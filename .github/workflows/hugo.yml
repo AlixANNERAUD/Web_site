@@ -52,7 +52,7 @@ jobs:
       - name: Build resume
         uses: xu-cheng/latex-action@v3
         with:
-          working-directory: ./Resume
+          working_directory: ./Resume
           root_file: Resume.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -output-directory="../assets"
       - name: Setup Pages
