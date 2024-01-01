@@ -50,9 +50,9 @@ jobs:
           path: Resume
           submodules: recursive
       - name: Build resume
-        working-directory: ./Resume
         uses: xu-cheng/latex-action@v3
         with:
+          working-directory: ./Resume
           root_file: Resume.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -output-directory="../assets"
       - name: Setup Pages
