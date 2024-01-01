@@ -49,15 +49,12 @@ jobs:
           repository: AlixANNERAUD/Resume
           path: Resume
           submodules: recursive
-      - name: Change to Resume directory
-        run: cd Resume
       - name: Build resume
+        working-directory: ./Resume
         uses: xu-cheng/latex-action@v3
         with:
           root_file: Resume.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -output-directory="../assets"
-      - name: Change back to root directory
-        run: cd ..
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
