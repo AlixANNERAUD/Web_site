@@ -1,0 +1,24 @@
+languageCode = "en"
+languageName = "🇬🇧 English"
+languageDirection = "ltr"
+weight = 1
+
+title = "My portfolio"
+copyright = "Copyright Alix ANNERAUD. Use Hugo with Congo"
+
+[params]
+  dateFormat = "2 January 2006"
+  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+
+  # mainSections = ["section1", "section2"]
+
+[author]
+   name = "Alix ANNERAUD"
+   image = "Images/Alix.png"
+   headline = "20 years old student in computer science"
+   bio = "Hey, I'm Alix, a french student in computer science. I'm passionate about embedded systems and development."
+   links = [
+     { email = "mailto:alix@anneraud.fr" },
+     { github = "https://github.com/AlixANNERAUD" },
+     { linkedin = "https://www.linkedin.com/in/alix-anneraud/" },
+   ]
