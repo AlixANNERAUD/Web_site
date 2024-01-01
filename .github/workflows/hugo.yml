@@ -77,17 +77,6 @@ jobs:
         with:
           path: ./public
 
-  build_resume:
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: Resume.tex
-
   # Deployment job
   deploy:
     environment:
