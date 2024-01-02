@@ -10,21 +10,21 @@ weight: 20
 Here is a list of my projects.
 {{< /lead >}}
 
-# Personal
+## {{< icon "palette-solid" >}} Personal
 
-- [Xila](https://github.com/Xila-Project) : An **operating system** for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
+- [Xila](https://github.com/Xila-Project) : An operating system for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
 {{< badge >}}Work in progress{{< /badge >}}
 
 - Construction of a model railway network in [HO scale](https://en.wikipedia.org/wiki/HO_scale).
 {{< badge >}}Work in progress{{< /badge >}}
 
-- 2023 - Nextcloud instance : I'm hosting a [Nextcloud](https://nextcloud.com/) instance (nuage.anneraud.fr) for my family and I using [TrueNAS SCALE](https://www.truenas.com/truenas-scale/).
+- 2023 - [Nextcloud](https://nextcloud.com/) instance : I'm hosting a cloud storage server (nuage.anneraud.fr) for my family and I using [TrueNAS SCALE](https://www.truenas.com/truenas-scale/).
 
-- 2021 - Matrix instance : I'm hosting a [matrix](https://matrix.org/) instance (matrix.insa.lol) for my friends and I using ansible and docker.
+- 2021 - [Matrix](https://matrix.org/) instance : I'm hosting a messaging server (matrix.insa.lol) for my friends and I using ansible and docker.
 
 - Helped the development of [INSAgenda](https://insagenda.fr/), a school agenda for INSA Rouen Normandie. Developed minor features.
 
-# School
+## {{< icon "graduation-cap-solid" >}} School
 
 - 2023 - [Huffman (de)compressor](https://github.com/AlixANNERAUD/Huffman_compressor) : A project where we have to develop a simple huffman (de)compressor in plain C.
 {{< badge >}}Work in progress{{< /badge >}}

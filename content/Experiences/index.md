@@ -11,7 +11,7 @@ weight: 10
 Here is a list of my experiences.
 {{< /lead >}}
 
-## :school: Education
+## {{< icon "graduation-cap-solid" >}} Education
 
 - 2021 - Ongoing : **Engineering degree** in computer science at [INSA Rouen Normandie](https://www.insa-rouen.fr).
 {{< badge >}} Ongoing {{< /badge >}}
@@ -22,7 +22,7 @@ Here is a list of my experiences.
 
 - 2018 : **Brevet** (~ GCSEs) with very good honors at [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/).
 
-## :briefcase: Professional
+## {{< icon "briefcase-solid" >}} Professional
 
 - 2021 - Ongoing (20h/month) : School-business relations **assistant** at [INSA Rouen Normandie](https://www.insa-rouen.fr).
 {{< badge >}} Ongoing {{< /badge >}}
@@ -32,7 +32,7 @@ Here is a list of my experiences.
 
 - 2021 (1 month) : **Intern** at [Renault Cléon](https://www.renault.fr/) factory as a assembly line worker.
 
-## :house: Personal
+## {{< icon "palette-solid" >}} Personal
 
 - 2023 - Ongoing : **Volunteer** in the embedded systems department at [INSAracing](https://www.linkedin.com/company/insa-rouen-racing/about/).
 {{< badge >}} Ongoing {{< /badge >}}

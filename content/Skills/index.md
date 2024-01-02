@@ -13,9 +13,7 @@ showEdit: false
 Here is a list of my skills.
 {{< /lead >}}
 
-# :wrench: Technical
-
-## Programming languages
+## {{< icon "code-solid" >}}Programming languages
 
 | Language    |    Level     |
 | :---------- | :----------: |
@@ -30,14 +28,14 @@ Here is a list of my skills.
 | PHP         |   Beginner   |
 | SQL         |   Beginner   |
 
-## Markup languages
+## {{< icon "file-code-solid" >}} Markup languages
 
 | Language       |    Level     |
 | :------------- | :----------: |
 | Markdown       |   Advanced   |
 | \\( \LaTeX \\) | Intermediate |
 
-## Software
+## {{< icon "window-restore-solid" >}} Software
 
 | Tool               |         Level         |
 | :----------------- | :-------------------: |
@@ -49,9 +47,7 @@ Here is a list of my skills.
 | Bash               |       Beginner        |
 | Make / CMake       | Beginner/Intermediate |
 
-# :people: Human
-
-## :speech_balloon: Languages
+## {{< icon "users-solid" >}} Communication
 
 | Language     |    Level    |
 | :----------- | :---------: |
