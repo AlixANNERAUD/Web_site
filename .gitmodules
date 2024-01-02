@@ -1,3 +1,6 @@
 [submodule "themes/congo"]
 	path = themes/congo
 	url = https://github.com/jpanther/congo.git
+[submodule "Resume"]
+	path = Resume
+	url = https://github.com/AlixANNERAUD/Resume.git
