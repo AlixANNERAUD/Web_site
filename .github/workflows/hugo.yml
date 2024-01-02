@@ -48,7 +48,9 @@ jobs:
         with:
           working_directory: ./Resume
           root_file: Resume.tex
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -output-directory=../static
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+      - name: Copy resume to static
+        run: cp ./Resume/Resume.pdf ./static/Resume.pdf
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
