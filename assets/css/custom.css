@@ -21,3 +21,7 @@ body {
 .max-w-prose {
     max-width: 100%;
 }
+
+table {
+    max-width: 50%;
+}
