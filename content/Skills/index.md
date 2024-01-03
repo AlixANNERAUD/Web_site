@@ -13,7 +13,7 @@ showEdit: false
 Here is a list of my skills.
 {{< /lead >}}
 
-## {{< icon "code-solid" >}}Programming languages
+## {{< icon "code-solid" >}} Programming languages
 
 
 | Language    |      Level      |
