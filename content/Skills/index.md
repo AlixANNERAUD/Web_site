@@ -23,6 +23,7 @@ Here is a list of my skills.
 | Rust        | {{< level 2 >}} |
 | Python      | {{< level 2 >}} |
 | Free Pascal | {{< level 2 >}} |
+| VHDL        | {{< level 1 >}} |
 | HTML        | {{< level 1 >}} |
 | CSS         | {{< level 1 >}} |
 | JavaScript  | {{< level 1 >}} |
