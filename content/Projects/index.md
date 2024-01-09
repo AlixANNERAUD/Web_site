@@ -25,7 +25,8 @@ Here is a list of my projects.
 ## {{< icon "graduation-cap-solid" >}} School
 
 - 2023 - [Huffman (de)compressor](https://github.com/AlixANNERAUD/Huffman_compressor) : A project where we have to develop a simple huffman (de)compressor in plain C.
-{{< badge >}}Work in progress{{< /badge >}}
+
+- 2023 - [Robot mouche](https://github.com/https://github.com/AlixANNERAUD/Robot_Mouche) : A project where we have to design a robot  hat can either move freely thanks to a remote control over WiFi or follow a line and avoid obstacles using a LiDAR sensor and a camera.
 
 - 2023 - [Music danceability](https://github.com/AlixANNERAUD/Music_danceability_prediction) : A data science team project where we had to predict the danceability of a song. We extracted data from the Spotify API. Developed in Python with Jupyter Notebook.
 
