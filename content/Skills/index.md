@@ -55,8 +55,8 @@ Here is a list of my skills.
 | :----------- | :---------: |
 | :fr: French  |   Native    |
 | :uk: English | Fluent (C1) |
-| :es: Spanish | Basic (A1)  |
-| :de: German  | Basic  (A1) |
+| :es: Spanish | Basic (A2)  |
+| :de: German  | Basic  (A2) |
 
 
 |         Legend :         |
