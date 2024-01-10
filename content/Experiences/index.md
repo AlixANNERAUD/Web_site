@@ -22,7 +22,7 @@ Here is a list of my experiences.
 - 2021 : **Scientific baccalaureate** (~ A-level) @ [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/)
   - Mathematics, Physics and Chemistry specialties.
   - European section : extra English lessons.
-  - With highest honour.
+  - With distinction.
 
 - 2018 : Cambridge **B1 Preliminary** (formerly PET).
 
