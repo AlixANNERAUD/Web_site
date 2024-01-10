@@ -20,6 +20,9 @@ body {
     max-width: 100%;
 }
 
-table {
-    max-width: 50%;
+
+@media (min-width: 1280px) {
+    table {
+        max-width: 50%;
+    }
 }
