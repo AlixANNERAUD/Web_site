@@ -3,8 +3,33 @@ title: "Projets"
 showDate: false
 showAuthor: false
 showReadingTime: false
+weight: 20
 ---
 
 {{< lead >}}
 Voici une liste de mes projets.
 {{< /lead >}}
+
+## {{< icon "palette-solid" >}} Personnels
+
+- {{< badge >}}En cours{{< /badge >}} [Xila](https://github.com/Xila-Project) : Un système d'exploitation pour microcontrôleurs. Je suis actuellement en train de réécrire une partie significative du code en Rust afin de le rendre plus robuste.
+
+- {{< badge >}}En cours{{< /badge >}} Réseau ferroviaire miniature : Depuis 2019, je construis un réseau ferroviaire miniature à l'échelle [HO](https://fr.wikipedia.org/wiki/%C3%89chelles_de_train_miniature#%C3%89chelle_HO) avec un contrôle [DCC](https://fr.wikipedia.org/wiki/Digital_Command_Control). Toute la partie électronique est conçue par moi-même (signaux, détection d'occupation, etc.).
+
+- [Enceinte connectée](https://github.com/AlixANNERAUD/Connected_speaker) : Conception d'un système de télécommande pour une carte d'amplificateur à base de TDA7294 à l'aide de composants disponibles dans le commerce et d'un ESP32, améliorant le contrôle audio polyvalent du divertissement à domicile.
+
+- [INSAgenda](https://insagenda.fr/) : Contribution à un projet d'amis en développant une fonctionnalité mineure pour un agenda scolaire à l'INSA Rouen Normandie.
+  
+- Je défends passionnément la souveraineté des données et héberge personnellement et maintiens une partie de mes services en ligne pour moi, ma famille et mes amis, notamment [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), KeeWeb, et d'autres.
+
+## {{< icon "graduation-cap-solid" >}} Scolaires
+
+- 2023 - [Compresseur/décompresseur Huffman](https://github.com/AlixANNERAUD/Huffman_compressor) : Un projet où nous devons développer un simple compresseur/décompresseur Huffman en C pur.
+
+- 2023 - [Robot mouche](https://github.com/AlixANNERAUD/Robot_Mouche) : Un projet où nous devons concevoir un robot pouvant se déplacer librement grâce à une télécommande via WiFi ou suivre une ligne et éviter les obstacles à l'aide d'un capteur LiDAR et d'une caméra.
+
+- 2023 - [Prédictibilité de la danse musicale](https://github.com/AlixANNERAUD/Music_danceability_prediction) : Projet d'équipe en science des données où nous devions prédire la danseabilité d'une chanson. Nous avons extrait des données de l'API Spotify. Développé en Python avec Jupyter Notebook.
+
+- 2022 - [INSAtram](https://github.com/AlixANNERAUD/INSAtram) : Un jeu de gestion sur un réseau de tramway. Développé en Free Pascal avec SDL 1.2.
+
+- 2022 - [Calculateur de systèmes d'équations linéaires](https://github.com/AlixANNERAUD/System_of_linear_equations_solver) pour résoudre des systèmes linéaires en C pur.
