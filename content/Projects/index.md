@@ -14,19 +14,19 @@ Here is a list of my projects.
 
 - {{< badge >}}Ongoing{{< /badge >}} [Xila](https://github.com/Xila-Project) : An operating system for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
 
-- {{< badge >}}Ongoing{{< /badge >}} 2019 : Construction of a model railway network in [HO scale](https://en.wikipedia.org/wiki/HO_scale).
+- {{< badge >}}Ongoing{{< /badge >}} Model railway network : Since 2019, I'm building a model railway network in [HO scale](https://en.wikipedia.org/wiki/HO_scale) with [DCC control](https://en.wikipedia.org/wiki/Digital_Command_Control). The whole electronic part is designed by myself (signals, occupancy detection, etc.).
 
-- Smart Hi-Fi : 
+- [Connected speaker](https://github.com/AlixANNERAUD/Connected_speaker) : Designed a remote control system for a TDA7294 based amplifier card using off-the-shelf components and an ESP32, enhancing home entertainment with versatile audio control.
 
-- Developed minor feature of [INSAgenda](https://insagenda.fr/), a school agenda for INSA Rouen Normandie.
-
+- [INSAgenda](https://insagenda.fr/) : Contributed to friends project by developing a minor feature for a school agenda at INSA Rouen Normandie.
+  
 - I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), KeeWeb, and more.
 
 ## {{< icon "graduation-cap-solid" >}} School
 
 - 2023 - [Huffman (de)compressor](https://github.com/AlixANNERAUD/Huffman_compressor) : A project where we have to develop a simple huffman (de)compressor in plain C.
 
-- 2023 - [Robot mouche](https://github.com/https://github.com/AlixANNERAUD/Robot_Mouche) : A project where we have to design a robot  hat can either move freely thanks to a remote control over WiFi or follow a line and avoid obstacles using a LiDAR sensor and a camera.
+- 2023 - [Robot mouche](https://github.com/AlixANNERAUD/Robot_Mouche) : A project where we have to design a robot  hat can either move freely thanks to a remote control over WiFi or follow a line and avoid obstacles using a LiDAR sensor and a camera.
 
 - 2023 - [Music danceability](https://github.com/AlixANNERAUD/Music_danceability_prediction) : A data science team project where we had to predict the danceability of a song. We extracted data from the Spotify API. Developed in Python with Jupyter Notebook.
 
