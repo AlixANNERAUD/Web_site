@@ -31,7 +31,7 @@ Here is a list of my experiences.
 
 ## {{< icon "briefcase-solid" >}} Professional
 
-- {{< badge >}}Ongoing{{< /badge >}} 2021 (20h/month) : Assistant to the School-Business Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+- {{< badge >}}Ongoing{{< /badge >}} 2021 (20h/month) : Assistant to the Corporate Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
   - Versatile assistance position.
   - Collection and valorization of data concerning INSA partner
 companies.
