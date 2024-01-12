@@ -24,6 +24,8 @@ Voici une liste de mes projets.
 
 ## {{< icon "graduation-cap-solid" >}} Scolaires
 
+- {{< badge >}}En cours{{< /badge >}} 2024 - Cartographie environnementale en temps réel sur un robot mobile : L'objectif est d'appliquer [le document de recherche de notre professeur](), en utilisant les capteurs LiDAR, IMU et Caméra embarqués sur [R.O.S.](https://fr.wikipedia.org/wiki/Robot_Operating_System). Le projet vise à mettre en œuvre un algorithme en temps réel basé sur des grilles 2.5D, utilisant ROS et le C++ pour générer des cartes illustrant les espaces libres et occupés dans l'environnement du robot.
+
 - 2023 - [Compresseur/décompresseur Huffman](https://github.com/AlixANNERAUD/Huffman_compressor) : Un projet où nous devons développer un simple compresseur/décompresseur Huffman en C pur.
 
 - 2023 - [Robot mouche](https://github.com/AlixANNERAUD/Robot_Mouche) : Un projet où nous devons concevoir un robot pouvant se déplacer librement grâce à une télécommande via WiFi ou suivre une ligne et éviter les obstacles à l'aide d'un capteur LiDAR et d'une caméra.

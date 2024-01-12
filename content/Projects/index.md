@@ -24,6 +24,8 @@ Here is a list of my projects.
 
 ## {{< icon "graduation-cap-solid" >}} School
 
+- {{< badge >}}Ongoing{{< /badge >}} 2024 - Real-time environmental mapping on a mobile robot : The objective is to apply our professor's research paper, utilizing onboard LiDAR, IMU, and Camera sensors within the [Robot Operating System (ROS)](https://fr.wikipedia.org/wiki/Robot_Operating_System). The project aims to implement a real-time algorithm based on 2.5D grids, using the ROS framework and C++ to generate maps that depict free and occupied spaces in the robot's environment.
+ 
 - 2023 - [Huffman (de)compressor](https://github.com/AlixANNERAUD/Huffman_compressor) : A project where we have to develop a simple huffman (de)compressor in plain C.
 
 - 2023 - [Robot mouche](https://github.com/AlixANNERAUD/Robot_Mouche) : A project where we have to design a robot  hat can either move freely thanks to a remote control over WiFi or follow a line and avoid obstacles using a LiDAR sensor and a camera.
