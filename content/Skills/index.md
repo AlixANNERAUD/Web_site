@@ -20,7 +20,8 @@ Here is a list of my skills.
 | :---------- | :-------------: |
 | C           | {{< level 3 >}} |
 | C++         | {{< level 3 >}} |
-| Rust        | {{< level 2 >}} |
+| Rust        | {{< level 3 >}} |
+| Java        | {{< level 2 >}} |
 | Python      | {{< level 2 >}} |
 | Free Pascal | {{< level 2 >}} |
 | VHDL        | {{< level 1 >}} |
