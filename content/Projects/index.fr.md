@@ -20,7 +20,7 @@ Voici une liste de mes projets.
 
 - [INSAgenda](https://insagenda.fr/) : Contribution à un projet d'amis en développant une fonctionnalité mineure pour un agenda scolaire à l'INSA Rouen Normandie.
   
-- Je défends passionnément la souveraineté des données et héberge personnellement et maintiens une partie de mes services en ligne pour moi, ma famille et mes amis, notamment [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), KeeWeb, et d'autres.
+- En tant que fervent défenseur de la souveraineté des données, je prends en charge l'hébergement de services en ligne pour moi-même, ma famille et mes amis. Ces services comprennent notamment [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/) et [Gitea](https://about.gitea.com/).
 
 ## {{< icon "graduation-cap-solid" >}} Scolaires
 

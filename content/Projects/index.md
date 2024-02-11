@@ -20,7 +20,7 @@ Here is a list of my projects.
 
 - [INSAgenda](https://insagenda.fr/) : Contributed to friends project by developing a minor feature for a school agenda at INSA Rouen Normandie.
   
-- I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), KeeWeb, and more.
+- I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Gitea](https://about.gitea.com/) and more.
 
 ## {{< icon "graduation-cap-solid" >}} School
 
