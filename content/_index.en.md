@@ -9,7 +9,7 @@ I'm passionate about **embedded systems**, **artificial intelligence** and **low
 I've also a [part time job](/experiences).
 
 {{< alert "circle-info" >}}
-I am currently looking for an **internship abroad** (between 1 and 2 months) in the field of IT. I am available between June 17 and August 31, 2024.
+I am currently looking for an **internship abroad** (minimum 10 weeks) in the field of IT. I am available between mid-april and September 2025.
 Contact me by email at [alix@anneraud.fr](mailto:alix@anneraud.fr) or on [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).
 My resume is available [here](/Resume.pdf).
 {{< /alert >}}
