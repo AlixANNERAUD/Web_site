@@ -31,7 +31,11 @@ Here is a list of my experiences.
 
 ## {{< icon "briefcase-solid" >}} Professional
 
-- {{< badge >}}Ongoing{{< /badge >}} 2021 (20h/month) : Assistant to the Corporate Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+- 2024 {{< badge >}}Ongoing{{< /badge >}} : **Intern** @ [New-York University](https://www.nyu.edu/).
+  - 11 weeks internship.
+  - Development of odor detection and localization algorithms.
+
+- 2021 - 2024 (20h/month) : **Assistant** to the Corporate Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
   - Versatile assistance position.
   - Collection and valorization of data concerning INSA partner
 companies.
@@ -45,7 +49,3 @@ ticeship tax.
 - July 2022 : **Intern** @ [Renault Cléon factory](https://www.renaultgroup.com/groupe/implantations/usine-cleon/)
   - 1 month internship.
   - Rotor/stator assembly for electric motor production.
-
-## {{< icon "palette-solid" >}} Personal
-
-- {{< badge >}}Ongoing{{< /badge >}} 2023 : **Volunteer** in the embedded systems department @ [INSAracing](https://www.linkedin.com/company/insa-rouen-racing/about/).

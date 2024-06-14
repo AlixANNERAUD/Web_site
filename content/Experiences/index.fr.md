@@ -31,7 +31,11 @@ Voici une liste de mes expériences.
 
 ## {{< icon "briefcase-solid" >}} Professionnelles
 
-- {{< badge >}}En cours{{< /badge >}} 2021 (20h/mois) : Assistant au Département Relations École-Entreprises @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+- 2024 {{< badge >}}En cours{{< /badge >}} : **Stagiaire** @ [Université de New-York](https://www.nyu.edu/).
+  - Stage de 11 semaines.
+  - Développement d'algorithmes de détection et de localisation d'odeurs.
+
+- 2021 - 2024 (20h/mois) : Assistant au Département Relations École-Entreprises @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
   - Position polyvalente d'assistance.
   - Collecte et valorisation des données concernant les entreprises partenaires de l'INSA.
   - Prospection des entreprises partenaires pour la collecte de la taxe d'apprentissage.
@@ -43,7 +47,3 @@ Voici une liste de mes expériences.
 - Juillet 2022 : **Stagiaire** @ [Usine Renault Cléon](https://www.renaultgroup.com/groupe/implantations/usine-cleon/)
   - Stage d'un mois.
   - Assemblage rotor/stator pour la production de moteurs électriques.
-
-## {{< icon "palette-solid" >}} Personnelles
-
-- {{< badge >}}En cours{{< /badge >}} 2023 : **Bénévole** au sein du département de systèmes embarqués @ [INSAracing](https://www.linkedin.com/company/insa-rouen-racing/about/).
