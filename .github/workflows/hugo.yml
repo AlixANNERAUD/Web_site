@@ -48,6 +48,7 @@ jobs:
         with:
           working_directory: ./Resume
           root_file: Resume.tex
+          latexmk_shell_escape: true
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
       - name: Copy resume to static
         run: cp ./Resume/Resume.pdf ./static/Resume.pdf
