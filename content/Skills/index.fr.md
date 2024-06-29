@@ -10,7 +10,7 @@ showEdit: false
 {{< katex >}}
 
 {{< lead >}}
-Voici une liste de mes compétences.
+Voici une liste de mes compétences. Pour vous donner une idée plus concrète de mes compétences, je vous invite à consulter [mes projets](/projects).
 {{< /lead >}}
 
 ## {{< icon "code-solid" >}} Langages de programmation

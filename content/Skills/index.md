@@ -10,7 +10,7 @@ showEdit: false
 {{< katex >}}
 
 {{< lead >}}
-Here is a list of my skills.
+Here is a list of my skills. To give you a more concrete idea of my skills, I invite you to check out [my projects](/projects)
 {{< /lead >}}
 
 ## {{< icon "code-solid" >}} Programming languages
@@ -21,8 +21,8 @@ Here is a list of my skills.
 | C           | {{< level 3 >}} |
 | C++         | {{< level 3 >}} |
 | Rust        | {{< level 3 >}} |
+| Python      | {{< level 3 >}} |
 | Java        | {{< level 2 >}} |
-| Python      | {{< level 2 >}} |
 | Free Pascal | {{< level 2 >}} |
 | VHDL        | {{< level 1 >}} |
 | HTML        | {{< level 1 >}} |
