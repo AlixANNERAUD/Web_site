@@ -16,7 +16,7 @@ copyright = "Copyright Alix ANNERAUD. Utilise Hugo avec le thème Congo."
 [author]
    name = "Alix ANNERAUD"
    image = "Images/Alix.png"
-   headline = "Étudiant salarié en informatique."
+   headline = "Étudiant en informatique."
    # bio = "Hey, I'm Alix, a french student in computer science. I'm passionate about embedded systems and development."
    links = [
      { email = "mailto:alix@anneraud.fr" },
