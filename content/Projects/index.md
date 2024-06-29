@@ -24,7 +24,9 @@ Here is a list of my projects.
 
 ## {{< icon "graduation-cap-solid" >}} School
 
-- {{< badge >}}Ongoing{{< /badge >}} 2024 - Real-time environmental mapping on a mobile robot : The objective is to apply our [professor's research paper](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), utilizing onboard LiDAR, IMU, and Camera sensors within the [Robot Operating System (ROS)](https://fr.wikipedia.org/wiki/Robot_Operating_System). The project aims to implement a real-time algorithm based on 2.5D grids, using the ROS framework and C++ to generate maps that depict free and occupied spaces in the robot's environment.
+- 2024 - [Evidential Occupancy Grid Map](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR and IMU sensors, based on the [Dempster-Shafer theory](https://en.wikipedia.org/wiki/Dempster%E2%80%93Shafer_theory). It was developed in C++ and utilizes the [Robot Operating System (ROS)](https://en.wikipedia.org/wiki/Robot_Operating_System).
+
+- 2024 - [ITI Adventure](https://github.com/AlixANNERAUD/ITI_aventure): A text-based role-playing game developed in Java to put object-oriented programming principles into practice.
  
 - 2023 - [Huffman (de)compressor](https://github.com/AlixANNERAUD/Huffman_compressor) : A project where we have to develop a simple huffman (de)compressor in plain C.
 

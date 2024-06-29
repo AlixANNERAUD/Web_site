@@ -24,7 +24,9 @@ Voici une liste de mes projets.
 
 ## {{< icon "graduation-cap-solid" >}} Scolaires
 
-- {{< badge >}}En cours{{< /badge >}} 2024 - Cartographie environnementale en temps réel sur un robot mobile : L'objectif est d'appliquer [le document de recherche de notre professeur](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), en utilisant les capteurs LiDAR, IMU et Caméra embarqués sur [R.O.S.](https://fr.wikipedia.org/wiki/Robot_Operating_System). Le projet vise à mettre en œuvre un algorithme en temps réel basé sur des grilles 2.5D, utilisant ROS et le C++ pour générer des cartes illustrant les espaces libres et occupés dans l'environnement du robot.
+- 2024 - [Cartographie évidentielle](https://github.com/AlixANNERAUD/Evidential_occupancy_map) : Basé sur le [document de recherche de notre professeur](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), nous avons développé un algorithme en temps réel qui crée des cartes des espaces libres et occupés dans l'environnement d'un robot en utilisant des capteurs LiDAR et IMU embarqués, basé sur la [théorie de Dempster-Shafer](https://en.wikipedia.org/wiki/Dempster%E2%80%93Shafer_theory). Il a été développé en C++ et utilise le [Robot Operating System (ROS)](https://fr.wikipedia.org/wiki/Robot_Operating_System).
+
+- 2024 - [ITI Aventure](https://github.com/AlixANNERAUD/ITI_aventure) : Un jeu de rôle textuel développé en Java afin de mettre en pratique les principes de la programmation orientée objet.
 
 - 2023 - [Compresseur/décompresseur Huffman](https://github.com/AlixANNERAUD/Huffman_compressor) : Un projet où nous devons développer un simple compresseur/décompresseur Huffman en C pur.
 
