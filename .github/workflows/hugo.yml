@@ -46,6 +46,7 @@ jobs:
       - name: Build resume
         uses: xu-cheng/latex-action@v3
         with:
+          texlive_version: 2023
           working_directory: ./Resume
           root_file: Resume.tex
           latexmk_shell_escape: true
