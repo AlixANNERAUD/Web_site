@@ -24,7 +24,9 @@ Here is a list of my projects.
 
 ## {{< icon "graduation-cap-solid" >}} School
 
-- 2024 - [Evidential Occupancy Grid Map](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR and IMU sensors, based on the [Dempster-Shafer theory](https://en.wikipedia.org/wiki/Dempster%E2%80%93Shafer_theory). It was developed in C++ and utilizes the [Robot Operating System (ROS)](https://en.wikipedia.org/wiki/Robot_Operating_System).
+- 2024 - [Evidential Occupancy Grid Map (EOGM)](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper on pratical application of the Dempster-Shafer theory in robotics](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR, IMU and GPS sensors.
+It was developed for [Robot Operating System (ROS)](https://en.wikipedia.org/wiki/Robot_Operating_System) in C++. 
+It's fast and efficient due to various memory optimizations, vectorization and parallelization techniques. 
 
 - 2024 - [ITI Adventure](https://github.com/AlixANNERAUD/ITI_aventure): A text-based role-playing game developed in Java to put object-oriented programming principles into practice.
  
