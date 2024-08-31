@@ -11,6 +11,28 @@ weight: 10
 Here is a list of my experiences.
 {{< /lead >}}
 
+## {{< icon "briefcase-solid" >}} Professional
+
+- June - August 2024 (3 months) : **Intern** @ [New-York University](https://www.nyu.edu/).
+  - Research project in gas source localisation (GSL) using mobile and fixed sensors.
+  - Conducted research on gas source diffusion using fluid mechanics simulations (Fick's law) and localisation algorithms.
+  - Performed **signal processing** and **data analysis** to interpret sensor readings using Python.
+  - Developed IoT devices for data collection and transmission in C++.
+
+- 2021 - 2024 (3 years - 20h/month) : **Assistant** to the Corporate Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+  - Versatile assistance position.
+  - Collection and valorization of data concerning INSA partner
+companies.
+  - Canvassing partner companies for the collection of the appren-
+ticeship tax.
+  - Administrative management of student files.
+  - Alumni survey for course certification.
+
+- {{< badge >}}Ongoing{{< /badge >}} 2019 : Communication **assistant** @ [Guenola SAHUT](https://guenola-sahut.fr/).
+
+- July 2022 (1 month) : **Intern** @ [Renault Cléon factory](https://www.renaultgroup.com/groupe/implantations/usine-cleon/)
+  - Rotor/stator assembly for electric motor production.
+
 ## {{< icon "graduation-cap-solid" >}} Education
 
 - {{< badge >}}Ongoing{{< /badge >}}
@@ -28,24 +50,3 @@ Here is a list of my experiences.
 
 - 2018 : **Junior school certificate** (~ GCSEs) @ [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/).
   -  With highest honour
-
-## {{< icon "briefcase-solid" >}} Professional
-
-- 2024 {{< badge >}}Ongoing{{< /badge >}} : **Intern** @ [New-York University](https://www.nyu.edu/).
-  - 11 weeks internship.
-  - Development of odor detection and localization algorithms.
-
-- 2021 - 2024 (20h/month) : **Assistant** to the Corporate Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
-  - Versatile assistance position.
-  - Collection and valorization of data concerning INSA partner
-companies.
-  - Canvassing partner companies for the collection of the appren-
-ticeship tax.
-  - Administrative management of student files.
-  - Alumni survey for course certification.
-
-- {{< badge >}}Ongoing{{< /badge >}} 2019 : Communication **assistant** @ [Guenola SAHUT](https://guenola-sahut.fr/).
-
-- July 2022 : **Intern** @ [Renault Cléon factory](https://www.renaultgroup.com/groupe/implantations/usine-cleon/)
-  - 1 month internship.
-  - Rotor/stator assembly for electric motor production.
