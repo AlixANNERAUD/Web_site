@@ -2,7 +2,7 @@
 title: "Accueil"
 ---
 
-Salut 👋, je suis **Alix**, un étudiant à l'[INSA Rouen](https://www.insa-rouen.fr). Actuellement en 3e année d'école d'**ingénieur**, je me spécialise en **informatique**.
+Salut 👋, je suis **Alix**, un étudiant à l'[INSA Rouen](https://www.insa-rouen.fr). Actuellement en 4ème année d'école d'**ingénieur**, je me spécialise en **informatique**.
 
 Je suis passionné par les **systèmes embarqués**, l'**intelligence artificielle** et la **programmation bas niveau**. Consultez mes [projets](/projects) pour plus de détails.
 

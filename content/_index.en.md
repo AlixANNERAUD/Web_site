@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-Hey 👋, I'm **Alix**, a French student at the [INSA Rouen](https://www.insa-rouen.fr). Currently in my 3rd year of **engineering school**, I'm specializing in **computer science**.
+Hey 👋, I'm **Alix**, a French student at the [INSA Rouen](https://www.insa-rouen.fr). Currently in my 4th year of **engineering school**, I'm specializing in **computer science**.
 
 I'm passionate about **embedded systems**, **artificial intelligence** and **low level programming**. See my [projects](/projects) for more details.
 
