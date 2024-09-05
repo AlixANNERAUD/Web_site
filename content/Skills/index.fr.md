@@ -44,7 +44,7 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | :----------------- | :-------------: |
 | Git                | {{< level 3 >}} |
 | Visual Studio Code | {{< level 3 >}} |
-| GNU/Linux          | {{< level 2 >}} |
+| GNU/Linux          | {{< level 3 >}} |
 | FreeBSD            | {{< level 2 >}} |
 | Docker             | {{< level 2 >}} |
 | Bash               | {{< level 1 >}} |

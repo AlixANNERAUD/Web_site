@@ -44,7 +44,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | :----------------- | :-------------: |
 | Git                | {{< level 3 >}} |
 | Visual Studio Code | {{< level 3 >}} |
-| GNU/Linux          | {{< level 2 >}} |
+| GNU/Linux          | {{< level 3 >}} |
 | FreeBSD            | {{< level 2 >}} |
 | Docker             | {{< level 2 >}} |
 | Bash               | {{< level 1 >}} |
