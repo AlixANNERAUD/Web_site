@@ -11,31 +11,31 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Compétences"
-  pageRef = "skills"
-  weight = 30
+name = "Compétences"
+pageRef = "skills"
+weight = 30
 
 [[main]]
-  name = "Expériences"
-  pageRef = "experiences"
-  weight = 10
+name = "Expériences"
+pageRef = "experiences"
+weight = 10
 
 [[main]]
-  name = "Projets"
-  pageRef = "projects"
-  weight = 20
+name = "Projets"
+pageRef = "projects"
+weight = 20
 
 [[main]]
-  identifier = "search"
-  weight = 99
-  [main.params]
-    action = "search"
+identifier = "search"
+weight = 99
+[main.params]
+action = "search"
 
 [[main]]
-  identifier = "locale"
-  weight = 100
-  [main.params]
-    action = "locale"
+identifier = "locale"
+weight = 100
+[main.params]
+action = "locale"
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

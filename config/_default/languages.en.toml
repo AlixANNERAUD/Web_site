@@ -7,18 +7,15 @@ title = "My portfolio"
 copyright = "Copyright Alix ANNERAUD. Built with Hugo and Congo theme."
 
 [params]
-  dateFormat = "2 January 2006"
-  description = "Alix ANNERAUD's portfolio"
-
-  # mainSections = ["section1", "section2"]
+dateFormat = "2 January 2006"
+description = "Alix ANNERAUD's portfolio"
 
 [author]
-   name = "Alix ANNERAUD"
-   image = "Images/Alix.png"
-   headline = "20-year old student in computer science."
-   # bio = "Hey, I'm Alix, a french student in computer science. I'm passionate about embedded systems and development."
-   links = [
-     { email = "mailto:alix@anneraud.fr" },
-     { github = "https://github.com/AlixANNERAUD" },
-     { linkedin = "https://www.linkedin.com/in/alix-anneraud/" },
-   ]
+name = "Alix ANNERAUD"
+image = "Images/Alix.png"
+headline = "20-year old student in computer science."
+links = [
+  { email = "mailto:alix@anneraud.fr" },
+  { github = "https://github.com/AlixANNERAUD" },
+  { linkedin = "https://www.linkedin.com/in/alix-anneraud/" },
+]
