@@ -13,7 +13,7 @@ description = "Le portefolio d'Alix ANNERAUD"
 [author]
 name = "Alix ANNERAUD"
 image = "Images/Alix.png"
-headline = "Étudiant en informatique."
+headline = "Étudiant en informatique de 21 ans."
 links = [
   { email = "mailto:alix@anneraud.fr" },
   { github = "https://github.com/AlixANNERAUD" },
