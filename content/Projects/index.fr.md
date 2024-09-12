@@ -18,7 +18,7 @@ Voici une liste de mes projets.
 
 - [Enceinte connectée](https://github.com/AlixANNERAUD/Connected_speaker) : Conception d'un système de télécommande pour une carte d'amplificateur à base de TDA7294 à l'aide de composants disponibles dans le commerce et d'un ESP32, améliorant le contrôle audio polyvalent du divertissement à domicile.
 
-- [INSAgenda](https://insagenda.fr/) : Contribution à un projet d'amis en développant une fonctionnalité mineure pour un agenda scolaire à l'INSA Rouen Normandie.
+- [INSAgenda](https://insagenda.insa.lol/) : Contribution à un projet d'amis en développant une fonctionnalité mineure pour un agenda scolaire à l'INSA Rouen Normandie.
   
 - En tant que fervent défenseur de la souveraineté des données, je prends en charge l'hébergement de services en ligne pour moi-même, ma famille et mes amis. Ces services comprennent notamment [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/) et [Gitea](https://about.gitea.com/).
 
