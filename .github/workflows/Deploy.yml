@@ -59,8 +59,10 @@ jobs:
           root_file: Resume.tex
           latexmk_shell_escape: true
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-      - name: Copy resume to static
-        run: cp ./Resume/Resume.pdf ./static/Resume.fr.pdf
+      - name: Copy resume to static (English)
+        run: cp ./Resume/English/Resume.pdf ./static/Resume.pdf
+      - name: Copy resume to static (Français)
+        run: cp ./Resume/Français/Resume.pdf ./static/Resume.fr.pdf
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
