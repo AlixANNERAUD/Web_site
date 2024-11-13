@@ -9,5 +9,5 @@ Je suis passionné par les **systèmes embarqués**, l'**apprentissage automatiq
 {{< alert "circle-info" >}}
 Je suis actuellement à la recherche d'un **stage à l'étranger** (minimum 10 semaines) dans le domaine de l'informatique. Je suis disponible de mi-mai jusqu'a septembre 2025. Je suis également à la recherche d'un contrat de professionnalisation pour ma dernière année d'école d'ingénieur (Septembre 2025).
 Contactez-moi par e-mail à [alix@anneraud.fr](mailto:alix@anneraud.fr) ou sur [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).
-Mon CV est disponible [ici](/Resume.pdf).
+Mon CV est disponible [ici](/Resume.fr.pdf).
 {{< /alert >}}

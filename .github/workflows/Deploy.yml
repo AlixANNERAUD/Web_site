@@ -43,16 +43,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Build resume
+      - name: Build resume (English)
         uses: xu-cheng/latex-action@v3
         with:
           texlive_version: 2023
-          working_directory: ./Resume
+          working_directory: ./Resume/English
+          root_file: Resume.tex
+          latexmk_shell_escape: true
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+      - name: Build resume (Français)
+        uses: xu-cheng/latex-action@v3
+        with:
+          texlive_version: 2023
+          working_directory: ./Resume/Français
           root_file: Resume.tex
           latexmk_shell_escape: true
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
       - name: Copy resume to static
-        run: cp ./Resume/Resume.pdf ./static/Resume.pdf
+        run: cp ./Resume/Resume.pdf ./static/Resume.fr.pdf
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
