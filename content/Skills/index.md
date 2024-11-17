@@ -23,20 +23,21 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Rust        | {{< level 3 >}} |
 | Python      | {{< level 3 >}} |
 | Java        | {{< level 2 >}} |
+| HTML        | {{< level 2 >}} |
+| CSS         | {{< level 2 >}} |
 | Free Pascal | {{< level 2 >}} |
+| SQL         | {{< level 2 >}} |
+| JavaScript  | {{< level 2 >}} |
+| Bash        | {{< level 2 >}} |
 | VHDL        | {{< level 1 >}} |
-| HTML        | {{< level 1 >}} |
-| CSS         | {{< level 1 >}} |
-| JavaScript  | {{< level 1 >}} |
 | PHP         | {{< level 1 >}} |
-| SQL         | {{< level 1 >}} |
 
 ## {{< icon "file-code-solid" >}} Markup languages
 
 | Language       |      Level      |
 | :------------- | :-------------: |
 | Markdown       | {{< level 3 >}} |
-| \\( \LaTeX \\) | {{< level 2 >}} |
+| \\( \LaTeX \\) | {{< level 3 >}} |
 
 ## {{< icon "window-restore-solid" >}} Software
 
@@ -45,6 +46,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Git                | {{< level 3 >}} |
 | Visual Studio Code | {{< level 3 >}} |
 | GNU/Linux          | {{< level 3 >}} |
+| GitHub Action (CI) | {{< level 3 >}} |
 | FreeBSD            | {{< level 2 >}} |
 | Docker             | {{< level 2 >}} |
 | Bash               | {{< level 1 >}} |
