@@ -33,42 +33,50 @@ jobs:
     env:
       HUGO_VERSION: 0.120.4
     steps:
-      - name: Install Hugo CLI
+      - name: Setup | Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass
+  
+      - name: Setup | Dart Sass
         run: sudo snap install dart-sass
+    
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Build resume (English)
+     
+      - name: Build | Resume (English)
         uses: xu-cheng/latex-action@v3
-        with:
-          texlive_version: 2023
+        with:     
           working_directory: ./Resume/English
           root_file: Resume.tex
           latexmk_shell_escape: true
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-      - name: Build resume (Français)
+     
+      - name: Build | Resume (Français)
         uses: xu-cheng/latex-action@v3
         with:
-          texlive_version: 2023
           working_directory: ./Resume/Français
           root_file: Resume.tex
           latexmk_shell_escape: true
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-      - name: Copy resume to static (English)
+    
+      - name: Copy | Resume to static (English)
         run: cp ./Resume/English/Resume.pdf ./static/Resume.pdf
-      - name: Copy resume to static (Français)
+
+
+      - name: Copy | Resume to static (Français)
         run: cp ./Resume/Français/Resume.pdf ./static/Resume.fr.pdf
-      - name: Setup Pages
+     
+      - name: Setup | GitHub Pages
         id: pages
         uses: actions/configure-pages@v4
-      - name: Install Node.js dependencies
+     
+      - name: Setup | Node.js and npm
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Build with Hugo
+     
+      - name: Build | Hugo website
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
@@ -77,7 +85,8 @@ jobs:
           hugo \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
         # -- minify 
-      - name: Upload artifact
+
+      - name: Upload | Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
@@ -90,6 +99,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy | GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
