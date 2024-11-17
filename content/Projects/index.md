@@ -12,17 +12,21 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 ## {{< icon "palette-solid" >}} Personal
 
-- {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}C & Rust{{< /badge >}} [Xila](https://github.com/Xila-Project) : An operating system for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
+- {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Rust{{< /badge >}} {{< badge >}}C{{< /badge >}} {{< badge >}}C++{{< /badge >}} [Xila](https://github.com/Xila-Project) : An operating system for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
 
 - {{< badge >}}Ongoing{{< /badge >}} Model railway network : Since 2019, I'm building a model railway network in [HO scale](https://en.wikipedia.org/wiki/HO_scale) with [DCC control](https://en.wikipedia.org/wiki/Digital_Command_Control). The whole electronic part is designed by myself (signals, occupancy detection, etc.).
 
-- {{< badge >}}C++{{< /badge >}} [Connected speaker](https://github.com/AlixANNERAUD/Connected_speaker) : Designed a remote control system for a TDA7294 based amplifier card using off-the-shelf components and an ESP32, enhancing home entertainment with versatile audio control.
+- {{< badge >}}C++{{< /badge >}} {{< badge >}}JavaScript{{< /badge >}} [Connected speaker](https://github.com/AlixANNERAUD/Connected_speaker) : Designed a remote control system for a TDA7294 based amplifier card using off-the-shelf components and an ESP32, enhancing home entertainment with versatile audio control.
 
 - {{< badge >}}Rust{{< /badge >}} [INSAgenda](https://insagenda.insa.lol/) : Contributed to friends project by developing a minor feature for a school agenda at INSA Rouen Normandie.
   
-- I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Gitea](https://about.gitea.com/) and more.
+- I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) and more.
+
+- I also contribute to many open-source projects through GitHub Pull Requests, feel free to check out [my GitHub profile](https://github.com/AlixANNERAUD).
 
 ## {{< icon "graduation-cap-solid" >}} School
+
+- {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Python{{< /badge >}} {{< badge >}}Django{{< /badge >}} 2024 - [Music Composition AI](https://github.com/AlixANNERAUD/Machine_Learning_demonstrator): Demonstration project in machine learning where we trained a model capable of generating personalized music playlists based on user listening data (using the Spotify API).
 
 - {{< badge >}}C++{{< /badge >}} 2024 - [Evidential Occupancy Grid Map (EOGM)](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper on pratical application of the Dempster-Shafer theory in robotics](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR, IMU and GPS sensors.
 It was developed for [Robot Operating System (ROS)](https://en.wikipedia.org/wiki/Robot_Operating_System). 
