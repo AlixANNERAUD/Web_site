@@ -10,7 +10,7 @@ copyright = "Copyright Alix ANNERAUD. Built with Hugo and Congo theme."
 dateFormat = "2 January 2006"
 description = "Alix ANNERAUD's portfolio"
 
-[author]
+[params.author]
 name = "Alix ANNERAUD"
 image = "Images/Alix.png"
 headline = "21-year old student in computer science."

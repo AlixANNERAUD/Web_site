@@ -10,7 +10,7 @@ copyright = "Copyright Alix ANNERAUD. Utilise Hugo avec le thème Congo."
 dateFormat = "2 January 2006"
 description = "Le portefolio d'Alix ANNERAUD"
 
-[author]
+[params.author]
 name = "Alix ANNERAUD"
 image = "Images/Alix.png"
 headline = "Étudiant en informatique de 21 ans."
