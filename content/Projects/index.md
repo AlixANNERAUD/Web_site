@@ -28,7 +28,7 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 - {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Python{{< /badge >}} {{< badge >}}Django{{< /badge >}} 2024 - [Music Composition AI](https://github.com/AlixANNERAUD/Machine_Learning_demonstrator): Demonstration project in machine learning where we trained a model capable of generating personalized music playlists based on user listening data (using the Spotify API).
 
-- {{< badge >}}C++{{< /badge >}} 2024 - [Evidential Occupancy Grid Map (EOGM)](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper on pratical application of the Dempster-Shafer theory in robotics](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR, IMU and GPS sensors.
+- {{< badge >}}C++{{< /badge >}} {{< badge >}}ROS{{< /badge >}} 2024 - [Evidential Occupancy Grid Map (EOGM)](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper on pratical application of the Dempster-Shafer theory in robotics](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR, IMU and GPS sensors.
 It was developed for [Robot Operating System (ROS)](https://en.wikipedia.org/wiki/Robot_Operating_System). 
 It's fast and efficient due to various memory optimizations, vectorization and parallelization techniques. 
 
