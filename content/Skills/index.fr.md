@@ -57,7 +57,7 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | Langue     |    Niveau    |
 | :----------- | :---------: |
 | :fr: Français  |   Natif    |
-| :uk: Anglais | Courant (C1) |
+| :uk: Anglais | Courant (TOEIC : 975 - C1) |
 | :es: Espagnol | Basique (A2)  |
 | :de: Allemand  | Basique  (A2) |
 

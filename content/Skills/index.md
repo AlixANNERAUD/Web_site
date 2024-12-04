@@ -57,7 +57,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Language     |    Level    |
 | :----------- | :---------: |
 | :fr: French  |   Native    |
-| :uk: English | Fluent (C1) |
+| :uk: English | Fluent (TOEIC 975 - C1) |
 | :es: Spanish | Basic (A2)  |
 | :de: German  | Basic  (A2) |
 
