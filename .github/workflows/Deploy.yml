@@ -46,29 +46,6 @@ jobs:
         with:
           submodules: recursive
      
-      - name: Build | Resume (English)
-        uses: xu-cheng/latex-action@v3
-        with:     
-          working_directory: ./Resume/English
-          root_file: Resume.tex
-          latexmk_shell_escape: true
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-     
-      - name: Build | Resume (Français)
-        uses: xu-cheng/latex-action@v3
-        with:
-          working_directory: ./Resume/Français
-          root_file: Resume.tex
-          latexmk_shell_escape: true
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-    
-      - name: Copy | Resume to static (English)
-        run: cp ./Resume/English/Resume.pdf ./static/Resume.pdf
-
-
-      - name: Copy | Resume to static (Français)
-        run: cp ./Resume/Français/Resume.pdf ./static/Resume.fr.pdf
-     
       - name: Setup | GitHub Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -87,7 +64,8 @@ jobs:
         # -- minify 
 
       - name: Upload | Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
@@ -101,4 +79,4 @@ jobs:
     steps:
       - name: Deploy | GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
