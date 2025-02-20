@@ -18,7 +18,7 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}JavaScript{{< /badge >}} [Enceinte connectée](https://github.com/AlixANNERAUD/Connected_speaker) : Conception d'un système de télécommande pour une carte d'amplificateur à base de TDA7294 à l'aide de composants disponibles dans le commerce et d'un ESP32, améliorant le contrôle audio polyvalent du divertissement à domicile.
 
-- {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [insa.lol](https://insa.lol/) : Un ensemble de services proposés aux étudiants de l'INSA de Rouen Normandie.
+- {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [insa.lol](https://insa.lol/) : Un ensemble de services souverain proposés aux étudiants de l'INSA de Rouen Normandie : agenda, messagerie, réseau social, etc.
   
 - Attaché à la souveraineté des données, j'assure l'hébergement de services en ligne pour ma famille, mes amis et moi-même. Parmi ces services figurent [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) et bien d'autres.
 

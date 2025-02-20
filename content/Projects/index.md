@@ -18,7 +18,7 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}JavaScript{{< /badge >}} [Connected speaker](https://github.com/AlixANNERAUD/Connected_speaker) : Designed a remote control system for a TDA7294 based amplifier card using off-the-shelf components and an ESP32, enhancing home entertainment with versatile audio control.
 
-- {{< badge >}}Rust{{< /badge >}} [INSAgenda](https://insagenda.insa.lol/) : Contributed to friends project by developing a minor feature for a school agenda at INSA Rouen Normandie.
+- {{< badge >}}Rust{{< /badge >}} [insa.lol](https://insa.lol) : A set of sovereign services offered to INSA Rouen Normandie students: calendar, messaging, social network, etc.
   
 - I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) and more.
 
