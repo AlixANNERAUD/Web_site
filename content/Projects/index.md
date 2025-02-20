@@ -26,7 +26,9 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 ## {{< icon "graduation-cap-solid" >}} School
 
-- {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Python{{< /badge >}} {{< badge >}}Django{{< /badge >}} 2024 - [Music Composition AI](https://github.com/AlixANNERAUD/Machine_Learning_demonstrator): Demonstration project in machine learning where we trained a model capable of generating personalized music playlists based on user listening data (using the Spotify API).
+- {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Django{{< /badge >}} {{< badge >}}Vue.js{{< /badge >}} {{< badge >}}NLP{{< /badge >}} 2025 - ThéraPIC: Project Manager in an agile team as part of the Certified INSA Projects (PIC). Development of an application for pharmacists at [Centre Henri Becquerel](https://www.becquerel.fr/) to semi-automate the management of medication prescriptions. This project involves the use of structured data and the enhancement of unstructured data through natural language processing (identifying diseases, medications, etc. in reports, etc.).
+
+- {{< badge >}}Django{{< /badge >}} {{< badge >}}Vue.js{{< /badge >}} {{< badge >}}ML{{< /badge >}} 2024 - [Deez'Nalyzer](https://github.com/AlixANNERAUD/Deez_Nalyzer): Developed a web application and machine learning models to create music playlists and identify the genre of a song from MP3 excerpts using the Deezer API.  
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}ROS{{< /badge >}} 2024 - [Evidential Occupancy Grid Map (EOGM)](https://github.com/AlixANNERAUD/Evidential_occupancy_map): Based on our professor's [research paper on pratical application of the Dempster-Shafer theory in robotics](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), we developed a real-time algorithm that creates maps of free and occupied spaces in a robot's environment using onboard LiDAR, IMU and GPS sensors.
 It was developed for [Robot Operating System (ROS)](https://en.wikipedia.org/wiki/Robot_Operating_System). 

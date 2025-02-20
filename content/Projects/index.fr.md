@@ -7,7 +7,7 @@ weight: 20
 ---
 
 {{< lead >}}
-Voici une liste de mes projets pour vous donner une idée de mes compétences et de mes intérêts.
+Voici une liste de mes projets pour vous donner une idée de mes compétences et de mes centres d'intérêts.
 {{< /lead >}}
 
 ## {{< icon "palette-solid" >}} Personnels
@@ -18,7 +18,7 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}JavaScript{{< /badge >}} [Enceinte connectée](https://github.com/AlixANNERAUD/Connected_speaker) : Conception d'un système de télécommande pour une carte d'amplificateur à base de TDA7294 à l'aide de composants disponibles dans le commerce et d'un ESP32, améliorant le contrôle audio polyvalent du divertissement à domicile.
 
-- {{< badge >}}Rust{{< /badge >}} [INSAgenda](https://insagenda.insa.lol/) : Contribution à un projet d'amis en développant une fonctionnalité mineure pour un agenda scolaire à l'INSA Rouen Normandie.
+- {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [insa.lol](https://insa.lol/) : Un ensemble de services proposés aux étudiants de l'INSA de Rouen Normandie.
   
 - Attaché à la souveraineté des données, j'assure l'hébergement de services en ligne pour ma famille, mes amis et moi-même. Parmi ces services figurent [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) et bien d'autres.
 
@@ -26,7 +26,9 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 ## {{< icon "graduation-cap-solid" >}} Scolaires
 
-- {{< badge >}}En cours{{< /badge >}} {{< badge >}}Python{{< /badge >}} {{< badge >}}Django{{< /badge >}} 2024 - [IA de composition musicale](https://github.com/AlixANNERAUD/Machine_Learning_demonstrator) : Projet de démonstration en apprentissage automatique où nous avons formé un modèle capable de générer des playlists musicales personnalisées en fonction des données d'écoute de l'utilisateur (à partir de l'API Spotify).
+- {{< badge >}}En cours{{< /badge >}} {{< badge >}}Django{{< /badge >}} {{< badge >}}Vue.js{{< /badge >}} {{< badge >}}NLP{{< /badge >}} 2025 - ThéraPIC : Chef de projet au sein d'une équipe agile dans le cadre des Projets INSA Certifiés (PIC). Développement d'une application destinée aux pharmaciens du [Centre Henri Becquerel](https://www.becquerel.fr/) pour la gestion semi-automatique des prescriptions médicamenteuses. Ce projet inclut l'utilisation de données structurées et la valorisation de données non structurées par le biais de traitements automatiques du langage (identification de maladies, de médicaments, etc. dans des comptes-rendus, etc.).
+
+- {{< badge >}}Django{{< /badge >}} {{< badge >}}Vue.js{{< /badge >}} {{< badge >}}ML{{< /badge >}} 2024 - [Deez'Nalyzer](https://github.com/AlixANNERAUD/Deez_Nalyzer) : Développement d'une application web et de modèles de machine learning capables de composer des playlists musicales et d'identifier le genre musical d'une chanson à partir des extraits MP3, en utilisant l'API Deezer.
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}ROS{{< /badge >}} 2024 - [Cartographie évidentielle](https://github.com/AlixANNERAUD/Evidential_occupancy_map) : Basé sur le [document de recherche de notre professeur](https://www.researchgate.net/publication/337171728_25D_Evidential_Grids_for_Dynamic_Object_Detection), sur l’application de [la théorie de Dempster-Shafer](https://en.wikipedia.org/wiki/Dempster%E2%80%93Shafer_theory) en robotique, nous avons développé un algorithme en temps réel qui génère une carte d'occupation évidentielle via les données des capteurs LiDAR, IMU et GPS embarqués sur un robot mobile. Il est optimisé pour la rapidité et l'efficacité en utilisant une gestion de mémoire efficace et une parallélisation et vectorisation des calculs.
 
