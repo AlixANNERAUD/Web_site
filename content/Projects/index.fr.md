@@ -20,7 +20,7 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 - {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [insa.lol](https://insa.lol/) : Un ensemble de services souverain proposés aux étudiants de l'INSA de Rouen Normandie : agenda, messagerie, réseau social, etc.
   
-- Attaché à la souveraineté des données, j'assure l'hébergement de services en ligne pour ma famille, mes amis et moi-même. Parmi ces services figurent [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) et bien d'autres.
+- {{< badge >}}Docker{{< /badge >}} Attaché à la souveraineté des données, j'assure l'hébergement de services en ligne pour ma famille, mes amis et moi-même. Parmi ces services figurent [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) et bien d'autres.
 
 - Je contribue également à de nombreux projet open-source par l'intermédiaire de Pull Requests sur GitHub, n'hésitez pas à consulter [mon profil GitHub](https://github.com/AlixANNERAUD).
 
