@@ -15,22 +15,30 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 
 ## {{< icon "code-solid" >}} Programming languages
 
+| Language                |      Level      |
+| :---------------------- | :-------------: |
+| C                       | {{< level 3 >}} |
+| C++                     | {{< level 3 >}} |
+| Rust                    | {{< level 3 >}} |
+| Python                  | {{< level 3 >}} |
+| Java                    | {{< level 2 >}} |
+| HTML                    | {{< level 2 >}} |
+| CSS                     | {{< level 2 >}} |
+| Free Pascal             | {{< level 2 >}} |
+| SQL                     | {{< level 2 >}} |
+| TypeScript / JavaScript | {{< level 2 >}} |
+| Bash                    | {{< level 2 >}} |
+| VHDL                    | {{< level 1 >}} |
+| PHP                     | {{< level 1 >}} |
 
-| Language    |      Level      |
-| :---------- | :-------------: |
-| C           | {{< level 3 >}} |
-| C++         | {{< level 3 >}} |
-| Rust        | {{< level 3 >}} |
-| Python      | {{< level 3 >}} |
-| Java        | {{< level 2 >}} |
-| HTML        | {{< level 2 >}} |
-| CSS         | {{< level 2 >}} |
-| Free Pascal | {{< level 2 >}} |
-| SQL         | {{< level 2 >}} |
-| JavaScript  | {{< level 2 >}} |
-| Bash        | {{< level 2 >}} |
-| VHDL        | {{< level 1 >}} |
-| PHP         | {{< level 1 >}} |
+## {{< icon "code-solid" >}} Frameworks
+
+| Framework |      Level      |
+| :-------- | :-------------: |
+| Django    | {{< level 2 >}} |
+| Vue.js    | {{< level 2 >}} |
+| ROS 1     | {{< level 2 >}} |
+| Actix     | {{< level 2 >}} |
 
 ## {{< icon "file-code-solid" >}} Markup languages
 
@@ -39,7 +47,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Markdown       | {{< level 3 >}} |
 | \\( \LaTeX \\) | {{< level 3 >}} |
 
-## {{< icon "window-restore-solid" >}} Software
+## {{< icon "window-restore-solid" >}} Tools
 
 | Tool               |      Level      |
 | :----------------- | :-------------: |
@@ -54,16 +62,14 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 
 ## {{< icon "users-solid" >}} Communication
 
-| Language     |    Level    |
-| :----------- | :---------: |
-| :fr: French  |   Native    |
+| Language     |          Level          |
+| :----------- | :---------------------: |
+| :fr: French  |         Native          |
 | :uk: English | Fluent (TOEIC 975 - C1) |
-| :es: Spanish | Basic (A2)  |
-| :de: German  | Basic  (A2) |
-
+| :es: Spanish |       Basic (A2)        |
+| :de: German  |       Basic (A2)        |
 
 |         Legend :         |
 | :----------------------: | :--------------------------: |
 | {{< level 1 >}} Beginner | {{< level 2 >}} Intermediate |
 | {{< level 3 >}} Advanced |    {{< level 4 >}} Expert    |
-  
