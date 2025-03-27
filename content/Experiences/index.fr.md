@@ -13,13 +13,17 @@ Voici une liste de mes expériences.
 
 ## {{< icon "briefcase-solid" >}} Professionnelles
 
+- {{< badge >}}Prochainement{{< /badge >}} Mai - Août 2025 (4 mois) : **Stagiaire en ingénierie logicielle** @ [Amazon Espagne (Madrid)](https://www.amazon.es/).
+
 - Juin - Août 2024 (3 mois) : **Stagiaire** @ [Université de New-York](https://www.nyu.edu/).
+
   - Projet de recherche en localisation de sources de gaz (GSL) utilisant des capteurs mobiles et fixes.
   - Réalisé des recherches sur la diffusion des gaz à l'aide de simulations en **mécanique des fluides** (loi de Fick) et **d'algorithmes de localisation**.
   - **Traitement du signal** et **analyse des données** pour interpréter les mesures des capteurs en utilisant Python.
   - Développement de dispositifs IoT pour la collecte et la transmission des données en C++.
 
 - 2021 - 2024 (3 ans - 20h/mois) : **Assistant** au Département Relations École-Entreprises @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+
   - Position polyvalente d'assistance.
   - Collecte et valorisation des données concernant les entreprises partenaires de l'INSA.
   - Prospection des entreprises partenaires pour la collecte de la taxe d'apprentissage.
@@ -40,6 +44,7 @@ Voici une liste de mes expériences.
   - 1re et 2e année : cycle préparatoire (tronc commun).
 
 - 2021 : **Baccalauréat scientifique** @ [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/)
+
   - Spécialités Mathématiques, Physique et Chimie.
   - Section européenne : cours d'anglais supplémentaires.
   - Mention Très Bien.
