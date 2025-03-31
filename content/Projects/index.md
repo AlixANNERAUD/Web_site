@@ -24,6 +24,14 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 - I also contribute to many open-source projects through GitHub Pull Requests, feel free to check out [my GitHub profile](https://github.com/AlixANNERAUD).
 
+## {{< icon "trophy-solid" >}} Competitions
+
+- {{< badge >}}Competitive Programming{{< /badge >}} 2025 - [Cod'INSA](https://codinsa.org/): [1st place in the general ranking](https://codinsa.org/static/past).
+
+- {{< badge >}}CTF{{< /badge >}} 2025 - [Jeanne d’Hack CTF (University of Rouen)](https://www.jeanne-hack-ctf.org/post/): Team "Les Schtroumpfs": [3rd place in the general ranking](https://www.jeanne-hack-ctf.org/post/2025/).
+
+- {{< badge >}}CTF{{< /badge >}} 2024 - [TRACS (DGSE)](https://tracs.viarezo.fr/): Team "Les Schtroumpfs": [1st place in the general ranking](https://tracs.viarezo.fr/edition_results/show_student_ranking/2024/).
+
 ## {{< icon "graduation-cap-solid" >}} School
 
 - {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Django{{< /badge >}} {{< badge >}}Vue.js{{< /badge >}} {{< badge >}}NLP{{< /badge >}} 2025 - ThéraPIC: Project Manager in an agile team as part of the Certified INSA Projects (PIC). Development of an application for pharmacists at [Centre Henri Becquerel](https://www.becquerel.fr/) to semi-automate the management of medication prescriptions. This project involves the use of structured data and the enhancement of unstructured data through natural language processing (identifying diseases, medications, etc. in reports, etc.).

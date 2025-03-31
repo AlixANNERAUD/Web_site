@@ -24,6 +24,14 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 - Je contribue également à de nombreux projet open-source par l'intermédiaire de Pull Requests sur GitHub, n'hésitez pas à consulter [mon profil GitHub](https://github.com/AlixANNERAUD).
 
+## {{< icon "trophy-solid" >}} Compétitions
+
+- {{< badge >}}Programmation compétitive{{< /badge >}} 2025 - [Cod'INSA](https://codinsa.org/) : [1ère place au classement général](https://codinsa.org/static/past).
+
+- {{< badge >}}CTF{{< /badge >}} 2025 - [Jeanne d’Hack CTF (Université de Rouen)](https://www.jeanne-hack-ctf.org/post/) : Équipe "Les Schtroumpfs" : [3ème place au classement général](https://www.jeanne-hack-ctf.org/post/2025/).
+
+- {{< badge >}}CTF{{< /badge >}} 2024 - [TRACS (DGSE)](https://tracs.viarezo.fr/) : Équipe "Les Schtroumpfs" : [1ère place au classement général](https://tracs.viarezo.fr/edition_results/show_student_ranking/2024/).
+
 ## {{< icon "graduation-cap-solid" >}} Scolaires
 
 - {{< badge >}}En cours{{< /badge >}} {{< badge >}}Django{{< /badge >}} {{< badge >}}Vue.js{{< /badge >}} {{< badge >}}NLP{{< /badge >}} 2025 - ThéraPIC : Chef de projet au sein d'une équipe agile dans le cadre des Projets INSA Certifiés (PIC). Développement d'une application destinée aux pharmaciens du [Centre Henri Becquerel](https://www.becquerel.fr/) pour la gestion semi-automatique des prescriptions médicamenteuses. Ce projet inclut l'utilisation de données structurées et la valorisation de données non structurées par le biais de traitements automatiques du langage (identification de maladies, de médicaments, etc. dans des comptes-rendus, etc.).
