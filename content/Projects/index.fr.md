@@ -30,7 +30,7 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 - {{< badge >}}CTF{{< /badge >}} 2025 - [Jeanne d’Hack CTF (Université de Rouen)](https://www.jeanne-hack-ctf.org/post/) : Équipe "Les Schtroumpfs" : [3ème place au classement général](https://www.jeanne-hack-ctf.org/post/2025/).
 
-- {{< badge >}}CTF{{< /badge >}} 2024 - [TRACS (DGSE)](https://tracs.viarezo.fr/) : Équipe "Les Schtroumpfs" : [1ère place au classement général](https://tracs.viarezo.fr/edition_results/show_student_ranking/2024/).
+- {{< badge >}}CTF{{< /badge >}} 2024 - [TRACS (DGSE)](https://tracs.viarezo.fr/) : Équipe "Les Schtroumpfs" : [36ème place au classement général](https://tracs.viarezo.fr/edition_results/show_student_ranking/2024/).
 
 ## {{< icon "graduation-cap-solid" >}} Scolaires
 
