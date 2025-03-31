@@ -26,7 +26,7 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 ## {{< icon "trophy-solid" >}} Competitions
 
-- {{< badge >}}Competitive programming{{< /badge >}} 2025 - [Cod'INSA](https://codinsa.org/): [1st place in the general ranking](https://codinsa.org/static/past).
+- {{< badge >}}Competitive programming{{< /badge >}} 2025 - [Cod'INSA](https://codinsa.org/): Team INSA Rouen : [1st place in the general ranking](https://codinsa.org/static/past).
 
 - {{< badge >}}CTF{{< /badge >}} 2025 - [Jeanne d’Hack CTF (University of Rouen)](https://www.jeanne-hack-ctf.org/post/): Team "Les Schtroumpfs": [3rd place in the general ranking](https://www.jeanne-hack-ctf.org/post/2025/).
 
