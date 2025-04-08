@@ -66,11 +66,12 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | Git                | {{< level 3 >}} |
 | Visual Studio Code | {{< level 3 >}} |
 | GNU/Linux          | {{< level 3 >}} |
+| Docker             | {{< level 3 >}} |
 | GitHub Action (CI) | {{< level 3 >}} |
 | FreeBSD            | {{< level 2 >}} |
-| Docker             | {{< level 2 >}} |
+| CMake              | {{< level 2 >}} |
 | Bash               | {{< level 1 >}} |
-| Make / CMake       | {{< level 1 >}} |
+| Make               | {{< level 1 >}} |
 
 ## {{< icon "users-solid" >}} Communication
 
