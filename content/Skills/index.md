@@ -49,6 +49,16 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Markdown       | {{< level 3 >}} |
 | \\( \LaTeX \\) | {{< level 3 >}} |
 
+## {{< icon "dolly-solid" >}} Package managers
+
+| Package manager |      Level      |
+| :-------------- | :-------------: |
+| Cargo           | {{< level 3 >}} |
+| Uv              | {{< level 3 >}} |
+| Poetry          | {{< level 3 >}} |
+| NPM             | {{< level 3 >}} |
+| PlatformIO      | {{< level 3 >}} |
+
 ## {{< icon "window-restore-solid" >}} Tools
 
 | Tool               |      Level      |
@@ -57,9 +67,6 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Visual Studio Code | {{< level 3 >}} |
 | GNU/Linux          | {{< level 3 >}} |
 | GitHub Action (CI) | {{< level 3 >}} |
-| Cargo              | {{< level 3 >}} |
-| Uv                 | {{< level 3 >}} |
-| Poetry             | {{< level 3 >}} |
 | FreeBSD            | {{< level 2 >}} |
 | Docker             | {{< level 2 >}} |
 | Bash               | {{< level 1 >}} |
