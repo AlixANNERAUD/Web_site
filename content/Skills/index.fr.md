@@ -33,12 +33,14 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 
 ## {{< icon "code-solid" >}} Infrastructure logicielle
 
-| Framework |     Niveau      |
-| :-------- | :-------------: |
-| Django    | {{< level 2 >}} |
-| Vue.js    | {{< level 2 >}} |
-| ROS 1     | {{< level 2 >}} |
-| Actix     | {{< level 2 >}} |
+| Framework     |     Niveau      |
+| :------------ | :-------------: |
+| Django        | {{< level 3 >}} |
+| Vue.js        | {{< level 3 >}} |
+| Actix         | {{< level 3 >}} |
+| ROS 1         | {{< level 2 >}} |
+| Apache Hadoop | {{< level 2 >}} |
+| MongoDB       | {{< level 2 >}} |
 
 ## {{< icon "file-code-solid" >}} Langages de balisage
 

@@ -33,12 +33,14 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 
 ## {{< icon "code-solid" >}} Frameworks
 
-| Framework |      Level      |
-| :-------- | :-------------: |
-| Django    | {{< level 2 >}} |
-| Vue.js    | {{< level 2 >}} |
-| ROS 1     | {{< level 2 >}} |
-| Actix     | {{< level 2 >}} |
+| Framework     |      Level      |
+| :------------ | :-------------: |
+| Django        | {{< level 3 >}} |
+| Vue.js        | {{< level 3 >}} |
+| Actix         | {{< level 3 >}} |
+| ROS 1         | {{< level 2 >}} |
+| Apache Hadoop | {{< level 2 >}} |
+| MongoDB       | {{< level 2 >}} |
 
 ## {{< icon "file-code-solid" >}} Markup languages
 
