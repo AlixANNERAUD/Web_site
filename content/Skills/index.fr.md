@@ -57,6 +57,9 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | Visual Studio Code | {{< level 3 >}} |
 | GNU/Linux          | {{< level 3 >}} |
 | GitHub Action (CI) | {{< level 3 >}} |
+| Cargo              | {{< level 3 >}} |
+| Uv                 | {{< level 3 >}} |
+| Poetry             | {{< level 3 >}} |
 | FreeBSD            | {{< level 2 >}} |
 | Docker             | {{< level 2 >}} |
 | Bash               | {{< level 1 >}} |
