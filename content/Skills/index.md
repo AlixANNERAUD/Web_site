@@ -22,7 +22,6 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Rust                    | {{< level 3 >}} |
 | Python                  | {{< level 3 >}} |
 | Java                    | {{< level 2 >}} |
-| HTML                    | {{< level 2 >}} |
 | CSS                     | {{< level 2 >}} |
 | Free Pascal             | {{< level 2 >}} |
 | SQL                     | {{< level 2 >}} |
@@ -48,6 +47,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | :------------- | :-------------: |
 | Markdown       | {{< level 3 >}} |
 | \\( \LaTeX \\) | {{< level 3 >}} |
+| HTML           | {{< level 3 >}} |
 
 ## {{< icon "dolly-solid" >}} Package managers
 

@@ -22,7 +22,6 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | Rust                    | {{< level 3 >}} |
 | Python                  | {{< level 3 >}} |
 | Java                    | {{< level 2 >}} |
-| HTML                    | {{< level 2 >}} |
 | CSS                     | {{< level 2 >}} |
 | Free Pascal             | {{< level 2 >}} |
 | SQL                     | {{< level 2 >}} |
@@ -48,6 +47,7 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | :------------- | :-------------: |
 | Markdown       | {{< level 3 >}} |
 | \\( \LaTeX \\) | {{< level 3 >}} |
+| HTML           | {{< level 3 >}} |
 
 ## {{< icon "dolly-solid" >}} Gestionnaires de paquets
 
