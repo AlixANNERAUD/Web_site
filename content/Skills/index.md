@@ -36,6 +36,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | :------------ | :-------------: |
 | Django        | {{< level 3 >}} |
 | Vue.js        | {{< level 3 >}} |
+| React         | {{< level 3 >}} |
 | Actix         | {{< level 3 >}} |
 | ROS 1         | {{< level 2 >}} |
 | Apache Hadoop | {{< level 2 >}} |

@@ -36,6 +36,7 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 | :------------ | :-------------: |
 | Django        | {{< level 3 >}} |
 | Vue.js        | {{< level 3 >}} |
+| React         | {{< level 3 >}} |
 | Actix         | {{< level 3 >}} |
 | ROS 1         | {{< level 2 >}} |
 | Apache Hadoop | {{< level 2 >}} |
