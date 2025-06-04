@@ -13,7 +13,7 @@ Voici une liste de mes expériences.
 
 ## {{< icon "briefcase-solid" >}} Professionnelles
 
-- {{< badge >}}Prochainement{{< /badge >}} Mai - Août 2025 (4 mois) : **Stagiaire en ingénierie logicielle** @ [Amazon Espagne (Madrid)](https://www.amazon.es/).
+- {{< badge >}}En cours{{< /badge >}} Mai - Août 2025 (4 mois) : **Stagiaire en ingénierie logicielle** @ [Amazon Espagne (Madrid)](https://www.amazon.es/).
 
 - Juin - Août 2024 (3 mois) : **Stagiaire** @ [Université de New-York](https://www.nyu.edu/).
 

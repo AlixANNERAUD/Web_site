@@ -13,7 +13,7 @@ Here is a list of my experiences.
 
 ## {{< icon "briefcase-solid" >}} Professional
 
-- {{< badge >}} Upcoming{{< /badge >}} May - August 2025 (4 months) : **Software engineer intern** @ [Amazon Spain (Madrid)](https://www.amazon.es/).
+- {{< badge >}}Ongoing{{< /badge >}} May - August 2025 (4 months) : **Software engineer intern** @ [Amazon Spain (Madrid)](https://www.amazon.es/).
 
 - June - August 2024 (3 months) : **Intern** @ [New-York University](https://www.nyu.edu/).
 
