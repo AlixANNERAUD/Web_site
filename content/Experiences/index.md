@@ -44,11 +44,26 @@ Here is a list of my experiences.
 
 ## {{< icon "graduation-cap-solid" >}} Education
 
-- {{< badge >}}Ongoing{{< /badge >}}
-  2021 : **Engineering degree** @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+- {{< badge >}}Ongoing{{< /badge >}} 2021 - 2026 : **Engineering degree** @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
 
-  - 3rd to 5th year: specialization in computer science.
-  - 1st & 2nd year: preparatory cycle (common core).
+  - **3rd to 5th year** : specialization in computer science
+    - Advanced algorithms and programming in {{< badge >}}C{{< /badge >}} and compilation
+    - Object-oriented programming in {{< badge >}}Java{{< /badge >}}
+    - Embedded systems and operating systems in {{< badge >}}C{{< /badge >}}
+    - Operations research and optimization
+    - Signal and image processing, information theory
+    - Numerical analysis, machine learning and deep learning ({{< badge >}}Python{{< /badge >}}, {{< badge >}}NumPy{{< /badge >}}, {{< badge >}}PyTorch{{< /badge >}})
+    - Relational databases ({{< badge >}}SQL{{< /badge >}}, {{< badge >}}Postgres{{< /badge >}})
+      and big data ({{< badge >}}Apache Hadoop{{< /badge >}}, {{< badge >}}MongoDB{{< /badge >}})
+    - Full-stack web development ({{< badge >}}Node.js{{< /badge >}}, {{< badge >}}Javascript{{< /badge >}})
+    - Digital law, strategic and financial management, large IT project management
+    - Languages: English, Spanish
+  - **1st & 2nd year** : preparatory cycle (common core)
+    - International Bilingual Section (SIB): half of the courses in English
+    - Applied mathematics and physics
+    - General and organic chemistry
+    - Computer science fundamentals
+    - Languages: English, Spanish
 
 - 2021 : **Scientific baccalaureate** (~ A-level) @ [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/)
 

@@ -42,11 +42,26 @@ Voici une liste de mes expériences.
 
 ## {{< icon "graduation-cap-solid" >}} Éducation
 
-- {{< badge >}}En cours{{< /badge >}}
-  2021 : **Diplôme d'ingénieur** @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
+- {{< badge >}}En cours{{< /badge >}} 2021 - 2026 : **Diplôme d'ingénieur** @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
 
-  - 3e à 5e année : spécialisation en informatique.
-  - 1re et 2e année : cycle préparatoire (tronc commun).
+  - **3e à 5e année** : spécialisation en informatique
+    - Algorithmique et programmation avancée en {{< badge >}}C{{< /badge >}} et compilation
+    - Programmation orientée objet en {{< badge >}}Java{{< /badge >}}
+    - Systèmes embarqués et systèmes d'exploitation en {{< badge >}}C{{< /badge >}}
+    - Recherche opérationnelle et optimisation
+    - Traitement du signal et de l'image, théorie de l'information
+    - Analyse numérique, apprentissage automatique et profond ({{< badge >}}Python{{< /badge >}}, {{< badge >}}NumPy{{< /badge >}}, {{< badge >}}PyTorch{{< /badge >}})
+    - Bases de données relationnelles ({{< badge >}}SQL{{< /badge >}}, {{< badge >}}Postgres{{< /badge >}})
+      et big data ({{< badge >}}Apache Hadoop{{< /badge >}}, {{< badge >}}MongoDB{{< /badge >}})
+    - Développement web full-stack (backend {{< badge >}}Node.js{{< /badge >}}, frontend {{< badge >}}Javascript{{< /badge >}})
+    - Droit numérique, gestion stratégique et financière, maîtrise des grands projets informatiques
+    - Langues : anglais, espagnol
+  - **1re et 2e année** : cycle préparatoire (tronc commun)
+    - Section Internationale Bilingue (SIB) : moitié des cours en anglais
+    - Mathématiques et physique appliquées
+    - Chimie générale et organique
+    - Informatique fondamentale
+    - Langues : anglais, espagnol
 
 - 2021 : **Baccalauréat scientifique** @ [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/)
 
