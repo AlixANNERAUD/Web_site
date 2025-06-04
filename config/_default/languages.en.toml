@@ -4,7 +4,7 @@ languageDirection = "ltr"
 weight = 1
 
 title = "My portfolio"
-copyright = "Copyright Alix ANNERAUD. Built with Hugo and Congo theme."
+copyright = "Alix ANNERAUD. Built with [Hugo](https://gohugo.io/) and [Congo](https://jpanther.github.io/congo/) theme. [GitHub](https://github.com/AlixANNERAUD/Web_site)"
 
 [params]
 dateFormat = "2 January 2006"
