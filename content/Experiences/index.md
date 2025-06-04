@@ -24,8 +24,8 @@ Here is a list of my experiences.
 
   - Research project in gas source localisation (GSL) using mobile and fixed sensors.
   - Conducted research on gas source diffusion using fluid mechanics simulations (Fick's law) and localisation algorithms.
-  - Performed **signal processing** and **data analysis** to interpret sensor readings using Python.
-  - Developed IoT devices for data collection and transmission in C++.
+  - Performed **signal processing** and **data analysis** to interpret sensor readings using {{< badge >}}Python{{< /badge >}}.
+  - Developed IoT devices for data collection and transmission in {{< badge >}}C++{{< /badge >}}.
 
 - 2021 - 2024 (3 years - 20h/month) : **Assistant** to the Corporate Relations Department @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
 

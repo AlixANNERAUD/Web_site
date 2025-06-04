@@ -24,8 +24,8 @@ Voici une liste de mes expériences.
 
   - Projet de recherche en localisation de sources de gaz (GSL) utilisant des capteurs mobiles et fixes.
   - Réalisé des recherches sur la diffusion des gaz à l'aide de simulations en **mécanique des fluides** (loi de Fick) et **d'algorithmes de localisation**.
-  - **Traitement du signal** et **analyse des données** pour interpréter les mesures des capteurs en utilisant Python.
-  - Développement de dispositifs IoT pour la collecte et la transmission des données en C++.
+  - **Traitement du signal** et **analyse des données** pour interpréter les mesures des capteurs en utilisant {{< badge >}}Python{{< /badge >}}.
+  - Développement de dispositifs IoT pour la collecte et la transmission des données en {{< badge >}}C++{{< /badge >}}.
 
 - 2021 - 2024 (3 ans - 20h/mois) : **Assistant** au Département Relations École-Entreprises @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
 
