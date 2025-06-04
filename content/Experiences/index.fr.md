@@ -15,6 +15,11 @@ Voici une liste de mes expériences.
 
 - {{< badge >}}En cours{{< /badge >}} Mai - Août 2025 (4 mois) : **Stagiaire en ingénierie logicielle** @ [Amazon Espagne (Madrid)](https://www.amazon.es/).
 
+  - Développement full-stack dans une équipe Agile de 8 personnes : backend {{< badge >}}Java{{< /badge >}}/{{< badge >}}Coral{{< /badge >}}, frontend {{< badge >}}React{{< /badge >}}/{{< badge >}}Harmony{{< /badge >}}.
+  - Utilisation intensive des services {{< badge >}}AWS{{< /badge >}} (S3, DynamoDB, Athena) pour le cloud computing et le stockage de données.
+  - Création d'outils automatisés en libre-service pour les équipes marketing avec responsabilité complète (conception, développement, déploiement, maintenance).
+  - Travail sur des systèmes à grande échelle déployés mondialement avec des standards élevés de performance, évolutivité et sécurité.
+
 - Juin - Août 2024 (3 mois) : **Stagiaire** @ [Université de New-York](https://www.nyu.edu/).
 
   - Projet de recherche en localisation de sources de gaz (GSL) utilisant des capteurs mobiles et fixes.
