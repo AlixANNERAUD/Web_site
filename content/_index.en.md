@@ -2,14 +2,14 @@
 title: "Home"
 ---
 
-Hey 👋, I'm **Alix**, a French student at the [INSA Rouen](https://www.insa-rouen.fr). Currently in my 4th year of **engineering school**, I'm specializing in **computer science**.
+Hey 👋, I'm **Alix**, a French **computer science** student with a strong background in software development engineering from [INSA Rouen](https://www.insa-rouen.fr).
 
 I'm passionate about **embedded systems**, **machine learning** and **low level programming**. See my [projects](/projects) for more details.
 
 {{< alert "circle-info" >}}
-I am currently looking currently seeking a **work-study contract** starting in September 2025 for my final year of engineering school.
+I am actively seeking **professional opportunities** to further develop my expertise and contribute to innovative projects.
 
-Don't hesitate to check out my [resume](https://resume.alix.anneraud.fr/Resume.english.pdf).
+Feel free to review my [resume](https://resume.alix.anneraud.fr/Resume.english.pdf).
 
 Contact me by email at [alix@anneraud.fr](mailto:alix@anneraud.fr) or on [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).
 {{< /alert >}}
