@@ -9,7 +9,7 @@ Je suis passionné par les **systèmes embarqués**, l'**apprentissage automatiq
 {{< alert "circle-info" >}}
 Je recherche activement des **opportunités professionnelles** pour développer davantage mon expertise et contribuer à des projets innovants.
 
-N'hésitez pas à consulter mon [CV](https://resume.alix.anneraud.fr/Resume.english.pdf).
+N'hésitez pas à consulter mon [CV](https://resume.alix.anneraud.fr/Resume.français.pdf).
 
 Contactez-moi par e-mail à [alix@anneraud.fr](mailto:alix@anneraud.fr) ou sur [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).
 {{< /alert >}}
