@@ -1,0 +1,11 @@
+{{ $pdf_url := .Get "src" }}
+<object
+  data="{{ $pdf_url }}#toolbar=0&navpanes=0&scrollbar=0"
+  width="100%"
+  style="aspect-ratio: 1/1.414"
+  type="application/pdf"
+>
+  <p>
+    Unable to display PDF file. <a href="{{ $pdf_url }}">Download</a> instead.
+  </p>
+</object>
