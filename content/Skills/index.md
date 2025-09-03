@@ -21,11 +21,10 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | C++                     | {{< level 3 >}} |
 | Rust                    | {{< level 3 >}} |
 | Python                  | {{< level 3 >}} |
-| Java                    | {{< level 2 >}} |
-| CSS                     | {{< level 2 >}} |
+| Java                    | {{< level 3 >}} |
+| TypeScript / JavaScript | {{< level 3 >}} |
 | Free Pascal             | {{< level 2 >}} |
 | SQL                     | {{< level 2 >}} |
-| TypeScript / JavaScript | {{< level 2 >}} |
 | Bash                    | {{< level 2 >}} |
 | VHDL                    | {{< level 1 >}} |
 | PHP                     | {{< level 1 >}} |
@@ -37,6 +36,7 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Django        | {{< level 3 >}} |
 | Vue.js        | {{< level 3 >}} |
 | React         | {{< level 3 >}} |
+| Coral         | {{< level 3 >}} |
 | Actix         | {{< level 3 >}} |
 | ROS 1         | {{< level 2 >}} |
 | Apache Hadoop | {{< level 2 >}} |
@@ -49,6 +49,8 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 | Markdown       | {{< level 3 >}} |
 | \\( \LaTeX \\) | {{< level 3 >}} |
 | HTML           | {{< level 3 >}} |
+| CSS            | {{< level 2 >}} |
+| Smithy         | {{< level 2 >}} |
 
 ## {{< icon "dolly-solid" >}} Package managers
 
