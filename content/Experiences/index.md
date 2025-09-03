@@ -15,10 +15,10 @@ Here is a list of my experiences.
 
 - {{< badge >}}Ongoing{{< /badge >}} May - August 2025 (4 months) : **Software engineer intern** @ [Amazon Spain (Madrid)](https://www.amazon.es/).
 
-  - Full-stack development in an 8-person Agile team: {{< badge >}}Java{{< /badge >}}/{{< badge >}}Coral{{< /badge >}} backend, {{< badge >}}React{{< /badge >}}/{{< badge >}}Harmony{{< /badge >}} frontend.
-  - Extensive {{< badge >}}AWS{{< /badge >}} services usage (S3, DynamoDB, Athena) for cloud computing and data storage.
+  - Full-stack development in an 8-person Agile team: {{< badge >}}Java{{< /badge >}}/{{< badge >}}Coral{{< /badge >}} backend, {{< badge >}}TypeScript{{< /badge >}}/{{< badge >}}React{{< /badge >}} frontend.
   - Built automated self-service tools for marketing teams with end-to-end ownership (design, development, deployment, maintenance).
-  - Worked on large-scale systems deployed globally with high standards for performance, scalability, and security.
+  - Extensive {{< badge >}}AWS{{< /badge >}} services usage (API Gateway, Lambda, Redshift, CloudFormation, CDK).
+  - Worked on large-scale systems deployed globally with high standards for code quality, performance and scalability.
 
 - June - August 2024 (3 months) : **Intern** @ [New-York University](https://www.nyu.edu/).
 
