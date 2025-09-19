@@ -20,7 +20,7 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 - {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [dera.page](https://dera.page) : A set of sovereign services offered to INSA Rouen Normandie students: calendar, messaging, social network, etc.
   
-- {{< badge >}}Docker{{< /badge >}} I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends, including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) and more.
+- {{< badge >}}Docker{{< /badge >}} {{< badge >}}Ansible{{< /badge >}} I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends (see [anneraud.fr](https://anneraud.fr)), including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) and more.
 
 - I also contribute to many open-source projects through GitHub Pull Requests, feel free to check out [my GitHub profile](https://github.com/AlixANNERAUD).
 
