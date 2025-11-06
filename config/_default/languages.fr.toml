@@ -3,12 +3,12 @@ languageName = "🇫🇷 Français"
 languageDirection = "ltr"
 weight = 2
 
-title = "Mon portefolio"
+title = "Mon portfolio"
 copyright = "Alix ANNERAUD. Construit avec [Hugo](https://gohugo.io/) et le thème [Congo](https://jpanther.github.io/congo/). [GitHub](https://github.com/AlixANNERAUD/Web_site)"
 
 [params]
 dateFormat = "2 January 2006"
-description = "Le portefolio d'Alix ANNERAUD"
+description = "Le portfolio d'Alix ANNERAUD"
 
 [params.author]
 name = "Alix ANNERAUD"
