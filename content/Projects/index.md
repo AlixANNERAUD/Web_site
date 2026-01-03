@@ -14,14 +14,14 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 - {{< badge >}}Ongoing{{< /badge >}} {{< badge >}}Rust{{< /badge >}} {{< badge >}}C{{< /badge >}} {{< badge >}}C++{{< /badge >}} [Xila](https://github.com/Xila-Project) : An operating system for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
 
+- {{< badge >}}Docker{{< /badge >}} {{< badge >}}Ansible{{< /badge >}} [Infrastructure](https://github.com/AlixANNERAUD/Infrastructure): I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends (see [anneraud.fr](https://anneraud.fr)), including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) and more.
+
 - {{< badge >}}Ongoing{{< /badge >}} Model railway network : Since 2019, I'm building a model railway network in [HO scale](https://en.wikipedia.org/wiki/HO_scale) with [DCC control](https://en.wikipedia.org/wiki/Digital_Command_Control). The whole electronic part is designed by myself (signals, occupancy detection, etc.).
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}JavaScript{{< /badge >}} [Connected speaker](https://github.com/AlixANNERAUD/Connected_speaker) : Designed a remote control system for a TDA7294 based amplifier card using off-the-shelf components and an ESP32, enhancing home entertainment with versatile audio control.
 
 - {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [dera.page](https://dera.page) : A set of sovereign services offered to INSA Rouen Normandie students: calendar, messaging, social network, etc.
   
-- {{< badge >}}Docker{{< /badge >}} {{< badge >}}Ansible{{< /badge >}} I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends (see [anneraud.fr](https://anneraud.fr)), including [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) and more.
-
 - I also contribute to many open-source projects through GitHub Pull Requests, feel free to check out [my GitHub profile](https://github.com/AlixANNERAUD).
 
 ## {{< icon "trophy-solid" >}} Competitions

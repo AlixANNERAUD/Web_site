@@ -14,13 +14,13 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 - {{< badge >}}En cours{{< /badge >}} {{< badge >}}Rust{{< /badge >}} {{< badge >}}C{{< /badge >}} {{< badge >}}C++{{< /badge >}} [Xila](https://xila.dev) : Développement d’un système d’exploitation simple pour microcontrôleurs, initialement en C++. Réécriture partielle en Rust pour améliorer performances et sécurité.
 
+- {{< badge >}}Docker{{< /badge >}} {{< badge >}}Ansible{{< /badge >}} [Infrastructure](https://github.com/AlixANNERAUD/Infrastructure) : Attaché à la souveraineté des données, j'assure l'hébergement de services en ligne pour ma famille, mes amis et moi-même (voir [anneraud.fr](https://anneraud.fr)). Parmi ces services figurent [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) et bien d'autres.
+
 - {{< badge >}}En cours{{< /badge >}} Réseau ferroviaire miniature : Depuis 2019, je construis un réseau ferroviaire miniature à l'échelle [HO](https://fr.wikipedia.org/wiki/%C3%89chelles_de_train_miniature#%C3%89chelle_HO) avec un contrôle [DCC](https://fr.wikipedia.org/wiki/Digital_Command_Control). Toute la partie électronique est conçue par moi-même (signaux, détection d'occupation, etc.).
 
 - {{< badge >}}C++{{< /badge >}} {{< badge >}}JavaScript{{< /badge >}} [Enceinte connectée](https://github.com/AlixANNERAUD/Connected_speaker) : Conception d'un système de télécommande pour une carte d'amplificateur à base de TDA7294 à l'aide de composants disponibles dans le commerce et d'un ESP32, améliorant le contrôle audio polyvalent du divertissement à domicile.
 
 - {{< badge >}}Rust{{< /badge >}} {{< badge >}}Docker{{< /badge >}} [dera.page](https://dera.page/) : Un ensemble de services souverain proposés aux étudiants de l'INSA de Rouen Normandie : agenda, messagerie, réseau social, etc.
-  
-- {{< badge >}}Docker{{< /badge >}} {{< badge >}}Ansible{{< /badge >}} Attaché à la souveraineté des données, j'assure l'hébergement de services en ligne pour ma famille, mes amis et moi-même (voir [anneraud.fr](https://anneraud.fr)). Parmi ces services figurent [Nextcloud](https://nextcloud.com/), [Matrix](https://matrix.org/), [Bitwarden](https://bitwarden.com/), [Jellyfin](https://jellyfin.org/), [Gitea](https://about.gitea.com/) et bien d'autres.
 
 - Je contribue également à de nombreux projet open-source par l'intermédiaire de Pull Requests sur GitHub, n'hésitez pas à consulter [mon profil GitHub](https://github.com/AlixANNERAUD).
 
