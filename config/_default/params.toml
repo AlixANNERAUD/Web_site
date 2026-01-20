@@ -75,6 +75,10 @@ showTermCount = true
 # event = ""
 # script = ""
 
+[umamiAnalytics]
+site = "89a5e147-d520-4293-aa35-f80eb903ae3a"
+script = "https://s.anneraud.fr/script.js"
+
 [verification]
 # google = ""
 # bing = ""
