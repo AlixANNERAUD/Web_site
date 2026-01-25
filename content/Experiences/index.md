@@ -14,13 +14,12 @@ Here is a list of my experiences.
 ## {{< icon "briefcase-solid" >}} Professional
 
 - {{< badge >}}Ongoing{{< /badge >}} December 2025 - August 2026 (9 months): **Network and Telecom Technician** @ [Linkt](https://linkt.fr/).
-  - Level 1 technical support: Receiving and handling client requests via phone and ticketing system.
-  - Network and telecom diagnostics: Incident analysis on VPN MPLS, VoIP, and firewalls for SME clients.
-  - Layer 3 configuration: Remote setup of multi-vendor routers (Cisco, Keenetic, Zyxel, etc.).
-  - Access management: Preliminary troubleshooting of faults on FTTH, FTTO, xDSL, and 4G links, and initiating interventions with infrastructure operators.
-  - Intervention coordination: Liaising with internal and external technical teams when on-site action is required.
-  - SLA monitoring: Ensuring compliance with high restoration time guarantees (SLA ≤ 4h) in a 24/7 environment.
-  - Onboarding and training: Started the position with no prior network experience; upskilled through support and training from internal teams.
+  - Level 1 Technical Support: Receiving and handling client requests via phone and ticketing system.
+  - Network Diagnostics: Initial incident analysis on VPN MPLS, VoIP, and firewalls for SME clients.
+  - Layer 3 Configuration: Remote setup and troubleshooting of multi-vendor routers (Cisco, Keenetic, Zyxel, etc.).
+  - Access Management: Preliminary troubleshooting of faults on FTTH, FTTO, xDSL, and 4G links; coordinating interventions with infrastructure operators.
+  - SLA Compliance: Ensuring incident resolution within strict 4-hour restoration guarantees (GTR/SLA) in a 24/7 environment.
+  - Onboarding & Upskilling: Started the position with no prior network experience; gained technical proficiency through internal team training and peer support.
 
 - May - August 2025 (4 months) : **Software engineer intern** @ [Amazon Spain (Madrid)](https://www.amazon.es/).
   - Full-stack development within an 8-person Agile team in the [US Prime and Marketing Technology](https://amazon.jobs/content/en/teams/north-america-stores/upmt) organization, "Discovery Technology" division.
