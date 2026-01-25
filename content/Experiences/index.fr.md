@@ -13,8 +13,16 @@ Voici une liste de mes expériences.
 
 ## {{< icon "briefcase-solid" >}} Professionnelles
 
-- {{< badge >}}En cours{{< /badge >}} Mai - Août 2025 (4 mois) : **Stagiaire en ingénierie logicielle** @ [Amazon Espagne (Madrid)](https://www.amazon.es/).
+- {{< badge >}}En cours{{< /badge >}} Décembre 2025 - Août 2026 (9 mois) : **Technicien réseau et télécoms** @ [Linkt](https://linkt.fr/).
+  - Support technique N1 : Réception et traitement des sollicitations clients par téléphone et ticketing.
+  - Diagnostic réseau & télécoms : Analyse d'incidents sur VPN MPLS, VoIP et pare-feu pour une clientèle PME/PMI.
+  - Configuration L3 : Paramétrage à distance de routeurs multi-constructeurs (Cisco, Keenetic, Zyxel, etc.).
+  - Gestion des accès : Pré-diagnostic des pannes sur liens FTTH, FTTO, xDSL et 4G, et déclenchement d'interventions auprès des opérateurs d'infrastructure.
+  - Organisation des interventions : Coordination avec les équipes techniques internes et externes lorsqu'une intervention sur site est nécessaire.
+  - Suivi des engagements : Respect des garanties de temps de rétablissement (GTR ≤ 4h) en environnement 24h/7j.
+  - Intégration et formation : Prise de poste sans expérience préalable en réseau ; montée en compétences via l'accompagnement des équipes internes.
 
+- Mai - Août 2025 (4 mois) : **Stagiaire en ingénierie logicielle** @ [Amazon Espagne (Madrid)](https://www.amazon.es/).
   - Développement full-stack au sein d'une équipe Agile de 8 personnes dans l'organisation [US Prime and Marketing Technology](https://amazon.jobs/content/en/teams/north-america-stores/upmt), division "Discovery Technology".
   - Refonte complète d'un outil en libre-service destiné aux équipes marketing avec responsabilité totale du projet (conception, développement, déploiement, audit, maintenance).
   - Technologies utilisées :
@@ -24,14 +32,12 @@ Voici une liste de mes expériences.
   - Travail sur des systèmes à grande échelle déployés dans plusieurs régions AWS avec des exigences élevées en matière de qualité de code, de performance et de scalabilité.
 
 - Juin - Août 2024 (3 mois) : **Stagiaire** @ [Université de New York](https://www.nyu.edu/).
-
   - Projet de recherche en localisation de sources de gaz (GSL) utilisant des capteurs mobiles et fixes.
   - Recherches sur la diffusion des gaz à l'aide de simulations en **mécanique des fluides** (loi de Fick) et **d'algorithmes de localisation**.
   - **Traitement du signal** et **analyse des données** pour interpréter les mesures des capteurs en utilisant {{< badge >}}Python{{< /badge >}}.
   - Développement de dispositifs IoT pour la collecte et la transmission des données en {{< badge >}}C++{{< /badge >}}.
 
 - 2021 - 2024 (3 ans - 20h/mois) : **Assistant** au Département Relations École-Entreprises @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
-
   - Poste polyvalent d'assistance.
   - Collecte et valorisation des données concernant les entreprises partenaires de l'INSA.
   - Prospection des entreprises partenaires pour la collecte de la taxe d'apprentissage.
@@ -46,7 +52,6 @@ Voici une liste de mes expériences.
 ## {{< icon "graduation-cap-solid" >}} Éducation
 
 - {{< badge >}}En cours{{< /badge >}} 2021 - 2026 : **Diplôme d'ingénieur** @ [INSA Rouen Normandie](https://www.insa-rouen.fr).
-
   - **3e à 5e année** : spécialisation en informatique
     - Algorithmique et programmation avancée en {{< badge >}}C{{< /badge >}} et compilation
     - Programmation orientée objet en {{< badge >}}Java{{< /badge >}}
@@ -67,7 +72,6 @@ Voici une liste de mes expériences.
     - Langues : anglais, espagnol
 
 - 2021 : **Baccalauréat scientifique** @ [Institution Jean-Paul II](https://www.institutionjeanpaul2.fr/)
-
   - Spécialités Mathématiques, Physique et Chimie.
   - Section européenne : cours d'anglais supplémentaires.
   - Mention Très Bien.
