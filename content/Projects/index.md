@@ -25,7 +25,7 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 ## {{< icon "trophy-solid" >}} Competitions
 
-- {{< badge >}}CTF{{< /badge >}} 2025 - [Jeanne d’Hack CTF (University of Rouen)](https://www.jeanne-hack-ctf.org/post/): Team "#JeSuisAlix": [1st place in the general ranking (tie with 2 other teams)](https://www.jeanne-hack-ctf.org/post/2025/).
+- {{< badge >}}CTF{{< /badge >}} 2026 - [Jeanne d’Hack CTF (University of Rouen)](https://www.jeanne-hack-ctf.org/post/): Team "#JeSuisAlix": [1st place in the general ranking (tie with 2 other teams)](https://www.jeanne-hack-ctf.org/post/2026/).
 
 - {{< badge >}}Competitive programming{{< /badge >}} 2025 - [Cod'INSA](https://codinsa.org/): Team INSA Rouen : [1st place in the general ranking](https://codinsa.org/static/past).
 
