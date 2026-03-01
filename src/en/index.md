@@ -17,7 +17,7 @@ features:
     linkText: See my experiences
   - icon: ❤️
     title: Passionate about Computing
-    details: I am fortunate to turn my passion into my studies. I enjoy spending my free time exploring new technologies—ranging from web development and cybersecurity to embedded systems and electronics.
+    details: I am fortunate to turn my passion into my studies. I enjoy spending my free time exploring new technologies, ranging from web development and cybersecurity to embedded systems and electronics.
     link: /projects
     linkText: See my projects
   - icon: 🚀

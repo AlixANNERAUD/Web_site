@@ -17,7 +17,7 @@ features:
     linkText: Voir mes expériences
   - icon: ❤️
     title: Passionné par l'informatique
-    details: J'ai la chance de transformer ma passion en mes études. J'aime passer mon temps libre à explorer de nouvelles technologies—allant du développement web et la cybersécurité aux systèmes embarqués et l'électronique.
+    details: J'ai la chance de transformer ma passion en mes études. J'aime passer mon temps libre à explorer de nouvelles technologies, allant du développement web et la cybersécurité aux systèmes embarqués et l'électronique.
     link: /fr/projects
     linkText: Voir mes projets
   - icon: 🚀
