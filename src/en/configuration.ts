@@ -17,22 +17,22 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "Experiences",
-      link: "/en/experiences/",
+      link: "/experiences/",
       activeMatch: "^/experiences",
     },
     {
       text: "Projects",
-      link: "/en/projects/",
+      link: "/projects/",
       activeMatch: "^/projects",
     },
     {
       text: "Skills",
-      link: "/en/skills/",
+      link: "/skills/",
       activeMatch: "^/skills",
     },
     {
       text: "Resume",
-      link: "/en/resume/",
+      link: "/resume/",
       activeMatch: "^/resume",
     },
   ];
