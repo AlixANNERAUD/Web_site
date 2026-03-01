@@ -35,11 +35,11 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 
 | Langage  |        Niveau        |
 | :------- | :------------------: |
-| Markdown | <Level :level="3" /> |
-| LaTeX    | <Level :level="3" /> |
+| Markdown | <Level :level="4" /> |
+| LaTeX    | <Level :level="4" /> |
 | HTML     | <Level :level="3" /> |
-| CSS      | <Level :level="2" /> |
-| Smithy   | <Level :level="2" /> |
+| CSS      | <Level :level="3" /> |
+| Smithy   | <Level :level="3" /> |
 
 ## <Blocks /> Gestionnaires de paquets
 

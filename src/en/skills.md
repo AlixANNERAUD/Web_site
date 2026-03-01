@@ -35,11 +35,11 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 
 | Language |        Level         |
 | :------- | :------------------: |
-| Markdown | <Level :level="3" /> |
-| LaTeX    | <Level :level="3" /> |
+| Markdown | <Level :level="4" /> |
+| LaTeX    | <Level :level="4" /> |
 | HTML     | <Level :level="3" /> |
-| CSS      | <Level :level="2" /> |
-| Smithy   | <Level :level="2" /> |
+| CSS      | <Level :level="3" /> |
+| Smithy   | <Level :level="3" /> |
 
 ## <Blocks /> Package managers
 
