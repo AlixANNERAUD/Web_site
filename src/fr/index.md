@@ -30,6 +30,6 @@ features:
 > [!IMPORTANT]
 > Je suis activement à la recherche d'**opportunités professionnelles** pour développer davantage mon expertise et contribuer à des projets innovants.
 >
-> N'hésitez pas à consulter mon [CV](/fr/resume/).
+> N'hésitez pas à consulter mon [CV](/fr/resume).
 >
 > Vous pouvez m'écrire par email à [alix@anneraud.fr](mailto:alix@anneraud.fr) ou sur [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).

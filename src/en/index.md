@@ -30,6 +30,6 @@ features:
 > [!IMPORTANT]
 > I am actively seeking **professional opportunities** to further develop my expertise and contribute to innovative projects.
 >
-> Feel free to check out my [CV](/resume/).
+> Feel free to check out my [CV](/resume).
 >
 > Contact me by email at [alix@anneraud.fr](mailto:alix@anneraud.fr) or on [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).
