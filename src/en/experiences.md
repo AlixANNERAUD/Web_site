@@ -11,15 +11,17 @@ date="December 2025 - August 2026 (9 months)"
 companyName="Linkt"
 companyUrl="https://linkt.fr/"
 location="Mont-Saint-Aignan, France"
-:tags="['Network', 'Telecom', 'Technical Support', 'Cisco']">
+:tags="['Network & Telecom', 'Customer Relations', 'MPLS & VPN', 'VoIP (SIP/Centrex)', 'Cisco/Juniper/Mikrotik', 'Vue.js (WXT)']">
 
   <ul>
-    <li>Level 1 Technical Support: Receiving and handling client requests via phone and ticketing system.</li>
-    <li>Network Diagnostics: Initial incident analysis on VPN MPLS, VoIP, and firewalls for SME clients.</li>
-    <li>Layer 3 Configuration: Remote setup and troubleshooting of multi-vendor routers (Cisco, Keenetic, Zyxel, etc.).</li>
-    <li>Access Management: Preliminary troubleshooting of faults on FTTH, FTTO, xDSL, and 4G links; coordinating interventions with infrastructure operators.</li>
-    <li>SLA Compliance: Ensuring incident resolution within strict 4-hour restoration guarantees (GTR/SLA) in a 24/7 environment.</li>
-    <li>Onboarding & Upskilling: Started the position with no prior network experience; gained technical proficiency through internal team training and peer support.</li>
+    <li><strong>Level 1 Technical Support & Customer Relations:</strong> Receiving and handling client requests (~8/day) via phone and ticketing system for service interruptions or degradation incidents.</li>
+    <li><strong>Corrective Network Maintenance:</strong> Diagnostics and restoration of VPN IP links on MPLS backbone and redundancy management via VRRP (e.g., 4G/5G backup).</li>
+    <li><strong>Multi-technology & Access:</strong> Fault diagnostics on a heterogeneous network (FTTH/O, xDSL, 4G/5G, Starlink) and coordination of interventions with third-party operators (Orange, SFR, Covage).</li>
+    <li><strong>Layer 2/3 Corrective Configuration:</strong> Remote setup and troubleshooting of routers (Cisco, Keenetic, MikroTik, Juniper): VLAN management, routing, DHCP, and domains.</li>
+    <li><strong>IP Telephony Support:</strong> First-level diagnostics on SIP Trunk / Centrex architectures and assistance with handset configuration during replacements.</li>
+    <li><strong>SLA Compliance:</strong> Strict adherence to restoration guarantees (SLA ≤ 4h) in a critical 24/7 environment.</li>
+    <li><strong>Workflow Optimization (Dev):</strong> Development of a web extension (WXT/Vue.js) to automate diagnostics (signal analysis, IP/Mac lookup) and ticket enrichment.</li>
+    <li><strong>Upskilling:</strong> Rapid learning of network and telecom fundamentals on the job and through self-study, complementing an initial software engineering profile.</li>
   </ul>
 </Experience>
 
@@ -45,11 +47,11 @@ date="June - August 2024 (3 months)"
 companyName="New York University"
 companyUrl="https://www.nyu.edu/"
 location="New York, USA"
-:tags="['Gas Source Localisation', 'Fluid Mechanics', 'Signal Processing', 'Python', 'C++']">
+:tags="['Gas Source Localization', 'Fluid Mechanics', 'Signal Processing', 'Python', 'C++']">
 
   <ul>
-    <li>Research project in gas source localisation (GSL) using mobile and fixed sensors.</li>
-    <li>Research on gas diffusion using <strong>fluid mechanics</strong> simulations (Fick's law) and <strong>localisation algorithms</strong>.</li>
+    <li>Research project in gas source localization (GSL) using mobile and fixed sensors.</li>
+    <li>Research on gas diffusion using <strong>fluid mechanics</strong> simulations (Fick's law) and <strong>localization algorithms</strong>.</li>
     <li><strong>Signal processing</strong> and <strong>data analysis</strong> to interpret sensor measurements using <Badge>Python</Badge>.</li>
     <li>Development of IoT devices for data collection and transmission in <Badge>C++</Badge>.</li>
   </ul>

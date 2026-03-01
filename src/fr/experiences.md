@@ -11,16 +11,18 @@ date="Décembre 2025 - Août 2026 (9 mois)"
 companyName="Linkt"
 companyUrl="https://linkt.fr/"
 location="Mont-Saint-Aignan, France"
-:tags="['Réseau', 'Télécoms', 'Support technique', 'Cisco']">
+:tags="['Réseau & Télécoms', 'Relation client', 'MPLS & VPN', 'VoIP (SIP/Centrex)', 'Cisco/Juniper/Mikrotik', 'Vue.js (WXT)']">
 
-  <ul>
-    <li>Support technique N1 : Réception et traitement des sollicitations clients par téléphone et ticketing.</li>
-    <li>Diagnostic réseau et télécoms : Analyse d'incidents sur VPN MPLS, VoIP et pare-feu pour une clientèle PME/PMI.</li>
-    <li>Configuration L3 : Paramétrage à distance de routeurs multi-constructeurs (Cisco, Keenetic, Zyxel, etc.).</li>
-    <li>Gestion des accès : Pré-diagnostic des pannes sur liens FTTH, FTTO, xDSL et 4G, et déclenchement d'interventions auprès des opérateurs d'infrastructure.</li>
-    <li>Suivi des engagements : Respect des garanties de temps de rétablissement (GTR ≤ 4h) en environnement 24h/7j.</li>
-    <li>Intégration et formation : Prise de poste sans expérience préalable en réseau ; montée en compétences via l'accompagnement des équipes internes.</li>
-  </ul>
+<ul>
+  <li><strong>Support technique N1 & Relation client :</strong> Réception et traitement des sollicitations (appels et tickets, ~8/jour) pour des incidents de coupure ou dégradation de service.</li>
+  <li><strong>Maintenance corrective Réseau :</strong> Diagnostic et rétablissement de liens VPN IP sur backbone MPLS et gestion de la redondance via VRRP (ex: backup 4G/5G).</li>
+  <li><strong>Multi-technologies & Accès :</strong> Diagnostic de pannes sur un parc hétérogène (FTTH/O, xDSL, 4G/5G, Starlink) et coordination d'interventions avec les opérateurs tiers (Orange, SFR, Covage).</li>
+  <li><strong>Configuration curative L2/L3 :</strong> Paramétrage à distance et troubleshooting de routeurs (Cisco, Keenetic, MikroTik, Juniper) : gestion de VLANs, routage, DHCP et domaines.</li>
+  <li><strong>Support Téléphonie IP :</strong> Diagnostic de premier niveau sur architectures Trunk SIP / Centrex et assistance à la configuration de combinés lors de remplacements SAV.</li>
+  <li><strong>Suivi des engagements (SLA) :</strong> Respect rigoureux des garanties de temps de rétablissement (GTR ≤ 4h) en environnement critique 24h/7j.</li>
+  <li><strong>Optimisation du workflow (Dev) :</strong> Développement d'une extension web (WXT/Vue.js) pour automatiser les diagnostics (analyse de signal, IP/Mac lookup) et l'enrichissement des tickets.</li>
+  <li><strong>Montée en compétences :</strong> Apprentissage rapide des fondamentaux réseau et télécoms sur le terrain et en autodidacte, en complément d'un profil initial d'ingénieur logiciel.</li>
+</ul>
 </Experience>
 
 <Experience
