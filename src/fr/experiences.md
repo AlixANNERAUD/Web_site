@@ -42,7 +42,7 @@ location="Madrid, Espagne"
 </Experience>
 
 <Experience
-title="Stagiaire"
+title="Stagiaire en recherche"
 date="Juin - Août 2024 (3 mois)"
 companyName="Université de New York"
 companyUrl="https://www.nyu.edu/"
@@ -58,7 +58,6 @@ location="New York, USA"
 </Experience>
 
 <Experience
-badge="En cours"
 title="Assistant au Département Relations École-Entreprises"
 date="2021 - 2024 (3 ans - 20h/mois)"
 companyName="INSA Rouen Normandie"
@@ -105,7 +104,7 @@ location="Cléon, France">
 <Experience
 badge="En cours"
 title="Diplôme d'ingénieur"
-date="2021 - 2026"
+date="2021 - 2027"
 companyName="INSA Rouen Normandie"
 companyUrl="https://www.insa-rouen.fr"
 location="Rouen, France">

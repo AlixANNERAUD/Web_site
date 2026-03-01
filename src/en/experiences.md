@@ -42,7 +42,7 @@ location="Madrid, Spain"
 </Experience>
 
 <Experience
-title="Intern"
+title="Research Intern"
 date="June - August 2024 (3 months)"
 companyName="New York University"
 companyUrl="https://www.nyu.edu/"
@@ -58,7 +58,6 @@ location="New York, USA"
 </Experience>
 
 <Experience
-badge="Ongoing"
 title="Assistant to the Corporate Relations Department"
 date="2021 - 2024 (3 years - 20h/month)"
 companyName="INSA Rouen Normandie"
@@ -105,7 +104,7 @@ location="Cléon, France">
 <Experience
 badge="Ongoing"
 title="Engineering Degree"
-date="2021 - 2026"
+date="2021 - 2027"
 companyName="INSA Rouen Normandie"
 companyUrl="https://www.insa-rouen.fr"
 location="Rouen, France">
