@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run docs:build"
+  },
+  "devDependencies": {
+    "mermaid": "^11.12.2",
+    "prettier": "3.8.1",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "lucide-vue-next": "^0.575.0",
+    "tailwindcss": "^4.2.1",
+    "vue": "^3.5.26"
+  }
+}

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Inline icon components with proper alignment */
+svg {
+  display: inline;
+  vertical-align: middle;
+}
