@@ -33,13 +33,13 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 
 ## <FileCode /> Markup languages
 
-| Language       |        Level         |
-| :------------- | :------------------: |
-| Markdown       | <Level :level="3" /> |
-| \\( \LaTeX \\) | <Level :level="3" /> |
-| HTML           | <Level :level="3" /> |
-| CSS            | <Level :level="2" /> |
-| Smithy         | <Level :level="2" /> |
+| Language |        Level         |
+| :------- | :------------------: |
+| Markdown | <Level :level="3" /> |
+| LaTeX    | <Level :level="3" /> |
+| HTML     | <Level :level="3" /> |
+| CSS      | <Level :level="2" /> |
+| Smithy   | <Level :level="2" /> |
 
 ## <Blocks /> Package managers
 

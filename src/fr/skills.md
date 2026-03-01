@@ -33,13 +33,13 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 
 ## <FileCode /> Langages de balisage
 
-| Langage        |        Niveau        |
-| :------------- | :------------------: |
-| Markdown       | <Level :level="3" /> |
-| \\( \LaTeX \\) | <Level :level="3" /> |
-| HTML           | <Level :level="3" /> |
-| CSS            | <Level :level="2" /> |
-| Smithy         | <Level :level="2" /> |
+| Langage  |        Niveau        |
+| :------- | :------------------: |
+| Markdown | <Level :level="3" /> |
+| LaTeX    | <Level :level="3" /> |
+| HTML     | <Level :level="3" /> |
+| CSS      | <Level :level="2" /> |
+| Smithy   | <Level :level="2" /> |
 
 ## <Blocks /> Gestionnaires de paquets
 
