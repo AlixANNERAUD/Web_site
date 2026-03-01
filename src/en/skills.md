@@ -76,7 +76,8 @@ Here is a list of my skills. To give you a more concrete idea of my skills, I in
 
 ## <Table /> Legend
 
-- <Level :level="1" /> Beginner
-- <Level :level="2" /> Intermediate
-- <Level :level="3" /> Advanced
-- <Level :level="4" /> Expert
+- <Level :level="1" /> Basic understanding
+- <Level :level="2" /> Working knowledge
+- <Level :level="3" /> Proficient
+- <Level :level="4" /> Highly skilled
+- <Level :level="5" /> Expert mastery

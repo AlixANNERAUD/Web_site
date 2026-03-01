@@ -76,7 +76,8 @@ Voici une liste de mes compétences. Pour vous donner une idée plus concrète d
 
 ## <Table /> Légende
 
-- <Level :level="1" /> Débutant
-- <Level :level="2" /> Intermédiaire
-- <Level :level="3" /> Avancé
-- <Level :level="4" /> Expert
+- <Level :level="1" /> Compréhension de base
+- <Level :level="2" /> Connaissance opérationnelle
+- <Level :level="3" /> Compétence confirmée
+- <Level :level="4" /> Hautement qualifié
+- <Level :level="5" /> Maîtrise experte
