@@ -6,7 +6,7 @@ hero:
   text: "étudiant en génie logiciel"
   tagline: spécialisé en programmation système, logiciel embarqué et développement full-stack, avec un attrait pour Rust, le machine learning et la cybersécurité.
   image:
-    src: /images/alix.png
+    src: /images/alix.webp
     alt: Alix ANNERAUD
 
 features:

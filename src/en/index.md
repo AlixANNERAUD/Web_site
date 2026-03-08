@@ -6,7 +6,7 @@ hero:
   text: "a software engineering student"
   tagline: specialising in systems programming, embedded software, and full-stack development, with a taste for Rust, machine learning, and cybersecurity.
   image:
-    src: /images/alix.png
+    src: /images/alix.webp
     alt: Alix ANNERAUD
 
 features:
