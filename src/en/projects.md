@@ -4,7 +4,7 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 ## <Palette /> Personal
 
-<Project badge="Ongoing" title="Xila" date="2019 - Present" link="https://github.com/Xila-Project" :tags="['Rust', 'WebAssembly']">
+<Project badge="Ongoing" title="Xila" date="2019 - Present" link="https://www.xila.dev" :tags="['Rust', 'WebAssembly']">
 A lightweight operating system for microcontrollers (primarily ESP32-S3), fully rewritten from a legacy C++/Berry architecture to a modern Rust/WebAssembly stack. The Rust core handles hardware abstraction and task scheduling, while a built-in WASM runtime provides a sandboxed, language-agnostic application ecosystem, enabling near-native performance with memory safety enforced at compile time.
 </Project>
 

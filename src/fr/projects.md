@@ -4,7 +4,7 @@ Voici une liste de mes projets pour vous donner une idée de mes compétences et
 
 ## <Palette /> Personnels
 
-<Project badge="En cours" title="Xila" date="2019 - Présent" link="https://github.com/Xila-Project" :tags="['Rust', 'WebAssembly']">
+<Project badge="En cours" title="Xila" date="2019 - Présent" link="https://www.xila.dev" :tags="['Rust', 'WebAssembly']">
 Un système d'exploitation léger pour microcontrôleurs (principalement ESP32-S3), entièrement réécrit depuis une architecture C++/Berry vers une pile moderne Rust/WebAssembly. Le noyau en Rust gère l'abstraction matérielle et l'ordonnancement des tâches, tandis qu'un runtime WASM intégré offre un écosystème d'applications bac à sable, indépendant du langage, permettant des performances proches du natif avec une sûreté mémoire garantie à la compilation.
 </Project>
 
