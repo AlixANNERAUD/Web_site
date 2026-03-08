@@ -21,7 +21,6 @@ location="Mont-Saint-Aignan, France"
   <li><strong>Support Téléphonie IP :</strong> Diagnostic de premier niveau sur architectures Trunk SIP / Centrex et assistance à la configuration de combinés lors de remplacements SAV.</li>
   <li><strong>Suivi des engagements (SLA) :</strong> Respect rigoureux des garanties de temps de rétablissement (GTR ≤ 4h) en environnement critique 24h/7j.</li>
   <li><strong>Optimisation du workflow (Dev) :</strong> Développement d'une extension web (WXT/Vue.js) pour automatiser les diagnostics (analyse de signal, IP/Mac lookup) et l'enrichissement des tickets.</li>
-  <li><strong>Montée en compétences :</strong> Apprentissage rapide des fondamentaux réseau et télécoms sur le terrain et en autodidacte, en complément d'un profil initial d'ingénieur logiciel.</li>
 </ul>
 </Experience>
 
@@ -35,9 +34,9 @@ location="Madrid, Espagne"
 
   <ul>
     <li>Développement full-stack au sein d'une équipe Agile de 8 personnes dans l'organisation <a href="https://amazon.jobs/content/en/teams/north-america-stores/upmt">US Prime and Marketing Technology</a>, division « Discovery Technology ».</li>
-    <li>Refonte complète d'un outil en libre-service destiné aux équipes marketing avec responsabilité totale du projet (conception, développement, déploiement, audit, maintenance).</li>
-    <li>Utilisation intensive des services AWS (API Gateway, Lambda, Redshift, CloudFormation, CDK) pour le cloud computing et le stockage de données.</li>
-    <li>Travail sur des systèmes à grande échelle déployés dans plusieurs régions AWS avec des exigences élevées en matière de qualité de code, de performance et de scalabilité.</li>
+    <li>Pilotage de la refonte complète d'un outil de gestion de campagnes en libre-service utilisé par les équipes marketing dans plusieurs régions AWS, avec responsabilité totale de la conception à la mise en production.</li>
+    <li>Utilisation intensive des services AWS (API Gateway, Lambda, Redshift, CloudFormation, CDK) pour l'infrastructure cloud et les pipelines de données.</li>
+    <li>Travail sur des systèmes à grande échelle et multi-régions avec des exigences strictes en qualité de code, performance et excellence opérationnelle (revues de code, runbooks, monitoring).</li>
   </ul>
 </Experience>
 
@@ -50,10 +49,10 @@ location="New York, USA"
 :tags="['Localisation de sources de gaz', 'Mécanique des fluides', 'Traitement du signal', 'Python', 'C++']">
 
   <ul>
-    <li>Projet de recherche en localisation de sources de gaz (GSL) utilisant des capteurs mobiles et fixes.</li>
-    <li>Recherches sur la diffusion des gaz à l'aide de simulations en <strong>mécanique des fluides</strong> (loi de Fick) et <strong>d'algorithmes de localisation</strong>.</li>
-    <li><strong>Traitement du signal</strong> et <strong>analyse des données</strong> pour interpréter les mesures des capteurs en utilisant <Badge>Python</Badge>.</li>
-    <li>Développement de dispositifs IoT pour la collecte et la transmission des données en <Badge>C++</Badge>.</li>
+    <li>Projet de recherche en localisation de sources de gaz (GSL) combinant des réseaux de capteurs mobiles et fixes pour estimer la position d'une émission gazeuse en environnement intérieur.</li>
+    <li>Modélisation de la diffusion des gaz par simulations en mécanique des fluides (loi de Fick) et développement d'algorithmes de localisation probabilistes.</li>
+    <li>Traitement du signal et analyse statistique des données en <Badge>Python</Badge> pour extraire des caractéristiques pertinentes de mesures bruitées.</li>
+    <li>Conception et réalisation de dispositifs IoT d'acquisition en <Badge>C++</Badge> pour la collecte et la transmission sans fil des données en temps réel.</li>
   </ul>
 </Experience>
 
@@ -66,16 +65,13 @@ location="Rouen, France"
 :tags="['Collecte de données', 'Entreprises partenaires', 'Taxe d\'apprentissage', 'Gestion administrative']">
 
   <ul>
-    <li>Poste polyvalent d'assistance.</li>
-    <li>Collecte et valorisation des données concernant les entreprises partenaires de l'INSA.</li>
-    <li>Prospection des entreprises partenaires pour la collecte de la taxe d'apprentissage.</li>
-    <li>Gestion administrative des dossiers étudiants.</li>
-    <li>Enquête auprès des anciens élèves pour la certification des formations.</li>
+    <li>Collecte, nettoyage et mise à jour d'une base de données sur les entreprises partenaires de l'INSA pour soutenir les actions de relations institutionnelles.</li>
+    <li>Prospection des entreprises partenaires pour la collecte de la taxe d'apprentissage au nom de l'école.</li>
+    <li>Gestion administrative des dossiers étudiants et réalisation d'enquêtes auprès des anciens élèves pour l'accréditation des formations.</li>
   </ul>
 </Experience>
 
 <Experience
-badge="En cours"
 title="Assistant en communication"
 date="2019"
 companyName="Guenola SAHUT"
@@ -83,7 +79,7 @@ companyUrl="https://guenola-sahut.fr/"
 location="France">
 
   <ul>
-    <li>Assistant dans les tâches de communication pour Guenola SAHUT.</li>
+    <li>Assistance aux tâches de communication et de contenu web pour une professionnelle indépendante.</li>
   </ul>
 </Experience>
 

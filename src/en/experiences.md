@@ -21,7 +21,6 @@ location="Mont-Saint-Aignan, France"
     <li><strong>IP Telephony Support:</strong> First-level diagnostics on SIP Trunk / Centrex architectures and assistance with handset configuration during replacements.</li>
     <li><strong>SLA Compliance:</strong> Strict adherence to restoration guarantees (SLA ≤ 4h) in a critical 24/7 environment.</li>
     <li><strong>Workflow Optimization (Dev):</strong> Development of a web extension (WXT/Vue.js) to automate diagnostics (signal analysis, IP/Mac lookup) and ticket enrichment.</li>
-    <li><strong>Upskilling:</strong> Rapid learning of network and telecom fundamentals on the job and through self-study, complementing an initial software engineering profile.</li>
   </ul>
 </Experience>
 
@@ -35,9 +34,9 @@ location="Madrid, Spain"
 
   <ul>
     <li>Full-stack development within an 8-person Agile team in the <a href="https://amazon.jobs/content/en/teams/north-america-stores/upmt">US Prime and Marketing Technology</a> organization, "Discovery Technology" division.</li>
-    <li>Complete refactoring of a self-service tool for marketing teams with full project responsibility (design, development, deployment, audit, maintenance).</li>
-    <li>Extensive use of AWS services (API Gateway, Lambda, Redshift, CloudFormation, CDK) for cloud computing and data storage.</li>
-    <li>Work on large-scale systems deployed across multiple AWS regions with high requirements for code quality, performance, and scalability.</li>
+    <li>Led the complete redesign and refactoring of a self-service campaign management tool used by marketing teams across multiple AWS regions, with full ownership from design to production deployment.</li>
+    <li>Extensive use of AWS services (API Gateway, Lambda, Redshift, CloudFormation, CDK) for cloud infrastructure and data pipelines.</li>
+    <li>Worked on high-scale, multi-region systems with strict requirements for code quality, performance, and operational excellence (code reviews, on-call runbooks, monitoring).</li>
   </ul>
 </Experience>
 
@@ -50,10 +49,10 @@ location="New York, USA"
 :tags="['Gas Source Localization', 'Fluid Mechanics', 'Signal Processing', 'Python', 'C++']">
 
   <ul>
-    <li>Research project in gas source localization (GSL) using mobile and fixed sensors.</li>
-    <li>Research on gas diffusion using <strong>fluid mechanics</strong> simulations (Fick's law) and <strong>localization algorithms</strong>.</li>
-    <li><strong>Signal processing</strong> and <strong>data analysis</strong> to interpret sensor measurements using <Badge>Python</Badge>.</li>
-    <li>Development of IoT devices for data collection and transmission in <Badge>C++</Badge>.</li>
+    <li>Research project in gas source localization (GSL) combining mobile and fixed sensor networks to estimate the position of a gas emission source in indoor environments.</li>
+    <li>Modelled gas diffusion using fluid mechanics simulations (Fick's law) and developed probabilistic localization algorithms.</li>
+    <li>Signal processing and statistical data analysis in <Badge>Python</Badge> to extract meaningful features from noisy sensor readings.</li>
+    <li>Designed and built custom IoT acquisition devices in <Badge>C++</Badge> for real-time data collection and wireless transmission.</li>
   </ul>
 </Experience>
 
@@ -66,16 +65,13 @@ location="Rouen, France"
 :tags="['Data Collection', 'Partner Companies', 'Apprenticeship Tax', 'Administrative Management']">
 
   <ul>
-    <li>Versatile assistance position.</li>
-    <li>Collection and valorization of data concerning INSA partner companies.</li>
-    <li>Canvassing partner companies for the collection of the apprenticeship tax.</li>
-    <li>Administrative management of student files.</li>
-    <li>Alumni survey for course certification.</li>
+    <li>Collected, cleaned, and maintained a database of INSA partner companies to support institutional outreach.</li>
+    <li>Canvassed partner companies to collect apprenticeship tax contributions on behalf of the school.</li>
+    <li>Managed administrative processing of student files and conducted alumni surveys for course accreditation.</li>
   </ul>
 </Experience>
 
 <Experience
-badge="Ongoing"
 title="Communication Assistant"
 date="2019"
 companyName="Guenola SAHUT"
@@ -83,7 +79,7 @@ companyUrl="https://guenola-sahut.fr/"
 location="France">
 
   <ul>
-    <li>Assisted in communication tasks for Guenola SAHUT.</li>
+    <li>Assisted with communication and web content tasks for an independent professional.</li>
   </ul>
 </Experience>
 
