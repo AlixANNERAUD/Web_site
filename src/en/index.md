@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "👋 Hey, I'm Alix,"
   text: "a software engineering student"
-  tagline: with a passion for embedded systems, machine learning, and low-level programming.
+  tagline: specialising in systems programming, embedded software, and full-stack development, with a taste for Rust, machine learning, and cybersecurity.
   image:
     src: /images/alix.png
     alt: Alix ANNERAUD
@@ -12,23 +12,23 @@ hero:
 features:
   - icon: 🌐
     title: International Experience
-    details: Through internships in Spain and the United States, I have gained a global perspective and strengthened my ability to adapt and communicate within multicultural environments.
+    details: Interned at Amazon (Madrid) and NYU (New York), and currently working as a Network & Telecom Engineer at Linkt. I'm comfortable in multicultural, fast-paced professional environments.
     link: /experiences
     linkText: See my experiences
-  - icon: ❤️
-    title: Passionate about Computing
-    details: I am fortunate to turn my passion into my studies. I enjoy spending my free time exploring new technologies, ranging from web development and cybersecurity to embedded systems and electronics.
+  - icon: 🏆
+    title: Competitions & Open Source
+    details: 1st place at Jeanne d'Hack CTF 2026 and Cod'INSA 2025. I also actively contribute to open-source projects and build personal software ranging from an OS for microcontrollers to self-hosted infrastructure.
     link: /projects
     linkText: See my projects
-  - icon: 🚀
-    title: Driven and Ambitious
-    details: I am highly motivated to achieve my goals and deliver quality work. I enjoy taking on technical challenges and am always ready to put in the effort required to see a project through to success.
+  - icon: 🛠️
+    title: Broad Technical Background
+    details: From low-level Rust and C to full-stack web (Vue.js, Django, TypeScript) and cloud (AWS), I work across the stack and enjoy tackling hard problems at any level of the system.
     link: /skills
     linkText: See my skills
 ---
 
 > [!IMPORTANT]
-> I am actively seeking **professional opportunities** to further develop my expertise and contribute to innovative projects.
+> I am looking for a **contrat de professionnalisation** starting in **September 2026**, alongside the resumption of my studies at INSA Rouen Normandie.
 >
 > Feel free to check out my [CV](/resume).
 >
