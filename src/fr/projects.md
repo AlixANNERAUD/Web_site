@@ -12,6 +12,10 @@ Un système d'exploitation léger pour microcontrôleurs (principalement ESP32-S
 Infrastructure auto-hébergée pour moi-même, ma famille et mes amis (voir <a href="https://anneraud.fr">anneraud.fr</a>), gérée avec Docker et Ansible. Les services incluent <a href="https://nextcloud.com/">Nextcloud</a>, <a href="https://matrix.org/">Matrix</a>, <a href="https://bitwarden.com/">Bitwarden</a>, <a href="https://jellyfin.org/">Jellyfin</a>, <a href="https://about.gitea.com/">Gitea</a> et bien d'autres, animée par une conviction forte en faveur de la souveraineté des données.
 </Project>
 
+<Project badge="En cours" title="Mini Train Store" date="2020 - Présent" link="https://github.com/AlixANNERAUD/MiniTrainStore" :tags="['Odoo', 'Docker', 'Vue.js', 'Wxt', 'Tailwind', 'PostgreSQL']">
+Pour moderniser le commerce de trains miniatures de mon père, j'ai développé et déployé une solution e-commerce complète basée sur Odoo (voir <a href="https://www.minitrainstore.fr">minitrainstore.fr</a>). La plateforme est auto-hébergée sur un serveur que je gère. En complément de la boutique, j'ai développé une extension de navigateur sur mesure pour synchroniser l'inventaire directement depuis son compte <a href="https://www.leboncoin.fr">leboncoin.fr</a>, simplifiant sa gestion quotidienne des stocks.
+</Project>
+
 <Project badge="En cours" title="Réseau ferroviaire miniature" date="2019 - Présent">
 Depuis 2019, je construis un réseau ferroviaire miniature à l'échelle <a href="https://en.wikipedia.org/wiki/HO_scale">HO</a> avec commande numérique <a href="https://en.wikipedia.org/wiki/Digital_Command_Control">DCC</a>. Je conçois et fabrique toute l'électronique moi-même, circuits de détection d'occupation de canton et cartes de commande de signaux, alliant conception matérielle et logiciel embarqué pour une signalisation automatisée.
 </Project>
