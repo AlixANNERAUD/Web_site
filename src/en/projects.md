@@ -4,12 +4,12 @@ Here is a list of my projects to provide you with an insight into my skills and 
 
 ## <Palette /> Personal
 
-<Project badge="Ongoing" title="Xila" date="2019 - Present" link="https://github.com/Xila-Project" :tags="['Rust', 'C', 'C++']">
-An operating system for microcontrollers. I'm currently rewriting a significant part of the codebase in Rust in order to make it more robust.
+<Project badge="Ongoing" title="Xila" date="2019 - Present" link="https://github.com/Xila-Project" :tags="['Rust', 'WebAssembly']">
+A lightweight operating system for microcontrollers (primarily ESP32-S3), fully rewritten from a legacy C++/Berry architecture to a modern Rust/WebAssembly stack. The Rust core handles hardware abstraction and task scheduling, while a built-in WASM runtime provides a sandboxed, language-agnostic application ecosystem, enabling near-native performance with memory safety enforced at compile time.
 </Project>
 
 <Project badge="Ongoing" title="Infrastructure" date="2020 - Present" link="https://github.com/AlixANNERAUD/Infrastructure" :tags="['Docker', 'Ansible']">
-I passionately advocate for data sovereignty and personally host and maintain a portion of my online services for myself, my family, and friends (see <a href="https://anneraud.fr">anneraud.fr</a>), including <a href="https://nextcloud.com/">Nextcloud</a>, <a href="https://matrix.org/">Matrix</a>, <a href="https://bitwarden.com/">Bitwarden</a>, <a href="https://jellyfin.org/">Jellyfin</a>, <a href="https://about.gitea.com/">Gitea</a> and more.
+Self-hosted infrastructure for myself, family, and friends (see <a href="https://anneraud.fr">anneraud.fr</a>), managed with Docker and Ansible. Services include <a href="https://nextcloud.com/">Nextcloud</a>, <a href="https://matrix.org/">Matrix</a>, <a href="https://bitwarden.com/">Bitwarden</a>, <a href="https://jellyfin.org/">Jellyfin</a>, <a href="https://about.gitea.com/">Gitea</a> and more, driven by a strong belief in data sovereignty.
 </Project>
 
 <Project badge="Ongoing" title="Mini Train Store" date="2020 - Present" link="https://github.com/AlixANNERAUD/MiniTrainStore" :tags="['Odoo', 'Docker', 'Vue.js', 'Wxt', 'Tailwind', 'PostgreSQL']">
@@ -17,15 +17,15 @@ To modernize my father’s miniature train business, I developed and deployed a 
 </Project>
 
 <Project badge="Ongoing" title="Model railway network" date="2019 - Present">
-Since 2019, I'm building a model railway network in <a href="https://en.wikipedia.org/wiki/HO_scale">HO scale</a> with <a href="https://en.wikipedia.org/wiki/Digital_Command_Control">DCC control</a>. The whole electronic part is designed by myself (signals, occupancy detection, etc.).
+Since 2019, I've been building an <a href="https://en.wikipedia.org/wiki/HO_scale">HO-scale</a> model railway layout with full <a href="https://en.wikipedia.org/wiki/Digital_Command_Control">DCC</a> control. I design and build all the electronics myself, including block occupancy detection circuits and signal control boards, combining hardware design with embedded software for automated signaling.
 </Project>
 
 <Project title="Connected speaker" date="2023" link="https://github.com/AlixANNERAUD/Connected_speaker" :tags="['C++', 'JavaScript']">
-Designed a remote control system for a TDA7294 based amplifier card using off-the-shelf components and an ESP32, enhancing home entertainment with versatile audio control.
+Built a wireless remote control system for a TDA7294-based hi-fi amplifier using an ESP32 and off-the-shelf components. The ESP32 hosts a web interface to control volume, input selection, and power from any device on the local network.
 </Project>
 
 <Project title="dera.page" date="2022 - Present" link="https://dera.page" :tags="['Rust', 'Docker']">
-A set of sovereign services offered to INSA Rouen Normandie students: calendar, messaging, social network, etc.
+A privacy-respecting platform offering shared services to INSA Rouen Normandie students: calendar, instant messaging, and a social network. Self-hosted and built in Rust for performance and reliability.
 </Project>
 
 I also contribute to many open-source projects through GitHub Pull Requests, feel free to check out <a href="https://github.com/AlixANNERAUD">my GitHub profile</a>.
@@ -55,7 +55,7 @@ Project Manager in an agile team as part of the Certified INSA Projects (PIC). D
 </Project>
 
 <Project title="Deez'Nalyzer" date="2024" link="https://github.com/AlixANNERAUD/Deez_Nalyzer" :tags="['Django', 'Vue.js', 'ML']">
-Developed a web application and machine learning models to create music playlists and identify the genre of a song from MP3 excerpts using the Deezer API.
+Built a full-stack web application integrating the Deezer API to extract audio features from MP3 excerpts. Trained and compared machine learning models to classify song genres and generate thematic playlists.
 </Project>
 
 <Project title="Evidential Occupancy Grid Map (EOGM)" date="2024" link="https://github.com/AlixANNERAUD/Evidential_occupancy_map" :tags="['C++', 'ROS']">
@@ -63,25 +63,25 @@ Based on our professor's <a href="https://www.researchgate.net/publication/33717
 </Project>
 
 <Project title="ITI Adventure" date="2024" link="https://github.com/AlixANNERAUD/ITI_aventure" :tags="['Java']">
-A text-based role-playing game developed in Java to put object-oriented programming principles into practice.
+A text-based RPG developed in Java, applying OOP principles through inheritance hierarchies for characters and items, a modular event system, and design patterns such as Strategy and Observer.
 </Project>
 
 <Project title="Huffman (de)compressor" date="2023" link="https://github.com/AlixANNERAUD/Huffman_compressor" :tags="['C']">
-A project where we have to develop a simple huffman (de)compressor.
+Implemented a Huffman (de)compressor from scratch in C, covering tree construction, canonical encoding, and bitstream I/O, an exercise in data structures, bit manipulation, and file handling.
 </Project>
 
 <Project title="Robot mouche" date="2023" link="https://github.com/AlixANNERAUD/Robot_Mouche" :tags="['C++']">
-A project where we have to design a robot hat can either move freely thanks to a remote control over WiFi or follow a line and avoid obstacles using a LiDAR sensor and a camera.
+Designed and programmed a versatile robot in C++: it can be driven remotely via WiFi or operate autonomously, following a line and avoiding obstacles using a LiDAR sensor and a camera.
 </Project>
 
 <Project title="Music danceability" date="2023" link="https://github.com/AlixANNERAUD/Music_danceability_prediction" :tags="['Python']">
-A data science team project where we had to predict the danceability of a song. We extracted data from the Spotify API.
+A data science team project using the Spotify API: we built and compared several ML models to predict a track's danceability score from audio features, including feature engineering and model evaluation.
 </Project>
 
 <Project title="INSAtram" date="2022" link="https://github.com/AlixANNERAUD/INSAtram" :tags="['Free pascal']">
-A managment game about a tramway network. Developed in Free Pascal with SDL 1.2.
+A tram network management game built in Free Pascal with SDL 1.2, featuring route planning, passenger flow simulation, and resource management.
 </Project>
 
 <Project title="System of linear equations calculator" date="2022" link="https://github.com/AlixANNERAUD/System_of_linear_equations_solver" :tags="['C']">
-For solving linear systems.
+A C implementation of Gaussian elimination with partial pivoting to solve arbitrary systems of linear equations.
 </Project>
