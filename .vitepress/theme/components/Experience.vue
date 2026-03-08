@@ -18,7 +18,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  companyLink: {
+  companyUrl: {
     type: String,
     required: true,
   },
@@ -39,7 +39,7 @@ const props = defineProps({
       {{ title }}
 
       @
-      <a :href="companyLink" target="_blank" rel="noopener noreferrer">
+      <a :href="companyUrl" target="_blank" rel="noopener noreferrer">
         {{ companyName }}
       </a>
 
