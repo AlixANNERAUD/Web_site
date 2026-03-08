@@ -1,6 +1,6 @@
 # Experiences
 
-Voici un résumé de mes expériences professionnelles et de ma formation.
+Un aperçu de mon parcours professionnel, de mes stages et de ma formation académique.
 
 ## <BriefcaseBusiness /> Professionnelles
 

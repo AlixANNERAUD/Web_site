@@ -1,6 +1,6 @@
 # Projets
 
-Voici une liste de mes projets pour vous donner une idée de mes compétences et de mes centres d'intérêts.
+Une sélection de projets personnels, scolaires et compétitifs reflétant mes intérêts et mon parcours technique.
 
 ## <Palette /> Personnels
 

@@ -1,6 +1,6 @@
 # Experiences
 
-Here is a summary of my professional experiences and education.
+An overview of my professional background, internships, and academic training.
 
 ## <BriefcaseBusiness /> Professional
 

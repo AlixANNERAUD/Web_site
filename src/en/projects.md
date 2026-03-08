@@ -1,6 +1,6 @@
 # Projects
 
-Here is a list of my projects to provide you with an insight into my skills and interests.
+A selection of personal, academic, and competitive projects reflecting my interests and technical background.
 
 ## <Palette /> Personal
 

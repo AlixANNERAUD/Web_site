@@ -1,6 +1,6 @@
 # Skills
 
-Here is a list of my skills. To give you a more concrete idea of my skills, I invite you to check out [my projects](/projects)
+An overview of my technical skills and language proficiency. For context on how I apply them, see [my projects](/projects).
 
 ## <SquareCode /> Programming languages
 
