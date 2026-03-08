@@ -98,6 +98,24 @@ location="Cléon, France">
 ## <GraduationCap /> Education
 
 <Experience
+title="Project Manager"
+date="2025 (1 semester, ~20h/week)"
+companyName="ThéraPIC (INSA Rouen Normandie × Centre Henri Becquerel)"
+companyUrl="https://www.becquerel.fr/"
+location="Rouen, France"
+:tags="['Django', 'Vue.js', 'TypeScript', 'Tailwind', 'PostgreSQL', 'Docker', 'Ansible', 'NLP', 'Agile']">
+
+  <ul>
+    <li>Led a 6-person agile team over a full semester (~20h/week) as part of the Certified INSA Projects (PIC) programme.</li>
+    <li>Worked directly with pharmacists at <a href="https://www.becquerel.fr/">Centre Henri Becquerel</a> (cancer care centre) as the external client: gathered requirements, ran sprint reviews, and managed deliverables.</li>
+    <li>Delivered a full-stack web application to semi-automate medication prescription management, reducing manual processing time for clinical staff.</li>
+    <li>Stack: <strong>TypeScript / Vue.js / Tailwind</strong> frontend, <strong>Python / Django</strong> REST backend, <strong>PostgreSQL</strong> database, served behind an <strong>Nginx</strong> reverse proxy, fully containerised with <strong>Docker Compose</strong> and deployed via <strong>Ansible</strong>.</li>
+    <li>Applied NLP to extract structured information (diseases, medications, dosages) from unstructured clinical reports.</li>
+    <li>Enforced software quality throughout: comprehensive unit and integration tests, API documentation, code reviews, and CI pipeline.</li>
+  </ul>
+</Experience>
+
+<Experience
 badge="Ongoing"
 title="Engineering Degree"
 date="2021 - 2027"

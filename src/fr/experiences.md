@@ -98,6 +98,24 @@ location="Cléon, France">
 ## <GraduationCap /> Éducation
 
 <Experience
+title="Chef de projet"
+date="2025 (1 semestre, ~20h/semaine)"
+companyName="ThéraPIC (INSA Rouen Normandie × Centre Henri Becquerel)"
+companyUrl="https://www.becquerel.fr/"
+location="Rouen, France"
+:tags="['Django', 'Vue.js', 'TypeScript', 'Tailwind', 'PostgreSQL', 'Docker', 'Ansible', 'NLP', 'Agile']">
+
+  <ul>
+    <li>Pilotage d'une équipe agile de 6 personnes sur un semestre complet (~20h/semaine) dans le cadre des Projets INSA Certifiés (PIC).</li>
+    <li>Collaboration directe avec les pharmaciens du <a href="https://www.becquerel.fr/">Centre Henri Becquerel</a> (centre de cancérologie) en tant que client externe : recueil des besoins, animation des revues de sprint et gestion des livrables.</li>
+    <li>Livraison d'une application web full-stack semi-automatisant la gestion des prescriptions médicamenteuses, réduisant le temps de traitement manuel pour le personnel clinique.</li>
+    <li>Stack : frontend <strong>TypeScript / Vue.js / Tailwind</strong>, backend REST <strong>Python / Django</strong>, base de données <strong>PostgreSQL</strong>, servi derrière un reverse proxy <strong>Nginx</strong>, intégralement conteneurisé avec <strong>Docker Compose</strong> et déployé via <strong>Ansible</strong>.</li>
+    <li>Application du TALN pour extraire des informations structurées (maladies, médicaments, posologies) depuis des comptes-rendus cliniques non structurés.</li>
+    <li>Qualité logicielle tout au long du projet : tests unitaires et d'intégration, documentation de l'API, revues de code et pipeline CI.</li>
+  </ul>
+</Experience>
+
+<Experience
 badge="En cours"
 title="Diplôme d'ingénieur"
 date="2021 - 2027"

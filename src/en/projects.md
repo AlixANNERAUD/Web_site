@@ -50,10 +50,6 @@ Team "Les Schtroumpfs": <a href="https://tracs.viarezo.fr/edition_results/show_s
 
 ## <GraduationCap /> School
 
-<Project title="ThéraPIC" date="2025" :tags="['Django', 'Vue.js', 'NLP']">
-Project Manager in an agile team as part of the Certified INSA Projects (PIC). Development of an application for pharmacists at <a href="https://www.becquerel.fr/">Centre Henri Becquerel</a> to semi-automate the management of medication prescriptions. This project involves the use of structured data and the enhancement of unstructured data through natural language processing (identifying diseases, medications, etc. in reports, etc.).
-</Project>
-
 <Project title="Deez'Nalyzer" date="2024" link="https://github.com/AlixANNERAUD/Deez_Nalyzer" :tags="['Django', 'Vue.js', 'ML']">
 Built a full-stack web application integrating the Deezer API to extract audio features from MP3 excerpts. Trained and compared machine learning models to classify song genres and generate thematic playlists.
 </Project>

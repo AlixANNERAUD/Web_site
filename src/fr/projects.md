@@ -46,10 +46,6 @@ Je contribue également à de nombreux projets open-source par l'intermédiaire 
 
 ## <GraduationCap /> Scolaires
 
-<Project title="ThéraPIC" date="2025" :tags="['Django', 'Vue.js', 'NLP']">
-Chef de projet au sein d'une équipe agile dans le cadre des Projets INSA Certifiés (PIC). Développement d'une application destinée aux pharmaciens du <a href="https://www.becquerel.fr/">Centre Henri Becquerel</a> pour la gestion semi-automatique des prescriptions médicamenteuses. Ce projet inclut l'utilisation de données structurées et la valorisation de données non structurées par le biais du traitement automatique du langage naturel (identification de maladies, de médicaments, etc. dans des comptes-rendus, etc.).
-</Project>
-
 <Project title="Deez'Nalyzer" date="2024" link="https://github.com/AlixANNERAUD/Deez_Nalyzer" :tags="['Django', 'Vue.js', 'ML']">
 Développement d'une application web full-stack intégrant l'API Deezer pour extraire les caractéristiques audio d'extraits MP3. Entraînement et comparaison de modèles de machine learning pour classifier les genres musicaux et générer des playlists thématiques.
 </Project>
