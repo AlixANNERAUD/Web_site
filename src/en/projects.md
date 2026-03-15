@@ -12,7 +12,7 @@ A lightweight operating system for microcontrollers (primarily ESP32-S3), fully 
 Self-hosted infrastructure for myself, family, and friends (see <a href="https://anneraud.fr">anneraud.fr</a>), managed with Docker and Ansible. Services include <a href="https://nextcloud.com/">Nextcloud</a>, <a href="https://matrix.org/">Matrix</a>, <a href="https://bitwarden.com/">Bitwarden</a>, <a href="https://jellyfin.org/">Jellyfin</a>, <a href="https://about.gitea.com/">Gitea</a> and more, driven by a strong belief in data sovereignty.
 </Project>
 
-<Project badge="Ongoing" title="Mini Train Store" date="2020 - Present" link="https://github.com/AlixANNERAUD/MiniTrainStore" :tags="['Odoo', 'Docker', 'Vue.js', 'Wxt', 'Tailwind', 'PostgreSQL']">
+<Project badge="Ongoing" title="Mini Train Store" date="2026 - Present" link="https://github.com/AlixANNERAUD/MiniTrainStore" :tags="['Odoo', 'Docker', 'Vue.js', 'Wxt', 'Tailwind', 'PostgreSQL']">
 To modernize my father’s miniature train business, I developed and deployed a comprehensive e-commerce solution based on Odoo (see <a href="https://www.minitrainstore.fr">minitrainstore.fr</a>). The platform is self-hosted on a server I manage. In addition to the storefront, I built a custom browser extension to synchronize inventory directly from his <a href="https://www.leboncoin.fr">leboncoin.fr</a> account, streamlining his daily stock management.
 </Project>
 
