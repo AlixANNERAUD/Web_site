@@ -35,6 +35,14 @@ const configuration = defineConfig({
   },
   head: [
     [
+      "link",
+      {
+        rel: "icon",
+        href: "/images/icon.png",
+        type: "image/png",
+      },
+    ],
+    [
       "script",
       {
         defer: "",
