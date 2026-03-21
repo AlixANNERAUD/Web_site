@@ -8,8 +8,9 @@ Une sélection de projets personnels, scolaires et compétitifs reflétant mes i
 Un système d'exploitation léger pour microcontrôleurs (principalement ESP32-S3), entièrement réécrit depuis une architecture C++/Berry vers une pile moderne Rust/WebAssembly. Le noyau en Rust gère l'abstraction matérielle et l'ordonnancement des tâches, tandis qu'un runtime WASM intégré offre un écosystème d'applications bac à sable, indépendant du langage, permettant des performances proches du natif avec une sûreté mémoire garantie à la compilation.
 </Project>
 
-<Project title="Infrastructure" date="2020 - Présent" link="https://github.com/AlixANNERAUD/Infrastructure" :tags="['Docker', 'Ansible']">
+<Project title="Infrastructure" date="2020 - Présent" link="https://github.com/AlixANNERAUD/Infrastructure" :tags="['Docker', 'Ansible', 'Debian']">
 Infrastructure auto-hébergée pour moi-même, ma famille et mes amis (voir <a href="https://anneraud.fr">anneraud.fr</a>), gérée avec Docker et Ansible. Les services incluent <a href="https://nextcloud.com/">Nextcloud</a>, <a href="https://matrix.org/">Matrix</a>, <a href="https://bitwarden.com/">Bitwarden</a>, <a href="https://jellyfin.org/">Jellyfin</a>, <a href="https://about.gitea.com/">Gitea</a> et bien d'autres, animée par une conviction forte en faveur de la souveraineté des données.
+L'intégralité du stack repose sur Debian, mon système d'exploitation de prédilection pour sa stabilité et son efficacité, aussi bien en tant que base serveur qu'en tant que daily driver.
 </Project>
 
 <Project badge="En cours" title="Mini Train Store" date="2026 - Présent" link="https://github.com/AlixANNERAUD/MiniTrainStore" :tags="['Odoo', 'Docker', 'Vue.js', 'Wxt', 'Tailwind', 'PostgreSQL']">
