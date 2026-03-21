@@ -10,7 +10,7 @@ A lightweight operating system for microcontrollers (primarily ESP32-S3), fully 
 
 <Project badge="Ongoing" title="Infrastructure" date="2020 - Present" link="https://github.com/AlixANNERAUD/Infrastructure" :tags="['Docker', 'Ansible', 'Debian']">
 Self-hosted infrastructure for myself, family, and friends (see <a href="https://anneraud.fr">anneraud.fr</a>), managed with Docker and Ansible. Services include <a href="https://nextcloud.com/">Nextcloud</a>, <a href="https://matrix.org/">Matrix</a>, <a href="https://bitwarden.com/">Bitwarden</a>, <a href="https://jellyfin.org/">Jellyfin</a>, <a href="https://about.gitea.com/">Gitea</a> and more, driven by a strong belief in data sovereignty.
-The entire stack runs on Debian, my preferred operating system for its stability and efficiency, both as a server base and as my daily driver.
+The entire stack runs on Debian (Linux), my preferred operating system for its stability and efficiency, both as a server base and as my daily driver.
 </Project>
 
 <Project badge="Ongoing" title="Mini Train Store" date="2026 - Present" link="https://github.com/AlixANNERAUD/MiniTrainStore" :tags="['Odoo', 'Docker', 'Vue.js', 'Wxt', 'Tailwind', 'PostgreSQL']">
