@@ -1,7 +1,8 @@
 import { LocaleSpecificConfig, type DefaultTheme } from "vitepress";
 
 export const ENGLISH_CONFIGURATION: LocaleSpecificConfig = {
-  description: "Vite & Vue powered static site generator.",
+  description:
+    "Portfolio of a software engineering student specializing in systems programming, embedded software, and full-stack development.",
 
   themeConfig: {
     nav: nav(),

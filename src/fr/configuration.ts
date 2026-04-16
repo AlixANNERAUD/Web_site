@@ -1,7 +1,8 @@
 import { LocaleSpecificConfig, type DefaultTheme } from "vitepress";
 
 export const FRENCH_CONFIGURATION: LocaleSpecificConfig = {
-  description: "Un portfolio de développeur frontend construit avec VitePress.",
+  description:
+    "Portfolio d'un etudiant en genie logiciel specialise en programmation systeme, embarquee et developpement full-stack.",
 
   themeConfig: {
     nav: nav(),
