@@ -7,7 +7,7 @@ Conformément aux dispositions de l'article 6 de la Loi n° 2004-575 du 21 juin 
 Le site **alix.anneraud.fr** est un site personnel à vocation non commerciale (portfolio professionnel).
 
 - **Directeur de la publication et responsable éditorial :** Alix ANNERAUD
-- **Statut :** Particulier / Étudiant
+- **Statut :** Particulier
 - **Contact :** alix@anneraud.fr
 
 _Note : Conformément à l'article 6, III, 2° de la loi n° 2004-575 du 21 juin 2004, l'éditeur a choisi de conserver l'anonymat concernant son adresse postale personnelle. Ces données ont été transmises de manière sécurisée et conforme aux hébergeurs et gestionnaires de domaine mentionnés ci-dessous._
