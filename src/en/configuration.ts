@@ -9,7 +9,7 @@ export const ENGLISH_CONFIGURATION: LocaleSpecificConfig = {
 
     footer: {
       message:
-        "Alix ANNERAUD - <a href='https://mit-license.org/'>MIT License</a> - Powered by <a href='https://vitepress.dev/'>VitePress</a>",
+        "Alix ANNERAUD - <a href='https://mit-license.org/'>MIT License</a> - Powered by <a href='https://vitepress.dev/'>VitePress</a> - <a href='/legal-notice'>Legal Notice</a>",
     },
   },
 };

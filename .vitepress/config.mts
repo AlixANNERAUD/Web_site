@@ -54,10 +54,8 @@ const configuration = defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     i18nRouting: true,
-
     footer: {
-      message:
-        "Administré par <a href='https://alix.anneraud.fr'>Alix ANNERAUD</a> - Sous licence <a href='https://mit-license.org/'>MIT</a> - Conçu avec <a href='https://vitepress.dev/'>VitePress</a>",
+      message: "",
     },
     socialLinks: [
       {

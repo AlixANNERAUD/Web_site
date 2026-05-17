@@ -8,7 +8,7 @@ export const FRENCH_CONFIGURATION: LocaleSpecificConfig = {
     nav: nav(),
     footer: {
       message:
-        "Alix ANNERAUD - <a href='https://mit-license.org/'>Licence MIT</a> - Conçu avec <a href='https://vitepress.dev/'>VitePress</a>",
+        "Alix ANNERAUD - <a href='https://mit-license.org/'>Licence MIT</a> - Conçu avec <a href='https://vitepress.dev/'>VitePress</a> - <a href='/fr/legal-notice'>Mentions légales</a>",
     },
     docFooter: {
       prev: "Précédent",
