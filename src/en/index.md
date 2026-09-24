@@ -26,10 +26,3 @@ features:
     link: /skills
     linkText: See my skills
 ---
-
-> [!IMPORTANT]
-> I am looking for a **contrat de professionnalisation** starting in **September 2026**, alongside the resumption of my studies at INSA Rouen Normandie.
->
-> Feel free to check out my [CV](/resume).
->
-> Contact me by email at [alix@anneraud.fr](mailto:alix@anneraud.fr) or on [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).

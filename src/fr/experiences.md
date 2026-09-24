@@ -6,8 +6,15 @@ Un aperçu de mon parcours professionnel, de mes stages et de ma formation acad�
 
 <Experience
 badge="En cours"
+title="Ingénieur sécurité"
+date="Septembre 2026 - Août 2027 (1 an)"
+companyName="Amazon Espagne (Madrid)"
+companyUrl="https://memo.bank/"
+location="Paris, France" />
+
+<Experience
 title="Technicien réseau et télécoms"
-date="Décembre 2025 - Août 2026 (9 mois)"
+date="Décembre 2025 - Septembre 2026 (10 mois)"
 companyName="Linkt"
 companyUrl="https://linkt.fr/"
 location="Mont-Saint-Aignan, France"

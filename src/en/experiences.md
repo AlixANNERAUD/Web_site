@@ -6,8 +6,15 @@ An overview of my professional background, internships, and academic training.
 
 <Experience
 badge="Ongoing"
+title="Security engineer"
+date="September 2026 - September 2027 (1 year)"
+companyName="Memo Bank"
+companyUrl="https://memo.bank/"
+location="Paris, France" />
+
+<Experience
 title="Network and Telecom Technician"
-date="December 2025 - August 2026 (9 months)"
+date="December 2025 - September 2026 (10 months)"
 companyName="Linkt"
 companyUrl="https://linkt.fr/"
 location="Mont-Saint-Aignan, France"

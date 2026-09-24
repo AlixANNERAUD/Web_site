@@ -26,10 +26,3 @@ features:
     link: /fr/skills
     linkText: Voir mes compétences
 ---
-
-> [!IMPORTANT]
-> Je recherche un **contrat de professionnalisation** à partir de **septembre 2026**, en parallèle de la reprise de mes études à l'INSA Rouen Normandie.
->
-> N'hésitez pas à consulter mon [CV](/fr/resume).
->
-> Vous pouvez m'écrire par email à [alix@anneraud.fr](mailto:alix@anneraud.fr) ou sur [LinkedIn](https://www.linkedin.com/in/alix-anneraud/).
