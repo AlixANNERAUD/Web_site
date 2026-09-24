@@ -8,7 +8,7 @@ Un aperçu de mon parcours professionnel, de mes stages et de ma formation acad�
 badge="En cours"
 title="Ingénieur sécurité"
 date="Septembre 2026 - Août 2027 (1 an)"
-companyName="Amazon Espagne (Madrid)"
+companyName="Memo Bank"
 companyUrl="https://memo.bank/"
 location="Paris, France" />
 
