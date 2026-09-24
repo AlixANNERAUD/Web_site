@@ -23,7 +23,7 @@ location="Mont-Saint-Aignan, France"
   <ul>
     <li><strong>Level 1 Technical Support & Customer Relations:</strong> Receiving and handling client requests (~8/day) via phone and ticketing system for service interruptions or degradation incidents.</li>
     <li><strong>Corrective Network Maintenance:</strong> Diagnostics and restoration of VPN IP links on MPLS backbone and redundancy management via VRRP (e.g., 4G/5G backup).</li>
-    <li><strong>Multi-technology & Access:</strong> Fault diagnostics on a heterogeneous network (FTTH/O, xDSL, 4G/5G, Starlink) and coordination of interventions with third-party operators (Orange, SFR, Covage).</li>
+    <li><strong>Multi-technology & Access:</strong> Fault diagnostics on a heterogeneous network (FTTx, xDSL, 4G/5G, Starlink) and coordination of interventions with third-party operators (Orange, SFR, Covage).</li>
     <li><strong>Layer 2/3 Corrective Configuration:</strong> Remote setup and troubleshooting of routers (Cisco, Keenetic, MikroTik, Juniper): VLAN management, routing, DHCP, and domains.</li>
     <li><strong>IP Telephony Support:</strong> First-level diagnostics on SIP Trunk / Centrex architectures and assistance with handset configuration during replacements.</li>
     <li><strong>SLA Compliance:</strong> Strict adherence to restoration guarantees (SLA ≤ 4h) in a critical 24/7 environment.</li>
