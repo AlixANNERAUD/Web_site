@@ -65,6 +65,17 @@ Un aperçu de mes compétences techniques et linguistiques. Pour voir comment je
 | Bash               | <Level :level="1" /> |
 | Make               | <Level :level="1" /> |
 
+## <Bot /> Développement agentique
+
+J'utilise régulièrement des agents de code pour accélérer le développement tout en conservant une validation technique humaine des changements.
+
+| Compétence                           |        Niveau        |
+| :----------------------------------- | :------------------: |
+| OpenCode / Claude Code / Codex       | <Level :level="4" /> |
+| Workflows de développement agentique | <Level :level="4" /> |
+| Intégration d'outils et serveurs MCP | <Level :level="3" /> |
+| Agents avec Git, GitHub, tests et CI | <Level :level="4" /> |
+
 ## <Earth /> Communication
 
 | Langue        |          Niveau          |

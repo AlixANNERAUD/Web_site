@@ -65,6 +65,17 @@ An overview of my technical skills and language proficiency. For context on how 
 | Bash               | <Level :level="1" /> |
 | Make               | <Level :level="1" /> |
 
+## <Bot /> Agentic development
+
+I regularly use coding agents to accelerate development while retaining human technical validation of the changes they produce.
+
+| Skill                                  |        Level         |
+| :------------------------------------- | :------------------: |
+| OpenCode / Claude Code / Codex         | <Level :level="4" /> |
+| Agentic development workflows          | <Level :level="4" /> |
+| Tool and MCP server integration        | <Level :level="3" /> |
+| Agents with Git, GitHub, tests, and CI | <Level :level="4" /> |
+
 ## <Earth /> Communication
 
 | Language     |          Level          |

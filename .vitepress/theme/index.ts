@@ -4,6 +4,7 @@ import { App } from "vue";
 import {
   AppWindow,
   Blocks,
+  Bot,
   BriefcaseBusiness,
   Earth,
   FileCode,
@@ -25,6 +26,7 @@ const ADDITIONAL_COMPONENTS = [
   { name: "FileCode", component: FileCode },
   { name: "Blocks", component: Blocks },
   { name: "AppWindow", component: AppWindow },
+  { name: "Bot", component: Bot },
   { name: "Earth", component: Earth },
 ];
 
