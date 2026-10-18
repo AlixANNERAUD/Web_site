@@ -1,190 +1,106 @@
 # Expériences
 
-Un aperçu de mon parcours professionnel, de mes stages et de ma formation académique.
+Un parcours entre ingénierie logicielle, systèmes, sécurité, réseau et recherche. Les réalisations techniques se retrouvent également dans [mes projets](/fr/projects).
 
-## <BriefcaseBusiness /> Professionnelles
-
-<Experience
-badge="En cours"
-title="Ingénieur sécurité"
-date="Septembre 2026 - Août 2027 (1 an)"
-companyName="Memo Bank"
-companyUrl="https://memo.bank/"
-location="Paris, France" />
+## <BriefcaseBusiness /> Expériences professionnelles
 
 <Experience
-title="Technicien réseau et télécoms"
-date="Décembre 2025 - Septembre 2026 (10 mois)"
-companyName="Linkt"
-companyUrl="https://linkt.fr/"
-location="Mont-Saint-Aignan, France"
-:tags="['Réseau & Télécoms', 'Relation client', 'MPLS & VPN', 'VoIP (SIP/Centrex)', 'Cisco/Juniper/Mikrotik', 'Vue.js (WXT)']">
+  badge="En cours"
+  title="Ingénieur sécurité"
+  date="Septembre 2026 – Août 2027"
+  companyName="Memo Bank"
+  companyUrl="https://memo.bank/"
+  location="Paris, France"
+  :tags="['Sécurité', 'Ingénierie logicielle']"
+/>
 
+<Experience
+  title="Technicien réseau et télécoms"
+  date="Décembre 2025 – Septembre 2026"
+  companyName="Linkt"
+  companyUrl="https://linkt.fr/"
+  location="Mont-Saint-Aignan, France"
+  :tags="['Réseau L2/L3', 'MPLS', 'VoIP', 'Vue.js', 'WXT']"
+>
 <ul>
-  <li><strong>Support technique N1 & Relation client :</strong> Réception et traitement des sollicitations (appels et tickets, ~8/jour) pour des incidents de coupure ou dégradation de service.</li>
-  <li><strong>Maintenance corrective Réseau :</strong> Diagnostic et rétablissement de liens VPN IP sur backbone MPLS et gestion de la redondance via VRRP (ex: backup 4G/5G).</li>
-  <li><strong>Multi-technologies & Accès :</strong> Diagnostic de pannes sur un parc hétérogène (FTTx, xDSL, 4G/5G, Starlink) et coordination d'interventions avec les opérateurs tiers (Orange, SFR, Covage).</li>
-  <li><strong>Configuration curative L2/L3 :</strong> Paramétrage à distance et troubleshooting de routeurs (Cisco, Keenetic, MikroTik, Juniper) : gestion de VLANs, routage, DHCP et domaines.</li>
-  <li><strong>Support Téléphonie IP :</strong> Diagnostic de premier niveau sur architectures Trunk SIP / Centrex et assistance à la configuration de combinés lors de remplacements SAV.</li>
-  <li><strong>Suivi des engagements (SLA) :</strong> Respect rigoureux des garanties de temps de rétablissement (GTR ≤ 4h) en environnement critique 24h/7j.</li>
-  <li><strong>Optimisation du workflow (Dev) :</strong> Développement d'une extension web (WXT/Vue.js) pour automatiser les diagnostics (analyse de signal, IP/Mac lookup) et l'enrichissement des tickets.</li>
+  <li>Diagnostic et résolution d'incidents sur des accès FTTH/FTTO, xDSL, 4G/5G et des VPN sur backbone MPLS, avec coordination des opérateurs partenaires.</li>
+  <li>Dépannage de routeurs Cisco, Juniper, MikroTik et Keenetic : VLAN, routage, DHCP, redondance VRRP et téléphonie SIP.</li>
+  <li>Développement d'une extension de navigateur <strong>Vue.js/WXT</strong> pour faciliter la collecte d'informations réseau et les diagnostics dans les tickets.</li>
 </ul>
 </Experience>
 
 <Experience
-title="Stagiaire en ingénierie logicielle"
-date="Mai - Août 2025 (4 mois)"
-companyName="Amazon Espagne (Madrid)"
-companyUrl="https://www.amazon.es/"
-location="Madrid, Espagne"
-:tags="['Ingénierie logicielle', 'Java', 'Coral', 'Python', 'React', 'AWS']">
-
-  <ul>
-    <li>Développement full-stack au sein d'une équipe Agile de 8 personnes dans l'organisation <a href="https://amazon.jobs/content/en/teams/north-america-stores/upmt">US Prime and Marketing Technology</a>, division « Discovery Technology ».</li>
-    <li>Pilotage de la refonte complète d'un outil de gestion de campagnes en libre-service utilisé par les équipes marketing dans plusieurs régions AWS, avec responsabilité totale de la conception à la mise en production.</li>
-    <li>Utilisation intensive des services AWS (API Gateway, Lambda, Redshift, CloudFormation, CDK) pour l'infrastructure cloud et les pipelines de données.</li>
-    <li>Travail sur des systèmes à grande échelle et multi-régions avec des exigences strictes en qualité de code, performance et excellence opérationnelle (revues de code, runbooks, monitoring).</li>
-  </ul>
+  title="Stagiaire en ingénierie logicielle"
+  date="Mai – Août 2025"
+  companyName="Amazon"
+  companyUrl="https://www.amazon.es/"
+  location="Madrid, Espagne"
+  :tags="['Java', 'Python', 'React', 'AWS', 'Redshift']"
+>
+<ul>
+  <li>Modernisation d'un outil interne de recherche et de diagnostic des contenus pour les équipes marketing.</li>
+  <li>Travail sur la performance des requêtes, l'expérience utilisateur et la prise en charge de plusieurs régions.</li>
+  <li>Développement et intégration dans un environnement full-stack Java/Python/TypeScript avec des services AWS, des revues de code et des exigences de qualité opérationnelle.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Stagiaire en recherche"
-date="Juin - Août 2024 (3 mois)"
-companyName="Université de New York"
-companyUrl="https://www.nyu.edu/"
-location="New York, USA"
-:tags="['Localisation de sources de gaz', 'Mécanique des fluides', 'Traitement du signal', 'Python', 'C++']">
-
-  <ul>
-    <li>Projet de recherche en localisation de sources de gaz (GSL) combinant des réseaux de capteurs mobiles et fixes pour estimer la position d'une émission gazeuse en environnement intérieur.</li>
-    <li>Modélisation de la diffusion des gaz par simulations en mécanique des fluides (loi de Fick) et développement d'algorithmes de localisation probabilistes.</li>
-    <li>Traitement du signal et analyse statistique des données en <Badge>Python</Badge> pour extraire des caractéristiques pertinentes de mesures bruitées.</li>
-    <li>Conception et réalisation de dispositifs IoT d'acquisition en <Badge>C++</Badge> pour la collecte et la transmission sans fil des données en temps réel.</li>
-  </ul>
+  title="Stagiaire en recherche"
+  date="Juin – Août 2024"
+  companyName="New York University"
+  companyUrl="https://www.nyu.edu/"
+  location="New York, États-Unis"
+  :tags="['Python', 'C++', 'Simulation', 'Traitement du signal']"
+>
+<ul>
+  <li>Étude de la <strong>localisation de sources de gaz</strong> à partir de réseaux de capteurs fixes et mobiles.</li>
+  <li>Simulation de phénomènes de diffusion et exploration d'algorithmes de localisation à partir de mesures bruitées.</li>
+  <li>Prototypage d'acquisition de données et analyse statistique des résultats.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Assistant au Département Relations École-Entreprises"
-date="2021 - 2024 (3 ans - 20h/mois)"
-companyName="INSA Rouen Normandie"
-companyUrl="https://www.insa-rouen.fr"
-location="Rouen, France"
-:tags="['Collecte de données', 'Entreprises partenaires', 'Taxe d\'apprentissage', 'Gestion administrative']">
+  title="Assistant aux relations entreprises"
+  date="2021 – 2024"
+  companyName="INSA Rouen Normandie"
+  companyUrl="https://www.insa-rouen.fr/"
+  location="Rouen, France"
+  :tags="['Données', 'Relations partenaires']"
+>
+<ul>
+  <li>Collecte, nettoyage et maintenance de données relatives aux entreprises partenaires et aux anciens élèves.</li>
+  <li>Appui aux campagnes de taxe d'apprentissage et au suivi administratif des dossiers.</li>
+</ul>
+</Experience>
 
-  <ul>
-    <li>Collecte, nettoyage et mise à jour d'une base de données sur les entreprises partenaires de l'INSA pour soutenir les actions de relations institutionnelles.</li>
-    <li>Prospection des entreprises partenaires pour la collecte de la taxe d'apprentissage au nom de l'école.</li>
-    <li>Gestion administrative des dossiers étudiants et réalisation d'enquêtes auprès des anciens élèves pour l'accréditation des formations.</li>
-  </ul>
+**Autres expériences :** stage de production chez Renault Cléon (2022) et assistance en communication chez Guenola Sahut (2019).
+
+## <GraduationCap /> Formation et projet d'ingénierie
+
+<Experience
+  title="Chef de projet / Product Owner — ThéraPIC"
+  date="2025"
+  companyName="INSA Rouen Normandie × Centre Henri Becquerel"
+  companyUrl="https://www.becquerel.fr/"
+  location="Rouen, France"
+  :tags="['Django', 'Vue.js', 'TypeScript', 'PostgreSQL', 'Docker']"
+>
+<ul>
+  <li>Coordination d'une équipe de développement et des échanges avec des pharmaciens cliniciens pour définir les besoins et les livrables.</li>
+  <li>Conception d'une application de consultation centralisée des données utiles à la validation pharmaceutique.</li>
+  <li>Mise en œuvre d'une architecture Django REST/Vue.js et d'un environnement conteneurisé, avec tests et intégration continue.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Assistant en communication"
-date="2019"
-companyName="Guenola SAHUT"
-companyUrl="https://guenola-sahut.fr/"
-location="France">
-
-  <ul>
-    <li>Assistance aux tâches de communication et de contenu web pour une professionnelle indépendante.</li>
-  </ul>
+  badge="En cours"
+  title="Diplôme d'ingénieur informatique"
+  date="2021 – 2027"
+  companyName="INSA Rouen Normandie"
+  companyUrl="https://www.insa-rouen.fr/"
+  location="Rouen, France"
+>
+Formation en algorithmique, systèmes d'exploitation, informatique embarquée, réseaux, génie logiciel, traitement du signal et apprentissage automatique.
 </Experience>
 
-<Experience
-title="Stagiaire"
-date="Juillet 2022 (1 mois)"
-companyName="Usine Renault Cléon"
-companyUrl="https://www.renaultgroup.com/groupe/implantations/usine-cleon/"
-location="Cléon, France">
-
-  <ul>
-    <li>Assemblage rotor/stator pour la production de moteurs électriques.</li>
-  </ul>
-</Experience>
-
-## <GraduationCap /> Éducation
-
-<Experience
-title="Chef de projet"
-date="2025 (1 semestre, ~20h/semaine)"
-companyName="ThéraPIC (INSA Rouen Normandie × Centre Henri Becquerel)"
-companyUrl="https://www.becquerel.fr/"
-location="Rouen, France"
-:tags="['Django', 'Vue.js', 'TypeScript', 'Tailwind', 'PostgreSQL', 'Docker', 'Ansible', 'NLP', 'Agile']">
-
-  <ul>
-    <li>Pilotage d'une équipe agile de 6 personnes sur un semestre complet (~20h/semaine) dans le cadre des Projets INSA Certifiés (PIC).</li>
-    <li>Collaboration directe avec les pharmaciens du <a href="https://www.becquerel.fr/">Centre Henri Becquerel</a> (centre de cancérologie) en tant que client externe : recueil des besoins, animation des revues de sprint et gestion des livrables.</li>
-    <li>Livraison d'une application web full-stack semi-automatisant la gestion des prescriptions médicamenteuses, réduisant le temps de traitement manuel pour le personnel clinique.</li>
-    <li>Stack : frontend <strong>TypeScript / Vue.js / Tailwind</strong>, backend REST <strong>Python / Django</strong>, base de données <strong>PostgreSQL</strong>, servi derrière un reverse proxy <strong>Nginx</strong>, intégralement conteneurisé avec <strong>Docker Compose</strong> et déployé via <strong>Ansible</strong>.</li>
-    <li>Application du TALN pour extraire des informations structurées (maladies, médicaments, posologies) depuis des comptes-rendus cliniques non structurés.</li>
-    <li>Qualité logicielle tout au long du projet : tests unitaires et d'intégration, documentation de l'API, revues de code et pipeline CI.</li>
-  </ul>
-</Experience>
-
-<Experience
-badge="En cours"
-title="Diplôme d'ingénieur"
-date="2021 - 2027"
-companyName="INSA Rouen Normandie"
-companyUrl="https://www.insa-rouen.fr"
-location="Rouen, France">
-
-  <ul>
-    <li><strong>3e à 5e année</strong> : spécialisation en informatique
-      <ul>
-        <li>Algorithmique et programmation avancée en <Badge>C</Badge> et compilation</li>
-        <li>Programmation orientée objet en <Badge>Java</Badge></li>
-        <li>Systèmes embarqués et systèmes d'exploitation en <Badge>C</Badge></li>
-        <li>Recherche opérationnelle et optimisation</li>
-        <li>Traitement du signal et de l'image, théorie de l'information</li>
-        <li>Analyse numérique, apprentissage automatique et profond (<Badge>Python</Badge>, <Badge>NumPy</Badge>, <Badge>PyTorch</Badge>)</li>
-        <li>Bases de données relationnelles (<Badge>SQL</Badge>, <Badge>PostgreSQL</Badge>) et big data (<Badge>Apache Hadoop</Badge>, <Badge>MongoDB</Badge>)</li>
-        <li>Développement web full-stack (backend <Badge>Node.js</Badge>, frontend <Badge>JavaScript</Badge>)</li>
-        <li>Droit numérique, gestion stratégique et financière, maîtrise des grands projets informatiques</li>
-        <li>Langues : anglais, espagnol</li>
-      </ul>
-    </li>
-    <li><strong>1re et 2e année</strong> : cycle préparatoire (tronc commun)
-      <ul>
-        <li>Section Internationale Bilingue (SIB) : moitié des cours en anglais</li>
-        <li>Mathématiques et physique appliquées</li>
-        <li>Chimie générale et organique</li>
-        <li>Informatique fondamentale</li>
-        <li>Langues : anglais, espagnol</li>
-      </ul>
-    </li>
-  </ul>
-</Experience>
-
-<Experience
-title="Baccalauréat scientifique"
-date="2021"
-companyName="Institution Jean-Paul II"
-companyUrl="https://www.institutionjeanpaul2.fr/"
-location="France">
-
-  <ul>
-    <li>Spécialités Mathématiques, Physique et Chimie.</li>
-    <li>Section européenne : cours d'anglais supplémentaires.</li>
-    <li>Mention Très Bien.</li>
-  </ul>
-</Experience>
-
-<Experience
-title="Cambridge B1 Preliminary"
-date="2018"
-location="France">
-</Experience>
-
-<Experience
-title="Brevet des collèges"
-date="2018"
-companyName="Institution Jean-Paul II"
-companyUrl="https://www.institutionjeanpaul2.fr/"
-location="France">
-
-  <ul>
-    <li>Mention Très Bien.</li>
-  </ul>
-</Experience>
+**Formation initiale :** baccalauréat scientifique, section européenne, Institution Jean-Paul II (2021). Certification Cambridge B1 Preliminary (2018).

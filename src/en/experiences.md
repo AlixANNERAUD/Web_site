@@ -1,190 +1,106 @@
 # Experiences
 
-An overview of my professional background, internships, and academic training.
+My background spans software engineering, systems, security, networks and research. For practical examples, see [my projects](/projects).
 
-## <BriefcaseBusiness /> Professional
-
-<Experience
-badge="Ongoing"
-title="Security engineer"
-date="September 2026 - September 2027 (1 year)"
-companyName="Memo Bank"
-companyUrl="https://memo.bank/"
-location="Paris, France" />
+## <BriefcaseBusiness /> Professional experience
 
 <Experience
-title="Network and Telecom Technician"
-date="December 2025 - September 2026 (10 months)"
-companyName="Linkt"
-companyUrl="https://linkt.fr/"
-location="Mont-Saint-Aignan, France"
-:tags="['Network & Telecom', 'Customer Relations', 'MPLS & VPN', 'VoIP (SIP/Centrex)', 'Cisco/Juniper/Mikrotik', 'Vue.js (WXT)']">
+  badge="Current"
+  title="Security Engineer"
+  date="September 2026 – August 2027"
+  companyName="Memo Bank"
+  companyUrl="https://memo.bank/"
+  location="Paris, France"
+  :tags="['Security', 'Software engineering']"
+/>
 
-  <ul>
-    <li><strong>Level 1 Technical Support & Customer Relations:</strong> Receiving and handling client requests (~8/day) via phone and ticketing system for service interruptions or degradation incidents.</li>
-    <li><strong>Corrective Network Maintenance:</strong> Diagnostics and restoration of VPN IP links on MPLS backbone and redundancy management via VRRP (e.g., 4G/5G backup).</li>
-    <li><strong>Multi-technology & Access:</strong> Fault diagnostics on a heterogeneous network (FTTx, xDSL, 4G/5G, Starlink) and coordination of interventions with third-party operators (Orange, SFR, Covage).</li>
-    <li><strong>Layer 2/3 Corrective Configuration:</strong> Remote setup and troubleshooting of routers (Cisco, Keenetic, MikroTik, Juniper): VLAN management, routing, DHCP, and domains.</li>
-    <li><strong>IP Telephony Support:</strong> First-level diagnostics on SIP Trunk / Centrex architectures and assistance with handset configuration during replacements.</li>
-    <li><strong>SLA Compliance:</strong> Strict adherence to restoration guarantees (SLA ≤ 4h) in a critical 24/7 environment.</li>
-    <li><strong>Workflow Optimization (Dev):</strong> Development of a web extension (WXT/Vue.js) to automate diagnostics (signal analysis, IP/Mac lookup) and ticket enrichment.</li>
-  </ul>
+<Experience
+  title="Network and Telecom Technician"
+  date="December 2025 – September 2026"
+  companyName="Linkt"
+  companyUrl="https://linkt.fr/"
+  location="Mont-Saint-Aignan, France"
+  :tags="['L2/L3 networking', 'MPLS', 'VoIP', 'Vue.js', 'WXT']"
+>
+<ul>
+  <li>Investigated and resolved connectivity incidents across FTTH/FTTO, xDSL and 4G/5G links and MPLS-backed VPN services, working with upstream operators.</li>
+  <li>Troubleshot Cisco, Juniper, MikroTik and Keenetic routers, including VLANs, routing, DHCP, VRRP failover and SIP telephony.</li>
+  <li>Built a <strong>Vue.js/WXT</strong> browser extension to simplify network data collection and ticket-based diagnostics.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Software Engineer Intern"
-date="May - August 2025 (4 months)"
-companyName="Amazon Spain (Madrid)"
-companyUrl="https://www.amazon.es/"
-location="Madrid, Spain"
-:tags="['Software Engineering', 'Java', 'Coral', 'Python', 'React', 'AWS']">
-
-  <ul>
-    <li>Full-stack development within an 8-person Agile team in the <a href="https://amazon.jobs/content/en/teams/north-america-stores/upmt">US Prime and Marketing Technology</a> organization, "Discovery Technology" division.</li>
-    <li>Led the complete redesign and refactoring of a self-service campaign management tool used by marketing teams across multiple AWS regions, with full ownership from design to production deployment.</li>
-    <li>Extensive use of AWS services (API Gateway, Lambda, Redshift, CloudFormation, CDK) for cloud infrastructure and data pipelines.</li>
-    <li>Worked on high-scale, multi-region systems with strict requirements for code quality, performance, and operational excellence (code reviews, on-call runbooks, monitoring).</li>
-  </ul>
+  title="Software Engineering Intern"
+  date="May – August 2025"
+  companyName="Amazon"
+  companyUrl="https://www.amazon.es/"
+  location="Madrid, Spain"
+  :tags="['Java', 'Python', 'React', 'AWS', 'Redshift']"
+>
+<ul>
+  <li>Modernized an internal content discovery and investigation tool used by marketing teams.</li>
+  <li>Worked on query performance, user experience and support for multiple regions.</li>
+  <li>Implemented full-stack changes across Java/Python/TypeScript and AWS services, following code review and operational quality practices.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Research Intern"
-date="June - August 2024 (3 months)"
-companyName="New York University"
-companyUrl="https://www.nyu.edu/"
-location="New York, USA"
-:tags="['Gas Source Localization', 'Fluid Mechanics', 'Signal Processing', 'Python', 'C++']">
-
-  <ul>
-    <li>Research project in gas source localization (GSL) combining mobile and fixed sensor networks to estimate the position of a gas emission source in indoor environments.</li>
-    <li>Modelled gas diffusion using fluid mechanics simulations (Fick's law) and developed probabilistic localization algorithms.</li>
-    <li>Signal processing and statistical data analysis in <Badge>Python</Badge> to extract meaningful features from noisy sensor readings.</li>
-    <li>Designed and built custom IoT acquisition devices in <Badge>C++</Badge> for real-time data collection and wireless transmission.</li>
-  </ul>
+  title="Research Intern"
+  date="June – August 2024"
+  companyName="New York University"
+  companyUrl="https://www.nyu.edu/"
+  location="New York, USA"
+  :tags="['Python', 'C++', 'Simulation', 'Signal processing']"
+>
+<ul>
+  <li>Investigated <strong>gas source localization</strong> using networks of mobile and fixed sensors.</li>
+  <li>Simulated diffusion processes and explored localization algorithms using noisy measurements.</li>
+  <li>Prototyped data acquisition and analyzed experimental results statistically.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Assistant to the Corporate Relations Department"
-date="2021 - 2024 (3 years - 20h/month)"
-companyName="INSA Rouen Normandie"
-companyUrl="https://www.insa-rouen.fr"
-location="Rouen, France"
-:tags="['Data Collection', 'Partner Companies', 'Apprenticeship Tax', 'Administrative Management']">
+  title="Corporate Relations Assistant"
+  date="2021 – 2024"
+  companyName="INSA Rouen Normandie"
+  companyUrl="https://www.insa-rouen.fr/"
+  location="Rouen, France"
+  :tags="['Data management', 'Partner relations']"
+>
+<ul>
+  <li>Collected, cleaned and maintained partner-company and alumni data.</li>
+  <li>Supported apprenticeship-tax outreach and administrative follow-up.</li>
+</ul>
+</Experience>
 
-  <ul>
-    <li>Collected, cleaned, and maintained a database of INSA partner companies to support institutional outreach.</li>
-    <li>Canvassed partner companies to collect apprenticeship tax contributions on behalf of the school.</li>
-    <li>Managed administrative processing of student files and conducted alumni surveys for course accreditation.</li>
-  </ul>
+**Earlier experience:** production internship at Renault Cléon (2022) and communication assistant work for Guenola Sahut (2019).
+
+## <GraduationCap /> Education and engineering projects
+
+<Experience
+  title="Project Lead / Product Owner — ThéraPIC"
+  date="2025"
+  companyName="INSA Rouen Normandie × Centre Henri Becquerel"
+  companyUrl="https://www.becquerel.fr/"
+  location="Rouen, France"
+  :tags="['Django', 'Vue.js', 'TypeScript', 'PostgreSQL', 'Docker']"
+>
+<ul>
+  <li>Coordinated a development team and requirements discussions with clinical pharmacists.</li>
+  <li>Designed an application to centralize information relevant to pharmaceutical prescription review.</li>
+  <li>Implemented a Django REST/Vue.js architecture and containerized environment with tests and continuous integration.</li>
+</ul>
 </Experience>
 
 <Experience
-title="Communication Assistant"
-date="2019"
-companyName="Guenola SAHUT"
-companyUrl="https://guenola-sahut.fr/"
-location="France">
-
-  <ul>
-    <li>Assisted with communication and web content tasks for an independent professional.</li>
-  </ul>
+  badge="Ongoing"
+  title="Computer Engineering Degree"
+  date="2021 – 2027"
+  companyName="INSA Rouen Normandie"
+  companyUrl="https://www.insa-rouen.fr/"
+  location="Rouen, France"
+>
+Coursework in algorithms, operating systems, embedded computing, networks, software engineering, signal processing and machine learning.
 </Experience>
 
-<Experience
-title="Intern"
-date="July 2022 (1 month)"
-companyName="Renault Cléon factory"
-companyUrl="https://www.renaultgroup.com/groupe/implantations/usine-cleon/"
-location="Cléon, France">
-
-  <ul>
-    <li>Rotor/stator assembly for electric motor production.</li>
-  </ul>
-</Experience>
-
-## <GraduationCap /> Education
-
-<Experience
-title="Project Manager"
-date="2025 (1 semester, ~20h/week)"
-companyName="ThéraPIC (INSA Rouen Normandie × Centre Henri Becquerel)"
-companyUrl="https://www.becquerel.fr/"
-location="Rouen, France"
-:tags="['Django', 'Vue.js', 'TypeScript', 'Tailwind', 'PostgreSQL', 'Docker', 'Ansible', 'NLP', 'Agile']">
-
-  <ul>
-    <li>Led a 6-person agile team over a full semester (~20h/week) as part of the Certified INSA Projects (PIC) programme.</li>
-    <li>Worked directly with pharmacists at <a href="https://www.becquerel.fr/">Centre Henri Becquerel</a> (cancer care centre) as the external client: gathered requirements, ran sprint reviews, and managed deliverables.</li>
-    <li>Delivered a full-stack web application to semi-automate medication prescription management, reducing manual processing time for clinical staff.</li>
-    <li>Stack: <strong>TypeScript / Vue.js / Tailwind</strong> frontend, <strong>Python / Django</strong> REST backend, <strong>PostgreSQL</strong> database, served behind an <strong>Nginx</strong> reverse proxy, fully containerised with <strong>Docker Compose</strong> and deployed via <strong>Ansible</strong>.</li>
-    <li>Applied NLP to extract structured information (diseases, medications, dosages) from unstructured clinical reports.</li>
-    <li>Enforced software quality throughout: comprehensive unit and integration tests, API documentation, code reviews, and CI pipeline.</li>
-  </ul>
-</Experience>
-
-<Experience
-badge="Ongoing"
-title="Engineering Degree"
-date="2021 - 2027"
-companyName="INSA Rouen Normandie"
-companyUrl="https://www.insa-rouen.fr"
-location="Rouen, France">
-
-  <ul>
-    <li><strong>3rd to 5th year</strong>: specialization in computer science
-      <ul>
-        <li>Advanced algorithms and programming in <Badge>C</Badge> and compilation</li>
-        <li>Object-oriented programming in <Badge>Java</Badge></li>
-        <li>Embedded systems and operating systems in <Badge>C</Badge></li>
-        <li>Operations research and optimization</li>
-        <li>Signal and image processing, information theory</li>
-        <li>Numerical analysis, machine learning and deep learning (<Badge>Python</Badge>, <Badge>NumPy</Badge>, <Badge>PyTorch</Badge>)</li>
-        <li>Relational databases (<Badge>SQL</Badge>, <Badge>PostgreSQL</Badge>) and big data (<Badge>Apache Hadoop</Badge>, <Badge>MongoDB</Badge>)</li>
-        <li>Full-stack web development (backend <Badge>Node.js</Badge>, frontend <Badge>JavaScript</Badge>)</li>
-        <li>Digital law, strategic and financial management, large IT project management</li>
-        <li>Languages: English, Spanish</li>
-      </ul>
-    </li>
-    <li><strong>1st & 2nd year</strong>: preparatory cycle (common core)
-      <ul>
-        <li>International Bilingual Section (SIB): half of the courses in English</li>
-        <li>Applied mathematics and physics</li>
-        <li>General and organic chemistry</li>
-        <li>Computer science fundamentals</li>
-        <li>Languages: English, Spanish</li>
-      </ul>
-    </li>
-  </ul>
-</Experience>
-
-<Experience
-title="Scientific Baccalaureate"
-date="2021"
-companyName="Institution Jean-Paul II"
-companyUrl="https://www.institutionjeanpaul2.fr/"
-location="France">
-
-  <ul>
-    <li>Mathematics, Physics and Chemistry specialties.</li>
-    <li>European section: extra English lessons.</li>
-    <li>With distinction.</li>
-  </ul>
-</Experience>
-
-<Experience
-title="Cambridge B1 Preliminary"
-date="2018"
-location="France">
-</Experience>
-
-<Experience
-title="Junior School Certificate"
-date="2018"
-companyName="Institution Jean-Paul II"
-companyUrl="https://www.institutionjeanpaul2.fr/"
-location="France">
-
-  <ul>
-    <li>With highest honour.</li>
-  </ul>
-</Experience>
+**Earlier education:** scientific baccalaureate, European section, Institution Jean-Paul II (2021). Cambridge B1 Preliminary certificate (2018).

@@ -1,94 +1,48 @@
 # Compétences
 
-Un aperçu de mes compétences techniques et linguistiques. Pour voir comment je les applique, consultez [mes projets](/fr/projects).
+J'aborde le logiciel de bout en bout, du microcontrôleur au service web. Plutôt qu'une notation subjective en étoiles, voici les domaines que je pratique et les projets qui les illustrent.
 
-## <SquareCode /> Langages de programmation
+<SkillDomain title="Systèmes, Rust et embarqué" :technologies="['Rust', 'C', 'C++', 'WebAssembly', 'ESP32', 'LVGL', 'Linux']">
 
-| Langage                 |        Niveau        |
-| :---------------------- | :------------------: |
-| C                       | <Level :level="4" /> |
-| C++                     | <Level :level="4" /> |
-| Rust                    | <Level :level="4" /> |
-| Python                  | <Level :level="4" /> |
-| Java                    | <Level :level="3" /> |
-| TypeScript / JavaScript | <Level :level="3" /> |
-| SQL                     | <Level :level="3" /> |
-| Free Pascal             | <Level :level="2" /> |
-| Bash                    | <Level :level="2" /> |
-| VHDL                    | <Level :level="1" /> |
-| PHP                     | <Level :level="1" /> |
+Conception de systèmes à ressources contraintes, abstraction matérielle, pilotes, ordonnancement et exécution d'applications WebAssembly. Projet principal : <a href="https://www.xila.dev">Xila</a>. J'expérimente également avec l'électronique d'un réseau ferroviaire miniature.
 
-## <SquareCode /> Frameworks
+</SkillDomain>
 
-| Framework     |        Niveau        |
-| :------------ | :------------------: |
-| Django        | <Level :level="3" /> |
-| Vue.js        | <Level :level="3" /> |
-| React         | <Level :level="3" /> |
-| Coral         | <Level :level="3" /> |
-| Actix         | <Level :level="3" /> |
-| ROS 1         | <Level :level="2" /> |
-| Apache Hadoop | <Level :level="2" /> |
-| MongoDB       | <Level :level="2" /> |
+<SkillDomain title="Backend, API et traitement de données" :technologies="['Python', 'Django REST', 'Java', 'SQL', 'PostgreSQL', 'Rust / Actix', 'NumPy']">
 
-## <FileCode /> Langages de balisage
+Architecture d'API, intégration de données, automatisation et traitement numérique. Mise en pratique sur <a href="/fr/experiences">ThéraPIC, Amazon et le projet de recherche à NYU</a>, ainsi que sur mes <a href="/fr/projects">projets de data science</a>.
 
-| Langage  |        Niveau        |
-| :------- | :------------------: |
-| Markdown | <Level :level="4" /> |
-| LaTeX    | <Level :level="4" /> |
-| HTML     | <Level :level="3" /> |
-| CSS      | <Level :level="3" /> |
-| Smithy   | <Level :level="3" /> |
+</SkillDomain>
 
-## <Blocks /> Gestionnaires de paquets
+<SkillDomain title="Frontend et applications web" :technologies="['Vue 3', 'TypeScript', 'JavaScript', 'React', 'Vite', 'WXT', 'Tailwind CSS']">
 
-| Gestionnaire de paquets |        Niveau        |
-| :---------------------- | :------------------: |
-| Cargo                   | <Level :level="3" /> |
-| Uv                      | <Level :level="3" /> |
-| Poetry                  | <Level :level="3" /> |
-| NPM                     | <Level :level="3" /> |
-| PlatformIO              | <Level :level="3" /> |
+Interfaces web, applications single-page et extensions de navigateur. Exemples : la boutique et les outils de gestion de <a href="https://www.minitrainstore.fr">Mini Train Store</a>, ainsi que des outils internes développés pendant mes expériences professionnelles.
 
-## <AppWindow /> Outils
+</SkillDomain>
 
-| Outil              |        Niveau        |
-| :----------------- | :------------------: |
-| Git                | <Level :level="3" /> |
-| Visual Studio Code | <Level :level="3" /> |
-| GNU/Linux          | <Level :level="3" /> |
-| Docker             | <Level :level="3" /> |
-| GitHub Action (CI) | <Level :level="3" /> |
-| FreeBSD            | <Level :level="2" /> |
-| CMake              | <Level :level="2" /> |
-| Bash               | <Level :level="1" /> |
-| Make               | <Level :level="1" /> |
+<SkillDomain title="Infrastructure, cloud et DevOps" :technologies="['Debian / Linux', 'Docker', 'Ansible', 'AWS', 'GitHub Actions', 'Git', 'Réseau']">
 
-## <Bot /> Développement agentique
+Déploiement et maintenance de services auto-hébergés, automatisation de configuration, pipelines CI/CD et environnements cloud. Voir mon <a href="https://github.com/AlixANNERAUD/Infrastructure">infrastructure auto-hébergée</a> et mon <a href="/fr/experiences">expérience sur AWS</a>.
 
-J'utilise régulièrement des agents de code pour accélérer le développement tout en conservant une validation technique humaine des changements.
+</SkillDomain>
 
-| Compétence                           |        Niveau        |
-| :----------------------------------- | :------------------: |
-| OpenCode / Claude Code / Codex       | <Level :level="4" /> |
-| Workflows de développement agentique | <Level :level="4" /> |
-| Intégration d'outils et serveurs MCP | <Level :level="3" /> |
-| Agents avec Git, GitHub, tests et CI | <Level :level="4" /> |
+<SkillDomain title="Sécurité et réseaux" :technologies="['Routage L2/L3', 'MPLS / VPN', 'SIP', 'Cisco', 'Juniper', 'CTF', 'Linux']">
 
-## <Earth /> Communication
+Diagnostic d'incidents télécom, administration et compréhension des réseaux, avec un intérêt pour la sécurité appliquée. Expériences chez <a href="/fr/experiences">Linkt et Memo Bank</a> et participation aux compétitions <a href="/fr/projects">Jeanne d'Hack et TRACS</a>.
 
-| Langue        |          Niveau          |
-| :------------ | :----------------------: |
-| :fr: Français |          Natif           |
-| :uk: Anglais  | Courant (TOEIC 975 - C1) |
-| :es: Espagnol |       Basique (A2)       |
-| :de: Allemand |       Basique (A2)       |
+</SkillDomain>
 
-## <Table /> Légende
+<SkillDomain title="Développement assisté par agents" :technologies="['OpenCode', 'Claude Code', 'Codex', 'MCP', 'Tests', 'Git / CI']">
 
-- <Level :level="1" /> Compréhension de base
-- <Level :level="2" /> Connaissance opérationnelle
-- <Level :level="3" /> Compétence confirmée
-- <Level :level="4" /> Hautement qualifié
-- <Level :level="5" /> Maîtrise experte
+Utilisation d'agents de code pour l'investigation, l'implémentation et les revues, en gardant la maîtrise du résultat : tests, vérification des modifications, intégration Git et CI. Exploration de l'interconnexion d'outils via le protocole MCP.
+
+</SkillDomain>
+
+## <Earth /> Langues
+
+| Langue | Niveau |
+| :--- | :--- |
+| Français | Natif |
+| Anglais | Courant — TOEIC 975 (C1) |
+| Espagnol | Notions (A2) |
+| Allemand | Notions (A2) |
