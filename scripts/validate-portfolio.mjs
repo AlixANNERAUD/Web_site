@@ -20,11 +20,11 @@ const ids = new Set();
 let featured = 0;
 
 // Editorial ranking weights are defined only in portfolioProjects.ts.
-const weightsSource = source.match(/export const PROJECT_RANK_WEIGHTS = \\{([\\s\\S]*?)\\} as const/);
+const weightsSource = source.match(/export const PROJECT_RANK_WEIGHTS = \{([\s\S]*?)\} as const/);
 if (!weightsSource) throw new Error("Missing project ranking weights.");
 const weightFactors = ["technicalDepth", "originality", "practicalImpact", "evidence"];
 const weights = Object.fromEntries(
-  [...weightsSource[1].matchAll(/(\\w+):\\s*(\\d+),/g)]
+  [...weightsSource[1].matchAll(/(\w+):\s*(\d+),/g)]
     .map((match) => [match[1], Number(match[2])]),
 );
 if (
