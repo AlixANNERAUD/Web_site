@@ -1,0 +1,34 @@
+# A one-time migration branch bootstrap: generate npm's own lockfile on
+# GitHub-hosted Node with registry access. Removes the need to fabricate
+# dependency hashes offline. Delete this workflow after the lockfile is stable.
+name: Bootstrap Astro lockfile
+
+on:
+  push:
+    branches: [feat/migrate-portfolio-to-astro]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: feat/migrate-portfolio-to-astro
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+      - name: Resolve and write lockfile
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+      - name: Commit generated package-lock.json
+        run: |
+          if ! git diff --quiet -- package-lock.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add package-lock.json
+            git commit -m "chore(astro): regenerate npm lockfile for Astro"
+            git push origin HEAD:feat/migrate-portfolio-to-astro
+          fi

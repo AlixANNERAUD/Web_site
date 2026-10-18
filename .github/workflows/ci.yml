@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build:
-    name: Build (VitePress)
+    name: Build (Astro)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,13 +29,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: "24"
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Validate bilingual project catalogues
+      - name: Validate bilingual project catalogue
         run: npm run validate:portfolio
-      - name: Build static site
-        run: npm run docs:build
-      - name: Check generated SEO and locale metadata
+      - name: Build Astro static site
+        run: npm run build
+      - name: Verify routes, SEO, Vue islands and locale parity
         run: npm run verify:static
