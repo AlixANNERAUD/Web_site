@@ -1,7 +1,7 @@
 /** Single source of truth for project metadata shared by the FR/EN pages. */
 export type PortfolioLanguage = "fr" | "en";
 export type ProjectCategory = "systems" | "web" | "infrastructure" | "embedded" | "security" | "data";
-export type ProjectGroup = "personal" | "competition" | "academic";
+export type ProjectGroup = "personal" | "library" | "competition" | "academic";
 export type Translation = Record<PortfolioLanguage, string>;
 
 export interface PortfolioProject {
@@ -109,12 +109,16 @@ export const portfolioProjects: PortfolioProject[] = [
     "category": "embedded",
     "symbol": "≋",
     "tags": [
-      "Algorithmique"
+      "ESP32",
+      "S88",
+      "DCC",
+      "Électronique"
     ],
     "description": {
       "fr": "Cartes électroniques de détection d'occupation et commande de signalisation pour un réseau H0 numérique.",
       "en": "Custom electronics for occupancy detection and automated signalling on an H0-scale railway."
-    }
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/S88-Wireless-Feedback-System"
   },
   {
     "id": "connected-speaker",
@@ -161,6 +165,156 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "A privacy-focused student services platform with a calendar, messaging and a social network."
     },
     "externalUrl": "https://dera.page"
+  },
+  {
+    "id": "lvgl-theme-shadcn",
+    "title": {
+      "fr": "lvgl_theme_shadcn",
+      "en": "lvgl_theme_shadcn"
+    },
+    "period": {
+      "fr": "2026 – présent",
+      "en": "2026 – present"
+    },
+    "group": "library",
+    "category": "embedded",
+    "symbol": "UI",
+    "tags": [
+      "C99",
+      "LVGL",
+      "Rust",
+      "UI"
+    ],
+    "description": {
+      "fr": "Un thème inspiré de shadcn/ui pour LVGL 9 : widgets, palettes claires/sombres et personnalisation sur microcontrôleurs.",
+      "en": "A shadcn/ui-inspired LVGL 9 theme: widget styling, light/dark palettes and customizable embedded interfaces."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/lvgl_theme_shadcn"
+  },
+  {
+    "id": "nanoexpr",
+    "title": {
+      "fr": "nanoexpr",
+      "en": "nanoexpr"
+    },
+    "period": {
+      "fr": "2026 – présent",
+      "en": "2026 – present"
+    },
+    "group": "library",
+    "category": "systems",
+    "symbol": "ƒ",
+    "tags": [
+      "Rust",
+      "no_std",
+      "Parser",
+      "C ABI"
+    ],
+    "description": {
+      "fr": "Parseur et évaluateur d'expressions mathématiques pour Rust embarqué, sans allocation dynamique et avec taille de pile bornée.",
+      "en": "Heap-free mathematical expression parser and evaluator for embedded Rust with bounded stack usage."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/nanoexpr"
+  },
+  {
+    "id": "nanoaudio",
+    "title": {
+      "fr": "nanoaudio",
+      "en": "nanoaudio"
+    },
+    "period": {
+      "fr": "2026 – présent",
+      "en": "2026 – present"
+    },
+    "group": "library",
+    "category": "embedded",
+    "symbol": "♫",
+    "tags": [
+      "Rust",
+      "no_std",
+      "Audio",
+      "DSP"
+    ],
+    "description": {
+      "fr": "Bibliothèque audio embarquée sans allocation : traitement PCM, mixage, buffers circulaires et codecs avec buffers fournis par l'appelant.",
+      "en": "Allocation-free embedded audio processing: PCM conversion, mixing, ring buffers and codecs using caller-owned memory."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/nanoaudio"
+  },
+  {
+    "id": "embedded-i18n",
+    "title": {
+      "fr": "embedded-i18n",
+      "en": "embedded-i18n"
+    },
+    "period": {
+      "fr": "2026 – présent",
+      "en": "2026 – present"
+    },
+    "group": "library",
+    "category": "embedded",
+    "symbol": "文",
+    "tags": [
+      "Rust",
+      "Macros",
+      "no_std",
+      "i18n"
+    ],
+    "description": {
+      "fr": "Internationalisation compilée dans le firmware Rust : traductions en ROM, validation à la compilation et fonctionnement sans allocateur.",
+      "en": "Compile-time localization for embedded Rust: translations stored in firmware, compile-time checks and allocator-free operation."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/embedded-i18n"
+  },
+  {
+    "id": "getargs-derive",
+    "title": {
+      "fr": "getargs-derive",
+      "en": "getargs-derive"
+    },
+    "period": {
+      "fr": "2026 – présent",
+      "en": "2026 – present"
+    },
+    "group": "library",
+    "category": "systems",
+    "symbol": ">_",
+    "tags": [
+      "Rust",
+      "Proc macros",
+      "CLI",
+      "no_std"
+    ],
+    "description": {
+      "fr": "Macros procédurales pour décrire des interfaces CLI en Rust embarqué, avec analyse sans allocation et aide générée à la compilation.",
+      "en": "Procedural macros for embedded Rust command-line interfaces, with allocation-free parsing and compile-time help generation."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/getargs-derive"
+  },
+  {
+    "id": "battery-percent",
+    "title": {
+      "fr": "battery-percent",
+      "en": "battery-percent"
+    },
+    "period": {
+      "fr": "2026 – présent",
+      "en": "2026 – present"
+    },
+    "group": "library",
+    "category": "embedded",
+    "symbol": "▰",
+    "tags": [
+      "C99",
+      "Rust",
+      "Battery",
+      "MCU"
+    ],
+    "description": {
+      "fr": "Estimation de charge par courbes de décharge et interpolation, avec filtrage ADC : bibliothèque C99 et bindings Rust no_std.",
+      "en": "Battery state-of-charge estimation from discharge curves and interpolation, with ADC filtering, in C99 and no_std Rust."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/battery-percent"
   },
   {
     "id": "jeanne-hack-2026",
@@ -264,9 +418,9 @@ export const portfolioProjects: PortfolioProject[] = [
     "category": "data",
     "symbol": "♫",
     "tags": [
-      "Nalyzer\" date=\"2024\" link=\"https://github.com/AlixANNERAUD/Deez_Nalyzer\" :tags=\"[",
-      ", ",
-      ", "
+      "Django",
+      "Vue.js",
+      "ML"
     ],
     "description": {
       "fr": "Application Django/Vue utilisant l'analyse audio et l'apprentissage automatique pour classifier des genres musicaux.",
@@ -288,8 +442,8 @@ export const portfolioProjects: PortfolioProject[] = [
     "category": "embedded",
     "symbol": "▦",
     "tags": [
-      "occupation évidentielle (EOGM)\" date=\"2024\" link=\"https://github.com/AlixANNERAUD/Evidential_occupancy_map\" :tags=\"[",
-      ", "
+      "C++",
+      "ROS"
     ],
     "description": {
       "fr": "Cartographie d'occupation robotique à partir de capteurs embarqués, basée sur la théorie de Dempster-Shafer.",
@@ -421,13 +575,64 @@ export const portfolioProjects: PortfolioProject[] = [
     "category": "data",
     "symbol": "Σ",
     "tags": [
-      "équations linéaires\" date=\"2022\" link=\"https://github.com/AlixANNERAUD/System_of_linear_equations_solver\" :tags=\"["
+      "C",
+      "Algèbre linéaire"
     ],
     "description": {
       "fr": "Résolution de systèmes linéaires en C par élimination de Gauss avec pivot partiel.",
       "en": "A C implementation of Gaussian elimination with partial pivoting for linear systems."
     },
     "externalUrl": "https://github.com/AlixANNERAUD/System_of_linear_equations_solver"
+  },
+  {
+    "id": "odor-localization",
+    "title": {
+      "fr": "Localisation de sources de gaz",
+      "en": "Gas source localization"
+    },
+    "period": {
+      "fr": "2024",
+      "en": "2024"
+    },
+    "group": "academic",
+    "category": "embedded",
+    "symbol": "◎",
+    "tags": [
+      "ESP32",
+      "MQTT",
+      "Capteurs",
+      "Recherche"
+    ],
+    "description": {
+      "fr": "Prototype de collecte de mesures de capteurs MQ via ESP32 et MQTT pour explorer la localisation de sources de gaz lors d'un stage de recherche.",
+      "en": "ESP32/MQ sensor acquisition and MQTT pipeline prototype for exploring gas source localization during a research internship."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/Odor_localization"
+  },
+  {
+    "id": "medical-image-deep-learning",
+    "title": {
+      "fr": "Segmentation d'images médicales",
+      "en": "Medical image segmentation"
+    },
+    "period": {
+      "fr": "Projet académique",
+      "en": "Academic project"
+    },
+    "group": "academic",
+    "category": "data",
+    "symbol": "▤",
+    "tags": [
+      "Python",
+      "Deep Learning",
+      "nnU-Net",
+      "CellViT"
+    ],
+    "description": {
+      "fr": "Expérimentation de segmentation et classification de tissus et cellules histopathologiques avec nnU-Net, CellViT++ et HoVer-Net.",
+      "en": "Histopathology tissue and cell segmentation/classification experiments using nnU-Net, CellViT++ and HoVer-Net."
+    },
+    "externalUrl": "https://github.com/AlixANNERAUD/Deep_learning_project"
   }
 ];
 

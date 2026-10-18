@@ -31,6 +31,32 @@ Une plateforme respectueuse de la vie privée offrant des services partagés aux
 
 Je contribue également à de nombreux projets open-source par l'intermédiaire de Pull Requests sur GitHub, n'hésitez pas à consulter <a href="https://github.com/AlixANNERAUD">mon profil GitHub</a>.
 
+## <Blocks /> Bibliothèques open source
+
+<PortfolioProjectDetail project-id="lvgl-theme-shadcn" lang="fr">
+Bibliothèque C99 compatible avec LVGL 9 proposant une identité visuelle inspirée de shadcn/ui pour les interfaces embarquées. Elle définit des palettes claires et sombres, des styles de composants et des variantes adaptées aux petits écrans et aux contrôles tactiles. Des bindings Rust `no_std` et des exemples de rendu accompagnent la bibliothèque. [Code et galerie](https://github.com/AlixANNERAUD/lvgl_theme_shadcn).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="nanoexpr" lang="fr">
+Évaluateur d'expressions mathématiques `no_std` pour microcontrôleurs, fonctionnant sans allocation dynamique. Son analyseur traite les expressions sans construire d'arbre syntaxique sur le tas ; il limite la profondeur d'imbrication et signale les erreurs précisément. La bibliothèque prend en charge différents types numériques, des fonctions et des variables. [Code et documentation](https://github.com/AlixANNERAUD/nanoexpr).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="nanoaudio" lang="fr">
+Bibliothèque Rust `no_std` de traitement audio à mémoire maîtrisée. Elle inclut conversion PCM, mixage, variation du volume, buffers circulaires pour le DMA et plusieurs codecs. Les fonctions travaillent avec des buffers fournis par l'appelant et sont destinées à être intégrées à des pilotes ou à un OS. [Code et exemples](https://github.com/AlixANNERAUD/nanoaudio).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="embedded-i18n" lang="fr">
+Outil d'internationalisation pour firmware Rust : les traductions sont résolues à la compilation et intégrées en ROM, sans parseur ni allocation au runtime. Les macros vérifient les clés et les paramètres de format, avec gestion des pluriels et plusieurs formats de fichiers. [Code et guide](https://github.com/AlixANNERAUD/embedded-i18n).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="getargs-derive" lang="fr">
+Macros procédurales Rust pour décrire des interfaces en ligne de commande avec une syntaxe proche de Clap, tout en ciblant `no_std`. L'analyse des arguments et la génération des messages d'aide peuvent fonctionner sans allocation dynamique. [Code et exemples](https://github.com/AlixANNERAUD/getargs-derive).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="battery-percent" lang="fr">
+Petite bibliothèque C99 et Rust `no_std` qui estime l'état de charge d'une batterie à partir de courbes de décharge et de mesures de tension. Elle gère diverses chimies, les packs en série ainsi que le lissage des mesures ADC, sans dépendance à un microcontrôleur spécifique. [Code et courbes](https://github.com/AlixANNERAUD/battery-percent).
+</PortfolioProjectDetail>
+
 ## <Trophy /> Compétitions
 
 <PortfolioProjectDetail project-id="jeanne-hack-2026" lang="fr">
@@ -81,4 +107,12 @@ Un jeu de gestion de réseau de tramway développé en Free Pascal avec SDL 1.2,
 
 <PortfolioProjectDetail project-id="linear-equations" lang="fr">
 Une implémentation en C de l'élimination gaussienne avec pivot partiel pour résoudre des systèmes d'équations linéaires arbitraires.
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="odor-localization" lang="fr">
+Travail exploratoire lié à mon stage de recherche à NYU sur la localisation de sources de gaz. Le dépôt présente notamment une architecture associant capteurs MQ, ESP32, publication MQTT et traitement côté serveur. La documentation reste partielle : il s'agit d'un prototype de recherche, et non d'un produit finalisé. [Dépôt de recherche](https://github.com/AlixANNERAUD/Odor_localization).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="medical-image-deep-learning" lang="fr">
+Projet de segmentation et de classification d'images histopathologiques. Le dépôt regroupe des scripts de préparation de données et d'entraînement pour nnU-Net, CellViT++ et HoVer-Net, notamment avec orchestration SLURM. Ce travail illustre l'intégration et l'expérimentation de plusieurs architectures de deep learning plutôt que le développement d'un nouveau modèle à partir de zéro. [Code et protocole](https://github.com/AlixANNERAUD/Deep_learning_project).
 </PortfolioProjectDetail>

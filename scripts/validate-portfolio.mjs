@@ -24,7 +24,7 @@ for (const project of projects) {
   }
   ids.add(project.id);
   if (project.featured) featured++;
-  if (!["personal", "competition", "academic"].includes(project.group)) {
+  if (!["personal", "library", "competition", "academic"].includes(project.group)) {
     throw new Error("Unknown project group: " + project.id);
   }
   if (!["systems", "web", "infrastructure", "embedded", "security", "data"].includes(project.category)) {
@@ -36,7 +36,19 @@ for (const project of projects) {
       throw new Error("Invalid external project URL: " + project.id);
     }
   }
-  if (!Array.isArray(project.tags)) throw new Error("Missing tags: " + project.id);
+  if (!Array.isArray(project.tags) || project.tags.length === 0) {
+    throw new Error("Missing tags: " + project.id);
+  }
+  for (const tag of project.tags) {
+    if (
+      typeof tag !== "string" ||
+      tag.trim() !== tag ||
+      tag.length > 32 ||
+      /[<>\[\]"=]/.test(tag) || /https?:/i.test(tag)
+    ) {
+      throw new Error("Malformed project technology tag for " + project.id + ": " + tag);
+    }
+  }
   for (const lang of ["fr", "en"]) {
     for (const field of ["title", "period", "description"]) {
       if (!project[field]?.[lang]?.trim()) {

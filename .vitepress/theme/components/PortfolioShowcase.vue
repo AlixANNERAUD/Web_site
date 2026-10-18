@@ -33,6 +33,7 @@ const categories: { id: ProjectCategory | "all"; fr: string; en: string }[] = [
 const groups: { id: ProjectGroup | "all"; fr: string; en: string }[] = [
   { id: "all", fr: "Tous", en: "All" },
   { id: "personal", fr: "Personnels", en: "Personal" },
+  { id: "library", fr: "Bibliothèques", en: "Libraries" },
   { id: "competition", fr: "Compétitions", en: "Competitions" },
   { id: "academic", fr: "Académiques", en: "Academic" },
 ];
