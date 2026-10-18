@@ -97,6 +97,79 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
       }
     }
 
+    // Immersive typographic homepage, keyboard-friendly scroll navigation and
+    // reduced-motion fallback. The intro is static Astro HTML, not a Vue island.
+    for (const path of ["/", "/fr/"]) {
+      try {
+        for (const [width, height] of [[1440, 900], [768, 900], [375, 812], [320, 640]]) {
+          await page.setViewportSize({ width, height });
+          await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
+          const intro = page.locator(".home-hero");
+          const title = intro.locator("#home-hero-title");
+          assert.equal(await intro.count(), 1, path + " hero should render once");
+          assert.equal(await title.count(), 1, path + " must have one typographic title");
+          assert.equal(await intro.locator("img").count(), 0,
+            path + " should not load the removed pixel portrait");
+          assert.equal(await intro.locator(".home-hero-title-mask").count(), 2);
+          assert.equal(await intro.locator(".home-hero-scroll").getAttribute("href"),
+            "#career-highlights", path + " scroll cue should target career");
+          assert.equal(await intro.locator(".home-action").count(), 3,
+            path + " should preserve professional, project and contact CTAs");
+
+          const rect = await intro.boundingBox();
+          assert.ok(rect && rect.height >= height - 119,
+            path + " hero should nearly fill the viewport at " + width + "×" + height +
+            " (height=" + rect?.height + ")");
+          assert.ok(rect.width <= width + 2, path + " hero must not overflow at " + width);
+          const overflow = await page.evaluate(
+            () => document.documentElement.scrollWidth > window.innerWidth + 2,
+          );
+          assert.equal(overflow, false, path + " horizontal overflow at " + width);
+          checked++;
+
+          if (width === 1440 || width === 375) {
+            // Capture the final visual state, not a mid-animation text reveal.
+            await page.waitForTimeout(1250);
+            await page.screenshot({
+              path: resolve(output,
+                engineName + "-" + (path === "/" ? "en" : "fr") +
+                "-hero-animated-" + width + ".png"),
+              fullPage: false,
+              timeout: 15000,
+            });
+          }
+        }
+
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.emulateMedia({ reducedMotion: "reduce" });
+        await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
+        const reduced = await page.locator(".home-hero-title-line").first()
+          .evaluate((node) => ({
+            animation: getComputedStyle(node).animationName,
+            opacity: getComputedStyle(node).opacity,
+          }));
+        assert.equal(reduced.animation, "none",
+          path + " must disable title animation for reduced motion");
+        assert.equal(reduced.opacity, "1",
+          path + " title remains readable without animation");
+        checked++;
+
+        // Same-page anchor works with either motion preference.
+        await page.locator(".home-hero-scroll").click();
+        await page.waitForFunction(() =>
+          location.hash === "#career-highlights" &&
+          document.querySelector("#career-highlights")?.getBoundingClientRect().top < window.innerHeight * 0.65,
+          null,
+          { timeout: 6000 },
+        );
+        checked++;
+        await page.emulateMedia({ reducedMotion: "no-preference" });
+      } catch (error) {
+        failures.push(engineName + " " + path + " immersive hero: " + error);
+        await page.emulateMedia({ reducedMotion: "no-preference" });
+      }
+    }
+
     // A balanced homepage must show professional experience first, then
     // multiple projects, with Xila's topology as a clearly labelled deep dive.
     for (const [path, careerUrl] of [
