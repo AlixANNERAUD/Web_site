@@ -44,7 +44,7 @@ for (const project of projects) {
       typeof tag !== "string" ||
       tag.trim() !== tag ||
       tag.length > 32 ||
-      /(?:https?:|title=|\\":|\\[|\\]|<|>)/i.test(tag)
+      /[<>\[\]"=]/.test(tag) || /https?:/i.test(tag)
     ) {
       throw new Error("Malformed project technology tag for " + project.id + ": " + tag);
     }
