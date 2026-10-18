@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { applyPortfolioSEO } from "./seo.mts";
 import { ENGLISH_CONFIGURATION } from "../src/en/configuration";
 import { FRENCH_CONFIGURATION } from "../src/fr/configuration";
 import tailwindcss from "@tailwindcss/vite";
@@ -17,6 +18,7 @@ const configuration = defineConfig({
     plugins: [tailwindcss()],
   },
   lastUpdated: false,
+  transformPageData: applyPortfolioSEO,
 
   locales: {
     root: {
