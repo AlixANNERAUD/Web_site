@@ -42,6 +42,9 @@ const copy = computed(() =>
   props.lang === "fr"
     ? {
         eyebrow: "Sélection / 01",
+        catalogueEyebrow: "Portfolio / Tous les projets",
+        catalogueTitle: "Projets",
+        archive: "Consulter les descriptions techniques complètes",
         title: "Des idées aux",
         emphasis: "systèmes.",
         description: "Du noyau Rust aux outils métiers : quelques projets que je conçois, développe et maintiens.",
@@ -57,6 +60,9 @@ const copy = computed(() =>
       }
     : {
         eyebrow: "Selected work / 01",
+        catalogueEyebrow: "Portfolio / All projects",
+        catalogueTitle: "Projects",
+        archive: "Read the full technical project descriptions",
         title: "From ideas to",
         emphasis: "systems.",
         description: "From a Rust kernel to practical business software: selected projects I design, build and maintain.",
@@ -96,6 +102,9 @@ const visibleProjects = computed(() => {
 const catalogueUrl = computed(() =>
   props.lang === "fr" ? "/fr/projects" : "/projects",
 );
+const archiveUrl = computed(() =>
+  props.lang === "fr" ? "/fr/projects/archive" : "/projects/archive",
+);
 </script>
 
 <template>
@@ -106,8 +115,11 @@ const catalogueUrl = computed(() =>
   >
     <div class="showcase-heading">
       <div class="showcase-heading-main">
-        <p class="showcase-eyebrow">{{ copy.eyebrow }}</p>
-        <h2>{{ copy.title }} <em>{{ copy.emphasis }}</em></h2>
+        <p class="showcase-eyebrow">
+          {{ mode === "catalogue" ? copy.catalogueEyebrow : copy.eyebrow }}
+        </p>
+        <h1 v-if="mode === 'catalogue'">{{ copy.catalogueTitle }}</h1>
+        <h2 v-else>{{ copy.title }} <em>{{ copy.emphasis }}</em></h2>
       </div>
       <p class="showcase-intro">
         {{ mode === "featured" ? copy.description : copy.catalogueDescription }}
@@ -197,6 +209,9 @@ const catalogueUrl = computed(() =>
     <a v-if="mode === 'featured'" class="showcase-all-link" :href="catalogueUrl">
       {{ copy.viewAll }} <span aria-hidden="true">↗</span>
     </a>
+    <a v-else class="showcase-all-link" :href="archiveUrl">
+      {{ copy.archive }} <span aria-hidden="true">↗</span>
+    </a>
   </section>
 </template>
 
@@ -206,6 +221,10 @@ const catalogueUrl = computed(() =>
   margin: 2.5rem auto 5rem;
   padding: 0 1.5rem;
   color: var(--vp-c-text-1);
+}
+
+.portfolio-showcase--catalogue {
+  margin-top: 4.25rem;
 }
 
 .showcase-heading {
@@ -230,6 +249,7 @@ const catalogueUrl = computed(() =>
   text-transform: uppercase;
 }
 
+.showcase-heading h1,
 .showcase-heading h2 {
   margin: 0;
   border: 0;
