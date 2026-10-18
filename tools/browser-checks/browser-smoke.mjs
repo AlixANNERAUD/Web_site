@@ -40,6 +40,24 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
           const horizontalOverflow = await page.evaluate(
             () => document.documentElement.scrollWidth > window.innerWidth + 2,
           );
+          if (horizontalOverflow && width === 320 && path.includes("/experiences")) {
+            const offenders = await page.evaluate(() => [...document.body.querySelectorAll("*")]
+              .filter((node) => {
+                const box = node.getBoundingClientRect();
+                return box.width > 0 && (box.right > window.innerWidth + 2 || box.left < -2);
+              })
+              .slice(0, 18)
+              .map((node) => ({
+                tag: node.tagName.toLowerCase(),
+                id: node.id,
+                className: typeof node.className === "string" ? node.className.slice(0, 90) : "",
+                rect: (() => { const r = node.getBoundingClientRect(); return {
+                  left: Math.round(r.left), right: Math.round(r.right), width: Math.round(r.width),
+                }; })(),
+              })));
+            console.error(engineName + " " + url + " width=320 overflow diagnostics: " +
+              JSON.stringify(offenders));
+          }
           assert.equal(horizontalOverflow, false, url + " horizontal overflow at " + width);
 
           if ((path === "/" || path === "/fr/" || path.endsWith("/projects")) && (width === 375 || width === 1440)) {
