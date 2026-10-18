@@ -90,6 +90,48 @@ for (const file of ["index.html", "fr/index.html"]) {
     failed.push(file + ": missing Person structured data");
   }
 }
+// Home is an engineering portfolio, not an Xila-only landing page.
+// Professional experience and a broad project selection must precede
+// the explicitly labelled Xila architecture deep dive in both locales.
+for (const [file, experienceUrl] of [
+  ["index.html", "/experiences"],
+  ["fr/index.html", "/fr/experiences"],
+]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  const marks = [
+    "home-hero",
+    "home-experience",
+    "home-experience-grid",
+    "portfolio-showcase",
+    "xila-topology",
+  ];
+  const positions = marks.map((part) => html.indexOf(part));
+  if (positions.some((index) => index < 0) ||
+      positions.some((index, i) => i > 0 && index <= positions[i - 1])) {
+    failed.push(file + ": homepage sections missing or in the wrong order");
+  }
+  if ([...html.matchAll(/class="home-experience-card"/g)].length !== 4) {
+    failed.push(file + ": expected four featured professional cards");
+  }
+  for (const id of ["memo-bank", "linkt", "amazon", "nyu"]) {
+    if (!html.includes(experienceUrl + "#" + id + "-title")) {
+      failed.push(file + ": missing professional milestone link for " + id);
+    }
+  }
+  for (const project of ["xila", "infrastructure", "mini-train-store"]) {
+    const prefix = file.startsWith("fr/") ? "/fr/projects/" : "/projects/";
+    if (!html.includes(prefix + project)) {
+      failed.push(file + ": missing selected project " + project);
+    }
+  }
+  if (!/Xila[^<]{0,140}/i.test(html) || !html.includes("xila-topology-link")) {
+    failed.push(file + ": Xila graph must be presented as a named project deep dive");
+  }
+  if ([...html.matchAll(/<h1(?:\s|>)/g)].length !== 1) {
+    failed.push(file + ": homepage should have exactly one H1");
+  }
+}
+
 // Structural regressions: these pages use one page-level heading and a
 // purpose-built layout rather than the legacy Markdown/document components.
 for (const [file, marker] of [
