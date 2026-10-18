@@ -139,9 +139,9 @@ function markLogoFailed(url: string) {
                 :class="{ 'career-company-mark--dark': entry.logoOnDark }"
                 aria-hidden="true"
               >
-                <span class="career-company-fallback">{{ entry.monogram }}</span>
+                <span v-if="!entry.logo || failedLogos.has(entry.logo)" class="career-company-fallback">{{ entry.monogram }}</span>
                 <img
-                  v-if="entry.logo && !failedLogos.has(entry.logo)"
+                  v-else
                   class="career-company-logo"
                   :src="entry.logo"
                   alt=""
