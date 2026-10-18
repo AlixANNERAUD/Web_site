@@ -51,6 +51,8 @@ scripts/                 Content and generated-HTML validation
 
 **Routes:** English pages appear at the root; French pages under `/fr/`. Existing `/projects/<id>` URLs and the generated `/projects/<id>.html` files remain stable with `build.format = "preserve"`. Every project has a dedicated page in both languages. Removed archive routes stay removed.
 
+**Homepage:** lead with a professional overview (Memo Bank, Linkt, Amazon, NYU), then the selected Xila / Infrastructure / Mini Train Store projects; keep the Xila architecture diagram as an explicitly labelled technical deep dive below the portfolio cards. This section is intentionally statically rendered via Astro, while the animated diagram hydrates only when visible.
+
 **Content editing:** Add metadata to [`portfolioProjects.ts`](./src/data/portfolioProjects.ts) and one file per locale under `src/content/projects/{en,fr}/`. Use `.mdx` only when a component is needed; `ArchitectureFlow` is static, while `XilaBrowserDemo` has `client:load`. Links and project ranking remain data-driven.
 
 **UI editing:** Reuse `EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `TechnologyTags` and `EditorialNext` rather than duplicating their styles. Astro layouts own the global shell; business logic stays in the Vue showcases.
