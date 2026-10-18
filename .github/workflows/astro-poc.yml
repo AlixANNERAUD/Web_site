@@ -1,0 +1,31 @@
+name: Astro migration POC (isolated)
+
+on:
+  pull_request:
+    paths:
+      - "experiments/astro-poc/**"
+      - ".github/workflows/astro-poc.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install and build current VitePress portfolio
+        run: |
+          npm ci
+          npm run docs:build
+      - name: Install and build isolated Astro POC
+        run: |
+          npm install --prefix experiments/astro-poc --no-audit --no-fund
+          npm run build --prefix experiments/astro-poc
+      - name: Compare emitted HTML and static artifacts
+        run: node experiments/astro-poc/measure.mjs
