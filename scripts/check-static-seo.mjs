@@ -75,6 +75,15 @@ for (const [file, marker] of [
   }
 }
 
+// Experience logos must appear in both generated locales. This is a
+// structural check; browser/network verification of remote assets is separate.
+for (const file of ["experiences.html", "fr/experiences.html"]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  if (!html.includes("career-company-logo") || !html.includes("logo-becquerel-blanc_tournant.jpg")) {
+    failed.push(file + ": experience company logo markup missing from SSR");
+  }
+}
+
 if (failed.length) {
   console.error("Static SEO checks failed:\n" + failed.join("\n"));
   process.exitCode = 1;
