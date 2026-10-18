@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import vue from "@astrojs/vue";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://alix.anneraud.fr",
@@ -10,5 +9,4 @@ export default defineConfig({
   trailingSlash: "never",
   build: { format: "file" },
   integrations: [vue(), mdx(), sitemap()],
-  vite: { plugins: [tailwindcss()] },
 });
