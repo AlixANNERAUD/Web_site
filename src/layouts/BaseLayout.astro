@@ -1,0 +1,135 @@
+---
+import "../styles/style.css";
+
+export interface Props {
+  lang: "en" | "fr";
+  title: string;
+  description: string;
+  path: string;
+  home?: boolean;
+  noFooter?: boolean;
+}
+const { lang, title, description, path, home = false, noFooter = false } = Astro.props;
+const fr = lang === "fr";
+const site = "https://alix.anneraud.fr";
+const normalPath = path === "/" || path === "/fr/" ? path : path.replace(/\/$/, "");
+const counterpart = fr
+  ? (normalPath === "/fr/" ? "/" : normalPath.replace(/^\/fr(?=\/)/, ""))
+  : (normalPath === "/" ? "/fr/" : "/fr" + normalPath);
+const enPath = fr ? counterpart : normalPath;
+const frPath = fr ? normalPath : counterpart;
+const titleText = home
+  ? fr
+    ? "Alix ANNERAUD — Logiciel, Rust et systèmes embarqués"
+    : "Alix ANNERAUD — Software, Rust and embedded systems"
+  : title + " | Alix ANNERAUD";
+const canonical = site + normalPath;
+const image = site + "/images/alix.webp";
+const links = fr
+  ? [
+      { label: "Expériences", href: "/fr/experiences" },
+      { label: "Projets", href: "/fr/projects" },
+      { label: "Compétences", href: "/fr/skills" },
+      { label: "CV", href: "/fr/resume" },
+    ]
+  : [
+      { label: "Experiences", href: "/experiences" },
+      { label: "Projects", href: "/projects" },
+      { label: "Skills", href: "/skills" },
+      { label: "Resume", href: "/resume" },
+    ];
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alix ANNERAUD",
+  url: site + "/",
+  image,
+  sameAs: ["https://github.com/AlixANNERAUD", "https://www.linkedin.com/in/alix-anneraud/"],
+  knowsAbout: ["Rust", "WebAssembly", "Embedded software", "Systems programming", "Security"],
+};
+---
+<!doctype html>
+<html lang={fr ? "fr" : "en"}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titleText}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alix ANNERAUD" />
+    <meta property="og:locale" content={fr ? "fr_FR" : "en_US"} />
+    <meta property="og:title" content={titleText} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={fr ? "Portrait d'Alix ANNERAUD" : "Portrait of Alix ANNERAUD"} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={titleText} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={site + enPath} />
+    <link rel="alternate" hreflang="fr" href={site + frPath} />
+    <link rel="alternate" hreflang="x-default" href={site + enPath} />
+    <link rel="icon" href="/images/icon.png" type="image/png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {home && <script type="application/ld+json" set:html={JSON.stringify(person)} />}
+    <script is:inline>
+      try {
+        const stored = localStorage.getItem("portfolio-theme");
+        if ((stored === "dark") || (stored !== "light" && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch {}
+    </script>
+    <script defer src="https://s.anneraud.fr/script.js" data-website-id="89a5e147-d520-4293-aa35-f80eb903ae3a"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{fr ? "Aller au contenu" : "Skip to content"}</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <a class="site-brand" href={fr ? "/fr/" : "/"} aria-label={fr ? "Accueil" : "Home"}>Alix ANNERAUD</a>
+          <nav class="site-main-nav" aria-label={fr ? "Navigation principale" : "Main navigation"}>
+            {links.map((link) => (
+              <a href={link.href} aria-current={normalPath === link.href || normalPath.startsWith(link.href + "/") ? "page" : undefined}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <div class="site-header-tools">
+            <a class="site-locale" href={counterpart} lang={fr ? "en" : "fr"} aria-label={fr ? "Switch to English" : "Passer en français"}>{fr ? "EN" : "FR"}</a>
+            <button class="site-theme-button" type="button" data-theme-toggle aria-label={fr ? "Changer de thème" : "Toggle theme"} aria-pressed="false">
+              <span aria-hidden="true">◐</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main id="main" class={home ? "site-home" : undefined}><slot /></main>
+      {!noFooter && <footer class="site-footer">
+        <div class="site-footer-inner">
+          <span>© Alix ANNERAUD · <a href="https://opensource.org/licenses/MIT">MIT</a> · Astro</span>
+          <nav aria-label={fr ? "Liens du pied de page" : "Footer links"}>
+            <a href={fr ? "/fr/legal-notice" : "/legal-notice"}>{fr ? "Mentions légales" : "Legal notice"}</a>
+            <a href="https://github.com/AlixANNERAUD" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alix-anneraud/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://matrix.to/#/@alix:anneraud.fr" target="_blank" rel="noopener noreferrer">Matrix</a>
+            <a href="mailto:alix@anneraud.fr">Email</a>
+          </nav>
+        </div>
+      </footer>}
+    </div>
+    <script is:inline>
+      const button = document.querySelector("[data-theme-toggle]");
+      if (button) {
+        const sync = () => button.setAttribute("aria-pressed", String(document.documentElement.classList.contains("dark")));
+        sync();
+        button.addEventListener("click", () => {
+          const dark = document.documentElement.classList.toggle("dark");
+          try { localStorage.setItem("portfolio-theme", dark ? "dark" : "light"); } catch {}
+          sync();
+        });
+      }
+    </script>
+  </body>
+</html>
