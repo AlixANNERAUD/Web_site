@@ -46,7 +46,7 @@ const groups: { id: ProjectGroup | "all"; fr: string; en: string }[] = [
 const copy = computed(() =>
   props.lang === "fr"
     ? {
-        eyebrow: "Sélection / 01",
+        eyebrow: "Projets / 02",
         catalogueEyebrow: "Portfolio / Tous les projets",
         catalogueTitle: "Projets",
         title: "Des idées aux",
@@ -66,7 +66,7 @@ const copy = computed(() =>
         empty: "Aucun projet ne correspond à cette recherche.",
       }
     : {
-        eyebrow: "Selected work / 01",
+        eyebrow: "Selected projects / 02",
         catalogueEyebrow: "Portfolio / All projects",
         catalogueTitle: "Projects",
         title: "From ideas to",

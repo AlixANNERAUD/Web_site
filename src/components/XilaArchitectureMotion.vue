@@ -20,16 +20,18 @@ let starting = false;
 
 const content = {
   fr: {
-    kicker: "Sous le capot / 02",
-    title: "Un système, plusieurs couches.",
+    kicker: "Focus technique — Xila / 03",
+    title: "Xila, du matériel aux applications.",
     text: "Un aperçu de l'architecture de Xila : les pilotes relient le matériel aux services Rust, puis à la frontière WebAssembly et aux applications.",
     diagram: "Pilotes → services Rust → frontières d'exécution WebAssembly → applications. Les services gèrent également le stockage/VFS et l'interface LVGL.",
+    explore: "Lire l'étude de cas Xila",
   },
   en: {
-    kicker: "Under the hood / 02",
-    title: "One system. Many layers.",
+    kicker: "Technical deep dive — Xila / 03",
+    title: "Inside Xila: from drivers to apps.",
     text: "A glimpse of Xila's architecture: drivers connect hardware to Rust services, WebAssembly guest bindings and applications.",
     diagram: "Drivers → Rust services → WebAssembly execution boundary → applications. Services also manage storage/VFS and LVGL graphics.",
+    explore: "Read the Xila case study",
   },
 } as const;
 
@@ -193,6 +195,10 @@ onBeforeUnmount(() => {
       </div>
       <figcaption class="visually-hidden">{{ content[lang].diagram }}</figcaption>
     </figure>
+
+    <a class="xila-topology-link" :href="lang === 'fr' ? '/fr/projects/xila' : '/projects/xila'">
+      {{ content[lang].explore }} <span aria-hidden="true">↗</span>
+    </a>
   </section>
 </template>
 
@@ -277,6 +283,18 @@ onBeforeUnmount(() => {
   font: 600 clamp(0.67rem, 1.2vw, 0.83rem)/1.3 ui-monospace, monospace;
   white-space: nowrap;
 }
+ .xila-topology-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  color: var(--vp-c-brand-1);
+  font-size: 0.92rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.xila-topology-link:hover { text-decoration: underline; }
+.xila-topology-link:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
 .visually-hidden {
   position: absolute;
   width: 1px;

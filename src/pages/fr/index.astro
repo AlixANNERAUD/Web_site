@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HomeHero from "../../components/HomeHero.astro";
+import HomeExperience from "../../components/HomeExperience.astro";
 import PortfolioShowcase from "../../components/PortfolioShowcase.vue";
 import XilaArchitectureMotion from "../../components/XilaArchitectureMotion.vue";
 ---
@@ -8,10 +9,11 @@ import XilaArchitectureMotion from "../../components/XilaArchitectureMotion.vue"
   lang="fr"
   path="/fr/"
   title="Alix ANNERAUD"
-  description="Portfolio d'Alix ANNERAUD : système d'exploitation Xila en Rust, logiciels embarqués, sécurité, projets open source et applications web."
+  description="Portfolio d'Alix ANNERAUD : ingénierie logicielle, sécurité chez Memo Bank, expériences Amazon, Linkt et NYU, systèmes Rust et projets open source."
   home
 >
   <HomeHero lang="fr" />
+  <HomeExperience lang="fr" />
+  <PortfolioShowcase lang="fr" mode="featured" />
   <XilaArchitectureMotion lang="fr" client:visible />
-  <PortfolioShowcase lang="fr" mode="featured" client:idle />
 </BaseLayout>
