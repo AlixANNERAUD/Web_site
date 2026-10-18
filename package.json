@@ -5,7 +5,8 @@
     "docs:preview": "vitepress preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run docs:build"
+    "check": "npm run format:check && npm run validate:portfolio && npm run docs:build",
+    "validate:portfolio": "node scripts/validate-portfolio.mjs"
   },
   "devDependencies": {
     "prettier": "3.9.10",
