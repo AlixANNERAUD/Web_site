@@ -60,4 +60,14 @@ for (const lang of ["fr", "en"]) {
   }
 }
 
-console.log("Validated " + projects.length + " projects and both localized archives.");
+const caseStudies = ["xila", "mini-train-store", "infrastructure"];
+for (const lang of ["fr", "en"]) {
+  for (const id of caseStudies) {
+    const markdown = readFileSync(join(root, "src", lang, "projects", id + ".md"), "utf8");
+    if (!markdown.includes("<ArchitectureFlow") || !markdown.includes("description:")) {
+      throw new Error("Missing case study diagram or SEO description: " + lang + "/" + id);
+    }
+  }
+}
+
+console.log("Validated " + projects.length + " projects, both archives and six case studies.");

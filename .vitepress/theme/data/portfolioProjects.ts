@@ -433,5 +433,8 @@ export const portfolioProjects: PortfolioProject[] = [
 
 export function projectDetailUrl(project: PortfolioProject, lang: PortfolioLanguage): string {
   const prefix = lang === "fr" ? "/fr" : "";
+  if (["xila", "mini-train-store", "infrastructure"].includes(project.id)) {
+    return `${prefix}/projects/${project.id}`;
+  }
   return `${prefix}/projects/archive#${project.id}`;
 }
