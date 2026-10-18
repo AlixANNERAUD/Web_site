@@ -2,6 +2,8 @@
 
 Une sélection de projets personnels, scolaires et compétitifs reflétant mes intérêts et mon parcours technique.
 
+<PortfolioShowcase lang="fr" mode="catalogue" />
+
 ## <Palette /> Personnels
 
 <Project badge="En cours" title="Xila" date="2019 - Présent" link="https://www.xila.dev" :tags="['Rust', 'WebAssembly']">
