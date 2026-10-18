@@ -26,13 +26,17 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
     const page = await context.newPage();
 
     for (const path of targets) {
-      for (const width of widths) {
-        await page.setViewportSize({ width, height: 900 });
-        const url = base + path;
-        try {
-          const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
-          assert.equal(response?.status(), 200, url + " should resolve");
-          await page.locator("main").first().waitFor({ timeout: 10000 });
+      const url = base + path;
+      try {
+        // Load each page only once; resizing is enough to test each breakpoint.
+        await page.setViewportSize({ width: 1440, height: 900 });
+        const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 10000 });
+        assert.equal(response?.status(), 200, url + " should resolve");
+        await page.locator("main").first().waitFor({ timeout: 7000 });
+
+        for (const width of widths) {
+          await page.setViewportSize({ width, height: 900 });
+          await page.waitForTimeout(60);
           const horizontalOverflow = await page.evaluate(
             () => document.documentElement.scrollWidth > window.innerWidth + 2,
           );
@@ -42,13 +46,14 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
             const name = path.replace(/\W+/g, "-") || "home";
             await page.screenshot({
               path: resolve(output, engineName + "-" + name + "-" + width + ".png"),
-              fullPage: true,
+              fullPage: false,
+              timeout: 10000,
             });
           }
           checked++;
-        } catch (error) {
-          failures.push(engineName + " " + path + " " + width + "px: " + error);
         }
+      } catch (error) {
+        failures.push(engineName + " " + path + ": " + error);
       }
     }
 
@@ -57,12 +62,12 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
       ["/fr/projects", "Bibliothèques"],
     ]) {
       try {
-        await page.goto(base + path, { waitUntil: "domcontentloaded" });
+        await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
         const library = page.getByRole("button", { name, exact: true });
         await library.waitFor({ timeout: 10000 });
         await library.click();
         const cards = page.locator(".showcase-card");
-        await page.waitForTimeout(250);
+        await page.waitForTimeout(100);
         assert.equal(await cards.count(), 6, "Expected six open-source libraries");
         const search = page.locator('input[type="search"]');
         await search.fill("nanoexpr");
