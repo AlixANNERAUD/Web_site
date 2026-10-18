@@ -17,6 +17,8 @@ This is the **single source of truth** for coding agents working in this reposit
 - `.vitepress/seo.mts`: canonical URLs, `hreflang`, Open Graph and structured metadata.
 - `.vitepress/theme/index.ts`: Vue component auto-registration.
 - `.vitepress/theme/components/`: project explorer, experience timeline, SVG/WebGL, Xila browser demo and other Vue UI.
+- `.vitepress/theme/components/Editorial*.vue` and `TechnologyTags.vue`: reusable hero, section headings, CTA, card surface and technology chips shared by three showcase pages.
+- `.vitepress/theme/style.css`: shared `.editorial-page` layout and global design tokens; avoid duplicating these in page-specific scoped CSS.
 - `.vitepress/theme/data/portfolioProjects.ts`: typed bilingual project metadata, group/category filters and detail URL logic.
 - `.vitepress/theme/data/experiences.ts`: bilingual professional and education timeline.
 - `.vitepress/theme/data/skills.ts`: bilingual technical domains, language proficiencies and links to supporting project pages; rendered through `SkillsShowcase.vue`.
@@ -38,6 +40,7 @@ Read the adjacent code and the root `README.md` before editing a subsystem; do n
 
 ## Frontend and performance
 
+- Use `EditorialHero`, `EditorialSectionHeading`, `EditorialNext`, `EditorialCard` and `TechnologyTags` for shared UI; keep domain-specific content and interactions in the individual showcase components. Do not reintroduce duplicate CSS for these primitives.
 - Favor existing Vue components and small, idiomatic TypeScript changes. Use the project's current styling conventions rather than introducing a new UI framework.
 - Respect `prefers-reduced-motion`. Interactive graphics need an accessible, meaningful static fallback; keyboard navigation, focus styles, contrast and text alternatives matter.
 - Keep WebGL/browser demos optional and lazy-loaded. Stop animation when invisible, release listeners/GPU resources on teardown, and avoid loading a large WASM artifact before user interaction.
