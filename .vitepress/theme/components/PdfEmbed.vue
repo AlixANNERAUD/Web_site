@@ -1,10 +1,10 @@
 <template>
-  <div class="pdf-container" style="height: calc(100vh - 64px); width: 100%">
+  <div class="pdf-container">
     <iframe
       v-if="src"
       :src="src"
+      :title="title"
       type="application/pdf"
-      frameborder="0"
       width="100%"
       height="100%"
       style="border: none"
@@ -15,6 +15,7 @@
       </p>
     </iframe>
     <div v-else class="error-state">No PDF link provided.</div>
+    <a v-if="src" class="pdf-open-link" :href="src" target="_blank" rel="noopener noreferrer">{{ openLabel }} ↗</a>
   </div>
 </template>
 
@@ -23,6 +24,14 @@ defineProps({
   src: {
     type: String,
     required: true,
+  },
+  title: {
+    type: String,
+    default: "CV (PDF)",
+  },
+  openLabel: {
+    type: String,
+    default: "Open PDF",
   },
 });
 </script>
@@ -35,6 +44,19 @@ defineProps({
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
+}
+
+.pdf-open-link {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.375rem;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  font-size: 0.85rem;
 }
 
 iframe {

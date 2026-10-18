@@ -1,4 +1,4 @@
-# Experiences
+# Expériences
 
 Un aperçu de mon parcours professionnel, de mes stages et de ma formation académique.
 

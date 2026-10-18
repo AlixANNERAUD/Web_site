@@ -11,8 +11,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="level">
-    <Star v-for="i in 5" :key="i" :class="{ filled: i <= level }" />
+  <div class="level" role="img" :aria-label="`${level} / 5`">
+    <Star v-for="i in 5" :key="i" :class="{ filled: i <= level }" aria-hidden="true" />
   </div>
 </template>
 
