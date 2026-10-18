@@ -12,6 +12,7 @@ This is the **single source of truth** for coding agents. `CLAUDE.md`, `GEMINI.m
 - `src/data/portfolioProjects.ts`, `experiences.ts`, `skills.ts`: bilingual metadata, rankings, content and evidence.
 - `src/components/`: Vue components, with reusable `EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `EditorialNext` and `TechnologyTags`; Astro components `HomeHero` and `HomeExperience` keep the homepage static where possible.
 - **Experience timeline**: recent cards are visible by default; older cards are grouped behind an accessible section-level toggle. Mark earlier roles with `earlier: true` in `src/data/experiences.ts` (including Corporate Relations Assistant). Do not truncate individual card descriptions to implement “show more”; `ExperienceTimeline.vue` owns the complete reusable card layout.
+- **Homepage intro**: `HomeHero.astro` is a full-viewport typographic introduction, with CSS-only staggered motion and a career scroll cue; do not restore the pixel portrait, introduce hero-only client JS, or ignore `prefers-reduced-motion`.
 - **Homepage hierarchy**: professional overview before diverse featured projects, then the Xila-only technical deep dive. Keep all four professional roles data-driven from `experiences.ts`, and never suggest the Xila architecture visualization maps the user’s entire experience.
 - `src/styles/`: responsive styling, motion and VitePress-compatible color tokens retained for the Vue islands.
 - `public/`: images, robots.txt and GitHub Pages CNAME.
