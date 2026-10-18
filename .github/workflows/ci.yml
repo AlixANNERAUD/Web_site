@@ -15,6 +15,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+      - name: Verify AI instruction symlinks
+        run: |
+          test -s AGENTS.md
+          for alias in CLAUDE.md GEMINI.md; do
+            test -L "$alias"
+            test "$(readlink "$alias")" = "AGENTS.md"
+            cmp -s AGENTS.md "$alias"
+          done
+          test -L .github/copilot-instructions.md
+          test "$(readlink .github/copilot-instructions.md)" = "../AGENTS.md"
+          cmp -s AGENTS.md .github/copilot-instructions.md
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
