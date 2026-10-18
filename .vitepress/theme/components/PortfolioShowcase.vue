@@ -254,6 +254,10 @@ const catalogueUrl = computed(() =>
   gap: 1rem;
 }
 
+.portfolio-showcase--catalogue .showcase-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .showcase-card {
   min-width: 0;
   border: 1px solid var(--vp-c-divider);
@@ -404,6 +408,7 @@ const catalogueUrl = computed(() =>
 @media (max-width: 600px) {
   .portfolio-showcase { margin: 2rem auto 3rem; padding: 0 1rem; }
   .showcase-grid { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-showcase--catalogue .showcase-grid { grid-template-columns: minmax(0, 1fr); }
   .showcase-art { min-height: 9.5rem; }
   .showcase-card-body { min-height: 0; }
   .showcase-search, .showcase-search input { width: 100%; }
