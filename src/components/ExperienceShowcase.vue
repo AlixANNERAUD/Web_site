@@ -207,6 +207,11 @@ function earlierButtonLabel(group: ExperienceGroup): string {
   cursor: pointer;
 }
 .career-earlier-toggle:hover { border-color: var(--vp-c-brand-1); }
+.career-earlier-toggle > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
 .career-earlier-toggle:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 3px;
@@ -215,7 +220,7 @@ function earlierButtonLabel(group: ExperienceGroup): string {
 .career-earlier-icon--open { transform: rotate(180deg); }
 .career-timeline--earlier { margin-bottom: 0.3rem; }
 @media (max-width: 680px) {
-  .career-earlier-toggle { margin-left: 1.75rem; }
+  .career-earlier-toggle { margin-left: 1.75rem; max-width: calc(100% - 1.75rem); white-space: normal; }
 }
 @media (prefers-reduced-motion: reduce) {
   .career-earlier-toggle svg { transition: none; }
