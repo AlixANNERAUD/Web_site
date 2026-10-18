@@ -10,7 +10,8 @@ This is the **single source of truth** for coding agents. `CLAUDE.md`, `GEMINI.m
 - `src/pages/`: file-based routes; `src/pages/{fr/,}projects/[slug].astro` renders 52 entries from the typed collection in `src/content.config.ts`.
 - `src/content/projects/{en,fr}/`: one `.md` or `.mdx` page per project in each locale. MDX is reserved for components such as architecture diagrams and Xila demo. Do not restore the removed archive routes.
 - `src/data/portfolioProjects.ts`, `experiences.ts`, `skills.ts`: bilingual metadata, rankings, content and evidence.
-- `src/components/`: Vue components, with reusable `EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `EditorialNext` and `TechnologyTags`.
+- `src/components/`: Vue components, with reusable `EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `EditorialNext` and `TechnologyTags`; Astro components `HomeHero` and `HomeExperience` keep the homepage static where possible.
+- **Homepage hierarchy**: professional overview before diverse featured projects, then the Xila-only technical deep dive. Keep all four professional roles data-driven from `experiences.ts`, and never suggest the Xila architecture visualization maps the user’s entire experience.
 - `src/styles/`: responsive styling, motion and VitePress-compatible color tokens retained for the Vue islands.
 - `public/`: images, robots.txt and GitHub Pages CNAME.
 - CI/deploy under `.github/workflows/`, content and built HTML validation under `scripts/`.
