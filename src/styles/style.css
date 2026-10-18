@@ -1,0 +1,7 @@
+@import "./portfolio-motion.css";
+
+/* Ensure Lucide icon alignment across static Astro content and Vue islands. */
+svg {
+  display: inline;
+  vertical-align: middle;
+}

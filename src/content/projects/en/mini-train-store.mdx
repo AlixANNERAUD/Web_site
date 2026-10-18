@@ -1,0 +1,45 @@
+---
+title: Mini Train Store — e-commerce and automation
+description: A case study about self-hosted Odoo and a Vue/WXT browser extension for Leboncoin listings.
+---
+
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+
+# Mini Train Store: connecting a storefront to listing management
+
+**Odoo · Vue 3 · WXT · TypeScript · Docker** · Since 2026
+
+> Turning a real family business need into software: an online storefront, catalogue management and automation around existing listings.
+
+## The challenge
+
+My father's model railway business relied in part on listings published on Leboncoin. Building an independent shop required a way to display products while reducing repetitive inventory and listing management.
+
+I deployed **self-hosted Odoo** and developed a **browser extension** tailored to the Leboncoin workflow. The goal was to make daily operations easier without rebuilding an entire e-commerce platform.
+
+## Architecture
+
+<ArchitectureFlow title="From listing to online catalogue" steps={[{ title: 'Leboncoin', detail: 'Product listings viewed in the browser.' }, { title: 'WXT extension', detail: 'Content script, listing extraction and profile-based local storage.' }, { title: 'Vue interface', detail: 'Review, sorting and preparation of collected data.' }, { title: 'Odoo', detail: 'Product API, categories, pricing and storefront publishing.' }]} />
+
+The extension separates **content scripts** for reading listings, a **background script** managing collected data and a **Vue 3 popup** for browsing that data. Its Odoo integration contains the product models and API requests needed to handle catalogue items.
+
+The shop runs on my own hosting infrastructure rather than relying entirely on a hosted SaaS.
+
+## Technical trade-offs
+
+- **Reuse Odoo instead of rebuilding commerce features.** Existing software covers core store operations; custom code handles the business-specific workflow.
+- **Isolate extraction in an extension.** It operates on pages visited by the user, stores listings by profile and provides a review interface.
+- **Reconcile two data models.** Listings and store products need mapping between price, status, description, categories and images.
+- **Account for third-party markup changes.** HTML selectors can break when the external website changes, so the scraper must remain testable and maintainable.
+
+## Outcome and next steps
+
+The shop is available at **[minitrainstore.fr](https://www.minitrainstore.fr/)**, and the repository contains the extension. The implemented features include collection, sorting, filtering and Odoo integration. I do not claim sales or time savings without measurements.
+
+## Explore the project
+
+- [Mini Train Store](https://www.minitrainstore.fr/)
+- [Source code and assets](https://github.com/AlixANNERAUD/MiniTrainStore)
+- [Extension architecture](https://github.com/AlixANNERAUD/MiniTrainStore/blob/main/code/extension/README.md)
+
+[← All projects](/projects)

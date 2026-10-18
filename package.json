@@ -1,22 +1,29 @@
 {
+  "name": "alix-anneraud-portfolio",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "docs:dev": "astro dev",
+    "docs:build": "astro build",
+    "docs:preview": "astro preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run validate:portfolio && npm run docs:build",
+    "check": "npm run format:check && npm run validate:portfolio && npm run build && npm run verify:static",
     "validate:portfolio": "node scripts/validate-portfolio.mjs",
     "verify:static": "node scripts/check-static-seo.mjs"
   },
-  "devDependencies": {
-    "prettier": "3.9.10",
-    "vitepress": "^1.6.4"
-  },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.3",
+    "@astrojs/mdx": "^7.0.8",
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/vue": "^7.0.3",
+    "astro": "^7.4.0",
     "lucide-vue-next": "^1.0.0",
-    "tailwindcss": "^4.3.3",
     "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10"
   }
 }

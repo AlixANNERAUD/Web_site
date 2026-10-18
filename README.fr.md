@@ -1,124 +1,52 @@
 # Alix ANNERAUD — Portfolio
 
-<p align="center">
-  <strong>Du noyau au navigateur.</strong><br />
-  Génie logiciel · Systèmes Rust · Embarqué · Sécurité
-</p>
+**Du noyau au navigateur.** Ingénierie logicielle · Systèmes Rust · Embarqué · Sécurité
 
-<p align="center">
-  <a href="https://alix.anneraud.fr/fr/">Visiter le portfolio</a>
-  · <a href="https://alix.anneraud.fr/fr/projects">Découvrir les projets</a>
-  · <a href="./README.md">Read in English 🇬🇧</a>
-</p>
+[Portfolio](https://alix.anneraud.fr/fr/) · [Projets](https://alix.anneraud.fr/fr/projects) · [English](./README.md)
 
-<p align="center">
-  <a href="https://github.com/AlixANNERAUD/Web_site/actions/workflows/ci.yml">
-    <img alt="Intégration continue" src="https://github.com/AlixANNERAUD/Web_site/actions/workflows/ci.yml/badge.svg" />
-  </a>
-  <a href="https://github.com/AlixANNERAUD/Web_site/actions/workflows/deploy.yml">
-    <img alt="Déploiement GitHub Pages" src="https://github.com/AlixANNERAUD/Web_site/actions/workflows/deploy.yml/badge.svg" />
-  </a>
-</p>
+Ce site est un portfolio bilingue généré statiquement avec **Astro**, complété par des îlots **Vue 3** pour les fonctionnalités réellement interactives. Chaque projet possède sa fiche en Markdown ou MDX.
 
----
+## Architecture
 
-Code source de **[alix.anneraud.fr](https://alix.anneraud.fr/fr/)**, mon portfolio personnel. Le site met en avant la démarche d'ingénierie derrière mes réalisations, de **[Xila](https://www.xila.dev/)**, un système d'exploitation en Rust, aux applications web, bibliothèques embarquées, travaux de recherche et projets d'auto-hébergement.
+- **Astro 7** : génération HTML, routes, pages FR/EN, SEO et sitemap.
+- **Vue 3 + TypeScript** : filtres des projets, fallback des logos d'expérience, démo Xila et animation WebGL facultative.
+- **MDX** : diagrammes et composants intégrés aux études de cas Xila, Infrastructure et Mini Train Store.
+- **Tailwind CSS 4** et CSS scoped : styles responsive de l'interface.
+- **GitHub Pages** : hébergement de `dist/`, sans backend.
 
-Il est construit en **VitePress + Vue 3**, avec un rendu HTML statique. Les éléments interactifs sont ajoutés progressivement pour conserver un site rapide, lisible et accessible.
-
-## Contenu
-
-| Section | Présentation |
-| --- | --- |
-| **[Accueil](https://alix.anneraud.fr/fr/)** | Introduction, visualisation de l'architecture Xila et projets mis en avant |
-| **[Projets](https://alix.anneraud.fr/fr/projects)** | Catalogue avec recherche et filtres : projets personnels, bibliothèques, compétitions et travaux académiques |
-| **[Études de cas](https://alix.anneraud.fr/fr/projects/xila)** | Décisions, contraintes et compromis techniques de Xila, [Mini Train Store](https://alix.anneraud.fr/fr/projects/mini-train-store) et de l'[Infrastructure](https://alix.anneraud.fr/fr/projects/infrastructure) |
-| **[Expériences](https://alix.anneraud.fr/fr/experiences)** | Chronologie des expériences professionnelles, de la formation et des projets d'ingénierie |
-| **[Compétences](https://alix.anneraud.fr/fr/skills)** | Compétences techniques illustrées par des réalisations concrètes |
-
-Le site existe également [en anglais](https://alix.anneraud.fr/). La fiche Xila propose une [démonstration dans le navigateur](https://alix.anneraud.fr/fr/projects/xila), chargée uniquement à la demande et hébergée séparément.
-
-## Technologies
-
-- **VitePress 1.x** : Markdown, génération statique, navigation et GitHub Pages.
-- **Vue 3 + TypeScript** : catalogue filtrable, chronologie des expériences et composants interactifs.
-- **Tailwind CSS 4 + CSS scoped** : mise en page responsive et prise en charge des thèmes.
-- **Lucide** et un rendu **WebGL2** léger, chargé seulement lorsque nécessaire.
-- **GitHub Actions** : compilation, vérifications des contenus et publication.
-
-Le portfolio lui-même ne nécessite ni backend ni base de données.
-
-## Démarrage local
-
-Avec une version LTS récente de Node.js et npm :
+## Développement local
 
 ```sh
-git clone https://github.com/AlixANNERAUD/Web_site.git
-cd Web_site
-
 npm ci
-npm run docs:dev
+npm run dev
+npm run validate:portfolio
+npm run build
+npm run verify:static
+npm run preview
 ```
 
-Ouvre ensuite l'adresse locale affichée par VitePress.
+Les commandes `docs:dev`, `docs:build` et `docs:preview` restent disponibles pour compatibilité. Utiliser `npm run format:check` avant de fusionner.
 
-| Commande | Utilité |
-| --- | --- |
-| `npm run docs:dev` | Serveur de développement |
-| `npm run docs:build` | Génère le site dans `.vitepress/dist/` |
-| `npm run docs:preview` | Prévisualise le site généré |
-| `npm run validate:portfolio` | Vérifie projets, identifiants, traductions et fiches |
-| `npm run verify:static` | Vérifie les métadonnées SEO du HTML généré (après build) |
-| `npm run format:check` | Vérifie le formatage Prettier |
-
-Les pages Projets, Expériences et Compétences utilisent les mêmes composants Vue (`EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `EditorialNext` et `TechnologyTags`). Leurs interactions restent indépendantes, mais la structure visuelle et les espacements sont mutualisés.
-
-## Organisation du dépôt
+## Structure
 
 ```text
-.vitepress/
-  config.mts                 Configuration VitePress et langues
-  seo.mts                    Canonical, Open Graph et hreflang
-  theme/
-    components/              Composants Vue, fiches, démos et visualisations
-    data/
-      portfolioProjects.ts   Métadonnées des projets FR/EN
-      experiences.ts         Expériences et formation FR/EN
-      skills.ts              Compétences FR/EN, réalisations liées et langues
-    style.css                Styles globaux
+astro.config.mjs              Configuration d'Astro (sortie HTML, Vue, MDX, sitemap)
 src/
-  en/                        Contenus anglais
-  fr/                        Contenus français
-  public/                    Assets statiques
-scripts/
-  validate-portfolio.mjs     Validation du catalogue
-  check-static-seo.mjs       Contrôles SEO du site généré
-.github/workflows/
-  ci.yml                     Build et vérifications des PR
-  deploy.yml                 Publication GitHub Pages
+  components/                 Composants Vue mutualisés et îlots interactifs
+  content.config.ts           Collection de projets typée
+  content/projects/en/        26 fiches en anglais
+  content/projects/fr/        26 fiches en français
+  content/legal/              Mentions légales et crédits des logos
+  data/                       Projets, expériences et compétences bilingues
+  layouts/BaseLayout.astro    Navigation, couleurs, langues, SEO
+  pages/                      Routes anglaises / et françaises /fr/
+  styles/                     Styles partagés et animations
+public/                       Images, CNAME, robots.txt
+scripts/                      Vérification des données et du HTML généré
 ```
 
-### Modifier le contenu
+Pour ajouter un projet, modifier les données dans [`portfolioProjects.ts`](./src/data/portfolioProjects.ts), puis ajouter une fiche dans **les deux langues**. Réserver MDX aux composants nécessaires ; pour les cartes et en-têtes, réutiliser les composants partagés `EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `TechnologyTags` et `EditorialNext`.
 
-**Classement des projets :** le catalogue trie par importance éditoriale (profondeur technique, originalité, impact concret et preuves publiques), avec un tri alphabétique alternatif. Les poids sont définis dans [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts) (technique 40 %, originalité 20 %, impact 25 %, preuves publiques 15 %).
+Les URL existantes (dont `/fr/projects/xila` et les fichiers `.html`) restent conservées. Les anciennes archives de projets ne sont pas recréées.
 
-**Projets :** les métadonnées sont centralisées dans [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts). Chaque réalisation possède sa **propre fiche Markdown en FR et en EN**, dans `src/fr/projects/<project-id>.md` et `src/en/projects/<project-id>.md`. Les trois principaux projets bénéficient d'études de cas plus approfondies. Exécuter `npm run validate:portfolio` après modification.
-
-**Expériences :** modifier [`experiences.ts`](./.vitepress/theme/data/experiences.ts). Dates, employeurs, descriptions et réalisations sont renseignés une seule fois, dans les deux langues.
-
-**Interface :** les composants se trouvent dans [`.vitepress/theme/components/`](./.vitepress/theme/components). Privilégier les animations CSS légères, respecter `prefers-reduced-motion` et conserver un rendu statique de secours pour les visualisations informatives.
-
-## CI et déploiement
-
-Les PR vers `main` déclenchent la [CI du portfolio](./.github/workflows/ci.yml). Un merge dans `main` lance le [déploiement GitHub Pages](./.github/workflows/deploy.yml), qui publie `.vitepress/dist/`.
-
-Domaine public : **[alix.anneraud.fr](https://alix.anneraud.fr/)**. Les outils de mesure d'audience et la démo Xila sont des services externes, indépendants du build du dépôt.
-
-## Contact
-
-- [Portfolio](https://alix.anneraud.fr/fr/)
-- [GitHub](https://github.com/AlixANNERAUD)
-- [LinkedIn](https://www.linkedin.com/in/alix-anneraud/)
-- [Email](mailto:alix@anneraud.fr)
-
-Ce dépôt contient des textes personnels, des descriptions de projets et des éléments d'identité visuelle. Me contacter avant de les réutiliser.
+La CI GitHub Actions vérifie les 52 fiches, les pages FR/EN, les composants SSR et les métadonnées SEO. Le déploiement sur GitHub Pages se fait depuis `dist/` après fusion sur `main`.

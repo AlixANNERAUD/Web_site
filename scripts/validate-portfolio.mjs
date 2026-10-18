@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const source = readFileSync(join(root, ".vitepress/theme/data/portfolioProjects.ts"), "utf8");
+const source = readFileSync(join(root, "src/data/portfolioProjects.ts"), "utf8");
 const opening = "export const portfolioProjects: PortfolioProject[] = ";
 const start = source.indexOf(opening);
 const end = source.indexOf(";\n\nexport function projectDetailUrl", start);
@@ -101,18 +101,20 @@ if (topFeatured.some((project) => !project.featured)) {
 
 // Every catalogue item must have its own public page in BOTH languages.
 for (const lang of ["fr", "en"]) {
-  const archivePath = join(root, "src", lang, "projects", "archive.md");
+  const archivePath = join(root, "src", "content", "projects", lang, "archive.md");
   if (existsSync(archivePath)) {
     throw new Error("Obsolete project archive must not be restored: " + archivePath);
   }
 
   for (const project of projects) {
-    const pagePath = join(root, "src", lang, "projects", project.id + ".md");
-    if (!existsSync(pagePath)) {
-      throw new Error("Missing dedicated project page: " + lang + "/" + project.id);
+    const basePath = join(root, "src", "content", "projects", lang, project.id);
+    const markdownPath = basePath + ".md";
+    const mdxPath = basePath + ".mdx";
+    if (existsSync(markdownPath) === existsSync(mdxPath)) {
+      throw new Error("Expected exactly one .md/.mdx project page: " + lang + "/" + project.id);
     }
-    const markdown = readFileSync(pagePath, "utf8");
-    if (!markdown.startsWith("---\\n") && !markdown.startsWith("---\n")) {
+    const markdown = readFileSync(existsSync(mdxPath) ? mdxPath : markdownPath, "utf8");
+    if (!markdown.startsWith("---\n")) {
       throw new Error("Missing page frontmatter: " + lang + "/" + project.id);
     }
     if (!/^title: /m.test(markdown) || !/^description: /m.test(markdown)) {
@@ -126,14 +128,14 @@ for (const lang of ["fr", "en"]) {
     }
   }
 }
-if (existsSync(join(root, "docs"))) {
+if (existsSync(join(root, "docs")) || existsSync(join(root, ".vitepress"))) {
   throw new Error("The obsolete docs/ directory must not be restored.");
 }
 
 const caseStudies = ["xila", "mini-train-store", "infrastructure"];
 for (const lang of ["fr", "en"]) {
   for (const id of caseStudies) {
-    const markdown = readFileSync(join(root, "src", lang, "projects", id + ".md"), "utf8");
+    const markdown = readFileSync(join(root, "src", "content", "projects", lang, id + ".mdx"), "utf8");
     if (!markdown.includes("<ArchitectureFlow") || !markdown.includes("description:")) {
       throw new Error("Missing case study diagram or SEO description: " + lang + "/" + id);
     }
@@ -141,3 +143,9 @@ for (const lang of ["fr", "en"]) {
 }
 
 console.log("Validated " + projects.length + " dedicated FR/EN pages and six case studies.");
+
+// Markdown pages and Vue islands are referenced from typed content, not VitePress config.
+const config = readFileSync(join(root, "astro.config.mjs"), "utf8");
+if (!config.includes("vue()") || !config.includes("mdx()") || !config.includes('format: "preserve"')) {
+  throw new Error("Astro integrations and preserved .html route format are required.");
+}

@@ -3,7 +3,6 @@ name: Deploy Portfolio to Pages
 on:
   push:
     branches: [main]
-
   workflow_dispatch:
 
 permissions:
@@ -11,15 +10,13 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
   build:
-    name: Build
+    name: Build static Astro site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,18 +26,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: "24"
           cache: npm
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci
-      - name: Build with VitePress
-        run: npm run docs:build
+      - name: Build with Astro
+        run: |
+          npm run validate:portfolio
+          npm run build
+          npm run verify:static
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: dist
 
   deploy:
     environment:

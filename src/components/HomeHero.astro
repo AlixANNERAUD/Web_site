@@ -1,0 +1,71 @@
+---
+interface Props { lang: "en" | "fr"; }
+const { lang } = Astro.props;
+const fr = lang === "fr";
+const buttons = fr
+  ? [
+      { label: "Explorer Xila", href: "https://www.xila.dev", main: true },
+      { label: "Tous mes projets", href: "/fr/projects" },
+      { label: "Me contacter", href: "mailto:alix@anneraud.fr" },
+    ]
+  : [
+      { label: "Explore Xila", href: "https://www.xila.dev", main: true },
+      { label: "All projects", href: "/projects" },
+      { label: "Get in touch", href: "mailto:alix@anneraud.fr" },
+    ];
+---
+<section class="home-hero">
+  <div class="home-hero-copy">
+    <p class="home-hero-name">Alix ANNERAUD</p>
+    <h1>{fr ? "Du noyau au navigateur." : "From kernel to browser."}</h1>
+    <p class="home-hero-tagline">
+      {fr
+        ? "Ingénierie logicielle, systèmes Rust et sécurité. Je construis des logiciels embarqués, des outils web et des infrastructures que je peux comprendre et maîtriser de bout en bout."
+        : "Software engineering, Rust systems and security. I build embedded software, web tools and infrastructure that I can understand and operate from end to end."}
+    </p>
+    <div class="home-hero-actions">
+      {buttons.map((button) => (
+        <a href={button.href} class:list={["home-action", { "home-action--primary": button.main }]}>
+          {button.label} <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </div>
+  <div class="home-hero-portrait">
+    <img src="/images/alix.webp" width="600" height="600" alt={fr ? "Portrait d'Alix ANNERAUD" : "Portrait of Alix ANNERAUD"} fetchpriority="high" />
+  </div>
+</section>
+<style>
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0,1.25fr) minmax(210px,.75fr);
+  align-items: center;
+  gap: clamp(2rem,5vw,6rem);
+  max-width: 1180px;
+  padding: clamp(3rem,7vw,7rem) 1.5rem;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.home-hero-name { margin: 0 0 .8rem; color: var(--vp-c-text-2); font-weight: 550; letter-spacing: .045em; }
+.home-hero h1 {
+  margin: 0;
+  font-family: Georgia,"Times New Roman",serif;
+  font-size: clamp(2.8rem,5.8vw,5.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.055em;
+}
+.home-hero-tagline { max-width: 39rem; margin: 1.5rem 0 0; color: var(--vp-c-text-2); line-height: 1.75; font-size: 1.03rem; }
+.home-hero-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2rem; }
+.home-action { display: inline-flex; gap: .4rem; align-items: center; padding: .75rem 1.1rem; color: var(--vp-c-text-1); background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-divider); border-radius: .5rem; text-decoration: none; font-size: .89rem; font-weight: 600; }
+.home-action--primary { color: #fff; background: var(--vp-c-brand-1); border-color: var(--vp-c-brand-1); }
+.home-action:hover { border-color: var(--vp-c-brand-1); }
+.home-action:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
+.home-hero-portrait { width: 100%; aspect-ratio: 1; position: relative; }
+.home-hero-portrait::before { content: ""; position: absolute; inset: -6%; z-index: -1; background: radial-gradient(ellipse at 30% 40%,#e06f1e60,transparent 65%),radial-gradient(ellipse at 70% 60%,#47caff50,transparent 70%); filter: blur(25px); }
+.home-hero-portrait img { width: 100%; height: 100%; border-radius: 1.75rem; object-fit: cover; }
+@media(max-width: 760px) {
+ .home-hero { grid-template-columns: 1fr; padding: 2.5rem 1rem 3rem; }
+ .home-hero-portrait { width: min(16rem, 65%); order: -1; margin: 0 auto; }
+}
+</style>

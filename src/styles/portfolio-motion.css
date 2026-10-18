@@ -1,0 +1,105 @@
+/*
+ * Portfolio motion tokens and progressive enhancement.
+ *
+ * Animations are decorative only: content remains server-rendered and fully
+ * readable without JavaScript, GSAP or scroll-timeline browser support.
+ */
+
+:root {
+  --portfolio-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes portfolio-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Short, staggered page-entry animation; no reveal observer is required. */
+  .site-home .home-hero-name,
+  .site-home .home-hero h1,
+  .site-home .home-hero-tagline,
+  .site-home .home-hero-actions,
+  .site-home .home-hero-portrait {
+    animation: portfolio-enter 620ms var(--portfolio-ease) both;
+  }
+
+  .site-home .home-hero-name { animation-delay: 40ms; }
+  .site-home .home-hero h1 { animation-delay: 100ms; }
+  .site-home .home-hero-tagline { animation-delay: 170ms; }
+  .site-home .home-hero-actions { animation-delay: 240ms; }
+  .site-home .home-hero-portrait { animation-delay: 130ms; }
+
+  .site-home .portfolio-showcase .showcase-card {
+    animation: portfolio-enter 540ms var(--portfolio-ease) both;
+  }
+
+  .site-home .portfolio-showcase .showcase-card:nth-child(1) { animation-delay: 260ms; }
+  .site-home .portfolio-showcase .showcase-card:nth-child(2) { animation-delay: 330ms; }
+  .site-home .portfolio-showcase .showcase-card:nth-child(3) { animation-delay: 400ms; }
+
+  /* Scroll-driven motion is progressive: unsupported browsers see static cards. */
+  @supports (animation-timeline: view()) {
+    .portfolio-showcase--catalogue .showcase-card {
+      animation: portfolio-enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .portfolio-showcase .showcase-art-symbol {
+      transition: transform 260ms var(--portfolio-ease);
+    }
+
+    .portfolio-showcase .showcase-card:hover .showcase-art-symbol {
+      transform: scale(1.04) rotate(-1deg);
+    }
+
+    .portfolio-showcase .showcase-card-actions a > span,
+    .portfolio-showcase .showcase-all-link > span {
+      display: inline-block;
+      transition: transform 180ms var(--portfolio-ease);
+    }
+
+    .portfolio-showcase .showcase-card-actions a:hover > span,
+    .portfolio-showcase .showcase-all-link:hover > span {
+      transform: translateX(3px);
+    }
+  }
+}
+
+/* Never hide content or require an animation to reach a keyboard target. */
+@media (prefers-reduced-motion: reduce) {
+  .site-home .home-hero-name,
+  .site-home .home-hero h1,
+  .site-home .home-hero-tagline,
+  .site-home .home-hero-actions,
+  .site-home .home-hero-portrait,
+  .site-home .portfolio-showcase .showcase-card,
+  .portfolio-showcase--catalogue .showcase-card {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .portfolio-showcase .showcase-card,
+  .portfolio-showcase .showcase-art-symbol,
+  .portfolio-showcase .showcase-card-actions a > span,
+  .portfolio-showcase .showcase-all-link > span,
+  .site-home .home-action {
+    transition: none !important;
+  }
+
+  .portfolio-showcase .showcase-card:hover,
+  .site-home .home-action:hover {
+    transform: none !important;
+  }
+}
