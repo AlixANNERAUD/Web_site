@@ -82,6 +82,7 @@ Ouvre ensuite l'adresse locale affichée par VitePress.
     data/
       portfolioProjects.ts   Métadonnées des projets FR/EN
       experiences.ts         Expériences et formation FR/EN
+      skills.ts              Compétences FR/EN, réalisations liées et langues
     style.css                Styles globaux
 src/
   en/                        Contenus anglais
