@@ -2,27 +2,22 @@
 layout: home
 
 hero:
-  name: "👋 Hey, I'm Alix,"
-  text: "a software engineering student"
-  tagline: specialising in systems programming, embedded software, and full-stack development, with a taste for Rust, machine learning, and cybersecurity.
+  name: "Alix ANNERAUD"
+  text: "From kernel to browser."
+  tagline: "Software engineering, Rust systems and security. I build embedded software, web tools and infrastructure that I can understand and operate from end to end."
   image:
     src: /images/alix.webp
-    alt: Alix ANNERAUD
-
-features:
-  - icon: 🌐
-    title: International Experience
-    details: Interned at Amazon (Madrid) and NYU (New York), and currently working as a Network & Telecom Engineer at Linkt. I'm comfortable in multicultural, fast-paced professional environments.
-    link: /experiences
-    linkText: See my experiences
-  - icon: 🏆
-    title: Competitions & Open Source
-    details: 1st place at Jeanne d'Hack CTF 2026 and Cod'INSA 2025. I also actively contribute to open-source projects and build personal software ranging from an OS for microcontrollers to self-hosted infrastructure.
-    link: /projects
-    linkText: See my projects
-  - icon: 🛠️
-    title: Broad Technical Background
-    details: From low-level Rust and C to full-stack web (Vue.js, Django, TypeScript) and cloud (AWS), I work across the stack and enjoy tackling hard problems at any level of the system.
-    link: /skills
-    linkText: See my skills
+    alt: Portrait of Alix ANNERAUD
+  actions:
+    - theme: brand
+      text: Explore Xila
+      link: https://www.xila.dev
+    - theme: alt
+      text: All projects
+      link: /projects
+    - theme: alt
+      text: Get in touch
+      link: mailto:alix@anneraud.fr
 ---
+
+<PortfolioShowcase lang="en" mode="featured" />
