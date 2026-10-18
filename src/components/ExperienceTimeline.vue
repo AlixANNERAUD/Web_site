@@ -220,4 +220,16 @@ function markLogoFailed(url: string) {
 }
 .career-highlights li { padding-left: 0.25rem; margin: 0.25rem 0; }
 .career-highlights li::marker { color: var(--vp-c-brand-1); }
+@media (max-width: 680px) {
+  .career-timeline-item {
+    grid-template-columns: 1.1rem minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+  .career-timeline-rail { padding: 0; align-items: flex-end; }
+  .career-timeline-date { display: none; }
+  .career-period { display: inline; }
+  .career-timeline-dot { top: 1.4rem; }
+  .career-company-mark { flex-basis: 4.25rem; width: 4.25rem; height: 3.3rem; }
+  .career-company-logo { padding: 0.32rem; }
+}
 </style>
