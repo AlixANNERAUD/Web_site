@@ -30,6 +30,10 @@ Côté applications invitées, Xila utilise un runtime **Wasmi** : les appels ex
 - **Développement natif et navigateur.** Un environnement Linux et un exemple dans le navigateur permettent d'itérer plus facilement avant de confronter les composants au matériel embarqué. Le stockage navigateur s'appuie sur une image disque et OPFS.
 - **Compromis assumés.** L'interpréteur WebAssembly, les abstractions et l'interface graphique ont un coût en mémoire et en performances qui doit être mesuré selon la carte et le cas d'usage.
 
+## Essayer Xila en WebAssembly
+
+<XilaBrowserDemo lang="fr" />
+
 ## État et limites
 
 Xila est **en développement actif**. La présence d'un exemple natif ou navigateur ne garantit pas qu'une carte particulière dispose de tous les pilotes requis. Je n'avance pas de ratio de performance face au natif sans mesure reproductible.
