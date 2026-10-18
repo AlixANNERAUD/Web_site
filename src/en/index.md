@@ -1,5 +1,6 @@
 ---
 layout: home
+description: Portfolio of Alix ANNERAUD: Xila operating system in Rust, embedded software, security, open source and web applications.
 
 hero:
   name: "Alix ANNERAUD"
