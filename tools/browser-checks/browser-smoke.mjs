@@ -79,6 +79,64 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
       }
     }
 
+    // Astro migration must preserve the centered editorial layout on wide screens.
+    for (const path of ["/experiences", "/fr/experiences", "/skills", "/fr/skills"]) {
+      try {
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
+        const container = page.locator(".editorial-page").first();
+        await container.waitFor();
+        const bounds = await container.boundingBox();
+        assert.ok(bounds, path + " editorial container missing");
+        assert.ok(bounds.width <= 1181, path + " editorial content is too wide: " + bounds.width);
+        assert.ok(Math.abs(bounds.x - (1440 - bounds.width) / 2) <= 2,
+          path + " editorial content is not centered");
+        checked++;
+      } catch (error) {
+        failures.push(engineName + " " + path + " editorial width: " + error);
+      }
+    }
+
+    // Earlier milestones are real, independent timeline cards, collapsed by default
+    // and individually expandable with keyboard-accessible native buttons.
+    for (const [path, more, less] of [
+      ["/experiences", "Show more", "Show less"],
+      ["/fr/experiences", "Voir plus", "Voir moins"],
+    ]) {
+      try {
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
+        await page.waitForFunction(() => document.querySelectorAll("astro-island[ssr]").length === 0);
+        const cards = page.locator(".career-card--compact");
+        assert.equal(await cards.count(), 4, path + " must contain four earlier milestone cards");
+
+        const ids = ["renault-cleon", "guenola-sahut", "baccalaureat", "cambridge-b1"];
+        for (const id of ids) {
+          const card = page.locator('[aria-labelledby="' + id + '-title"]');
+          const button = card.getByRole("button", { name: more, exact: true });
+          const details = page.locator("#experience-details-" + id);
+          assert.equal(await button.getAttribute("aria-expanded"), "false");
+          assert.equal(await details.isVisible(), false, id + " must initially be collapsed");
+
+          await button.click();
+          assert.equal(await details.isVisible(), true, id + " must expand");
+          const close = card.getByRole("button", { name: less, exact: true });
+          assert.equal(await close.getAttribute("aria-expanded"), "true");
+          await close.click();
+          assert.equal(await details.isVisible(), false, id + " must collapse again");
+          checked++;
+        }
+        // A snapshot captures the restored compact cards and page width.
+        await page.screenshot({
+          path: resolve(output, engineName + "-" + (path.startsWith("/fr/") ? "fr-" : "") + "experiences-1440.png"),
+          fullPage: true,
+          timeout: 15000,
+        });
+      } catch (error) {
+        failures.push(engineName + " " + path + " earlier milestones: " + error);
+      }
+    }
+
     await context.close();
   } finally {
     await browser.close();
