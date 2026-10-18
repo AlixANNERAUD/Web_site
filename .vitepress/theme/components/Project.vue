@@ -1,5 +1,5 @@
 <script setup>
-import { MapPin, Calendar, BriefcaseBusiness } from "lucide-vue-next";
+import { Calendar } from "lucide-vue-next";
 
 const props = defineProps({
   badge: {
@@ -39,14 +39,12 @@ const props = defineProps({
         {{ badge }}
       </Badge>
     </h3>
-    <p class="experience-meta">
-      <span><Calendar /> {{ date }}</span>
-
-      &nbsp; | &nbsp;
-      <span v-for="(tag, index) in tags" :key="index">
+    <div class="experience-meta">
+      <span class="project-date"><Calendar aria-hidden="true" /> {{ date }}</span>
+      <span v-for="tag in tags || []" :key="tag" class="project-tag">
         <Badge type="warning">{{ tag }}</Badge>
       </span>
-    </p>
+    </div>
     <div class="experience-content">
       <slot />
     </div>
@@ -64,12 +62,14 @@ const props = defineProps({
   margin-bottom: 0.5em;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.6rem;
 }
 
 .experience-meta span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  white-space: nowrap;
+  max-width: 100%;
 }
 
 .experience-meta :deep(svg) {
