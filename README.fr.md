@@ -97,6 +97,8 @@ scripts/
 
 ### Modifier le contenu
 
+**Classement des projets :** le catalogue trie par importance éditoriale (profondeur technique, originalité, impact concret et preuves publiques), avec un tri alphabétique alternatif. Voir [les pondérations et le classement complet](./docs/project-ranking.md).
+
 **Projets :** les métadonnées sont centralisées dans [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts). Chaque fiche détaillée doit également être présente dans les archives [FR](./src/fr/projects/archive.md) et [EN](./src/en/projects/archive.md). Les projets phares peuvent disposer d'une page spécifique dans `src/{fr,en}/projects/`. Exécuter `npm run validate:portfolio` après modification.
 
 **Expériences :** modifier [`experiences.ts`](./.vitepress/theme/data/experiences.ts). Dates, employeurs, descriptions et réalisations sont renseignés une seule fois, dans les deux langues.

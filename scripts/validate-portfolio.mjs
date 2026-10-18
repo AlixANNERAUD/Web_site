@@ -18,6 +18,27 @@ if (!Array.isArray(projects) || projects.length === 0) {
 
 const ids = new Set();
 let featured = 0;
+
+// Editorial ranking weights are defined only in portfolioProjects.ts.
+const weightsSource = source.match(/export const PROJECT_RANK_WEIGHTS = \{([\s\S]*?)\} as const/);
+if (!weightsSource) throw new Error("Missing project ranking weights.");
+const weightFactors = ["technicalDepth", "originality", "practicalImpact", "evidence"];
+const weights = Object.fromEntries(
+  [...weightsSource[1].matchAll(/(\w+):\s*(\d+),/g)]
+    .map((match) => [match[1], Number(match[2])]),
+);
+if (
+  Object.keys(weights).length !== weightFactors.length ||
+  weightFactors.some((factor) => !Number.isFinite(weights[factor])) ||
+  weightFactors.reduce((sum, factor) => sum + weights[factor], 0) !== 100
+) {
+  throw new Error("Ranking weights must contain four factors totaling 100%.");
+}
+const editorialScore = (project) =>
+  weightFactors.reduce(
+    (sum, factor) => sum + project.ranking[factor] * weights[factor],
+    0,
+  ) / 5;
 for (const project of projects) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project.id) || ids.has(project.id)) {
     throw new Error("Missing, invalid or duplicate project ID: " + project.id);
@@ -35,6 +56,18 @@ for (const project of projects) {
     if (!["http:", "https:"].includes(url.protocol)) {
       throw new Error("Invalid external project URL: " + project.id);
     }
+  }
+  if (
+    !project.ranking ||
+    weightFactors.some((factor) =>
+      typeof project.ranking[factor] !== "number" ||
+      !Number.isFinite(project.ranking[factor]) ||
+      project.ranking[factor] < 0 ||
+      project.ranking[factor] > 5
+    ) ||
+    Object.keys(project.ranking).length !== weightFactors.length
+  ) {
+    throw new Error("Missing/invalid editorial ranking factors: " + project.id);
   }
   if (!Array.isArray(project.tags) || project.tags.length === 0) {
     throw new Error("Missing tags: " + project.id);
@@ -59,6 +92,12 @@ for (const project of projects) {
 }
 
 if (featured !== 3) throw new Error("Expected exactly three featured projects.");
+const topFeatured = [...projects]
+  .sort((a, b) => editorialScore(b) - editorialScore(a) || a.id.localeCompare(b.id))
+  .slice(0, featured);
+if (topFeatured.some((project) => !project.featured)) {
+  throw new Error("Featured projects must be the highest-ranked editorial picks.");
+}
 
 for (const lang of ["fr", "en"]) {
   const markdown = readFileSync(join(root, "src", lang, "projects", "archive.md"), "utf8");

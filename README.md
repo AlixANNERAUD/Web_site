@@ -97,6 +97,8 @@ scripts/
 
 ### Editing content
 
+**Project ranking:** the catalogue sorts projects by editorial importance, using four weighted factors (technical depth, originality, practical impact and public evidence); visitors can switch to alphabetical order. See [project ranking and methodology](./docs/project-ranking.md).
+
 **Projects:** add or update an item in [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts), then update its detailed entry in both [English](./src/en/projects/archive.md) and [French](./src/fr/projects/archive.md) archives. Featured projects can also have dedicated pages under `src/{en,fr}/projects/`. Run `npm run validate:portfolio` afterward.
 
 **Experience:** edit [`experiences.ts`](./.vitepress/theme/data/experiences.ts). Roles, summaries, achievements and dates are localized in one place; both pages use the same timeline component.
