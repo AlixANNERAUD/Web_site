@@ -93,6 +93,8 @@ for (const [file, marker] of [
   ["fr/projects.html", "portfolio-showcase--catalogue"],
   ["experiences.html", "career-timeline"],
   ["fr/experiences.html", "career-timeline"],
+  ["skills.html", "skills-domain-grid"],
+  ["fr/skills.html", "skills-domain-grid"],
 ]) {
   const filename = resolve(dist, file);
   if (!existsSync(filename)) continue;
@@ -103,6 +105,29 @@ for (const [file, marker] of [
   }
   if (!html.includes(marker)) {
     failed.push(file + ": new portfolio layout not SSR-rendered (" + marker + ")");
+  }
+}
+
+// Skills must be real SSR content rather than hidden client-only cards.
+for (const [file, projectPrefix] of [
+  ["skills.html", "/projects/"],
+  ["fr/skills.html", "/fr/projects/"],
+]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  const cards = [...html.matchAll(/class="skills-domain-card"/g)].length;
+  if (cards !== 6) {
+    failed.push(file + ": expected six skill domain cards, found " + cards);
+  }
+  if (!html.includes("skills-language-grid") || !html.includes("TOEIC 975")) {
+    failed.push(file + ": language proficiency section missing");
+  }
+  for (const id of ["xila", "nanoexpr", "deez-nalyzer", "infrastructure", "mini-train-store"]) {
+    if (!html.includes(projectPrefix + id)) {
+      failed.push(file + ": missing evidence link to " + id);
+    }
+  }
+  if (html.includes("class=\"skill-domain\"")) {
+    failed.push(file + ": legacy SkillDomain layout still rendered");
   }
 }
 
