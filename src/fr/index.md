@@ -1,6 +1,6 @@
 ---
 layout: home
-description: Portfolio d'Alix ANNERAUD : système d'exploitation Xila en Rust, logiciels embarqués, sécurité, projets open source et applications web.
+description: "Portfolio d'Alix ANNERAUD : système d'exploitation Xila en Rust, logiciels embarqués, sécurité, projets open source et applications web."
 
 hero:
   name: "Alix ANNERAUD"
