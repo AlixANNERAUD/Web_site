@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeHero from "../components/HomeHero.astro";
+import PortfolioShowcase from "../components/PortfolioShowcase.vue";
+import XilaArchitectureMotion from "../components/XilaArchitectureMotion.vue";
+---
+<BaseLayout
+  lang="en"
+  path="/"
+  title="Alix ANNERAUD"
+  description="Portfolio of Alix ANNERAUD: Xila operating system in Rust, embedded software, security, open source and web applications."
+  home
+>
+  <HomeHero lang="en" />
+  <XilaArchitectureMotion lang="en" client:visible />
+  <PortfolioShowcase lang="en" mode="featured" client:idle />
+</BaseLayout>
