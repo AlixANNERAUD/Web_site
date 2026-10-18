@@ -1,6 +1,6 @@
 ---
 layout: page
-description: CV et expériences d'Alix ANNERAUD, ingénieur logiciel spécialisé en Rust, systèmes et sécurité.
+description: "CV et expériences d'Alix ANNERAUD, ingénieur logiciel spécialisé en Rust, systèmes et sécurité."
 footer: false
 ---
 
