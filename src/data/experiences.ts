@@ -20,6 +20,8 @@ export interface PortfolioExperience {
   highlights: ExperienceTranslation[];
   technologies: string[];
   ongoing?: boolean;
+  /** Earlier milestone: show detailed highlights and tags only on demand. */
+  compact?: boolean;
 }
 
 export const experiences: PortfolioExperience[] = [
@@ -208,5 +210,109 @@ export const experiences: PortfolioExperience[] = [
     highlights: [],
     technologies: ["Systems", "Networks", "Software engineering"],
     ongoing: true,
+  },
+  // Earlier milestones remain first-class timeline entries, but show their
+  // extended details on demand to keep the page focused on recent experience.
+  {
+    id: "renault-cleon",
+    group: "professional",
+    compact: true,
+    company: "Renault Cléon",
+    companyUrl: "https://www.renaultgroup.com/",
+    monogram: "R",
+    role: {
+      fr: "Stagiaire en production",
+      en: "Production Intern",
+    },
+    period: { fr: "2022", en: "2022" },
+    location: { fr: "Cléon, France", en: "Cléon, France" },
+    summary: {
+      fr: "Stage ouvrier d'un mois sur une ligne de production de rotors et de stators.",
+      en: "One-month production internship on a rotor and stator manufacturing line.",
+    },
+    highlights: [
+      {
+        fr: "Immersion dans un environnement industriel de fabrication automobile.",
+        en: "Gained first-hand exposure to an automotive manufacturing environment.",
+      },
+      {
+        fr: "Découverte des contraintes et de l'organisation du travail sur une ligne de production.",
+        en: "Observed the constraints and organization of work on a production line.",
+      },
+    ],
+    technologies: ["Industrial production"],
+  },
+  {
+    id: "guenola-sahut",
+    group: "professional",
+    compact: true,
+    company: "Guenola Sahut",
+    monogram: "GS",
+    role: {
+      fr: "Assistant en communication",
+      en: "Communication Assistant",
+    },
+    period: { fr: "2019", en: "2019" },
+    location: { fr: "France", en: "France" },
+    summary: {
+      fr: "Expérience d'assistance en communication auprès de Guenola Sahut.",
+      en: "Early experience assisting Guenola Sahut with communication work.",
+    },
+    highlights: [
+      {
+        fr: "Appui aux activités de communication et à leur organisation.",
+        en: "Assisted with communication activities and their organization.",
+      },
+    ],
+    technologies: ["Communication"],
+  },
+  {
+    id: "baccalaureat",
+    group: "education",
+    compact: true,
+    company: "Enseignement secondaire",
+    monogram: "BAC",
+    role: {
+      fr: "Baccalauréat scientifique — section européenne",
+      en: "Scientific Baccalaureate — European Section",
+    },
+    period: { fr: "2021", en: "2021" },
+    location: { fr: "France", en: "France" },
+    summary: {
+      fr: "Baccalauréat scientifique obtenu avec un parcours en section européenne.",
+      en: "Scientific baccalaureate with a European-section curriculum.",
+    },
+    highlights: [
+      {
+        fr: "Enseignement général scientifique complété par la section européenne.",
+        en: "Science-focused secondary education including a European section.",
+      },
+    ],
+    technologies: [],
+  },
+  {
+    id: "cambridge-b1",
+    group: "education",
+    compact: true,
+    company: "Cambridge English",
+    companyUrl: "https://www.cambridgeenglish.org/",
+    monogram: "B1",
+    role: {
+      fr: "Certification Cambridge B1 Preliminary",
+      en: "Cambridge B1 Preliminary Certificate",
+    },
+    period: { fr: "2018", en: "2018" },
+    location: { fr: "", en: "" },
+    summary: {
+      fr: "Certification d'anglais attestant le niveau B1.",
+      en: "English-language certification at B1 level.",
+    },
+    highlights: [
+      {
+        fr: "Certification Cambridge English Preliminary obtenue en 2018.",
+        en: "Cambridge English Preliminary certification earned in 2018.",
+      },
+    ],
+    technologies: ["English · B1"],
   },
 ];

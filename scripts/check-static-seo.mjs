@@ -155,6 +155,27 @@ for (const [file, projectPrefix] of [
   }
 }
 
+// Formerly abbreviated milestones must have dedicated SSR timeline cards.
+// Their detailed content stays available behind per-card toggles (browser-tested).
+for (const [file, label] of [
+  ["experiences.html", "Show more"],
+  ["fr/experiences.html", "Voir plus"],
+]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  const count = [...html.matchAll(/class="[^"]*career-card--compact[^"]*"/g)].length;
+  if (count !== 4) {
+    failed.push(file + ": expected four compact earlier milestone cards, got " + count);
+  }
+  for (const id of ["renault-cleon", "guenola-sahut", "baccalaureat", "cambridge-b1"]) {
+    if (!html.includes(id + "-title") || !html.includes("experience-details-" + id)) {
+      failed.push(file + ": missing accessible expand/collapse card for " + id);
+    }
+  }
+  if (!html.includes(label) || html.includes("career-other")) {
+    failed.push(file + ": expand buttons missing or old compressed summary present");
+  }
+}
+
 // Experience logos must appear in both generated locales. This is a
 // structural check; browser/network verification of remote assets is separate.
 for (const file of ["experiences.html", "fr/experiences.html"]) {
