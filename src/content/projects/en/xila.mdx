@@ -3,6 +3,9 @@ title: Xila — Rust embedded operating system
 description: Engineering decisions behind the Xila operating system, including Rust modules, drivers, WebAssembly and LVGL.
 ---
 
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+import XilaBrowserDemo from "../../../components/XilaBrowserDemo.vue";
+
 # Xila: building a modular embedded operating system
 
 **Rust · WebAssembly · LVGL · embedded systems** · Since 2019
@@ -17,7 +20,7 @@ The central challenge is to **define reusable contracts** between operating-syst
 
 ## Architecture
 
-<ArchitectureFlow title="Main layers of Xila" :steps="[{ title: 'Drivers', detail: 'Adaptation to hardware, native Linux and browser targets.' }, { title: 'Rust modules', detail: 'Tasks, users, VFS, networking, graphics and OS services.' }, { title: 'Execution boundary', detail: 'ABI contracts, guest/host bindings and the WebAssembly virtual machine.' }, { title: 'Applications', detail: 'Bundled programs, shell and Wasm applications.' }]" />
+<ArchitectureFlow title="Main layers of Xila" steps={[{ title: 'Drivers', detail: 'Adaptation to hardware, native Linux and browser targets.' }, { title: 'Rust modules', detail: 'Tasks, users, VFS, networking, graphics and OS services.' }, { title: 'Execution boundary', detail: 'ABI contracts, guest/host bindings and the WebAssembly virtual machine.' }, { title: 'Applications', detail: 'Bundled programs, shell and Wasm applications.' }]} />
 
 The repository distinguishes **modules** holding runtime behavior, **crates** defining contracts and utilities, **drivers** adapting to a platform, and **executables**. A file request goes through the VFS for namespace and access checks before reaching a LittleFS backend or a device endpoint.
 
@@ -32,7 +35,7 @@ Guest applications currently use the **Wasmi** runtime; guest calls cross an exp
 
 ## Try Xila in WebAssembly
 
-<XilaBrowserDemo lang="en" />
+<XilaBrowserDemo lang="en" client:load />
 
 ## Status and limitations
 

@@ -3,6 +3,8 @@ title: Infrastructure — auto-hébergement et automatisation
 description: Étude de cas sur l'exploitation de services auto-hébergés avec TrueNAS, Docker Compose, Ansible et supervision.
 ---
 
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+
 # Infrastructure : rendre l'auto-hébergement exploitable
 
 **Linux · TrueNAS · Docker Compose · Ansible · Monitoring** · Depuis 2020
@@ -17,7 +19,7 @@ L'infrastructure a progressivement évolué vers un ensemble de services : cloud
 
 ## Architecture
 
-<ArchitectureFlow title="De la configuration aux services" :steps="[{ title: 'Inventaire et secrets', detail: 'Inventaire Ansible et fichiers de configuration ; secrets gérés séparément.' }, { title: 'Provisionnement', detail: 'Playbooks Ansible et déploiements sur les hôtes.' }, { title: 'Exécution', detail: 'TrueNAS Apps et services déployés via Compose.' }, { title: 'Supervision', detail: 'Statuts de service, métriques et alertes.' }]" />
+<ArchitectureFlow title="De la configuration aux services" steps={[{ title: 'Inventaire et secrets', detail: 'Inventaire Ansible et fichiers de configuration ; secrets gérés séparément.' }, { title: 'Provisionnement', detail: 'Playbooks Ansible et déploiements sur les hôtes.' }, { title: 'Exécution', detail: 'TrueNAS Apps et services déployés via Compose.' }, { title: 'Supervision', detail: 'Statuts de service, métriques et alertes.' }]} />
 
 Le dépôt contient les **playbooks Ansible**, les fichiers **Docker Compose** des services gérés de cette manière, ainsi que l'inventaire et la documentation de déploiement. Certains services sont exécutés comme **applications TrueNAS**, d'autres sont gérés par Ansible.
 

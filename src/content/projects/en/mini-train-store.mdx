@@ -3,6 +3,8 @@ title: Mini Train Store — e-commerce and automation
 description: A case study about self-hosted Odoo and a Vue/WXT browser extension for Leboncoin listings.
 ---
 
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+
 # Mini Train Store: connecting a storefront to listing management
 
 **Odoo · Vue 3 · WXT · TypeScript · Docker** · Since 2026
@@ -17,7 +19,7 @@ I deployed **self-hosted Odoo** and developed a **browser extension** tailored t
 
 ## Architecture
 
-<ArchitectureFlow title="From listing to online catalogue" :steps="[{ title: 'Leboncoin', detail: 'Product listings viewed in the browser.' }, { title: 'WXT extension', detail: 'Content script, listing extraction and profile-based local storage.' }, { title: 'Vue interface', detail: 'Review, sorting and preparation of collected data.' }, { title: 'Odoo', detail: 'Product API, categories, pricing and storefront publishing.' }]" />
+<ArchitectureFlow title="From listing to online catalogue" steps={[{ title: 'Leboncoin', detail: 'Product listings viewed in the browser.' }, { title: 'WXT extension', detail: 'Content script, listing extraction and profile-based local storage.' }, { title: 'Vue interface', detail: 'Review, sorting and preparation of collected data.' }, { title: 'Odoo', detail: 'Product API, categories, pricing and storefront publishing.' }]} />
 
 The extension separates **content scripts** for reading listings, a **background script** managing collected data and a **Vue 3 popup** for browsing that data. Its Odoo integration contains the product models and API requests needed to handle catalogue items.
 

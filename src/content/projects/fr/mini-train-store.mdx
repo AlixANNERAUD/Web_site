@@ -3,6 +3,8 @@ title: Mini Train Store — commerce et automatisation
 description: Une étude de cas autour d'Odoo auto-hébergé et d'une extension Vue/WXT pour gérer les annonces Leboncoin.
 ---
 
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+
 # Mini Train Store : relier une boutique en ligne à la gestion des annonces
 
 **Odoo · Vue 3 · WXT · TypeScript · Docker** · Depuis 2026
@@ -17,7 +19,7 @@ J'ai déployé **Odoo en auto-hébergement** et développé une **extension de n
 
 ## Architecture
 
-<ArchitectureFlow title="De l'annonce au catalogue e-commerce" :steps="[{ title: 'Leboncoin', detail: 'Annonces consultées dans le navigateur.' }, { title: 'Extension WXT', detail: 'Content script, collecte des fiches et stockage local par profil.' }, { title: 'Interface Vue', detail: 'Vérification, tri et préparation des informations.' }, { title: 'Odoo', detail: 'API produits, catégories, prix et publication de la boutique.' }]" />
+<ArchitectureFlow title="De l'annonce au catalogue e-commerce" steps={[{ title: 'Leboncoin', detail: 'Annonces consultées dans le navigateur.' }, { title: 'Extension WXT', detail: 'Content script, collecte des fiches et stockage local par profil.' }, { title: 'Interface Vue', detail: 'Vérification, tri et préparation des informations.' }, { title: 'Odoo', detail: 'API produits, catégories, prix et publication de la boutique.' }]} />
 
 L'extension associe des **content scripts** pour lire les annonces, un **background script** pour gérer les données et un **popup Vue 3** pour consulter les éléments collectés. La couche d'intégration Odoo possède ses propres modèles de données et requêtes API pour la gestion des produits.
 

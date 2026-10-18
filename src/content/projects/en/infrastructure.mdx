@@ -3,6 +3,8 @@ title: Infrastructure — self-hosting and automation
 description: A case study on running self-hosted services with TrueNAS, Docker Compose, Ansible and observability.
 ---
 
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+
 # Infrastructure: making self-hosting maintainable
 
 **Linux · TrueNAS · Docker Compose · Ansible · Monitoring** · Since 2020
@@ -17,7 +19,7 @@ This project has grown into a collection of services including cloud storage, me
 
 ## Architecture
 
-<ArchitectureFlow title="From configuration to operating services" :steps="[{ title: 'Inventory and secrets', detail: 'Ansible inventory and configuration files; separate secret storage.' }, { title: 'Provisioning', detail: 'Ansible playbooks and deployments across hosts.' }, { title: 'Runtime', detail: 'TrueNAS Apps and services deployed with Compose.' }, { title: 'Observability', detail: 'Service status, metrics and alerts.' }]" />
+<ArchitectureFlow title="From configuration to operating services" steps={[{ title: 'Inventory and secrets', detail: 'Ansible inventory and configuration files; separate secret storage.' }, { title: 'Provisioning', detail: 'Ansible playbooks and deployments across hosts.' }, { title: 'Runtime', detail: 'TrueNAS Apps and services deployed with Compose.' }, { title: 'Observability', detail: 'Service status, metrics and alerts.' }]} />
 
 The repository contains **Ansible playbooks**, **Docker Compose** definitions for services deployed that way, plus an inventory and deployment documentation. Some services run as **TrueNAS Apps**, while others are deployed through Ansible.
 

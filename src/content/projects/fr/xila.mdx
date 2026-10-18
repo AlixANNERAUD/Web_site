@@ -3,6 +3,9 @@ title: Xila — système d'exploitation embarqué en Rust
 description: Architecture et choix techniques du système Xila, avec noyau Rust, modules, pilotes, WebAssembly et LVGL.
 ---
 
+import ArchitectureFlow from "../../../components/ArchitectureFlow.vue";
+import XilaBrowserDemo from "../../../components/XilaBrowserDemo.vue";
+
 # Xila : construire un OS modulaire pour l'embarqué
 
 **Rust · WebAssembly · LVGL · systèmes embarqués** · Depuis 2019
@@ -17,7 +20,7 @@ L'enjeu n'était donc pas simplement d'afficher une interface sur un ESP32, mais
 
 ## Architecture
 
-<ArchitectureFlow title="Couches principales de Xila" :steps="[{ title: 'Pilotes', detail: 'Adaptation aux cibles matérielles, à Linux natif et au navigateur.' }, { title: 'Modules Rust', detail: 'Tâches, utilisateurs, VFS, réseau, graphique et services du système.' }, { title: 'Frontière d’exécution', detail: 'Contrats ABI, liaison hôte/invité et machine virtuelle WebAssembly.' }, { title: 'Applications', detail: 'Programmes embarqués, shell et applications Wasm.' }]" />
+<ArchitectureFlow title="Couches principales de Xila" steps={[{ title: 'Pilotes', detail: 'Adaptation aux cibles matérielles, à Linux natif et au navigateur.' }, { title: 'Modules Rust', detail: 'Tâches, utilisateurs, VFS, réseau, graphique et services du système.' }, { title: 'Frontière d’exécution', detail: 'Contrats ABI, liaison hôte/invité et machine virtuelle WebAssembly.' }, { title: 'Applications', detail: 'Programmes embarqués, shell et applications Wasm.' }]} />
 
 Le dépôt sépare notamment les **modules** qui pilotent l'état du système, les **crates** contenant contrats et utilitaires, les **drivers** propres à une cible et les **exécutables**. Un appel fichier d'une application passe par le VFS et ses règles d'accès avant d'atteindre un backend comme LittleFS ou un périphérique.
 
@@ -32,7 +35,7 @@ Côté applications invitées, Xila utilise un runtime **Wasmi** : les appels ex
 
 ## Essayer Xila en WebAssembly
 
-<XilaBrowserDemo lang="fr" />
+<XilaBrowserDemo lang="fr" client:load />
 
 ## État et limites
 
