@@ -129,7 +129,7 @@ const navigation = computed(() => [
 </script>
 
 <template>
-  <div class="skills-showcase">
+  <div class="skills-showcase editorial-page">
     <EditorialHero
       :eyebrow="copy.eyebrow"
       :title="copy.title"
@@ -230,12 +230,7 @@ const navigation = computed(() => [
 </template>
 
 <style scoped>
-.skills-showcase {
-  width: min(100%, 1180px);
-  margin: 0 auto;
-  padding: 3.5rem 1.5rem 6rem;
-  color: var(--vp-c-text-1);
-}
+
 .skills-section,
 .skills-languages { scroll-margin-top: 6rem; }
 .skills-section { margin-bottom: 4.5rem; }
@@ -294,6 +289,14 @@ const navigation = computed(() => [
   font: 500 0.8rem/1.4 ui-monospace, monospace;
 }
 
+.skills-domain-card h3 {
+  margin: 0 0 0.6rem;
+  border: 0;
+  padding: 0;
+  font-size: clamp(1.2rem, 2.1vw, 1.5rem);
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
 .skills-domain-description {
   margin: 0 0 1.1rem;
   color: var(--vp-c-text-2);
@@ -400,7 +403,7 @@ const navigation = computed(() => [
 }
 
 @media (max-width: 560px) {
-.skills-showcase { padding: 2rem 1rem 4rem; }
+
   .skills-language-grid li { padding: 1rem; }
   .skills-count strong { font-size: 2.2rem; }
   .skills-language-icon { display: none; }
