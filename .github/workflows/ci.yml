@@ -26,3 +26,5 @@ jobs:
         run: npm run validate:portfolio
       - name: Build static site
         run: npm run docs:build
+      - name: Check generated SEO and locale metadata
+        run: npm run verify:static
