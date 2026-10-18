@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-browser-checks",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "node browser-smoke.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.57.0"
+  }
+}
