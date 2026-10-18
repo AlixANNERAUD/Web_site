@@ -99,11 +99,11 @@ for (const [file, experienceUrl] of [
 ]) {
   const html = readFileSync(resolve(dist, file), "utf8");
   const marks = [
-    "home-hero",
-    "home-experience",
-    "home-experience-grid",
-    "portfolio-showcase",
-    "xila-topology",
+    'class="home-hero"',
+    'class="home-experience"',
+    'class="home-experience-grid"',
+    'class="portfolio-showcase"',
+    'class="xila-topology"',
   ];
   const positions = marks.map((part) => html.indexOf(part));
   if (positions.some((index) => index < 0) ||
