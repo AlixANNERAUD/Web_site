@@ -1,0 +1,48 @@
+name: Portfolio browser audit (opt-in)
+
+on:
+  pull_request:
+    paths:
+      - "tools/browser-checks/**"
+      - ".github/workflows/browser-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Build VitePress
+        run: |
+          npm ci
+          npm run validate:portfolio
+          npm run docs:build
+      - name: Install browser test dependencies
+        run: npm install --prefix tools/browser-checks --no-audit --no-fund
+      - name: Install test browsers
+        working-directory: tools/browser-checks
+        run: npx playwright install --with-deps chromium firefox
+      - name: Start preview server and run tests
+        run: |
+          npm run docs:preview -- --host 127.0.0.1 --port 4173 > /tmp/portfolio-preview.log 2>&1 &
+          for i in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tools/browser-checks/browser-smoke.mjs
+      - name: Upload screenshots and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-screenshots
+          path: |
+            artifacts/browser
+            /tmp/portfolio-preview.log
+          if-no-files-found: ignore
