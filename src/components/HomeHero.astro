@@ -4,24 +4,24 @@ const { lang } = Astro.props;
 const fr = lang === "fr";
 const buttons = fr
   ? [
-      { label: "Explorer Xila", href: "https://www.xila.dev", main: true },
+      { label: "Mon parcours", href: "/fr/experiences", main: true },
       { label: "Tous mes projets", href: "/fr/projects" },
       { label: "Me contacter", href: "mailto:alix@anneraud.fr" },
     ]
   : [
-      { label: "Explore Xila", href: "https://www.xila.dev", main: true },
+      { label: "My experience", href: "/experiences", main: true },
       { label: "All projects", href: "/projects" },
       { label: "Get in touch", href: "mailto:alix@anneraud.fr" },
     ];
 ---
 <section class="home-hero">
   <div class="home-hero-copy">
-    <p class="home-hero-name">Alix ANNERAUD</p>
-    <h1>{fr ? "Du noyau au navigateur." : "From kernel to browser."}</h1>
+    <p class="home-hero-name">Alix ANNERAUD · {fr ? "Ingénieur logiciel" : "Software Engineer"}</p>
+    <h1>{fr ? "Logiciel, systèmes & sécurité." : "Software, systems & security."}</h1>
     <p class="home-hero-tagline">
       {fr
-        ? "Ingénierie logicielle, systèmes Rust et sécurité. Je construis des logiciels embarqués, des outils web et des infrastructures que je peux comprendre et maîtriser de bout en bout."
-        : "Software engineering, Rust systems and security. I build embedded software, web tools and infrastructure that I can understand and operate from end to end."}
+        ? "Je développe des systèmes Rust et des outils web, du prototype à la production. Mes expériences en sécurité (Memo Bank), développement logiciel (Amazon), recherche (NYU) et réseaux (Linkt) nourrissent mes projets open source."
+        : "I build Rust systems and web tools, from prototypes to production. My experience across security (Memo Bank), software engineering (Amazon), research (NYU) and networking (Linkt) informs my open-source work."}
     </p>
     <div class="home-hero-actions">
       {buttons.map((button) => (
