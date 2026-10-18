@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://alix.anneraud.fr",
   output: "static",
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   build: { format: "preserve" },
   integrations: [vue(), mdx(), sitemap()],
 });

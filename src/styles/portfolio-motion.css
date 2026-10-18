@@ -23,27 +23,27 @@
 
 @media (prefers-reduced-motion: no-preference) {
   /* Short, staggered page-entry animation; no reveal observer is required. */
-  .VPHome .VPHomeHero .name,
-  .VPHome .VPHomeHero .text,
-  .VPHome .VPHomeHero .tagline,
-  .VPHome .VPHomeHero .actions,
-  .VPHome .VPHomeHero .image-container {
+  .site-home .home-hero-name,
+  .site-home .home-hero h1,
+  .site-home .home-hero-tagline,
+  .site-home .home-hero-actions,
+  .site-home .home-hero-portrait {
     animation: portfolio-enter 620ms var(--portfolio-ease) both;
   }
 
-  .VPHome .VPHomeHero .name { animation-delay: 40ms; }
-  .VPHome .VPHomeHero .text { animation-delay: 100ms; }
-  .VPHome .VPHomeHero .tagline { animation-delay: 170ms; }
-  .VPHome .VPHomeHero .actions { animation-delay: 240ms; }
-  .VPHome .VPHomeHero .image-container { animation-delay: 130ms; }
+  .site-home .home-hero-name { animation-delay: 40ms; }
+  .site-home .home-hero h1 { animation-delay: 100ms; }
+  .site-home .home-hero-tagline { animation-delay: 170ms; }
+  .site-home .home-hero-actions { animation-delay: 240ms; }
+  .site-home .home-hero-portrait { animation-delay: 130ms; }
 
-  .VPHome .portfolio-showcase .showcase-card {
+  .site-home .portfolio-showcase .showcase-card {
     animation: portfolio-enter 540ms var(--portfolio-ease) both;
   }
 
-  .VPHome .portfolio-showcase .showcase-card:nth-child(1) { animation-delay: 260ms; }
-  .VPHome .portfolio-showcase .showcase-card:nth-child(2) { animation-delay: 330ms; }
-  .VPHome .portfolio-showcase .showcase-card:nth-child(3) { animation-delay: 400ms; }
+  .site-home .portfolio-showcase .showcase-card:nth-child(1) { animation-delay: 260ms; }
+  .site-home .portfolio-showcase .showcase-card:nth-child(2) { animation-delay: 330ms; }
+  .site-home .portfolio-showcase .showcase-card:nth-child(3) { animation-delay: 400ms; }
 
   /* Scroll-driven motion is progressive: unsupported browsers see static cards. */
   @supports (animation-timeline: view()) {
@@ -78,12 +78,12 @@
 
 /* Never hide content or require an animation to reach a keyboard target. */
 @media (prefers-reduced-motion: reduce) {
-  .VPHome .VPHomeHero .name,
-  .VPHome .VPHomeHero .text,
-  .VPHome .VPHomeHero .tagline,
-  .VPHome .VPHomeHero .actions,
-  .VPHome .VPHomeHero .image-container,
-  .VPHome .portfolio-showcase .showcase-card,
+  .site-home .home-hero-name,
+  .site-home .home-hero h1,
+  .site-home .home-hero-tagline,
+  .site-home .home-hero-actions,
+  .site-home .home-hero-portrait,
+  .site-home .portfolio-showcase .showcase-card,
   .portfolio-showcase--catalogue .showcase-card {
     animation: none !important;
     opacity: 1;
@@ -94,12 +94,12 @@
   .portfolio-showcase .showcase-art-symbol,
   .portfolio-showcase .showcase-card-actions a > span,
   .portfolio-showcase .showcase-all-link > span,
-  .VPHome .VPHomeHero .actions .VPButton {
+  .site-home .home-action {
     transition: none !important;
   }
 
   .portfolio-showcase .showcase-card:hover,
-  .VPHome .VPHomeHero .actions .VPButton:hover {
+  .site-home .home-action:hover {
     transform: none !important;
   }
 }
