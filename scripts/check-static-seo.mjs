@@ -19,6 +19,28 @@ const cases = [
   ["fr/skills.html", "/fr/skills", "/skills"],
 ];
 
+// Test EVERY static detail route, including alternate locale metadata.
+const catalogueSource = readFileSync(resolve(".vitepress/theme/data/portfolioProjects.ts"), "utf8");
+const declaration = "export const portfolioProjects: PortfolioProject[] = ";
+const catalogueStart = catalogueSource.indexOf(declaration) + declaration.length;
+const catalogueEnd = catalogueSource.indexOf(";\n\nexport function projectDetailUrl", catalogueStart);
+if (catalogueStart < declaration.length || catalogueEnd < 0) {
+  throw new Error("Could not find catalogue in portfolioProjects.ts");
+}
+const projectIds = JSON.parse(catalogueSource.slice(catalogueStart, catalogueEnd))
+  .map((project) => project.id);
+for (const id of projectIds) {
+  if (id !== "xila") {
+    cases.push([`projects/${id}.html`, `/projects/${id}`, `/fr/projects/${id}`]);
+    cases.push([`fr/projects/${id}.html`, `/fr/projects/${id}`, `/projects/${id}`]);
+  }
+}
+for (const removed of ["projects/archive.html", "fr/projects/archive.html"]) {
+  if (existsSync(resolve(dist, removed))) {
+    throw new Error("The old project archive was published: " + removed);
+  }
+}
+
 const required = [
   /<meta[^>]+property="og:title"/,
   /<meta[^>]+property="og:description"/,
@@ -35,6 +57,15 @@ for (const [file, canonicalPath, translationPath] of cases) {
     continue;
   }
   const html = readFileSync(filename, "utf8");
+  if (file.startsWith("projects/") || file.startsWith("fr/projects/")) {
+    const headings = [...html.matchAll(/<h1(?:\s|>)/g)];
+    if (headings.length !== 1) {
+      failed.push(file + ": expected exactly one project H1, found " + headings.length);
+    }
+    if (html.includes("/projects/archive")) {
+      failed.push(file + ": legacy archive link found");
+    }
+  }
   for (const pattern of required) {
     if (!pattern.test(html)) failed.push(file + ": missing " + pattern);
   }

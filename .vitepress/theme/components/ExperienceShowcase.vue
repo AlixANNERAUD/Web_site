@@ -215,9 +215,7 @@ function markLogoFailed(url: string) {
     </footer>
     <p class="career-logo-credits">
       <a
-        href="https://github.com/AlixANNERAUD/Web_site/blob/main/docs/experience-logo-sources.md"
-        target="_blank"
-        rel="noopener noreferrer"
+        :href="lang === 'fr' ? '/fr/legal-notice#credits-des-logos' : '/legal-notice#logo-credits'"
       >
         {{ copy.logoCredits }} ↗
       </a>

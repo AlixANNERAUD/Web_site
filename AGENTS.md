@@ -19,7 +19,7 @@ This is the **single source of truth** for coding agents working in this reposit
 - `.vitepress/theme/components/`: project explorer, experience timeline, SVG/WebGL, Xila browser demo and other Vue UI.
 - `.vitepress/theme/data/portfolioProjects.ts`: typed bilingual project metadata, group/category filters and detail URL logic.
 - `.vitepress/theme/data/experiences.ts`: bilingual professional and education timeline.
-- `src/{en,fr}/projects/archive.md`: detailed entries for all catalogue projects; selected projects also have standalone case studies under `src/{en,fr}/projects/`.
+- `src/{en,fr}/projects/<project-id>.md`: **one standalone page per catalogue project per language**. The three highlighted projects include deeper case studies. No archive pages or `docs/` folder should be introduced.
 - `src/public/`: public static assets. `.vitepress/dist/` and `.vitepress/cache/` are generated.
 - `scripts/`: project validation and built-HTML SEO checks.
 - `.github/workflows/`: PR CI, optional browser audit and GitHub Pages deployment.
@@ -29,7 +29,7 @@ Read the adjacent code and the root `README.md` before editing a subsystem; do n
 ## Editing content
 
 1. **Keep FR and EN consistent.** Whenever project, experience, title, navigation or SEO text changes, update its counterpart. Preserve route parity and existing deep links.
-2. **Use the typed data sources.** Add project metadata in `portfolioProjects.ts`, then keep both archives in sync; link to dedicated case studies where appropriate. For career content, update `experiences.ts` rather than duplicating entire timelines in Markdown.
+2. **Use the typed data sources.** Add project metadata in `portfolioProjects.ts`, then write a corresponding dedicated Markdown page in **both** `src/en/projects/` and `src/fr/projects/`. Never link back to the removed archives. For career content, update `experiences.ts` rather than duplicating entire timelines in Markdown.
 3. **Do not add duplicate titles.** Pages using the full-width catalogue or experience Vue components should have exactly one rendered H1; their Markdown wrappers must not add another.
 4. **Verify public claims.** Do not invent employment achievements, dates, performance metrics, rankings, customer outcomes, or project status. Avoid confidential employer details, credentials and client data. Prefer links to the relevant source repository or documentation.
 5. **Preserve brand provenance.** For organization logos, use verified assets, preserve proportions, give required credit and keep a readable fallback. Never fabricate a logo.

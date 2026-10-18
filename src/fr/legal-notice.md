@@ -37,3 +37,14 @@ Pour mesurer l'intérêt des projets présentés, ce site utilise **Umami**, une
 Sauf mention contraire, l'ensemble du code source de ce portfolio et les configurations associées sont mis à disposition sous les termes de la [Licence MIT](https://mit-license.org/).
 
 Le contenu textuel et les images des projets restent la propriété exclusive d'Alix ANNERAUD, sauf mentions spécifiques liées à des projets collaboratifs ou tiers.
+
+## 5. Crédits des logos {#credits-des-logos}
+
+Les logos affichés dans les expériences identifient leurs organismes respectifs et **n'impliquent ni partenariat ni approbation** de ce portfolio. Ces marques restent la propriété de leurs titulaires. Les images sont hébergées sur les sites des organismes ou sur Wikimedia Commons ; un monogramme s'affiche si leur chargement échoue.
+
+- **Memo Bank** : [logo officiel](https://memo.bank/logo-footer.svg), [site de l'organisme](https://memo.bank/).
+- **Linkt** : [logo de l'organisme](https://www.linkt.fr/wp-content/uploads/2026/05/logo-linkt-bleu-marine.svg), [site officiel](https://www.linkt.fr/).
+- **Amazon** : [logo sur Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amazon_logo.svg).
+- **New York University** : [logo sur Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nyu_short_color.svg), [consignes d'identité visuelle](https://engineering.nyu.edu/marketing-and-communications/identity-guide/logos-lockups).
+- **INSA Rouen Normandie** : [logo sur Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Logo_INSA_RN.jpg), auteur : Service communication INSA Rouen Normandie, licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), sans modification.
+- **Centre Henri Becquerel** : [logo officiel](https://www.becquerel.fr/wp-content/uploads/2022/10/logo-becquerel-blanc_tournant.jpg), [espace presse](https://www.becquerel.fr/le-centre/decouvrir-le-centre/espace-presse/).

@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -99,16 +99,35 @@ if (topFeatured.some((project) => !project.featured)) {
   throw new Error("Featured projects must be the highest-ranked editorial picks.");
 }
 
+// Every catalogue item must have its own public page in BOTH languages.
 for (const lang of ["fr", "en"]) {
-  const markdown = readFileSync(join(root, "src", lang, "projects", "archive.md"), "utf8");
-  const found = [...markdown.matchAll(/<PortfolioProjectDetail project-id="([a-z0-9-]+)"/g)]
-    .map((match) => match[1]);
-  if (found.length !== ids.size || new Set(found).size !== found.length) {
-    throw new Error("Archive count or uniqueness mismatch (" + lang + ").");
+  const archivePath = join(root, "src", lang, "projects", "archive.md");
+  if (existsSync(archivePath)) {
+    throw new Error("Obsolete project archive must not be restored: " + archivePath);
   }
-  for (const id of ids) {
-    if (!found.includes(id)) throw new Error("Project " + id + " missing in " + lang + " archive.");
+
+  for (const project of projects) {
+    const pagePath = join(root, "src", lang, "projects", project.id + ".md");
+    if (!existsSync(pagePath)) {
+      throw new Error("Missing dedicated project page: " + lang + "/" + project.id);
+    }
+    const markdown = readFileSync(pagePath, "utf8");
+    if (!markdown.startsWith("---\\n") && !markdown.startsWith("---\n")) {
+      throw new Error("Missing page frontmatter: " + lang + "/" + project.id);
+    }
+    if (!/^title: /m.test(markdown) || !/^description: /m.test(markdown)) {
+      throw new Error("Missing project page SEO metadata: " + lang + "/" + project.id);
+    }
+    if ([...markdown.matchAll(/^# (.+)$/gm)].length !== 1) {
+      throw new Error("Expected exactly one page H1: " + lang + "/" + project.id);
+    }
+    if (markdown.includes("/projects/archive")) {
+      throw new Error("Old archive URL in project page: " + lang + "/" + project.id);
+    }
   }
+}
+if (existsSync(join(root, "docs"))) {
+  throw new Error("The obsolete docs/ directory must not be restored.");
 }
 
 const caseStudies = ["xila", "mini-train-store", "infrastructure"];
@@ -121,4 +140,4 @@ for (const lang of ["fr", "en"]) {
   }
 }
 
-console.log("Validated " + projects.length + " projects, both archives and six case studies.");
+console.log("Validated " + projects.length + " dedicated FR/EN pages and six case studies.");

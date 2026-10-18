@@ -46,7 +46,6 @@ const copy = computed(() =>
         eyebrow: "Sélection / 01",
         catalogueEyebrow: "Portfolio / Tous les projets",
         catalogueTitle: "Projets",
-        archive: "Consulter les descriptions techniques complètes",
         title: "Des idées aux",
         emphasis: "systèmes.",
         description: "Du noyau Rust aux outils métiers : quelques projets que je conçois, développe et maintiens.",
@@ -67,7 +66,6 @@ const copy = computed(() =>
         eyebrow: "Selected work / 01",
         catalogueEyebrow: "Portfolio / All projects",
         catalogueTitle: "Projects",
-        archive: "Read the full technical project descriptions",
         title: "From ideas to",
         emphasis: "systems.",
         description: "From a Rust kernel to practical business software: selected projects I design, build and maintain.",
@@ -119,9 +117,6 @@ const visibleProjects = computed(() => {
 
 const catalogueUrl = computed(() =>
   props.lang === "fr" ? "/fr/projects" : "/projects",
-);
-const archiveUrl = computed(() =>
-  props.lang === "fr" ? "/fr/projects/archive" : "/projects/archive",
 );
 </script>
 
@@ -235,9 +230,6 @@ const archiveUrl = computed(() =>
 
     <a v-if="mode === 'featured'" class="showcase-all-link" :href="catalogueUrl">
       {{ copy.viewAll }} <span aria-hidden="true">↗</span>
-    </a>
-    <a v-else class="showcase-all-link" :href="archiveUrl">
-      {{ copy.archive }} <span aria-hidden="true">↗</span>
     </a>
   </section>
 </template>
