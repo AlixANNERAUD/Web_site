@@ -5,7 +5,7 @@ This is the **single source of truth** for coding agents. `CLAUDE.md`, `GEMINI.m
 ## Architecture
 
 - This is a **statically generated Astro 7 portfolio** (not VitePress). Do not introduce a server or another framework without an explicit request.
-- English routes are at `/`, French routes under `/fr/`. Route compatibility and canonical/alternate links matter: `build.format: "file"` preserves `.html` output.
+- English routes are at `/`, French routes under `/fr/`. Route compatibility and canonical/alternate links matter: `build.format: "preserve"` preserves `.html` output.
 - `src/layouts/BaseLayout.astro`: global HTML, accessible navigation, theme toggle, SEO, analytics, locale switch.
 - `src/pages/`: file-based routes; `src/pages/{fr/,}projects/[slug].astro` renders 52 entries from the typed collection in `src/content.config.ts`.
 - `src/content/projects/{en,fr}/`: one `.md` or `.mdx` page per project in each locale. MDX is reserved for components such as architecture diagrams and Xila demo. Do not restore the removed archive routes.

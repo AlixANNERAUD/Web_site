@@ -49,7 +49,7 @@ public/                  Images, CNAME and robots.txt
 scripts/                 Content and generated-HTML validation
 ```
 
-**Routes:** English pages appear at the root; French pages under `/fr/`. Existing `/projects/<id>` URLs and the generated `/projects/<id>.html` files remain stable with `build.format = "file"`. Every project has a dedicated page in both languages. Removed archive routes stay removed.
+**Routes:** English pages appear at the root; French pages under `/fr/`. Existing `/projects/<id>` URLs and the generated `/projects/<id>.html` files remain stable with `build.format = "preserve"`. Every project has a dedicated page in both languages. Removed archive routes stay removed.
 
 **Content editing:** Add metadata to [`portfolioProjects.ts`](./src/data/portfolioProjects.ts) and one file per locale under `src/content/projects/{en,fr}/`. Use `.mdx` only when a component is needed; `ArchitectureFlow` is static, while `XilaBrowserDemo` has `client:load`. Links and project ranking remain data-driven.
 

@@ -146,6 +146,6 @@ console.log("Validated " + projects.length + " dedicated FR/EN pages and six cas
 
 // Markdown pages and Vue islands are referenced from typed content, not VitePress config.
 const config = readFileSync(join(root, "astro.config.mjs"), "utf8");
-if (!config.includes("vue()") || !config.includes("mdx()") || !config.includes('format: "file"')) {
+if (!config.includes("vue()") || !config.includes("mdx()") || !config.includes('format: "preserve"')) {
   throw new Error("Astro integrations and preserved .html route format are required.");
 }
