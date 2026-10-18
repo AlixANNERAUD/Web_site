@@ -6,7 +6,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "npm run format:check && npm run validate:portfolio && npm run docs:build",
-    "validate:portfolio": "node scripts/validate-portfolio.mjs"
+    "validate:portfolio": "node scripts/validate-portfolio.mjs",
+    "verify:static": "node scripts/check-static-seo.mjs"
   },
   "devDependencies": {
     "prettier": "3.9.10",
