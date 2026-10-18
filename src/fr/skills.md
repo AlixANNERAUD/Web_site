@@ -1,6 +1,6 @@
 # Compétences
 
-Un aperçu de mes compétences techniques et linguistiques. Pour voir comment je les applique, consultez [mes projets](/projects).
+Un aperçu de mes compétences techniques et linguistiques. Pour voir comment je les applique, consultez [mes projets](/fr/projects).
 
 ## <SquareCode /> Langages de programmation
 
