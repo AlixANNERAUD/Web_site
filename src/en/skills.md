@@ -1,94 +1,48 @@
 # Skills
 
-An overview of my technical skills and language proficiency. For context on how I apply them, see [my projects](/projects).
+I work across the software stack, from microcontrollers to web services. Rather than assigning subjective star ratings, these are the areas I actively use and the work that demonstrates them.
 
-## <SquareCode /> Programming languages
+<SkillDomain title="Systems, Rust and embedded software" :technologies="['Rust', 'C', 'C++', 'WebAssembly', 'ESP32', 'LVGL', 'Linux']">
 
-| Language                |        Level         |
-| :---------------------- | :------------------: |
-| C                       | <Level :level="4" /> |
-| C++                     | <Level :level="4" /> |
-| Rust                    | <Level :level="4" /> |
-| Python                  | <Level :level="4" /> |
-| Java                    | <Level :level="3" /> |
-| TypeScript / JavaScript | <Level :level="3" /> |
-| SQL                     | <Level :level="3" /> |
-| Free Pascal             | <Level :level="2" /> |
-| Bash                    | <Level :level="2" /> |
-| VHDL                    | <Level :level="1" /> |
-| PHP                     | <Level :level="1" /> |
+Resource-constrained software, hardware abstraction, drivers, scheduling and WebAssembly applications. My main example is <a href="https://www.xila.dev">Xila</a>. I also design electronics for an automated model railway.
 
-## <SquareCode /> Frameworks
+</SkillDomain>
 
-| Framework     |        Level         |
-| :------------ | :------------------: |
-| Vue.js        | <Level :level="4" /> |
-| Django        | <Level :level="3" /> |
-| React         | <Level :level="3" /> |
-| Coral         | <Level :level="3" /> |
-| Actix         | <Level :level="3" /> |
-| ROS 1         | <Level :level="2" /> |
-| Apache Hadoop | <Level :level="2" /> |
-| MongoDB       | <Level :level="2" /> |
+<SkillDomain title="Backend, APIs and data processing" :technologies="['Python', 'Django REST', 'Java', 'SQL', 'PostgreSQL', 'Rust / Actix', 'NumPy']">
 
-## <FileCode /> Markup languages
+API architecture, data integration, automation and numerical computing. Applied through <a href="/experiences">ThéraPIC, Amazon and my NYU research internship</a>, as well as <a href="/projects">data science projects</a>.
 
-| Language |        Level         |
-| :------- | :------------------: |
-| Markdown | <Level :level="4" /> |
-| LaTeX    | <Level :level="4" /> |
-| HTML     | <Level :level="3" /> |
-| CSS      | <Level :level="3" /> |
-| Smithy   | <Level :level="3" /> |
+</SkillDomain>
 
-## <Blocks /> Package managers
+<SkillDomain title="Frontend and web applications" :technologies="['Vue 3', 'TypeScript', 'JavaScript', 'React', 'Vite', 'WXT', 'Tailwind CSS']">
 
-| Package manager |        Level         |
-| :-------------- | :------------------: |
-| Cargo           | <Level :level="3" /> |
-| Uv              | <Level :level="3" /> |
-| Poetry          | <Level :level="3" /> |
-| NPM             | <Level :level="3" /> |
-| PlatformIO      | <Level :level="3" /> |
+Web interfaces, single-page applications and browser extensions. Examples include <a href="https://www.minitrainstore.fr">Mini Train Store</a> and internal tools developed during my professional experience.
 
-## <AppWindow /> Tools
+</SkillDomain>
 
-| Tool               |        Level         |
-| :----------------- | :------------------: |
-| Git                | <Level :level="3" /> |
-| Visual Studio Code | <Level :level="3" /> |
-| GNU/Linux          | <Level :level="3" /> |
-| Docker             | <Level :level="3" /> |
-| GitHub Action (CI) | <Level :level="3" /> |
-| FreeBSD            | <Level :level="2" /> |
-| CMake              | <Level :level="2" /> |
-| Bash               | <Level :level="1" /> |
-| Make               | <Level :level="1" /> |
+<SkillDomain title="Infrastructure, cloud and DevOps" :technologies="['Debian / Linux', 'Docker', 'Ansible', 'AWS', 'GitHub Actions', 'Git', 'Networking']">
 
-## <Bot /> Agentic development
+Self-hosted services, configuration management, CI/CD pipelines and cloud environments. See my <a href="https://github.com/AlixANNERAUD/Infrastructure">self-hosted infrastructure</a> and <a href="/experiences">work with AWS</a>.
 
-I regularly use coding agents to accelerate development while retaining human technical validation of the changes they produce.
+</SkillDomain>
 
-| Skill                                  |        Level         |
-| :------------------------------------- | :------------------: |
-| OpenCode / Claude Code / Codex         | <Level :level="4" /> |
-| Agentic development workflows          | <Level :level="4" /> |
-| Tool and MCP server integration        | <Level :level="3" /> |
-| Agents with Git, GitHub, tests, and CI | <Level :level="4" /> |
+<SkillDomain title="Security and networking" :technologies="['L2/L3 routing', 'MPLS / VPN', 'SIP', 'Cisco', 'Juniper', 'CTF', 'Linux']">
 
-## <Earth /> Communication
+Telecom incident diagnostics, network operations and applied security. Experience at <a href="/experiences">Linkt and Memo Bank</a>, along with <a href="/projects">Jeanne d'Hack and TRACS</a> competitions.
 
-| Language     |          Level          |
-| :----------- | :---------------------: |
-| :fr: French  |         Native          |
-| :uk: English | Fluent (TOEIC 975 - C1) |
-| :es: Spanish |       Basic (A2)        |
-| :de: German  |       Basic (A2)        |
+</SkillDomain>
 
-## <Table /> Legend
+<SkillDomain title="Agent-assisted development" :technologies="['OpenCode', 'Claude Code', 'Codex', 'MCP', 'Testing', 'Git / CI']">
 
-- <Level :level="1" /> Basic understanding
-- <Level :level="2" /> Working knowledge
-- <Level :level="3" /> Proficient
-- <Level :level="4" /> Highly skilled
-- <Level :level="5" /> Expert mastery
+Coding agents support investigation, implementation and code reviews, with human validation through tests, change inspection, Git and CI. I also explore tool integrations using the MCP protocol.
+
+</SkillDomain>
+
+## <Earth /> Languages
+
+| Language | Proficiency |
+| :--- | :--- |
+| French | Native |
+| English | Fluent — TOEIC 975 (C1) |
+| Spanish | Basic (A2) |
+| German | Basic (A2) |
