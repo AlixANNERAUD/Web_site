@@ -1,5 +1,5 @@
 <script setup lang="ts">
-export interface FlowStep {
+interface FlowStep {
   title: string;
   detail: string;
 }
