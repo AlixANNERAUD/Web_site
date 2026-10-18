@@ -20,8 +20,8 @@ export interface PortfolioExperience {
   highlights: ExperienceTranslation[];
   technologies: string[];
   ongoing?: boolean;
-  /** Earlier milestone: show detailed highlights and tags only on demand. */
-  compact?: boolean;
+  /** Earlier milestone: hide its complete card until the section is expanded. */
+  earlier?: boolean;
 }
 
 export const experiences: PortfolioExperience[] = [
@@ -134,6 +134,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "insa-relations",
+    earlier: true,
     logo: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Logo_INSA_RN.jpg",
     group: "professional",
     company: "INSA Rouen Normandie",
@@ -216,7 +217,7 @@ export const experiences: PortfolioExperience[] = [
   {
     id: "renault-cleon",
     group: "professional",
-    compact: true,
+    earlier: true,
     company: "Renault Cléon",
     companyUrl: "https://www.renaultgroup.com/",
     monogram: "R",
@@ -245,7 +246,7 @@ export const experiences: PortfolioExperience[] = [
   {
     id: "guenola-sahut",
     group: "professional",
-    compact: true,
+    earlier: true,
     company: "Guenola Sahut",
     monogram: "GS",
     role: {
@@ -269,7 +270,7 @@ export const experiences: PortfolioExperience[] = [
   {
     id: "baccalaureat",
     group: "education",
-    compact: true,
+    earlier: true,
     company: "Enseignement secondaire",
     monogram: "BAC",
     role: {
@@ -293,7 +294,7 @@ export const experiences: PortfolioExperience[] = [
   {
     id: "cambridge-b1",
     group: "education",
-    compact: true,
+    earlier: true,
     company: "Cambridge English",
     companyUrl: "https://www.cambridgeenglish.org/",
     monogram: "B1",
