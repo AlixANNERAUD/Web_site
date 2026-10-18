@@ -108,13 +108,33 @@ for (const [file, marker] of [
   }
 }
 
+// Shared visual primitives must render as HTML in both locales.
+for (const file of [
+  "projects.html", "fr/projects.html", "experiences.html",
+  "fr/experiences.html", "skills.html", "fr/skills.html",
+]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  if (!html.includes("editorial-hero")) {
+    failed.push(file + ": shared editorial hero missing");
+  }
+  if (!html.includes("editorial-card") || !html.includes("editorial-tags")) {
+    failed.push(file + ": shared editorial cards/tags missing");
+  }
+}
+for (const file of ["experiences.html", "fr/experiences.html", "skills.html", "fr/skills.html"]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  if (!html.includes("editorial-section-heading") || !html.includes("editorial-next")) {
+    failed.push(file + ": shared section/CTA missing");
+  }
+}
+
 // Skills must be real SSR content rather than hidden client-only cards.
 for (const [file, projectPrefix] of [
   ["skills.html", "/projects/"],
   ["fr/skills.html", "/fr/projects/"],
 ]) {
   const html = readFileSync(resolve(dist, file), "utf8");
-  const cards = [...html.matchAll(/class="skills-domain-card"/g)].length;
+  const cards = [...html.matchAll(/<article[^>]+class="[^"]*skills-domain-card[^"]*"/g)].length;
   if (cards !== 6) {
     failed.push(file + ": expected six skill domain cards, found " + cards);
   }
