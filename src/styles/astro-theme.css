@@ -35,6 +35,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--vp-c-brand-1); 
 button { font: inherit; }
 .site-shell { min-height: 100vh; display: flex; flex-direction: column; }
 .site-shell > main { flex: 1; min-width: 0; }
+/* Shared editorial container: restored after the VitePress → Astro migration.
+ * Skills and Experience use this class; keep both aligned with the portfolio. */
+.editorial-page {
+  width: min(100%, 1180px);
+  max-width: 1180px;
+  margin-inline: auto;
+  padding: 3.5rem 1.5rem 6rem;
+  color: var(--vp-c-text-1);
+}
+
 .skip-link { position: absolute; left: 1rem; top: -5rem; padding: .55rem .9rem; z-index: 1000; background: var(--vp-c-bg); border: 2px solid var(--vp-c-brand-1); }
 .skip-link:focus { top: .5rem; }
 .site-header { position: sticky; top: 0; z-index: 40; background: var(--vp-c-bg); border-bottom: 1px solid var(--vp-c-divider); }
@@ -74,5 +84,6 @@ button { font: inherit; }
   .site-header-tools { margin-left: auto; }
   .prose { padding: 2rem 1rem 4rem; }
   .site-footer-inner { padding: 1.1rem 1rem; }
+  .editorial-page { padding: 2rem 1rem 4rem; }
 }
 @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
