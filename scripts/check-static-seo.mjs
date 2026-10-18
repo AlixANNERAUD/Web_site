@@ -2,10 +2,10 @@ import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 /**
- * Build-output smoke tests for the bilingual VitePress site.
+ * Build-output smoke tests for the bilingual Astro site.
  * The test intentionally parses generated HTML instead of trusting only config.
  */
-const dist = resolve(".vitepress/dist");
+const dist = resolve("dist");
 const cases = [
   ["index.html", "/", "/fr/"],
   ["fr/index.html", "/fr/", "/"],
@@ -17,10 +17,14 @@ const cases = [
   ["fr/experiences.html", "/fr/experiences", "/experiences"],
   ["skills.html", "/skills", "/fr/skills"],
   ["fr/skills.html", "/fr/skills", "/skills"],
+  ["resume.html", "/resume", "/fr/resume"],
+  ["fr/resume.html", "/fr/resume", "/resume"],
+  ["legal-notice.html", "/legal-notice", "/fr/legal-notice"],
+  ["fr/legal-notice.html", "/fr/legal-notice", "/legal-notice"],
 ];
 
 // Test EVERY static detail route, including alternate locale metadata.
-const catalogueSource = readFileSync(resolve(".vitepress/theme/data/portfolioProjects.ts"), "utf8");
+const catalogueSource = readFileSync(resolve("src/data/portfolioProjects.ts"), "utf8");
 const declaration = "export const portfolioProjects: PortfolioProject[] = ";
 const catalogueStart = catalogueSource.indexOf(declaration) + declaration.length;
 const catalogueEnd = catalogueSource.indexOf(";\n\nexport function projectDetailUrl", catalogueStart);
@@ -30,7 +34,7 @@ if (catalogueStart < declaration.length || catalogueEnd < 0) {
 const projectIds = JSON.parse(catalogueSource.slice(catalogueStart, catalogueEnd))
   .map((project) => project.id);
 for (const id of projectIds) {
-  if (id !== "xila") {
+  {
     cases.push([`projects/${id}.html`, `/projects/${id}`, `/fr/projects/${id}`]);
     cases.push([`fr/projects/${id}.html`, `/fr/projects/${id}`, `/projects/${id}`]);
   }
