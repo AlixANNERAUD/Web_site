@@ -38,7 +38,7 @@ Sauf mention contraire, l'ensemble du code source de ce portfolio et les configu
 
 Le contenu textuel et les images des projets restent la propriété exclusive d'Alix ANNERAUD, sauf mentions spécifiques liées à des projets collaboratifs ou tiers.
 
-## 5. Crédits des logos
+## 5. Crédits des logos {#credits-des-logos}
 
 Les logos affichés dans les expériences identifient leurs organismes respectifs et **n'impliquent ni partenariat ni approbation** de ce portfolio. Ces marques restent la propriété de leurs titulaires. Les images sont hébergées sur les sites des organismes ou sur Wikimedia Commons ; un monogramme s'affiche si leur chargement échoue.
 
