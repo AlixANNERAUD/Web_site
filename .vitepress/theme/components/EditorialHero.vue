@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ArrowDownRight } from "lucide-vue-next";
 
-export interface EditorialNavItem {
+interface EditorialNavItem {
   href: string;
   label: string;
 }
