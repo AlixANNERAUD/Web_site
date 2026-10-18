@@ -102,7 +102,7 @@ const catalogueUrl = computed(() =>
   <section
     class="portfolio-showcase"
     :class="{ 'portfolio-showcase--catalogue': mode === 'catalogue' }"
-    :aria-label="lang === 'fr' ? 'Projets sélectionnés' : 'Selected projects'"
+    :aria-label="mode === 'featured' ? (lang === 'fr' ? 'Projets sélectionnés' : 'Selected projects') : (lang === 'fr' ? 'Catalogue de projets' : 'Project catalogue')"
   >
     <div class="showcase-heading">
       <div class="showcase-heading-main">
@@ -171,7 +171,7 @@ const catalogueUrl = computed(() =>
           </p>
           <h3>{{ project.title[lang] }}</h3>
           <p class="showcase-card-description">{{ project.description[lang] }}</p>
-          <ul v-if="project.tags.length" class="showcase-tags" aria-label="Technologies">
+          <ul v-if="project.tags.length" class="showcase-tags" :aria-label="lang === 'fr' ? 'Technologies utilisées' : 'Technologies used'">
             <li v-for="tag in project.tags" :key="tag">{{ tag }}</li>
           </ul>
           <div class="showcase-card-actions">
@@ -190,7 +190,7 @@ const catalogueUrl = computed(() =>
       </article>
     </div>
 
-    <p v-if="visibleProjects.length === 0" class="showcase-empty">
+    <p v-if="visibleProjects.length === 0" class="showcase-empty" role="status">
       {{ copy.empty }}
     </p>
 
