@@ -41,9 +41,18 @@ VitePress TypeScript source**. The experiment does not use Vue.
 
 A dedicated CI workflow (`.github/workflows/astro-poc.yml`) builds both sites
 under Node 24 and prints file counts, total HTML/CSS/JS asset bytes and
-homepage HTML/gzip size. The workflow output is the source of truth for
-**actual measured artifact sizes**. Do not substitute the earlier descriptive
-estimates.
+homepage HTML/gzip size. The workflow completed successfully in [Actions run #39144885523](https://github.com/AlixANNERAUD/Web_site/actions/runs/39144885523). Its measured artifacts under the same Node 24 GitHub runner were:
+
+| Build output | VitePress: full portfolio | Astro: two-page POC |
+| --- | ---: | ---: |
+| Static files | 85 | 2 |
+| Total artifact size | 1,790,314 bytes | 11,570 bytes |
+| English homepage HTML | 22,569 bytes | 5,729 bytes |
+| English homepage HTML (gzip) | 5,567 bytes | 1,762 bytes |
+| French homepage HTML (gzip) | 5,676 bytes | 1,827 bytes |
+| JS across generated output | 421,703 bytes | 0 bytes |
+
+**Interpretation:** the minimalist static Astro pilot emits smaller HTML and no JS, as expected from a stripped-down two-page site with no Vue filters, Xila demo, navigation infrastructure or site-wide components. The complete VitePress build includes 27 projects and all documentation. Whole-site totals and build times **must not be presented as a framework performance benchmark**. No Lighthouse/LCP/CLS or runtime CPU measurements were collected.
 
 This is **not** an apples-to-apples performance comparison: the Astro POC has
 only two pages, no existing Vue filters, case-study navigation, resume PDF,
