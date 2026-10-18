@@ -82,6 +82,7 @@ Then open the local address printed by VitePress.
     data/
       portfolioProjects.ts   Project metadata (FR/EN)
       experiences.ts         Experience and education entries (FR/EN)
+      skills.ts              Bilingual skill domains, project evidence and languages
     style.css                Theme-wide styling
 src/
   en/                        English pages
