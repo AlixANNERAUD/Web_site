@@ -172,7 +172,7 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
       </ol>
 
       <p class="career-other">
-        <strong>{{ section.id === "professional" ? copy.other : "" }}</strong>
+        <strong v-if="section.id === 'professional'">{{ copy.other }}</strong>
         {{ section.id === "professional" ? copy.earlier : copy.studies }}
       </p>
     </section>
@@ -401,7 +401,7 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
   color: var(--vp-c-text-2);
   font-size: 0.8rem;
 }
-.career-period { font-weight: 600; }
+.career-period { display: none; font-weight: 600; }
 .career-location { display: inline-flex; align-items: center; gap: 0.25rem; }
 .career-summary {
   margin: 0 0 0.85rem;
@@ -483,6 +483,7 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
   .career-timeline-item { grid-template-columns: 1.1rem minmax(0, 1fr); gap: 0.65rem; }
   .career-timeline-rail { padding: 0; align-items: flex-end; }
   .career-timeline-date { display: none; }
+  .career-period { display: inline; }
   .career-timeline-dot { top: 1.4rem; }
   .career-card { padding: 1rem; }
   .career-company-mark { flex-basis: 2.8rem; height: 2.8rem; }
