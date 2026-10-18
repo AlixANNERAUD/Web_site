@@ -55,6 +55,26 @@ for (const file of ["index.html", "fr/index.html"]) {
     failed.push(file + ": missing Person structured data");
   }
 }
+// Structural regressions: these pages use one page-level heading and a
+// purpose-built layout rather than the legacy Markdown/document components.
+for (const [file, marker] of [
+  ["projects.html", "portfolio-showcase--catalogue"],
+  ["fr/projects.html", "portfolio-showcase--catalogue"],
+  ["experiences.html", "career-timeline"],
+  ["fr/experiences.html", "career-timeline"],
+]) {
+  const filename = resolve(dist, file);
+  if (!existsSync(filename)) continue;
+  const html = readFileSync(filename, "utf8");
+  const h1Count = [...html.matchAll(/<h1(?:\s|>)/g)].length;
+  if (h1Count !== 1) {
+    failed.push(file + ": expected exactly one h1, found " + h1Count);
+  }
+  if (!html.includes(marker)) {
+    failed.push(file + ": new portfolio layout not SSR-rendered (" + marker + ")");
+  }
+}
+
 if (failed.length) {
   console.error("Static SEO checks failed:\n" + failed.join("\n"));
   process.exitCode = 1;

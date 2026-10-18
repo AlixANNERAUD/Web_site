@@ -1,7 +1,7 @@
-# Projets
-
-Une sélection de projets personnels, de compétitions et de réalisations académiques. Utilisez la recherche et les filtres pour explorer le catalogue.
+---
+layout: page
+title: Projets
+description: Explorez les projets logiciels et embarqués d'Alix ANNERAUD avec recherche et filtres par domaine.
+---
 
 <PortfolioShowcase lang="fr" mode="catalogue" />
-
-Vous préférez lire les descriptions techniques complètes ? Consultez les [fiches détaillées de tous les projets](/fr/projects/archive).

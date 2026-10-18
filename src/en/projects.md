@@ -1,7 +1,7 @@
-# Projects
-
-Browse my personal projects, competition results, and academic work using the search field and filters.
+---
+layout: page
+title: Projects
+description: Explore Alix ANNERAUD's software and embedded projects, with search and category filters.
+---
 
 <PortfolioShowcase lang="en" mode="catalogue" />
-
-Looking for more technical context? Read the [full project descriptions](/projects/archive).
