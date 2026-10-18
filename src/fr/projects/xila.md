@@ -1,0 +1,44 @@
+---
+title: Xila — système d'exploitation embarqué en Rust
+description: Architecture et choix techniques du système Xila, avec noyau Rust, modules, pilotes, WebAssembly et LVGL.
+---
+
+# Xila : construire un OS modulaire pour l'embarqué
+
+**Rust · WebAssembly · LVGL · systèmes embarqués** · Depuis 2019
+
+> Un projet open source de longue durée : faire cohabiter des services système portables et des applications isolées sur des machines aux ressources limitées.
+
+## Le problème
+
+Sur un microcontrôleur, la mémoire, le stockage et le budget CPU limitent rapidement la complexité des logiciels. Pourtant, je voulais retrouver une expérience de développement modulaire : pilotes séparés, abstraction des périphériques, stockage, tâches, interface graphique et possibilité d'exécuter des applications sans les intégrer systématiquement au noyau.
+
+L'enjeu n'était donc pas simplement d'afficher une interface sur un ESP32, mais de **définir des contrats réutilisables** entre services système, matériels et programmes.
+
+## Architecture
+
+<ArchitectureFlow title="Couches principales de Xila" :steps="[{ title: 'Pilotes', detail: 'Adaptation aux cibles matérielles, à Linux natif et au navigateur.' }, { title: 'Modules Rust', detail: 'Tâches, utilisateurs, VFS, réseau, graphique et services du système.' }, { title: 'Frontière d’exécution', detail: 'Contrats ABI, liaison hôte/invité et machine virtuelle WebAssembly.' }, { title: 'Applications', detail: 'Programmes embarqués, shell et applications Wasm.' }]" />
+
+Le dépôt sépare notamment les **modules** qui pilotent l'état du système, les **crates** contenant contrats et utilitaires, les **drivers** propres à une cible et les **exécutables**. Un appel fichier d'une application passe par le VFS et ses règles d'accès avant d'atteindre un backend comme LittleFS ou un périphérique.
+
+Côté applications invitées, Xila utilise un runtime **Wasmi** : les appels exposés aux programmes WebAssembly rejoignent les mêmes services que ceux utilisés par les composants natifs. L'interface graphique s'appuie notamment sur **LVGL**.
+
+## Décisions d'ingénierie
+
+- **Cœur en Rust, applications WebAssembly.** Les services système sont développés en Rust, tandis que le format Wasm ouvre la porte à des programmes séparés du système hôte, avec une frontière d'exécution explicite.
+- **Abstractions avant portages.** Les interfaces des périphériques et du système de fichiers sont réutilisables ; les pilotes réalisent l'adaptation aux différentes cibles.
+- **Développement natif et navigateur.** Un environnement Linux et un exemple dans le navigateur permettent d'itérer plus facilement avant de confronter les composants au matériel embarqué. Le stockage navigateur s'appuie sur une image disque et OPFS.
+- **Compromis assumés.** L'interpréteur WebAssembly, les abstractions et l'interface graphique ont un coût en mémoire et en performances qui doit être mesuré selon la carte et le cas d'usage.
+
+## État et limites
+
+Xila est **en développement actif**. La présence d'un exemple natif ou navigateur ne garantit pas qu'une carte particulière dispose de tous les pilotes requis. Je n'avance pas de ratio de performance face au natif sans mesure reproductible.
+
+## Explorer le projet
+
+- [Code source de Xila Core](https://github.com/xila-project/core)
+- [Documentation et carte des composants](https://www.xila.dev/explanation/architecture/components)
+- [Tutoriel du portage navigateur](https://www.xila.dev/tutorials/browser)
+- [Tutoriel d'exécution native](https://www.xila.dev/tutorials/native)
+
+[← Tous les projets](/fr/projects)
