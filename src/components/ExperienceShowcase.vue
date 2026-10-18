@@ -5,7 +5,7 @@ import EditorialSectionHeading from "./EditorialSectionHeading.vue";
 import EditorialNext from "./EditorialNext.vue";
 import EditorialCard from "./EditorialCard.vue";
 import TechnologyTags from "./TechnologyTags.vue";
-import { ArrowUpRight, BriefcaseBusiness, GraduationCap, MapPin } from "lucide-vue-next";
+import { ArrowUpRight, BriefcaseBusiness, ChevronDown, GraduationCap, MapPin } from "lucide-vue-next";
 import { experiences, type ExperienceGroup, type ExperienceLanguage } from "../data/experiences";
 
 const props = withDefaults(defineProps<{ lang?: ExperienceLanguage }>(), { lang: "fr" });
@@ -39,11 +39,8 @@ const copy = computed(() =>
         current: "En cours",
         logoCredits: "Logos et marques : propriété de leurs organismes respectifs. Sources et crédits",
         technologies: "Technologies et domaines",
-        other: "Et aussi",
-        earlier:
-          "Stage de production chez Renault Cléon (2022) et assistance en communication chez Guenola Sahut (2019).",
-        studies:
-          "Formation initiale : baccalauréat scientifique, section européenne (2021). Certification Cambridge B1 Preliminary (2018).",
+        showMore: "Voir plus",
+        showLess: "Voir moins",
         next: "Et côté projets ?",
         nextText:
           "Découvrez les projets qui illustrent ces compétences, de Xila à l'auto-hébergement.",
@@ -60,11 +57,8 @@ const copy = computed(() =>
         current: "Ongoing",
         logoCredits: "Logos and trademarks belong to their respective owners. Sources and credits",
         technologies: "Technologies and domains",
-        other: "Earlier experience",
-        earlier:
-          "Production internship at Renault Cléon (2022) and communication assistant work for Guenola Sahut (2019).",
-        studies:
-          "Earlier education: scientific baccalaureate, European section (2021). Cambridge B1 Preliminary certificate (2018).",
+        showMore: "Show more",
+        showLess: "Show less",
         next: "What have I built?",
         nextText:
           "Explore the projects behind these skills, from Xila to self-hosted infrastructure.",
@@ -86,6 +80,13 @@ const navigation = computed(() =>
 const failedLogos = reactive(new Set<string>());
 function markLogoFailed(url: string) {
   failedLogos.add(url);
+}
+
+// Earlier entries stay compact until their individual details are requested.
+const expandedEntries = reactive(new Set<string>());
+function toggleEntry(id: string) {
+  if (expandedEntries.has(id)) expandedEntries.delete(id);
+  else expandedEntries.add(id);
 }
 </script>
 
@@ -130,6 +131,7 @@ function markLogoFailed(url: string) {
             class="career-card"
             variant="timeline"
             :highlighted="!!entry.ongoing"
+            :class="{ 'career-card--compact': entry.compact }"
             :aria-labelledby="entry.id + '-title'"
           >
             <div class="career-card-top">
@@ -174,33 +176,50 @@ function markLogoFailed(url: string) {
 
             <div class="career-metadata">
               <span class="career-period">{{ entry.period[lang] }}</span>
-              <span class="career-location">
+              <span v-if="entry.location[lang]" class="career-location">
                 <MapPin :size="14" aria-hidden="true" /> {{ entry.location[lang] }}
               </span>
             </div>
 
             <p class="career-summary">{{ entry.summary[lang] }}</p>
 
-            <ul v-if="entry.highlights.length" class="career-highlights">
-              <li v-for="(highlight, index) in entry.highlights" :key="index">
-                {{ highlight[lang] }}
-              </li>
-            </ul>
+            <div
+              :id="'experience-details-' + entry.id"
+              v-show="!entry.compact || expandedEntries.has(entry.id)"
+              class="career-card-details"
+            >
+              <ul v-if="entry.highlights.length" class="career-highlights">
+                <li v-for="(highlight, index) in entry.highlights" :key="index">
+                  {{ highlight[lang] }}
+                </li>
+              </ul>
 
-            <TechnologyTags
-              v-if="entry.technologies.length"
-              :tags="entry.technologies"
-              :label="copy.technologies"
-              density="timeline"
-            />
+              <TechnologyTags
+                v-if="entry.technologies.length"
+                :tags="entry.technologies"
+                :label="copy.technologies"
+                density="timeline"
+              />
+            </div>
+            <button
+              v-if="entry.compact"
+              type="button"
+              class="career-expand-button"
+              :aria-expanded="expandedEntries.has(entry.id)"
+              :aria-controls="'experience-details-' + entry.id"
+              @click="toggleEntry(entry.id)"
+            >
+              {{ expandedEntries.has(entry.id) ? copy.showLess : copy.showMore }}
+              <ChevronDown
+                :size="16"
+                :class="{ 'career-expand-icon--open': expandedEntries.has(entry.id) }"
+                aria-hidden="true"
+              />
+            </button>
           </EditorialCard>
         </li>
       </ol>
 
-      <p class="career-other">
-        <strong v-if="section.id === 'professional'">{{ copy.other }}</strong>
-        {{ section.id === "professional" ? copy.earlier : copy.studies }}
-      </p>
     </section>
 
     <EditorialNext
@@ -220,9 +239,6 @@ function markLogoFailed(url: string) {
 </template>
 
 <style scoped>
-
-
-
 .career-group { margin: 0 0 4.5rem; scroll-margin-top: 6rem; }
 .career-timeline { margin: 0; padding: 0; list-style: none; }
 .career-timeline-item {
@@ -345,15 +361,40 @@ function markLogoFailed(url: string) {
 }
 .career-highlights li { padding-left: 0.25rem; margin: 0.25rem 0; }
 .career-highlights li::marker { color: var(--vp-c-brand-1); }
-.career-other {
-  margin: 0.3rem 0 0;
-  padding: 1.1rem 1.2rem;
-  border-left: 2px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2);
-  font-size: 0.87rem;
-  line-height: 1.65;
+.career-card--compact .career-summary {
+  margin-bottom: 0.6rem;
 }
-.career-other strong { color: var(--vp-c-text-1); margin-right: 0.3rem; }
+.career-expand-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.65rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.45rem;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 0.81rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+.career-expand-button:hover {
+  border-color: var(--vp-c-brand-1);
+}
+.career-expand-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+.career-expand-button svg {
+  transition: transform 160ms ease;
+}
+.career-expand-icon--open {
+  transform: rotate(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .career-expand-button svg { transition: none; }
+}
 .career-logo-credits {
   margin: 0;
   color: var(--vp-c-text-3);
