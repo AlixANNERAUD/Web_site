@@ -90,7 +90,7 @@ function markLogoFailed(url: string) {
 </script>
 
 <template>
-  <div class="career-showcase">
+  <div class="career-showcase editorial-page">
     <EditorialHero
       :eyebrow="copy.eyebrow"
       :title="copy.before"
@@ -220,24 +220,10 @@ function markLogoFailed(url: string) {
 </template>
 
 <style scoped>
-.career-showcase {
-  width: min(100%, 1180px);
-  margin: 0 auto;
-  padding: 3.5rem 1.5rem 6rem;
-  color: var(--vp-c-text-1);
-}
 
-.career-section-index {
-  margin: 0 0 0.9rem;
-  color: var(--vp-c-text-2);
-  font-size: 0.73rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
+
 
 .career-group { margin: 0 0 4.5rem; scroll-margin-top: 6rem; }
-.career-section-index { margin: 0 0 0.5rem; }
 .career-timeline { margin: 0; padding: 0; list-style: none; }
 .career-timeline-item {
   display: grid;
@@ -314,6 +300,14 @@ function markLogoFailed(url: string) {
 }
 .career-organization a { display: inline-flex; align-items: center; gap: 0.15rem; color: inherit; text-decoration: none; }
 .career-organization a:hover { color: var(--vp-c-brand-1); }
+.career-card h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.19rem, 2.2vw, 1.55rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
 .career-current-label {
   display: inline-flex;
   align-items: center;
@@ -368,9 +362,10 @@ function markLogoFailed(url: string) {
 .career-logo-credits a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .career-logo-credits a:hover { color: var(--vp-c-text-1); }
 
+.career-card a:focus-visible,
 .career-logo-credits a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
 @media (max-width: 680px) {
-.career-showcase { padding: 2rem 1rem 4rem; }
+
   .career-timeline-item { grid-template-columns: 1.1rem minmax(0, 1fr); gap: 0.65rem; }
   .career-timeline-rail { padding: 0; align-items: flex-end; }
   .career-timeline-date { display: none; }
