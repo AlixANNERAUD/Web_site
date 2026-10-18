@@ -20,4 +20,6 @@ hero:
       link: mailto:alix@anneraud.fr
 ---
 
+<XilaArchitectureMotion lang="fr" />
+
 <PortfolioShowcase lang="fr" mode="featured" />
