@@ -37,3 +37,14 @@ To monitor traffic and interest in the displayed projects, this website uses **U
 Unless otherwise stated, the entire source code of this portfolio and its associated configurations are licensed under the terms of the [MIT License](https://mit-license.org/).
 
 The textual content and project imagery remain the exclusive property of Alix ANNERAUD, unless specific credits are given to collaborative or third-party projects.
+
+## 5. Logo credits
+
+Logos used in the experience timeline identify the organizations concerned and **do not imply partnership or endorsement**. Trademarks remain the property of their respective owners. Images are loaded from organization sites or Wikimedia Commons, with initials shown if an image fails to load.
+
+- **Memo Bank**: [official logo](https://memo.bank/logo-footer.svg), [organization website](https://memo.bank/).
+- **Linkt**: [company logo](https://www.linkt.fr/wp-content/uploads/2026/05/logo-linkt-bleu-marine.svg), [official website](https://www.linkt.fr/).
+- **Amazon**: [Wikimedia Commons logo](https://commons.wikimedia.org/wiki/File:Amazon_logo.svg).
+- **New York University**: [Wikimedia Commons logo](https://commons.wikimedia.org/wiki/File:Nyu_short_color.svg), [visual identity guidance](https://engineering.nyu.edu/marketing-and-communications/identity-guide/logos-lockups).
+- **INSA Rouen Normandie**: [Wikimedia Commons logo](https://commons.wikimedia.org/wiki/File:Logo_INSA_RN.jpg), author: Service communication INSA Rouen Normandie, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) licensed, unmodified.
+- **Centre Henri Becquerel**: [official logo](https://www.becquerel.fr/wp-content/uploads/2022/10/logo-becquerel-blanc_tournant.jpg), [press resources](https://www.becquerel.fr/le-centre/decouvrir-le-centre/espace-presse/).

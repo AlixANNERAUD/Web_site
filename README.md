@@ -67,7 +67,7 @@ Then open the local address printed by VitePress.
 | `npm run docs:dev` | Start the local development server |
 | `npm run docs:build` | Generate the production site in `.vitepress/dist/` |
 | `npm run docs:preview` | Preview the generated site |
-| `npm run validate:portfolio` | Check project IDs, translations, tags and archive entries |
+| `npm run validate:portfolio` | Check IDs, translations, project pages and engineering case studies |
 | `npm run verify:static` | Inspect generated HTML for SEO and locale metadata (run after build) |
 | `npm run format:check` | Check Prettier formatting |
 
@@ -97,9 +97,9 @@ scripts/
 
 ### Editing content
 
-**Project ranking:** the catalogue sorts projects by editorial importance, using four weighted factors (technical depth, originality, practical impact and public evidence); visitors can switch to alphabetical order. See [project ranking and methodology](./docs/project-ranking.md).
+**Project ranking:** the catalogue sorts projects by editorial importance, using four weighted factors (technical depth, originality, practical impact and public evidence); visitors can switch to alphabetical order. The weighting is maintained in [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts) (technical depth 40%, originality 20%, practical impact 25%, public evidence 15%).
 
-**Projects:** add or update an item in [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts), then update its detailed entry in both [English](./src/en/projects/archive.md) and [French](./src/fr/projects/archive.md) archives. Featured projects can also have dedicated pages under `src/{en,fr}/projects/`. Run `npm run validate:portfolio` afterward.
+**Projects:** add or update an item in [`portfolioProjects.ts`](./.vitepress/theme/data/portfolioProjects.ts) and its **dedicated Markdown page in both languages**: `src/en/projects/<project-id>.md` and `src/fr/projects/<project-id>.md`. The three leading projects include longer architecture case studies. Run `npm run validate:portfolio` afterward.
 
 **Experience:** edit [`experiences.ts`](./.vitepress/theme/data/experiences.ts). Roles, summaries, achievements and dates are localized in one place; both pages use the same timeline component.
 
