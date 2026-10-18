@@ -1,83 +1,39 @@
-# Agent instructions — Alix ANNERAUD portfolio
+# Repository instructions — alix.anneraud.fr
 
-This is the **single source of truth** for coding agents working in this repository. Claude, Gemini and Copilot compatibility files are symbolic links to this file. **Edit `AGENTS.md` only**; do not replace an alias with a duplicated Markdown document.
+This is the **single source of truth** for coding agents. `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` remain Git symlinks to this file.
 
-## Project and scope
+## Architecture
 
-- This repository builds the public, bilingual portfolio at https://alix.anneraud.fr.
-- It uses **VitePress 1.x, Vue 3, TypeScript, Tailwind CSS 4 and scoped CSS**; GitHub Pages hosts the generated static site. Do not migrate frameworks or introduce a backend unless explicitly requested.
-- Prioritize maintainable, accessible, responsive, fast-loading pages. Prefer small improvements to large rewrites.
-- Treat current source files as authoritative. Do not rely on stale public-site caches or earlier descriptions of the repository.
+- This is a **statically generated Astro 7 portfolio** (not VitePress). Do not introduce a server or another framework without an explicit request.
+- English routes are at `/`, French routes under `/fr/`. Route compatibility and canonical/alternate links matter: `build.format: "file"` preserves `.html` output.
+- `src/layouts/BaseLayout.astro`: global HTML, accessible navigation, theme toggle, SEO, analytics, locale switch.
+- `src/pages/`: file-based routes; `src/pages/{fr/,}projects/[slug].astro` renders 52 entries from the typed collection in `src/content.config.ts`.
+- `src/content/projects/{en,fr}/`: one `.md` or `.mdx` page per project in each locale. MDX is reserved for components such as architecture diagrams and Xila demo. Do not restore the removed archive routes.
+- `src/data/portfolioProjects.ts`, `experiences.ts`, `skills.ts`: bilingual metadata, rankings, content and evidence.
+- `src/components/`: Vue components, with reusable `EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `EditorialNext` and `TechnologyTags`.
+- `src/styles/`: responsive styling, motion and VitePress-compatible color tokens retained for the Vue islands.
+- `public/`: images, robots.txt and GitHub Pages CNAME.
+- CI/deploy under `.github/workflows/`, content and built HTML validation under `scripts/`.
 
-## Repository map
+## Code and content guidance
 
-- `src/en/`: English content, published at the root (`/`); **do not** build links under `/en/`.
-- `src/fr/`: French content, published under `/fr/`. Keep navigation, headings and meaningful copy synchronized across both languages.
-- `.vitepress/config.mts`: routes, locale rewrites, Vite integration and site configuration.
-- `.vitepress/seo.mts`: canonical URLs, `hreflang`, Open Graph and structured metadata.
-- `.vitepress/theme/index.ts`: Vue component auto-registration.
-- `.vitepress/theme/components/`: project explorer, experience timeline, SVG/WebGL, Xila browser demo and other Vue UI.
-- `.vitepress/theme/components/Editorial*.vue` and `TechnologyTags.vue`: reusable hero, section headings, CTA, card surface and technology chips shared by three showcase pages.
-- `.vitepress/theme/style.css`: shared `.editorial-page` layout and global design tokens; avoid duplicating these in page-specific scoped CSS.
-- `.vitepress/theme/data/portfolioProjects.ts`: typed bilingual project metadata, group/category filters and detail URL logic.
-- `.vitepress/theme/data/experiences.ts`: bilingual professional and education timeline.
-- `.vitepress/theme/data/skills.ts`: bilingual technical domains, language proficiencies and links to supporting project pages; rendered through `SkillsShowcase.vue`.
-- `src/{en,fr}/projects/<project-id>.md`: **one standalone page per catalogue project per language**. The three highlighted projects include deeper case studies. No archive pages or `docs/` folder should be introduced.
-- `src/public/`: public static assets. `.vitepress/dist/` and `.vitepress/cache/` are generated.
-- `scripts/`: project validation and built-HTML SEO checks.
-- `.github/workflows/`: PR CI, optional browser audit and GitHub Pages deployment.
+1. Maintain FR/EN parity, truthful public claims, correct metadata, canonical URLs and `hreflang`.
+2. Every project added to `portfolioProjects.ts` requires one entry under **both** `src/content/projects/en/` and `src/content/projects/fr/` with `title`, `description`, and exactly one H1.
+3. Prefer plain Astro / Markdown for static content. Only apply Vue hydration (`client:load`, `client:visible`, `client:idle`) where interactivity is necessary; do not hydrate the Skills showcase or static diagrams.
+4. Reuse the existing Vue editorial primitives; preserve keyboard focus, reduced motion, mobile layout, theme tokens and SSR-visible content.
+5. Never include secrets, proprietary employer source, personal records or fabricated performance/usage metrics in public pages.
+6. Preserve original logo attribution (legal notices); don't copy third-party brand assets without rights. Keep the fallback initials if a remote logo fails.
+7. Do not resurrect a `docs/` folder or old VitePress `.vitepress/` files.
+8. Treat the current source and CI as authoritative; avoid overwriting work in other PRs. Open PRs rather than pushing directly to `main` unless explicitly asked.
 
-Read the adjacent code and the root `README.md` before editing a subsystem; do not guess APIs, files or integrations.
-
-## Editing content
-
-1. **Keep FR and EN consistent.** Whenever project, experience, title, navigation or SEO text changes, update its counterpart. Preserve route parity and existing deep links.
-2. **Use the typed data sources.** Add project metadata in `portfolioProjects.ts`, then write a corresponding dedicated Markdown page in **both** `src/en/projects/` and `src/fr/projects/`. Never link back to the removed archives. For career content, update `experiences.ts` rather than duplicating entire timelines in Markdown.
-3. **Do not add duplicate titles.** Pages using the full-width catalogue or experience Vue components should have exactly one rendered H1; their Markdown wrappers must not add another.
-4. **Verify public claims.** Do not invent employment achievements, dates, performance metrics, rankings, customer outcomes, or project status. Avoid confidential employer details, credentials and client data. Prefer links to the relevant source repository or documentation.
-5. **Preserve brand provenance.** For organization logos, use verified assets, preserve proportions, give required credit and keep a readable fallback. Never fabricate a logo.
-6. **Keep page metadata correct.** Update localized titles/descriptions, canonical and `hreflang` behavior where needed. Do not break VitePress's `src/en` → root rewrite.
-
-## Frontend and performance
-
-- Use `EditorialHero`, `EditorialSectionHeading`, `EditorialNext`, `EditorialCard` and `TechnologyTags` for shared UI; keep domain-specific content and interactions in the individual showcase components. Do not reintroduce duplicate CSS for these primitives.
-- Favor existing Vue components and small, idiomatic TypeScript changes. Use the project's current styling conventions rather than introducing a new UI framework.
-- Respect `prefers-reduced-motion`. Interactive graphics need an accessible, meaningful static fallback; keyboard navigation, focus styles, contrast and text alternatives matter.
-- Keep WebGL/browser demos optional and lazy-loaded. Stop animation when invisible, release listeners/GPU resources on teardown, and avoid loading a large WASM artifact before user interaction.
-- Treat remote Xila demos, OPFS, cross-origin iframes and browser security headers as external constraints. Do not bypass origin isolation or delete user-created browser data.
-- Avoid new runtime dependencies for effects that can be implemented with CSS, existing components or browser APIs.
-
-## Commands and validation
-
-Use a current Node.js LTS release and npm, from the repository root:
+## Build and verification
 
 ```sh
 npm ci
 npm run validate:portfolio
-npm run docs:build
-npm run verify:static  # requires the completed build
+npm run build
+npm run verify:static
 npm run format:check
 ```
 
-- `npm run docs:dev` starts the development server; `npm run docs:preview` previews the production build.
-- `npm run check` combines formatting, project validation and build.
-- Follow existing Prettier conventions: LF, 2 spaces, double quotes and semicolons for applicable code.
-- PR CI is in `.github/workflows/ci.yml`; deployment happens on `main` through `.github/workflows/deploy.yml`. The optional Playwright audit is `.github/workflows/browser-audit.yml`.
-- If a check cannot be run, say so in the PR. Never claim a browser test, performance score or build is passing without evidence. Avoid unrelated whole-repo formatting changes.
-
-## Git and agent workflow
-
-- Prefer focused commits and reviewable PRs. Inspect the current branch and open changes before editing.
-- Do not push directly to `main`, merge PRs, publish, or make sweeping dependency/architecture changes unless asked.
-- Do not modify generated `.vitepress/dist/`, lockfiles without dependency changes, secrets, external deployments, or unrelated projects.
-- When finishing, summarize files changed, verification performed, any remaining risks, and the PR link.
-
-## Cross-agent aliases
-
-These paths must remain **real Git symlinks** (mode `120000`):
-
-- `CLAUDE.md` → `AGENTS.md` (Claude Code).
-- `GEMINI.md` → `AGENTS.md` (Gemini CLI).
-- `.github/copilot-instructions.md` → `../AGENTS.md` (GitHub Copilot).
-
-Codex, OpenCode and other agents capable of reading `AGENTS.md` should use it directly; do not create redundant copies. On Windows, Git may require symbolic-link support (`core.symlinks=true` / Developer Mode); when links cannot be resolved, read `AGENTS.md` explicitly.
+`npm run dev` starts Astro locally; `npm run preview` previews the static `dist/` output. Both English and French pages must be server-rendered correctly. Browser audit workflow may be launched when visual or hydration regressions are suspected.
