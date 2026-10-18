@@ -71,6 +71,8 @@ Ouvre ensuite l'adresse locale affichée par VitePress.
 | `npm run verify:static` | Vérifie les métadonnées SEO du HTML généré (après build) |
 | `npm run format:check` | Vérifie le formatage Prettier |
 
+Les pages Projets, Expériences et Compétences utilisent les mêmes composants Vue (`EditorialHero`, `EditorialSectionHeading`, `EditorialCard`, `EditorialNext` et `TechnologyTags`). Leurs interactions restent indépendantes, mais la structure visuelle et les espacements sont mutualisés.
+
 ## Organisation du dépôt
 
 ```text
