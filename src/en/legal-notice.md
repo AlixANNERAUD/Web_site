@@ -38,7 +38,7 @@ Unless otherwise stated, the entire source code of this portfolio and its associ
 
 The textual content and project imagery remain the exclusive property of Alix ANNERAUD, unless specific credits are given to collaborative or third-party projects.
 
-## 5. Logo credits
+## 5. Logo credits {#logo-credits}
 
 Logos used in the experience timeline identify the organizations concerned and **do not imply partnership or endorsement**. Trademarks remain the property of their respective owners. Images are loaded from organization sites or Wikimedia Commons, with initials shown if an image fails to load.
 
