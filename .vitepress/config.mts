@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import { withMermaid } from "vitepress-plugin-mermaid";
 import { ENGLISH_CONFIGURATION } from "../src/en/configuration";
 import { FRENCH_CONFIGURATION } from "../src/fr/configuration";
 import tailwindcss from "@tailwindcss/vite";
@@ -78,4 +77,4 @@ const configuration = defineConfig({
   },
 });
 
-export default withMermaid(configuration);
+export default configuration;
