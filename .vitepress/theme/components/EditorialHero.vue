@@ -65,7 +65,6 @@ withDefaults(
   padding-bottom: 1.75rem;
 }
 .editorial-hero__copy { min-width: 0; }
-.editorial-hero--compact .editorial-hero__copy { display: contents; }
 .editorial-hero__eyebrow,
 .editorial-hero__nav-caption {
   margin: 0 0 0.9rem;
@@ -97,36 +96,30 @@ withDefaults(
   line-height: 1.75;
 }
 .editorial-hero--compact .editorial-hero__copy {
-  display: flex;
-  flex: 1 1 60%;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
+  align-items: end;
+  column-gap: 2.5rem;
 }
-.editorial-hero--compact .editorial-hero__eyebrow { margin-bottom: 0.75rem; letter-spacing: 0.15em; }
+.editorial-hero--compact .editorial-hero__eyebrow {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.15em;
+}
 .editorial-hero--compact .editorial-hero__title {
+  grid-column: 1;
+  grid-row: 2;
   font-size: clamp(2.3rem, 4.8vw, 4.7rem);
   letter-spacing: -0.045em;
 }
 .editorial-hero--compact .editorial-hero__intro {
-  flex: 0 1 20rem;
-  max-width: 35rem;
+  grid-column: 2;
+  grid-row: 2;
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.65;
-}
-/* Compact layout positions its introduction alongside the title. */
-.editorial-hero--compact .editorial-hero__copy {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-.editorial-hero--compact .editorial-hero__intro {
-  position: absolute;
-  left: -9999px;
-}
-.editorial-hero--compact { position: relative; }
-.editorial-hero--compact .editorial-hero__copy { flex: 1 1 60%; }
-.editorial-hero--compact > .editorial-hero__intro {
-  flex: 0 1 20rem;
 }
 .editorial-hero__nav {
   display: flex;
@@ -163,7 +156,11 @@ withDefaults(
 }
 @media (max-width: 850px) {
   .editorial-hero--compact { align-items: start; flex-direction: column; gap: 0.85rem; }
-  .editorial-hero--compact .editorial-hero__copy { width: 100%; }
+   .editorial-hero--compact .editorial-hero__copy { grid-template-columns: 1fr; row-gap: 0.85rem; }
+  .editorial-hero--compact .editorial-hero__eyebrow,
+  .editorial-hero--compact .editorial-hero__title,
+  .editorial-hero--compact .editorial-hero__intro { grid-column: 1; grid-row: auto; }
+  .editorial-hero--compact .editorial-hero__intro { max-width: 35rem; }
 }
 @media (max-width: 720px) {
   .editorial-hero--wide { margin-bottom: 2.5rem; }
