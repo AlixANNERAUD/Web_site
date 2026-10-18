@@ -79,6 +79,59 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
       }
     }
 
+    // A balanced homepage must show professional experience first, then
+    // multiple projects, with Xila's topology as a clearly labelled deep dive.
+    for (const [path, careerUrl] of [
+      ["/", "/experiences"],
+      ["/fr/", "/fr/experiences"],
+    ]) {
+      try {
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
+        const experience = page.locator(".home-experience");
+        const featuredCards = experience.locator(".home-experience-card");
+        assert.equal(await featuredCards.count(), 4, path + " must surface four professional roles");
+        const employers = await featuredCards.locator(".home-experience-organization").allTextContents();
+        for (const company of ["Memo Bank", "Linkt", "Amazon", "New York University"]) {
+          assert.ok(employers.includes(company), path + " missing employer: " + company);
+        }
+        for (const id of ["memo-bank", "linkt", "amazon", "nyu"]) {
+          const link = experience.locator('a[href="' + careerUrl + "#" + id + '-title"]');
+          assert.equal(await link.count(), 1, path + " role needs a link to its timeline entry");
+        }
+        const sections = await page.evaluate(() => ({
+          hero: document.querySelector(".home-hero")?.getBoundingClientRect().top,
+          career: document.querySelector(".home-experience")?.getBoundingClientRect().top,
+          projects: document.querySelector(".portfolio-showcase")?.getBoundingClientRect().top,
+          xila: document.querySelector(".xila-topology")?.getBoundingClientRect().top,
+        }));
+        assert.ok(
+          Object.values(sections).every((value) => typeof value === "number") &&
+          sections.hero < sections.career &&
+          sections.career < sections.projects &&
+          sections.projects < sections.xila,
+          path + " homepage sections are out of order: " + JSON.stringify(sections),
+        );
+        assert.match(await page.locator(".xila-topology-heading").innerText(), /Xila/i);
+
+        for (const [width, columns] of [[1440, 2], [375, 1]]) {
+          await page.setViewportSize({ width, height: 900 });
+          const grid = await experience.locator(".home-experience-grid").evaluate((el) =>
+            getComputedStyle(el).gridTemplateColumns.split(" ").filter(Boolean).length,
+          );
+          assert.equal(grid, columns, path + " experience grid columns at " + width);
+          checked++;
+        }
+        await page.screenshot({
+          path: resolve(output, engineName + "-" + (path === "/" ? "home" : "fr-home") + "-career-1440.png"),
+          fullPage: true,
+          timeout: 15000,
+        });
+      } catch (error) {
+        failures.push(engineName + " " + path + " homepage balance: " + error);
+      }
+    }
+
     // Astro migration must preserve the centered editorial layout on wide screens.
     for (const path of ["/experiences", "/fr/experiences", "/skills", "/fr/skills"]) {
       try {
