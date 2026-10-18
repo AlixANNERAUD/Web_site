@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, reactive } from "vue";
 import { ArrowUpRight, BriefcaseBusiness, GraduationCap, MapPin } from "lucide-vue-next";
 import { experiences, type ExperienceGroup, type ExperienceLanguage } from "../data/experiences";
 
@@ -32,6 +32,7 @@ const copy = computed(() =>
           "J'aime comprendre comment les choses fonctionnent, puis concevoir les outils qui les rendent plus fiables et plus simples à utiliser. Mon parcours mêle développement, réseaux, sécurité et recherche.",
         selected: "Explorer mon parcours",
         current: "En cours",
+        logoCredits: "Logos et marques : propriété de leurs organismes respectifs. Sources et crédits",
         technologies: "Technologies et domaines",
         other: "Et aussi",
         earlier:
@@ -52,6 +53,7 @@ const copy = computed(() =>
           "I enjoy understanding how things work and building tools that make them more reliable and easier to use. My background connects software, networking, security and research.",
         selected: "Explore my experience",
         current: "Ongoing",
+        logoCredits: "Logos and trademarks belong to their respective owners. Sources and credits",
         technologies: "Technologies and domains",
         other: "Earlier experience",
         earlier:
@@ -71,6 +73,12 @@ function entriesFor(group: ExperienceGroup) {
 }
 
 const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/projects"));
+
+// Logo failures fall back to readable initials without affecting the card.
+const failedLogos = reactive(new Set<string>());
+function markLogoFailed(url: string) {
+  failedLogos.add(url);
+}
 </script>
 
 <template>
@@ -126,7 +134,25 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
             :aria-labelledby="entry.id + '-title'"
           >
             <div class="career-card-top">
-              <div class="career-company-mark" aria-hidden="true">{{ entry.monogram }}</div>
+              <span
+                class="career-company-mark"
+                :class="{ 'career-company-mark--dark': entry.logoOnDark }"
+                aria-hidden="true"
+              >
+                <span v-if="!entry.logo || failedLogos.has(entry.logo)" class="career-company-fallback">{{ entry.monogram }}</span>
+                <img
+                  v-else
+                  class="career-company-logo"
+                  :src="entry.logo"
+                  alt=""
+                  width="88"
+                  height="60"
+                  loading="lazy"
+                  decoding="async"
+                  referrerpolicy="no-referrer"
+                  @error="markLogoFailed(entry.logo)"
+                />
+              </span>
               <div class="career-card-heading">
                 <div class="career-card-heading-top">
                   <p class="career-organization">
@@ -187,6 +213,15 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
         {{ copy.projects }} <ArrowUpRight :size="19" aria-hidden="true" />
       </a>
     </footer>
+    <p class="career-logo-credits">
+      <a
+        href="https://github.com/AlixANNERAUD/Web_site/blob/main/docs/experience-logo-sources.md"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ copy.logoCredits }} ↗
+      </a>
+    </p>
   </div>
 </template>
 
@@ -351,17 +386,37 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
 }
 .career-card-top { display: flex; align-items: flex-start; gap: 1rem; }
 .career-company-mark {
+  position: relative;
   display: grid;
-  flex: 0 0 3.35rem;
+  flex: 0 0 5.5rem;
   place-items: center;
-  height: 3.35rem;
-  border-radius: 0.7rem;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-1);
+  width: 5.5rem;
+  height: 3.75rem;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.65rem;
+  background: #fff;
+  color: #254b55;
+}
+.career-company-mark--dark {
+  background: #17191d;
+  color: white;
+}
+.career-company-fallback {
   font-family: ui-monospace, monospace;
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   font-weight: 700;
   letter-spacing: -0.06em;
+}
+.career-company-logo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.45rem;
+  object-fit: contain;
+  background: inherit;
 }
 .career-card-heading { min-width: 0; flex: 1; }
 .career-card-heading-top { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.8rem; }
@@ -467,8 +522,17 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
   font-weight: 600;
   text-decoration: none;
 }
+.career-logo-credits {
+  margin: 0;
+  color: var(--vp-c-text-3);
+  font-size: 0.72rem;
+}
+.career-logo-credits a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.career-logo-credits a:hover { color: var(--vp-c-text-1); }
+
 .career-section-nav a:focus-visible,
 .career-card a:focus-visible,
+.career-logo-credits a:focus-visible,
 .career-next a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
 
 @media (max-width: 960px) {
@@ -486,7 +550,8 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
   .career-period { display: inline; }
   .career-timeline-dot { top: 1.4rem; }
   .career-card { padding: 1rem; }
-  .career-company-mark { flex-basis: 2.8rem; height: 2.8rem; }
+  .career-company-mark { flex-basis: 4.25rem; width: 4.25rem; height: 3.3rem; }
+  .career-company-logo { padding: 0.32rem; }
   .career-next { flex-direction: column; align-items: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -9,6 +9,10 @@ export interface PortfolioExperience {
   company: string;
   companyUrl?: string;
   monogram: string;
+  /** Verified public logo URL; only shown alongside the organization name. */
+  logo?: string;
+  /** Logo whose artwork is intentionally white (on a dark card). */
+  logoOnDark?: boolean;
   role: ExperienceTranslation;
   period: ExperienceTranslation;
   location: ExperienceTranslation;
@@ -21,6 +25,8 @@ export interface PortfolioExperience {
 export const experiences: PortfolioExperience[] = [
   {
     id: "memo-bank",
+    logo: "https://memo.bank/logo-footer.svg",
+    logoOnDark: true,
     group: "professional",
     company: "Memo Bank",
     companyUrl: "https://memo.bank/",
@@ -38,6 +44,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "linkt",
+    logo: "https://www.linkt.fr/wp-content/uploads/2026/05/logo-linkt-bleu-marine.svg",
     group: "professional",
     company: "Linkt",
     companyUrl: "https://linkt.fr/",
@@ -70,6 +77,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "amazon",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
     group: "professional",
     company: "Amazon",
     companyUrl: "https://www.amazon.jobs/",
@@ -98,6 +106,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "nyu",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Nyu_short_color.svg",
     group: "professional",
     company: "New York University",
     companyUrl: "https://www.nyu.edu/",
@@ -123,6 +132,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "insa-relations",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Logo_INSA_RN.jpg",
     group: "professional",
     company: "INSA Rouen Normandie",
     companyUrl: "https://www.insa-rouen.fr/",
@@ -151,6 +161,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "therapic",
+    logo: "https://www.becquerel.fr/wp-content/uploads/2022/10/logo-becquerel-blanc_tournant.jpg",
     group: "education",
     company: "INSA Rouen × Centre Henri Becquerel",
     companyUrl: "https://www.becquerel.fr/",
@@ -179,6 +190,7 @@ export const experiences: PortfolioExperience[] = [
   },
   {
     id: "insa-engineering",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Logo_INSA_RN.jpg",
     group: "education",
     company: "INSA Rouen Normandie",
     companyUrl: "https://www.insa-rouen.fr/",
