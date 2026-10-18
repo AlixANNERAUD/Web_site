@@ -197,24 +197,30 @@ for (const [file, projectPrefix] of [
   }
 }
 
-// Formerly abbreviated milestones must have dedicated SSR timeline cards.
-// Their detailed content stays available behind per-card toggles (browser-tested).
-for (const [file, label] of [
-  ["experiences.html", "Show more"],
-  ["fr/experiences.html", "Voir plus"],
+// Older experiences are complete cards, initially hidden by one toggle per section.
+// All content remains SSR-rendered; Vue handles accessible group visibility.
+for (const [file, professionalLabel, educationLabel] of [
+  ["experiences.html", "Show earlier experience", "Show earlier education"],
+  ["fr/experiences.html", "Voir les expériences précédentes", "Voir les formations précédentes"],
 ]) {
   const html = readFileSync(resolve(dist, file), "utf8");
-  const count = [...html.matchAll(/class="[^"]*career-card--compact[^"]*"/g)].length;
-  if (count !== 4) {
-    failed.push(file + ": expected four compact earlier milestone cards, got " + count);
-  }
-  for (const id of ["renault-cleon", "guenola-sahut", "baccalaureat", "cambridge-b1"]) {
-    if (!html.includes(id + "-title") || !html.includes("experience-details-" + id)) {
-      failed.push(file + ": missing accessible expand/collapse card for " + id);
+  for (const group of ["professional", "education"]) {
+    if (!html.includes('id="earlier-' + group + '"') ||
+        !html.includes('aria-controls="earlier-' + group + '"')) {
+      failed.push(file + ": missing earlier " + group + " list or accessible toggle");
     }
   }
-  if (!html.includes(label) || html.includes("career-other")) {
-    failed.push(file + ": expand buttons missing or old compressed summary present");
+  for (const id of ["insa-relations", "renault-cleon", "guenola-sahut", "baccalaureat", "cambridge-b1"]) {
+    if (!html.includes(id + '-title')) {
+      failed.push(file + ": older card not present in SSR: " + id);
+    }
+  }
+  if (!html.includes(professionalLabel) || !html.includes(educationLabel)) {
+    failed.push(file + ": missing translated group toggle labels");
+  }
+  if (html.includes('career-expand-button') || html.includes('career-card--compact') ||
+      html.includes('experience-details-')) {
+    failed.push(file + ": old per-card expansion controls must be removed");
   }
 }
 

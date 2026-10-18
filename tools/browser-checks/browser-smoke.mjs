@@ -40,6 +40,24 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
           const horizontalOverflow = await page.evaluate(
             () => document.documentElement.scrollWidth > window.innerWidth + 2,
           );
+          if (horizontalOverflow && width === 320 && path.includes("/experiences")) {
+            const offenders = await page.evaluate(() => [...document.body.querySelectorAll("*")]
+              .filter((node) => {
+                const box = node.getBoundingClientRect();
+                return box.width > 0 && (box.right > window.innerWidth + 2 || box.left < -2);
+              })
+              .slice(0, 18)
+              .map((node) => ({
+                tag: node.tagName.toLowerCase(),
+                id: node.id,
+                className: typeof node.className === "string" ? node.className.slice(0, 90) : "",
+                rect: (() => { const r = node.getBoundingClientRect(); return {
+                  left: Math.round(r.left), right: Math.round(r.right), width: Math.round(r.width),
+                }; })(),
+              })));
+            console.error(engineName + " " + url + " width=320 overflow diagnostics: " +
+              JSON.stringify(offenders));
+          }
           assert.equal(horizontalOverflow, false, url + " horizontal overflow at " + width);
 
           if ((path === "/" || path === "/fr/" || path.endsWith("/projects")) && (width === 375 || width === 1440)) {
@@ -151,43 +169,77 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
       }
     }
 
-    // Earlier milestones are real, independent timeline cards, collapsed by default
-    // and individually expandable with keyboard-accessible native buttons.
-    for (const [path, more, less] of [
-      ["/experiences", "Show more", "Show less"],
-      ["/fr/experiences", "Voir plus", "Voir moins"],
+    // Each section hides entire older cards by default and has ONE section
+    // toggle. All five older cards must show their full descriptions and tags
+    // after expansion, with independent state for professional vs education.
+    for (const [path, labels] of [
+      ["/experiences", ["Show earlier experience", "Hide earlier experience",
+                        "Show earlier education", "Hide earlier education"]],
+      ["/fr/experiences", ["Voir les expériences précédentes", "Masquer les expériences précédentes",
+                           "Voir les formations précédentes", "Masquer les formations précédentes"]],
     ]) {
       try {
         await page.setViewportSize({ width: 1440, height: 900 });
         await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 10000 });
         await page.waitForFunction(() => document.querySelectorAll("astro-island[ssr]").length === 0);
-        const cards = page.locator(".career-card--compact");
-        assert.equal(await cards.count(), 4, path + " must contain four earlier milestone cards");
 
-        const ids = ["renault-cleon", "guenola-sahut", "baccalaureat", "cambridge-b1"];
-        for (const id of ids) {
-          const card = page.locator('[aria-labelledby="' + id + '-title"]');
-          const button = card.getByRole("button", { name: more, exact: true });
-          const details = page.locator("#experience-details-" + id);
-          assert.equal(await button.getAttribute("aria-expanded"), "false");
-          assert.equal(await details.isVisible(), false, id + " must initially be collapsed");
+        const groups = [
+          { id: "professional", entries: ["insa-relations", "renault-cleon", "guenola-sahut"],
+            show: labels[0], hide: labels[1] },
+          { id: "education", entries: ["baccalaureat", "cambridge-b1"],
+            show: labels[2], hide: labels[3] },
+        ];
+        assert.equal(await page.locator(".career-earlier-toggle").count(), 2,
+          path + " should have exactly two section-level toggles");
+        assert.equal(await page.locator(".career-expand-button").count(), 0,
+          path + " should have no per-card toggle buttons");
 
-          await button.click();
-          assert.equal(await details.isVisible(), true, id + " must expand");
-          const close = card.getByRole("button", { name: less, exact: true });
-          assert.equal(await close.getAttribute("aria-expanded"), "true");
-          await close.click();
-          assert.equal(await details.isVisible(), false, id + " must collapse again");
+        for (const group of groups) {
+          const list = page.locator("#earlier-" + group.id);
+          const revealButton = page.getByRole("button", { name: group.show, exact: true });
+          assert.equal(await revealButton.getAttribute("aria-controls"), "earlier-" + group.id);
+          assert.equal(await revealButton.getAttribute("aria-expanded"), "false");
+          assert.equal(await list.isVisible(), false, path + " " + group.id + " initially visible");
+          assert.equal(await list.locator(".career-card").count(), group.entries.length);
+
+          for (const id of group.entries) {
+            const card = list.locator('[aria-labelledby="' + id + '-title"]');
+            assert.equal(await card.count(), 1, path + " must contain " + id + " in SSR");
+            assert.equal(await card.isVisible(), false, id + " initially visible");
+          }
+
+          await revealButton.click();
+          assert.equal(await list.isVisible(), true, group.id + " must be shown");
+          const hideButton = page.getByRole("button", { name: group.hide, exact: true });
+          assert.equal(await hideButton.getAttribute("aria-expanded"), "true");
+
+          for (const id of group.entries) {
+            const card = list.locator('[aria-labelledby="' + id + '-title"]');
+            assert.equal(await card.isVisible(), true, id + " must be visible after expansion");
+            assert.equal(await card.locator(".career-summary").isVisible(), true,
+              id + " must show the complete description");
+            assert.ok(await card.locator(".career-highlights li").count() >= 1,
+              id + " should retain full detail bullets");
+          }
+
+          // Expanding professional entries must not reveal older education cards.
+          const otherId = group.id === "professional" ? "education" : "professional";
+          assert.equal(await page.locator("#earlier-" + otherId).isVisible(), false,
+            "Expanding " + group.id + " should not reveal " + otherId);
+
+          await hideButton.click();
+          assert.equal(await hideButton.count(), 0, group.id + " must return to 'show' state");
+          assert.equal(await list.isVisible(), false, group.id + " must collapse again");
           checked++;
         }
-        // A snapshot captures the restored compact cards and page width.
         await page.screenshot({
-          path: resolve(output, engineName + "-" + (path.startsWith("/fr/") ? "fr-" : "") + "experiences-1440.png"),
+          path: resolve(output, engineName + "-" +
+            (path.startsWith("/fr/") ? "fr-" : "") + "experiences-1440.png"),
           fullPage: true,
           timeout: 15000,
         });
       } catch (error) {
-        failures.push(engineName + " " + path + " earlier milestones: " + error);
+        failures.push(engineName + " " + path + " earlier experience groups: " + error);
       }
     }
 
