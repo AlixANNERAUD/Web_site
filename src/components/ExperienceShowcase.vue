@@ -91,6 +91,10 @@ function recentEntriesFor(group: ExperienceGroup) {
 function earlierEntriesFor(group: ExperienceGroup) {
   return entriesFor(group).filter((entry) => entry.earlier);
 }
+function visibleCountFor(group: ExperienceGroup): number {
+  return recentEntriesFor(group).length +
+    (expandedGroups.has(group) ? earlierEntriesFor(group).length : 0);
+}
 function earlierButtonLabel(group: ExperienceGroup): string {
   if (group === "professional") {
     return expandedGroups.has(group)
@@ -123,7 +127,7 @@ function earlierButtonLabel(group: ExperienceGroup): string {
     >
       <EditorialSectionHeading
         :heading-id="section.id + '-heading'"
-        :eyebrow="String(sectionIndex + 1).padStart(2, '0') + ' / ' + entriesFor(section.id).length + ' ' + copy.count"
+        :eyebrow="String(sectionIndex + 1).padStart(2, '0') + ' / ' + visibleCountFor(section.id) + ' ' + copy.count"
         :title="section[lang]"
         :description="lang === 'fr' ? section.countFr : section.countEn"
       >
