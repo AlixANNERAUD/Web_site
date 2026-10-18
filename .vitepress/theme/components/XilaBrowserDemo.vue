@@ -127,7 +127,10 @@ const labels = {
   padding: 0.65rem 0.9rem;
   border: 1px solid var(--vp-c-divider);
   border-radius: 0.5rem;
-  font: 600 0.85rem/1.4 inherit;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
   text-decoration: none;
   cursor: pointer;
 }
