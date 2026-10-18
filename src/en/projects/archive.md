@@ -31,6 +31,32 @@ A privacy-respecting platform offering shared services to INSA Rouen Normandie s
 
 I also contribute to many open-source projects through GitHub Pull Requests, feel free to check out <a href="https://github.com/AlixANNERAUD">my GitHub profile</a>.
 
+## <Blocks /> Open-source libraries
+
+<PortfolioProjectDetail project-id="lvgl-theme-shadcn" lang="en">
+A C99 theme for LVGL 9 that brings shadcn/ui-inspired styling to embedded graphical interfaces. It provides light and dark palettes, component roles, and touch-friendly variants for small displays. The repository also offers `no_std` Rust bindings and render examples. [Code and screenshots](https://github.com/AlixANNERAUD/lvgl_theme_shadcn).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="nanoexpr" lang="en">
+A `no_std` mathematical expression evaluator for microcontrollers that does not allocate heap memory. Its parser evaluates expressions directly without a heap-allocated syntax tree, limits nesting depth, and reports precise errors. It supports several numeric representations, variables, and functions. [Source and documentation](https://github.com/AlixANNERAUD/nanoexpr).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="nanoaudio" lang="en">
+An allocation-free `no_std` audio processing library providing PCM conversion, mixing, volume control, DMA-friendly ring buffers, and codecs. Its routines operate on caller-provided buffers and are designed for integration into hardware drivers and operating systems. [Code and examples](https://github.com/AlixANNERAUD/nanoaudio).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="embedded-i18n" lang="en">
+Localization for Rust firmware with translations resolved at compile time and stored in ROM rather than parsed at runtime. Its macros validate translation keys and formatting arguments, support plural rules, and read several established translation file formats. [Source and guide](https://github.com/AlixANNERAUD/embedded-i18n).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="getargs-derive" lang="en">
+Rust procedural macros for declaring command-line parsers using Clap-like syntax while targeting `no_std`. Parsing and help text generation are designed to work without heap allocation. [Code and examples](https://github.com/AlixANNERAUD/getargs-derive).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="battery-percent" lang="en">
+A small C99 and `no_std` Rust library that estimates battery charge using voltage-to-state-of-charge curves. It supports several cell chemistries, series packs, and ADC smoothing without tying the implementation to a particular microcontroller. [Source and curves](https://github.com/AlixANNERAUD/battery-percent).
+</PortfolioProjectDetail>
+
 ## <Trophy /> Competitions
 
 <PortfolioProjectDetail project-id="jeanne-hack-2026" lang="en">
@@ -81,4 +107,12 @@ A tram network management game built in Free Pascal with SDL 1.2, featuring rout
 
 <PortfolioProjectDetail project-id="linear-equations" lang="en">
 A C implementation of Gaussian elimination with partial pivoting to solve arbitrary systems of linear equations.
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="odor-localization" lang="en">
+Exploratory work associated with my NYU research internship on gas source localization. The repository documents an acquisition architecture linking MQ gas sensors, an ESP32, MQTT transport, and backend processing. Documentation is still limited: this is a research prototype rather than a finished product. [Research repository](https://github.com/AlixANNERAUD/Odor_localization).
+</PortfolioProjectDetail>
+
+<PortfolioProjectDetail project-id="medical-image-deep-learning" lang="en">
+An academic histopathology image segmentation and cell classification project. The repository includes data preparation and training scripts for nnU-Net, CellViT++, and HoVer-Net, including SLURM-based workflows. The work focuses on integrating and experimenting with established deep-learning architectures rather than claiming a new model designed from scratch. [Source and workflow](https://github.com/AlixANNERAUD/Deep_learning_project).
 </PortfolioProjectDetail>
