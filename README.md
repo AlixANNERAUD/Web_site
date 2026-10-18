@@ -79,6 +79,8 @@ Then open the local address printed by VitePress.
   seo.mts                    Canonical, Open Graph and hreflang metadata
   theme/
     components/              Vue UI: projects, timeline, demos and diagrams
+      Editorial*.vue        Reusable hero, section headings, CTA and card
+      TechnologyTags.vue     Shared technology chips
     data/
       portfolioProjects.ts   Project metadata (FR/EN)
       experiences.ts         Experience and education entries (FR/EN)

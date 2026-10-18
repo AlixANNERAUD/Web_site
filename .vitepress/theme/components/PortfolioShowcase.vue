@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import EditorialHero from "./EditorialHero.vue";
+import EditorialCard from "./EditorialCard.vue";
+import TechnologyTags from "./TechnologyTags.vue";
 import {
   portfolioProjects,
   projectDetailUrl,
@@ -126,18 +129,14 @@ const catalogueUrl = computed(() =>
     :class="{ 'portfolio-showcase--catalogue': mode === 'catalogue' }"
     :aria-label="mode === 'featured' ? (lang === 'fr' ? 'Projets sélectionnés' : 'Selected projects') : (lang === 'fr' ? 'Catalogue de projets' : 'Project catalogue')"
   >
-    <div class="showcase-heading">
-      <div class="showcase-heading-main">
-        <p class="showcase-eyebrow">
-          {{ mode === "catalogue" ? copy.catalogueEyebrow : copy.eyebrow }}
-        </p>
-        <h1 v-if="mode === 'catalogue'">{{ copy.catalogueTitle }}</h1>
-        <h2 v-else>{{ copy.title }} <em>{{ copy.emphasis }}</em></h2>
-      </div>
-      <p class="showcase-intro">
-        {{ mode === "featured" ? copy.description : copy.catalogueDescription }}
-      </p>
-    </div>
+    <EditorialHero
+      variant="compact"
+      :heading-level="mode === 'catalogue' ? 'h1' : 'h2'"
+      :eyebrow="mode === 'catalogue' ? copy.catalogueEyebrow : copy.eyebrow"
+      :title="mode === 'catalogue' ? copy.catalogueTitle : copy.title"
+      :accent="mode === 'catalogue' ? undefined : copy.emphasis"
+      :intro="mode === 'featured' ? copy.description : copy.catalogueDescription"
+    />
 
     <div v-if="mode === 'catalogue'" class="showcase-toolbar">
       <div class="showcase-controls">
@@ -188,10 +187,11 @@ const catalogueUrl = computed(() =>
     </p>
 
     <div class="showcase-grid">
-      <article
+      <EditorialCard
         v-for="(project, index) in visibleProjects"
         :key="project.id"
         class="showcase-card"
+        variant="project"
       >
         <div class="showcase-art" :class="'showcase-art--' + project.category" aria-hidden="true">
           <span class="showcase-art-symbol">{{ project.symbol }}</span>
@@ -205,9 +205,12 @@ const catalogueUrl = computed(() =>
           </p>
           <h3>{{ project.title[lang] }}</h3>
           <p class="showcase-card-description">{{ project.description[lang] }}</p>
-          <ul v-if="project.tags.length" class="showcase-tags" :aria-label="lang === 'fr' ? 'Technologies utilisées' : 'Technologies used'">
-            <li v-for="tag in project.tags" :key="tag">{{ tag }}</li>
-          </ul>
+          <TechnologyTags
+            v-if="project.tags.length"
+            :tags="project.tags"
+            :label="lang === 'fr' ? 'Technologies utilisées' : 'Technologies used'"
+            density="project"
+          />
           <div class="showcase-card-actions">
             <a :href="projectDetailUrl(project, lang)">
               {{ copy.details }} <span aria-hidden="true">→</span>
@@ -221,7 +224,7 @@ const catalogueUrl = computed(() =>
             >{{ copy.external }} <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-      </article>
+      </EditorialCard>
     </div>
 
     <p v-if="visibleProjects.length === 0" class="showcase-empty" role="status">
@@ -246,19 +249,6 @@ const catalogueUrl = computed(() =>
   margin-top: 4.25rem;
 }
 
-.showcase-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 2.5rem;
-  margin: 0 0 2rem;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.showcase-heading-main { flex: 1 1 60%; }
-
-.showcase-eyebrow,
 .showcase-card-category {
   margin: 0 0 0.75rem;
   color: var(--vp-c-text-2);
@@ -266,31 +256,6 @@ const catalogueUrl = computed(() =>
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-}
-
-.showcase-heading h1,
-.showcase-heading h2 {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.3rem, 4.8vw, 4.7rem);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 1.07;
-}
-
-.showcase-heading h2 em {
-  color: var(--vp-c-brand-1);
-  font-weight: 400;
-}
-
-.showcase-intro {
-  flex: 0 1 20rem;
-  margin: 0;
-  color: var(--vp-c-text-2);
-  font-size: 0.95rem;
-  line-height: 1.65;
 }
 
 .showcase-toolbar {
@@ -361,20 +326,6 @@ const catalogueUrl = computed(() =>
 
 .portfolio-showcase--catalogue .showcase-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.showcase-card {
-  min-width: 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0.85rem;
-  background: var(--vp-c-bg);
-  overflow: hidden;
-  transition: transform 200ms ease, border-color 200ms ease;
-}
-
-.showcase-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--vp-c-brand-1);
 }
 
 .showcase-art {
@@ -449,23 +400,6 @@ const catalogueUrl = computed(() =>
   line-height: 1.65;
 }
 
-.showcase-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0 0 1.2rem;
-  padding: 0;
-  list-style: none;
-}
-
-.showcase-tags li {
-  padding: 0.22rem 0.52rem;
-  border-radius: 0.3rem;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-2);
-  font-size: 0.72rem;
-}
-
 .showcase-card-actions {
   display: flex;
   align-items: center;
@@ -513,24 +447,23 @@ const catalogueUrl = computed(() =>
 }
 
 @media (max-width: 850px) {
-  .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .showcase-heading { align-items: start; flex-direction: column; gap: 0.85rem; }
-  .showcase-intro { flex-basis: auto; max-width: 35rem; }
+.showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 600px) {
-  .portfolio-showcase { margin: 2rem auto 3rem; padding: 0 1rem; }
+.portfolio-showcase { margin: 2rem auto 3rem; padding: 0 1rem; }
   .showcase-grid { grid-template-columns: minmax(0, 1fr); }
   .portfolio-showcase--catalogue .showcase-grid { grid-template-columns: minmax(0, 1fr); }
   .showcase-art { min-height: 9.5rem; }
   .showcase-card-body { min-height: 0; }
   .showcase-toolbar-actions { width: 100%; }
   .showcase-search { flex: 1 1 100%; }
-  .showcase-search, .showcase-search input { width: 100%; }
+  .showcase-search,
+.showcase-search input { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .showcase-card, .showcase-filters button { transition: none; }
-  .showcase-card:hover { transform: none; }
+.showcase-filters button { transition: none; }
 }
+
 </style>

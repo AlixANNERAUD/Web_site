@@ -64,3 +64,15 @@ svg {
     transform: none;
   }
 }
+
+/* Shared container for full-width editorial Experience and Skills pages. */
+.editorial-page {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 6rem;
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 680px) {
+  .editorial-page { padding: 2rem 1rem 4rem; }
+}
