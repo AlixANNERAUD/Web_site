@@ -122,6 +122,7 @@ for (const [engineName, engine] of [["chromium", chromium], ["firefox", firefox]
           assert.equal(grid, columns, path + " experience grid columns at " + width);
           checked++;
         }
+        await page.setViewportSize({ width: 1440, height: 900 });
         await page.screenshot({
           path: resolve(output, engineName + "-" + (path === "/" ? "home" : "fr-home") + "-career-1440.png"),
           fullPage: true,
