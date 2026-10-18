@@ -2,27 +2,22 @@
 layout: home
 
 hero:
-  name: "👋 Salut, je suis Alix,"
-  text: "étudiant en génie logiciel"
-  tagline: spécialisé en programmation système, logiciel embarqué et développement full-stack, avec un attrait pour Rust, le machine learning et la cybersécurité.
+  name: "Alix ANNERAUD"
+  text: "Du noyau au navigateur."
+  tagline: "Ingénierie logicielle, systèmes Rust et sécurité. Je construis des logiciels embarqués, des outils web et des infrastructures que je peux comprendre et maîtriser de bout en bout."
   image:
     src: /images/alix.webp
-    alt: Alix ANNERAUD
-
-features:
-  - icon: 🌐
-    title: Expérience internationale
-    details: Stages chez Amazon (Madrid) et à NYU (New York), et actuellement technicien réseau & télécoms chez Linkt. À l'aise dans des environnements professionnels multiculturels et exigeants.
-    link: /fr/experiences
-    linkText: Voir mes expériences
-  - icon: 🏆
-    title: Compétitions & open source
-    details: 1ère place au Jeanne d'Hack CTF 2026 et au Cod'INSA 2025. Je contribue activement à des projets open source et développe des projets personnels allant d'un OS pour microcontrôleurs à une infrastructure auto-hébergée.
-    link: /fr/projects
-    linkText: Voir mes projets
-  - icon: 🛠️
-    title: Profil technique polyvalent
-    details: Du bas niveau en Rust et C au développement full-stack (Vue.js, Django, TypeScript) et au cloud (AWS), j'interviens à tous les niveaux du système et j'aime résoudre des problèmes complexes.
-    link: /fr/skills
-    linkText: Voir mes compétences
+    alt: Portrait d'Alix ANNERAUD
+  actions:
+    - theme: brand
+      text: Explorer Xila
+      link: https://www.xila.dev
+    - theme: alt
+      text: Tous mes projets
+      link: /fr/projects
+    - theme: alt
+      text: Me contacter
+      link: mailto:alix@anneraud.fr
 ---
+
+<PortfolioShowcase lang="fr" mode="featured" />
