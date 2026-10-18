@@ -19,6 +19,7 @@ This is the **single source of truth** for coding agents working in this reposit
 - `.vitepress/theme/components/`: project explorer, experience timeline, SVG/WebGL, Xila browser demo and other Vue UI.
 - `.vitepress/theme/data/portfolioProjects.ts`: typed bilingual project metadata, group/category filters and detail URL logic.
 - `.vitepress/theme/data/experiences.ts`: bilingual professional and education timeline.
+- `.vitepress/theme/data/skills.ts`: bilingual technical domains, language proficiencies and links to supporting project pages; rendered through `SkillsShowcase.vue`.
 - `src/{en,fr}/projects/<project-id>.md`: **one standalone page per catalogue project per language**. The three highlighted projects include deeper case studies. No archive pages or `docs/` folder should be introduced.
 - `src/public/`: public static assets. `.vitepress/dist/` and `.vitepress/cache/` are generated.
 - `scripts/`: project validation and built-HTML SEO checks.
