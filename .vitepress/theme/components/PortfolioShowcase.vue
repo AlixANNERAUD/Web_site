@@ -3,6 +3,7 @@ import { computed, ref } from "vue";
 import {
   portfolioProjects,
   projectDetailUrl,
+  projectScore,
   type PortfolioLanguage,
   type ProjectCategory,
   type ProjectGroup,
@@ -19,6 +20,7 @@ const props = withDefaults(
 const search = ref("");
 const category = ref<ProjectCategory | "all">("all");
 const group = ref<ProjectGroup | "all">("all");
+const sortMode = ref<"recommended" | "alphabetical">("recommended");
 
 const categories: { id: ProjectCategory | "all"; fr: string; en: string }[] = [
   { id: "all", fr: "Tous les domaines", en: "All areas" },
@@ -48,7 +50,10 @@ const copy = computed(() =>
         title: "Des idées aux",
         emphasis: "systèmes.",
         description: "Du noyau Rust aux outils métiers : quelques projets que je conçois, développe et maintiens.",
-        catalogueDescription: "Projets personnels, compétitions et réalisations académiques. Chaque projet possède une fiche détaillée.",
+        catalogueDescription: "Projets classés par intérêt technique, originalité et impact, selon une évaluation éditoriale ajustable.",
+        sortLabel: "Trier par",
+        sortRecommended: "Importance",
+        sortAlphabetical: "Nom (A → Z)",
         search: "Rechercher un projet",
         kind: "Type de projet",
         area: "Domaine",
@@ -66,7 +71,10 @@ const copy = computed(() =>
         title: "From ideas to",
         emphasis: "systems.",
         description: "From a Rust kernel to practical business software: selected projects I design, build and maintain.",
-        catalogueDescription: "Personal projects, competitions and academic work. Each item has a detailed description.",
+        catalogueDescription: "Projects ordered by technical depth, originality and practical impact, using an editable editorial assessment.",
+        sortLabel: "Sort by",
+        sortRecommended: "Importance",
+        sortAlphabetical: "Name (A → Z)",
         search: "Search projects",
         kind: "Project type",
         area: "Area",
@@ -79,10 +87,14 @@ const copy = computed(() =>
 );
 
 const visibleProjects = computed(() => {
-  if (props.mode === "featured") return portfolioProjects.filter((item) => item.featured);
+  if (props.mode === "featured") {
+    return portfolioProjects
+      .filter((item) => item.featured)
+      .sort((a, b) => projectScore(b) - projectScore(a) || a.id.localeCompare(b.id));
+  }
 
   const term = search.value.trim().toLocaleLowerCase(props.lang);
-  return portfolioProjects.filter((project) => {
+  const filtered = portfolioProjects.filter((project) => {
     if (category.value !== "all" && project.category !== category.value) return false;
     if (group.value !== "all" && project.group !== group.value) return false;
     if (!term) return true;
@@ -97,6 +109,12 @@ const visibleProjects = computed(() => {
       .toLocaleLowerCase(props.lang);
     return searchable.includes(term);
   });
+
+  return filtered.sort((a, b) =>
+    sortMode.value === "alphabetical"
+      ? a.title[props.lang].localeCompare(b.title[props.lang], props.lang)
+      : projectScore(b) - projectScore(a) || a.id.localeCompare(b.id),
+  );
 });
 
 const catalogueUrl = computed(() =>
@@ -155,10 +173,19 @@ const archiveUrl = computed(() =>
           </div>
         </div>
       </div>
-      <label class="showcase-search">
-        <span class="sr-only">{{ copy.search }}</span>
-        <input v-model="search" type="search" :placeholder="copy.search" />
-      </label>
+      <div class="showcase-toolbar-actions">
+        <label class="showcase-sort">
+          <span>{{ copy.sortLabel }}</span>
+          <select v-model="sortMode">
+            <option value="recommended">{{ copy.sortRecommended }}</option>
+            <option value="alphabetical">{{ copy.sortAlphabetical }}</option>
+          </select>
+        </label>
+        <label class="showcase-search">
+          <span class="sr-only">{{ copy.search }}</span>
+          <input v-model="search" type="search" :placeholder="copy.search" />
+        </label>
+      </div>
     </div>
 
     <p v-if="mode === 'catalogue'" class="showcase-count" role="status">
@@ -284,6 +311,20 @@ const archiveUrl = computed(() =>
 }
 
 .showcase-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.showcase-toolbar-actions { display: flex; flex-wrap: wrap; align-items: end; gap: 0.75rem; }
+.showcase-sort { display: flex; flex-direction: column; gap: 0.35rem; }
+.showcase-sort > span { color: var(--vp-c-text-2); font-size: 0.73rem; }
+.showcase-sort select {
+  min-height: 2.35rem;
+  padding: 0.49rem 1.5rem 0.49rem 0.6rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.5rem;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
 .showcase-controls { display: flex; flex-wrap: wrap; gap: 0.7rem 1.25rem; }
 .showcase-control-label { display: block; margin: 0 0 0.35rem; font-size: 0.73rem; color: var(--vp-c-text-2); }
 .showcase-count { margin: 0.1rem 0 1rem; color: var(--vp-c-text-2); font-size: 0.85rem; }
@@ -472,6 +513,7 @@ const archiveUrl = computed(() =>
 
 .showcase-filters button:focus-visible,
 .showcase-search input:focus-visible,
+.showcase-sort select:focus-visible,
 .showcase-card a:focus-visible,
 .showcase-all-link:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
@@ -490,6 +532,8 @@ const archiveUrl = computed(() =>
   .portfolio-showcase--catalogue .showcase-grid { grid-template-columns: minmax(0, 1fr); }
   .showcase-art { min-height: 9.5rem; }
   .showcase-card-body { min-height: 0; }
+  .showcase-toolbar-actions { width: 100%; }
+  .showcase-search { flex: 1 1 100%; }
   .showcase-search, .showcase-search input { width: 100%; }
 }
 
