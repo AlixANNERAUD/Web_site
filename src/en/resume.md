@@ -1,6 +1,6 @@
 ---
 layout: page
-description: Alix ANNERAUD's resume and professional experience in Rust, software systems and security.
+description: "Alix ANNERAUD's resume and professional experience in Rust, software systems and security."
 footer: false
 ---
 
