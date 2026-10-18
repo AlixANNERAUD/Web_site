@@ -2,7 +2,7 @@ import { LocaleSpecificConfig, type DefaultTheme } from "vitepress";
 
 export const FRENCH_CONFIGURATION: LocaleSpecificConfig = {
   description:
-    "Portfolio d'un etudiant en genie logiciel specialise en programmation systeme, embarquee et developpement full-stack.",
+    "Portfolio d'Alix ANNERAUD : ingénierie logicielle, systèmes Rust, logiciel embarqué, sécurité et projets open source.",
 
   themeConfig: {
     nav: nav(),
@@ -41,22 +41,22 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "Expériences",
-      link: "/fr/experiences/",
+      link: "/fr/experiences",
       activeMatch: "^/fr/experiences",
     },
     {
       text: "Projets",
-      link: "/fr/projects/",
+      link: "/fr/projects",
       activeMatch: "^/fr/projects",
     },
     {
       text: "Compétences",
-      link: "/fr/skills/",
+      link: "/fr/skills",
       activeMatch: "^/fr/skills",
     },
     {
       text: "CV",
-      link: "/fr/resume/",
+      link: "/fr/resume",
       activeMatch: "^/fr/resume",
     },
   ];
