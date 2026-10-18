@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { computed, reactive } from "vue";
+import EditorialHero from "./EditorialHero.vue";
+import EditorialSectionHeading from "./EditorialSectionHeading.vue";
+import EditorialNext from "./EditorialNext.vue";
+import EditorialCard from "./EditorialCard.vue";
+import TechnologyTags from "./TechnologyTags.vue";
 import { ArrowUpRight, BriefcaseBusiness, GraduationCap, MapPin } from "lucide-vue-next";
 import { experiences, type ExperienceGroup, type ExperienceLanguage } from "../data/experiences";
 
@@ -73,6 +78,9 @@ function entriesFor(group: ExperienceGroup) {
 }
 
 const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/projects"));
+const navigation = computed(() =>
+  sections.map((section) => ({ href: "#" + section.id, label: section[props.lang] })),
+);
 
 // Logo failures fall back to readable initials without affecting the card.
 const failedLogos = reactive(new Set<string>());
@@ -83,20 +91,14 @@ function markLogoFailed(url: string) {
 
 <template>
   <div class="career-showcase">
-    <header class="career-hero">
-      <div class="career-hero-copy">
-        <p class="career-eyebrow">{{ copy.eyebrow }}</p>
-        <h1>{{ copy.before }} <em>{{ copy.accent }}</em></h1>
-        <p class="career-intro">{{ copy.intro }}</p>
-      </div>
-      <nav class="career-section-nav" :aria-label="copy.selected">
-        <span class="career-nav-label">{{ copy.selected }}</span>
-        <a v-for="section in sections" :key="section.id" :href="'#' + section.id">
-          <span>{{ section[lang] }}</span>
-          <span aria-hidden="true">↘</span>
-        </a>
-      </nav>
-    </header>
+    <EditorialHero
+      :eyebrow="copy.eyebrow"
+      :title="copy.before"
+      :accent="copy.accent"
+      :intro="copy.intro"
+      :nav-label="copy.selected"
+      :nav-items="navigation"
+    />
 
     <section
       v-for="(section, sectionIndex) in sections"
@@ -105,21 +107,17 @@ function markLogoFailed(url: string) {
       class="career-group"
       :aria-labelledby="section.id + '-heading'"
     >
-      <div class="career-group-heading">
-        <div class="career-group-heading-main">
-          <span class="career-group-icon" aria-hidden="true">
-            <BriefcaseBusiness v-if="section.id === 'professional'" :size="22" />
-            <GraduationCap v-else :size="22" />
-          </span>
-          <div>
-            <p class="career-section-index">
-              {{ String(sectionIndex + 1).padStart(2, "0") }} / {{ entriesFor(section.id).length }} {{ copy.count }}
-            </p>
-            <h2 :id="section.id + '-heading'">{{ section[lang] }}</h2>
-            <p class="career-group-description">{{ lang === "fr" ? section.countFr : section.countEn }}</p>
-          </div>
-        </div>
-      </div>
+      <EditorialSectionHeading
+        :heading-id="section.id + '-heading'"
+        :eyebrow="String(sectionIndex + 1).padStart(2, '0') + ' / ' + entriesFor(section.id).length + ' ' + copy.count"
+        :title="section[lang]"
+        :description="lang === 'fr' ? section.countFr : section.countEn"
+      >
+        <template #icon>
+          <BriefcaseBusiness v-if="section.id === 'professional'" :size="22" />
+          <GraduationCap v-else :size="22" />
+        </template>
+      </EditorialSectionHeading>
 
       <ol class="career-timeline">
         <li v-for="entry in entriesFor(section.id)" :key="entry.id" class="career-timeline-item">
@@ -128,9 +126,10 @@ function markLogoFailed(url: string) {
             <span class="career-timeline-date">{{ entry.period[lang] }}</span>
           </div>
 
-          <article
+          <EditorialCard
             class="career-card"
-            :class="{ 'career-card-current': entry.ongoing }"
+            variant="timeline"
+            :highlighted="!!entry.ongoing"
             :aria-labelledby="entry.id + '-title'"
           >
             <div class="career-card-top">
@@ -188,12 +187,13 @@ function markLogoFailed(url: string) {
               </li>
             </ul>
 
-            <ul v-if="entry.technologies.length" class="career-tags" :aria-label="copy.technologies">
-              <li v-for="technology in entry.technologies" :key="technology">
-                {{ technology }}
-              </li>
-            </ul>
-          </article>
+            <TechnologyTags
+              v-if="entry.technologies.length"
+              :tags="entry.technologies"
+              :label="copy.technologies"
+              density="timeline"
+            />
+          </EditorialCard>
         </li>
       </ol>
 
@@ -203,16 +203,12 @@ function markLogoFailed(url: string) {
       </p>
     </section>
 
-    <footer class="career-next">
-      <div>
-        <p class="career-eyebrow">Next / 03</p>
-        <h2>{{ copy.next }}</h2>
-        <p>{{ copy.nextText }}</p>
-      </div>
-      <a :href="projectsUrl">
-        {{ copy.projects }} <ArrowUpRight :size="19" aria-hidden="true" />
-      </a>
-    </footer>
+    <EditorialNext
+      :title="copy.next"
+      :description="copy.nextText"
+      :href="projectsUrl"
+      :link-label="copy.projects"
+    />
     <p class="career-logo-credits">
       <a
         :href="lang === 'fr' ? '/fr/legal-notice#credits-des-logos' : '/legal-notice#logo-credits'"
@@ -231,17 +227,7 @@ function markLogoFailed(url: string) {
   color: var(--vp-c-text-1);
 }
 
-.career-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(230px, 290px);
-  align-items: end;
-  gap: 2.5rem;
-  padding: 1.5rem 0 3.5rem;
-  margin-bottom: 3.7rem;
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.career-eyebrow, .career-section-index, .career-nav-label {
+.career-section-index {
   margin: 0 0 0.9rem;
   color: var(--vp-c-text-2);
   font-size: 0.73rem;
@@ -250,91 +236,8 @@ function markLogoFailed(url: string) {
   text-transform: uppercase;
 }
 
-.career-hero h1 {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.6rem, 5.5vw, 5.4rem);
-  font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 1.07;
-}
-
-.career-hero h1 em {
-  color: var(--vp-c-brand-1);
-  font-weight: 400;
-}
-
-.career-intro {
-  max-width: 39rem;
-  margin: 1.45rem 0 0;
-  color: var(--vp-c-text-2);
-  font-size: 1.01rem;
-  line-height: 1.75;
-}
-
-.career-section-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem 1.15rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0.75rem;
-  background: var(--vp-c-bg-soft);
-}
-
-.career-section-nav .career-nav-label { margin-bottom: 0.65rem; }
-.career-section-nav a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.7rem 0;
-  border-top: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-1);
-  font-size: 0.86rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-.career-section-nav a span:last-child { color: var(--vp-c-brand-1); }
-
 .career-group { margin: 0 0 4.5rem; scroll-margin-top: 6rem; }
-.career-group-heading {
-  display: flex;
-  gap: 1rem;
-  padding: 0 0 1.5rem;
-}
-
-.career-group-heading-main { display: flex; align-items: flex-start; gap: 1.15rem; }
-.career-group-icon {
-  display: flex;
-  flex: 0 0 3.1rem;
-  align-items: center;
-  justify-content: center;
-  width: 3.1rem;
-  height: 3.1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0.75rem;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-1);
-}
 .career-section-index { margin: 0 0 0.5rem; }
-.career-group h2 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3.6vw, 3.2rem);
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.15;
-}
-.career-group-description {
-  margin: 0.45rem 0 0;
-  color: var(--vp-c-text-2);
-  font-size: 0.9rem;
-}
 .career-timeline { margin: 0; padding: 0; list-style: none; }
 .career-timeline-item {
   display: grid;
@@ -366,21 +269,6 @@ function markLogoFailed(url: string) {
   font-size: 0.76rem;
   line-height: 1.5;
   text-align: right;
-}
-
-.career-card {
-  min-width: 0;
-  margin: 0 0 1.25rem;
-  padding: clamp(1.1rem, 2.5vw, 1.85rem);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0.85rem;
-  background: var(--vp-c-bg);
-  transition: border-color 180ms ease, transform 180ms ease;
-}
-.career-card:hover { border-color: var(--vp-c-brand-1); transform: translateY(-2px); }
-.career-card-current {
-  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, var(--vp-c-divider));
-  background: color-mix(in srgb, var(--vp-c-brand-soft) 22%, var(--vp-c-bg));
 }
 .career-card-top { display: flex; align-items: flex-start; gap: 1rem; }
 .career-company-mark {
@@ -426,14 +314,6 @@ function markLogoFailed(url: string) {
 }
 .career-organization a { display: inline-flex; align-items: center; gap: 0.15rem; color: inherit; text-decoration: none; }
 .career-organization a:hover { color: var(--vp-c-brand-1); }
-.career-card h3 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: clamp(1.19rem, 2.2vw, 1.55rem);
-  line-height: 1.3;
-  letter-spacing: -0.025em;
-}
 .career-current-label {
   display: inline-flex;
   align-items: center;
@@ -471,15 +351,6 @@ function markLogoFailed(url: string) {
 }
 .career-highlights li { padding-left: 0.25rem; margin: 0.25rem 0; }
 .career-highlights li::marker { color: var(--vp-c-brand-1); }
-.career-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; margin: 1rem 0 0; list-style: none; }
-.career-tags li {
-  padding: 0.28rem 0.52rem;
-  border-radius: 0.35rem;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-2);
-  font-size: 0.71rem;
-  line-height: 1.4;
-}
 .career-other {
   margin: 0.3rem 0 0;
   padding: 1.1rem 1.2rem;
@@ -489,37 +360,6 @@ function markLogoFailed(url: string) {
   line-height: 1.65;
 }
 .career-other strong { color: var(--vp-c-text-1); margin-right: 0.3rem; }
-.career-next {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--vp-c-divider);
-}
-.career-next h2 {
-  margin: 0 0 0.45rem;
-  border: 0;
-  padding: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.65rem, 3vw, 2.5rem);
-  font-weight: 400;
-}
-.career-next p:last-child { color: var(--vp-c-text-2); margin: 0; }
-.career-next a {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  border: 1px solid var(--vp-c-brand-1);
-  border-radius: 0.5rem;
-  padding: 0.75rem 0.95rem;
-  color: var(--vp-c-brand-1);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-}
 .career-logo-credits {
   margin: 0;
   color: var(--vp-c-text-3);
@@ -528,32 +368,16 @@ function markLogoFailed(url: string) {
 .career-logo-credits a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .career-logo-credits a:hover { color: var(--vp-c-text-1); }
 
-.career-section-nav a:focus-visible,
-.career-card a:focus-visible,
-.career-logo-credits a:focus-visible,
-.career-next a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
-
-@media (max-width: 960px) {
-  .career-hero { grid-template-columns: 1fr; padding-bottom: 2.5rem; }
-  .career-section-nav { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.3rem; }
-  .career-section-nav .career-nav-label { flex-basis: 100%; margin: 0; }
-  .career-section-nav a { gap: 1rem; border: 0; }
-}
+.career-logo-credits a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
 @media (max-width: 680px) {
-  .career-showcase { padding: 2rem 1rem 4rem; }
-  .career-hero { gap: 1.25rem; margin-bottom: 2.5rem; }
+.career-showcase { padding: 2rem 1rem 4rem; }
   .career-timeline-item { grid-template-columns: 1.1rem minmax(0, 1fr); gap: 0.65rem; }
   .career-timeline-rail { padding: 0; align-items: flex-end; }
   .career-timeline-date { display: none; }
   .career-period { display: inline; }
   .career-timeline-dot { top: 1.4rem; }
-  .career-card { padding: 1rem; }
   .career-company-mark { flex-basis: 4.25rem; width: 4.25rem; height: 3.3rem; }
   .career-company-logo { padding: 0.32rem; }
-  .career-next { flex-direction: column; align-items: flex-start; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .career-card { transition: none; }
-  .career-card:hover { transform: none; }
-}
+
 </style>
