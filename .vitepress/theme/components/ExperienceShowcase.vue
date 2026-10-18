@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, reactive } from "vue";
 import { ArrowUpRight, BriefcaseBusiness, GraduationCap, MapPin } from "lucide-vue-next";
 import { experiences, type ExperienceGroup, type ExperienceLanguage } from "../data/experiences";
 
@@ -32,6 +32,7 @@ const copy = computed(() =>
           "J'aime comprendre comment les choses fonctionnent, puis concevoir les outils qui les rendent plus fiables et plus simples à utiliser. Mon parcours mêle développement, réseaux, sécurité et recherche.",
         selected: "Explorer mon parcours",
         current: "En cours",
+        logoCredits: "Sources et crédits des logos",
         technologies: "Technologies et domaines",
         other: "Et aussi",
         earlier:
@@ -52,6 +53,7 @@ const copy = computed(() =>
           "I enjoy understanding how things work and building tools that make them more reliable and easier to use. My background connects software, networking, security and research.",
         selected: "Explore my experience",
         current: "Ongoing",
+        logoCredits: "Logo sources and credits",
         technologies: "Technologies and domains",
         other: "Earlier experience",
         earlier:
@@ -71,6 +73,13 @@ function entriesFor(group: ExperienceGroup) {
 }
 
 const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/projects"));
+
+// Remote brand assets must fail gracefully (network, hotlinking or CDN errors).
+const unavailableLogos = reactive(new Set<string>());
+
+function handleLogoError(src: string) {
+  unavailableLogos.add(src);
+}
 </script>
 
 <template>
@@ -126,7 +135,24 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
             :aria-labelledby="entry.id + '-title'"
           >
             <div class="career-card-top">
-              <div class="career-company-mark" aria-hidden="true">{{ entry.monogram }}</div>
+              <div
+                class="career-company-mark"
+                :class="{ 'career-company-mark--dark': entry.logoOnDark }"
+                aria-hidden="true"
+              >
+                <span class="career-company-fallback">{{ entry.monogram }}</span>
+                <img
+                  v-if="entry.logo && !unavailableLogos.has(entry.logo)"
+                  class="career-company-logo"
+                  :src="entry.logo"
+                  alt=""
+                  width="112"
+                  height="64"
+                  loading="lazy"
+                  decoding="async"
+                  @error="handleLogoError(entry.logo)"
+                />
+              </div>
               <div class="career-card-heading">
                 <div class="career-card-heading-top">
                   <p class="career-organization">
@@ -187,6 +213,15 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
         {{ copy.projects }} <ArrowUpRight :size="19" aria-hidden="true" />
       </a>
     </footer>
+    <p class="career-logo-credits">
+      <a
+        href="https://github.com/AlixANNERAUD/Web_site/blob/main/docs/experience-logo-sources.md"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ copy.logoCredits }} <span aria-hidden="true">↗</span>
+      </a>
+    </p>
   </div>
 </template>
 
@@ -351,17 +386,37 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
 }
 .career-card-top { display: flex; align-items: flex-start; gap: 1rem; }
 .career-company-mark {
+  position: relative;
   display: grid;
-  flex: 0 0 3.35rem;
+  flex: 0 0 7rem;
   place-items: center;
-  height: 3.35rem;
+  width: 7rem;
+  height: 4rem;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 0.7rem;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-1);
+  background: #fff;
+  color: #23434a;
+}
+.career-company-mark--dark {
+  background: #172027;
+  color: #fff;
+}
+.career-company-fallback {
   font-family: ui-monospace, monospace;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.06em;
+}
+.career-company-logo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  background: inherit;
+  object-fit: contain;
 }
 .career-card-heading { min-width: 0; flex: 1; }
 .career-card-heading-top { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.8rem; }
@@ -467,8 +522,16 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
   font-weight: 600;
   text-decoration: none;
 }
+ .career-logo-credits {
+  margin: 0;
+  color: var(--vp-c-text-3);
+  font-size: 0.74rem;
+}
+.career-logo-credits a { color: inherit; text-underline-offset: 0.18rem; }
+.career-logo-credits a:hover { color: var(--vp-c-text-1); }
 .career-section-nav a:focus-visible,
 .career-card a:focus-visible,
+.career-logo-credits a:focus-visible,
 .career-next a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
 
 @media (max-width: 960px) {
@@ -486,7 +549,8 @@ const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/pro
   .career-period { display: inline; }
   .career-timeline-dot { top: 1.4rem; }
   .career-card { padding: 1rem; }
-  .career-company-mark { flex-basis: 2.8rem; height: 2.8rem; }
+  .career-company-mark { flex-basis: 4.9rem; width: 4.9rem; height: 3.5rem; }
+  .career-company-logo { padding: 0.3rem; }
   .career-next { flex-direction: column; align-items: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) {
