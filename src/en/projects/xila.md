@@ -30,6 +30,10 @@ Guest applications currently use the **Wasmi** runtime; guest calls cross an exp
 - **Native and browser development environments.** Linux and browser examples enable iteration before hardware validation. Browser persistence combines an image-based disk and OPFS.
 - **Explicit costs.** The Wasm interpreter, abstraction layers and graphics stack all have memory and performance implications that need to be measured on the intended device.
 
+## Try Xila in WebAssembly
+
+<XilaBrowserDemo lang="en" />
+
 ## Status and limitations
 
 Xila is **actively developed**. Running a native or browser example does not establish compatibility with a particular board. I avoid claiming near-native execution performance without reproducible benchmarks.
