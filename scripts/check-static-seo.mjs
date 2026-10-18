@@ -132,6 +132,39 @@ for (const [file, experienceUrl] of [
   }
 }
 
+// The immersive introduction must be purely typographic, full-height styled
+// and provide an accessible path to the real career content in BOTH locales.
+for (const [file, language, careerLink] of [
+  ["index.html", "en", "/experiences"],
+  ["fr/index.html", "fr", "/fr/experiences"],
+]) {
+  const html = readFileSync(resolve(dist, file), "utf8");
+  const heroStart = html.indexOf('<section class="home-hero"');
+  const careerStart = html.indexOf('<section class="home-experience"');
+  const hero = heroStart >= 0 && careerStart > heroStart
+    ? html.slice(heroStart, careerStart)
+    : "";
+  if (!hero.includes("home-hero-title-mask") ||
+      !hero.includes("home-hero-title-line--accent")) {
+    failed.push(file + ": animated editorial title is missing");
+  }
+  if (!hero.includes('href="#career-highlights"') ||
+      !hero.includes("home-hero-scroll")) {
+    failed.push(file + ": accessible scroll cue to career section is missing");
+  }
+  if (!hero.includes('href="' + careerLink + '"') ||
+      !hero.includes(language === "fr" ? "/fr/projects" : "/projects") ||
+      !hero.includes("mailto:alix@anneraud.fr")) {
+    failed.push(file + ": professional, projects or contact CTAs missing");
+  }
+  if (/<img(?:\s|>)/.test(hero) || hero.includes("home-hero-portrait")) {
+    failed.push(file + ": homepage hero must not embed the old pixel portrait");
+  }
+  if (heroStart < 0 || careerStart < 0 || careerStart <= heroStart) {
+    failed.push(file + ": homepage introduction must come before professional work");
+  }
+}
+
 // Structural regressions: these pages use one page-level heading and a
 // purpose-built layout rather than the legacy Markdown/document components.
 for (const [file, marker] of [
