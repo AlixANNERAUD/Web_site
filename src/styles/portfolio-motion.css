@@ -22,21 +22,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  /* Short, staggered page-entry animation; no reveal observer is required. */
-  .site-home .home-hero-name,
-  .site-home .home-hero h1,
-  .site-home .home-hero-tagline,
-  .site-home .home-hero-actions,
-  .site-home .home-hero-portrait {
-    animation: portfolio-enter 620ms var(--portfolio-ease) both;
-  }
-
-  .site-home .home-hero-name { animation-delay: 40ms; }
-  .site-home .home-hero h1 { animation-delay: 100ms; }
-  .site-home .home-hero-tagline { animation-delay: 170ms; }
-  .site-home .home-hero-actions { animation-delay: 240ms; }
-  .site-home .home-hero-portrait { animation-delay: 130ms; }
-
+  /* The static full-screen hero owns its own staggered typography motion
+     in HomeHero.astro. Avoid layering old generic animations on top. */
   .site-home .portfolio-showcase .showcase-card {
     animation: portfolio-enter 540ms var(--portfolio-ease) both;
   }
@@ -78,11 +65,6 @@
 
 /* Never hide content or require an animation to reach a keyboard target. */
 @media (prefers-reduced-motion: reduce) {
-  .site-home .home-hero-name,
-  .site-home .home-hero h1,
-  .site-home .home-hero-tagline,
-  .site-home .home-hero-actions,
-  .site-home .home-hero-portrait,
   .site-home .portfolio-showcase .showcase-card,
   .portfolio-showcase--catalogue .showcase-card {
     animation: none !important;
