@@ -1,5 +1,5 @@
 ---
-title: "lvgl_theme_shadcn — engineering project"
+title: "lvgl_theme_shadcn"
 description: "A shadcn/ui-inspired LVGL 9 theme: widget styling, light/dark palettes and customizable embedded interfaces."
 ---
 
@@ -7,7 +7,7 @@ description: "A shadcn/ui-inspired LVGL 9 theme: widget styling, light/dark pale
 
 # lvgl_theme_shadcn
 
-**C99 · LVGL · Rust · UI** · 2026 – present
+**C99 · LVGL · Rust · UI** · 2026 - present
 
 > A shadcn/ui-inspired LVGL 9 theme: widget styling, light/dark palettes and customizable embedded interfaces.
 

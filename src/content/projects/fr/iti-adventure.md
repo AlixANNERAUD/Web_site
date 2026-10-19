@@ -1,5 +1,5 @@
 ---
-title: "ITI Aventure — projet d'ingénierie"
+title: "ITI Aventure"
 description: "Jeu de rôle textuel Java appliquant programmation objet et patrons de conception."
 ---
 

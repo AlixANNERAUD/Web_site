@@ -1,5 +1,5 @@
 ---
-title: "Deez'Nalyzer — engineering project"
+title: "Deez'Nalyzer"
 description: "A Django/Vue application using audio analysis and machine learning to classify music genres."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "battery-percent — projet d'ingénierie"
+title: "battery-percent"
 description: "Estimation de charge par courbes de décharge et interpolation, avec filtrage ADC : bibliothèque C99 et bindings Rust no_std."
 ---
 
@@ -7,7 +7,7 @@ description: "Estimation de charge par courbes de décharge et interpolation, av
 
 # battery-percent
 
-**C99 · Rust · Battery · MCU** · 2026 – présent
+**C99 · Rust · Battery · MCU** · 2026 - présent
 
 > Estimation de charge par courbes de décharge et interpolation, avec filtrage ADC : bibliothèque C99 et bindings Rust no_std.
 

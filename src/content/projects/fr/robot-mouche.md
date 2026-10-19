@@ -1,5 +1,5 @@
 ---
-title: "Robot mouche — projet d'ingénierie"
+title: "Robot mouche"
 description: "Robot C++ pilotable en Wi-Fi ou autonome avec suivi de ligne et détection d'obstacles."
 ---
 

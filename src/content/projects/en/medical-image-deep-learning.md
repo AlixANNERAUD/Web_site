@@ -1,5 +1,5 @@
 ---
-title: "Medical image segmentation — engineering project"
+title: "Medical image segmentation"
 description: "Histopathology tissue and cell segmentation/classification experiments using nnU-Net, CellViT++ and HoVer-Net."
 ---
 

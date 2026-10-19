@@ -1,5 +1,5 @@
 ---
-title: "Segmentation d'images médicales — projet d'ingénierie"
+title: "Segmentation d'images médicales"
 description: "Expérimentation de segmentation et classification de tissus et cellules histopathologiques avec nnU-Net, CellViT++ et HoVer-Net."
 ---
 

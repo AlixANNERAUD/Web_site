@@ -1,5 +1,5 @@
 ---
-title: "dera.page — projet d'ingénierie"
+title: "dera.page"
 description: "Plateforme de services étudiants auto-hébergée, avec agenda, messagerie et réseau social."
 ---
 

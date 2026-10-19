@@ -1,5 +1,5 @@
 ---
-title: "dera.page — engineering project"
+title: "dera.page"
 description: "A privacy-focused student services platform with a calendar, messaging and a social network."
 ---
 

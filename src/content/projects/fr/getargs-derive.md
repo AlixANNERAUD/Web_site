@@ -1,5 +1,5 @@
 ---
-title: "getargs-derive — projet d'ingénierie"
+title: "getargs-derive"
 description: "Macros procédurales pour décrire des interfaces CLI en Rust embarqué, avec analyse sans allocation et aide générée à la compilation."
 ---
 
@@ -7,7 +7,7 @@ description: "Macros procédurales pour décrire des interfaces CLI en Rust emba
 
 # getargs-derive
 
-**Rust · Proc macros · CLI · no_std** · 2026 – présent
+**Rust · Proc macros · CLI · no_std** · 2026 - présent
 
 > Macros procédurales pour décrire des interfaces CLI en Rust embarqué, avec analyse sans allocation et aide générée à la compilation.
 

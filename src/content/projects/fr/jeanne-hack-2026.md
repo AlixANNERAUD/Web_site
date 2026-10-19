@@ -1,5 +1,5 @@
 ---
-title: "Jeanne d'Hack CTF (Université de Rouen) — projet d'ingénierie"
+title: "Jeanne d'Hack CTF (Université de Rouen)"
 description: "Première place ex æquo au classement général du CTF Jeanne d'Hack 2026."
 ---
 

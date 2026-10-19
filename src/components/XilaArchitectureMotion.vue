@@ -20,14 +20,14 @@ let starting = false;
 
 const content = {
   fr: {
-    kicker: "Focus technique — Xila / 03",
+    kicker: "Focus technique - Xila / 03",
     title: "Xila, du matériel aux applications.",
     text: "Un aperçu de l'architecture de Xila : les pilotes relient le matériel aux services Rust, puis à la frontière WebAssembly et aux applications.",
     diagram: "Pilotes → services Rust → frontières d'exécution WebAssembly → applications. Les services gèrent également le stockage/VFS et l'interface LVGL.",
     explore: "Lire l'étude de cas Xila",
   },
   en: {
-    kicker: "Technical deep dive — Xila / 03",
+    kicker: "Technical deep dive - Xila / 03",
     title: "Inside Xila: from drivers to apps.",
     text: "A glimpse of Xila's architecture: drivers connect hardware to Rust services, WebAssembly guest bindings and applications.",
     diagram: "Drivers → Rust services → WebAssembly execution boundary → applications. Services also manage storage/VFS and LVGL graphics.",

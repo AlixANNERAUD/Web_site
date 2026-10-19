@@ -1,5 +1,5 @@
 ---
-title: "Solveur de systèmes d'équations linéaires — projet d'ingénierie"
+title: "Solveur de systèmes d'équations linéaires"
 description: "Résolution de systèmes linéaires en C par élimination de Gauss avec pivot partiel."
 ---
 

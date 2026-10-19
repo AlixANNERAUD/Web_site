@@ -34,7 +34,7 @@ export const experiences: PortfolioExperience[] = [
     companyUrl: "https://memo.bank/",
     monogram: "M",
     role: { fr: "Ingénieur sécurité", en: "Security Engineer" },
-    period: { fr: "Sept. 2026 — Août 2027", en: "Sep 2026 — Aug 2027" },
+    period: { fr: "Sept. 2026 - Août 2027", en: "Sep 2026 - Aug 2027" },
     location: { fr: "Paris, France", en: "Paris, France" },
     summary: {
       fr: "Ingénierie sécurité dans l'environnement d'une banque.",
@@ -55,7 +55,7 @@ export const experiences: PortfolioExperience[] = [
       fr: "Technicien réseau et télécoms",
       en: "Network & Telecom Technician",
     },
-    period: { fr: "Déc. 2025 — Sept. 2026", en: "Dec 2025 — Sep 2026" },
+    period: { fr: "Déc. 2025 - Sept. 2026", en: "Dec 2025 - Sep 2026" },
     location: { fr: "Mont-Saint-Aignan, France", en: "Mont-Saint-Aignan, France" },
     summary: {
       fr: "Diagnostic d'incidents, exploitation réseau et automatisation des outils de support.",
@@ -88,7 +88,7 @@ export const experiences: PortfolioExperience[] = [
       fr: "Stagiaire en ingénierie logicielle",
       en: "Software Engineering Intern",
     },
-    period: { fr: "Mai — Août 2025", en: "May — Aug 2025" },
+    period: { fr: "Mai - Août 2025", en: "May - Aug 2025" },
     location: { fr: "Madrid, Espagne", en: "Madrid, Spain" },
     summary: {
       fr: "Modernisation d'un outil interne d'investigation de contenus pour des équipes marketing.",
@@ -114,7 +114,7 @@ export const experiences: PortfolioExperience[] = [
     companyUrl: "https://www.nyu.edu/",
     monogram: "NYU",
     role: { fr: "Stagiaire en recherche", en: "Research Intern" },
-    period: { fr: "Juin — Août 2024", en: "Jun — Aug 2024" },
+    period: { fr: "Juin - Août 2024", en: "Jun - Aug 2024" },
     location: { fr: "New York, États-Unis", en: "New York, USA" },
     summary: {
       fr: "Recherche sur la localisation de sources de gaz à partir de réseaux de capteurs.",
@@ -144,7 +144,7 @@ export const experiences: PortfolioExperience[] = [
       fr: "Assistant aux relations entreprises",
       en: "Corporate Relations Assistant",
     },
-    period: { fr: "2021 — 2024", en: "2021 — 2024" },
+    period: { fr: "2021 - 2024", en: "2021 - 2024" },
     location: { fr: "Rouen, France", en: "Rouen, France" },
     summary: {
       fr: "Gestion de données partenaires et appui aux campagnes de relations entreprises.",
@@ -170,8 +170,8 @@ export const experiences: PortfolioExperience[] = [
     companyUrl: "https://www.becquerel.fr/",
     monogram: "T",
     role: {
-      fr: "Chef de projet / Product Owner — ThéraPIC",
-      en: "Project Lead / Product Owner — ThéraPIC",
+      fr: "Chef de projet / Product Owner - ThéraPIC",
+      en: "Project Lead / Product Owner - ThéraPIC",
     },
     period: { fr: "2025", en: "2025" },
     location: { fr: "Rouen, France", en: "Rouen, France" },
@@ -202,7 +202,7 @@ export const experiences: PortfolioExperience[] = [
       fr: "Diplôme d'ingénieur informatique",
       en: "Computer Engineering Degree",
     },
-    period: { fr: "2021 — 2027", en: "2021 — 2027" },
+    period: { fr: "2021 - 2027", en: "2021 - 2027" },
     location: { fr: "Rouen, France", en: "Rouen, France" },
     summary: {
       fr: "Formation en algorithmique, systèmes d'exploitation, informatique embarquée, réseaux, génie logiciel et intelligence artificielle.",
@@ -274,8 +274,8 @@ export const experiences: PortfolioExperience[] = [
     company: "Enseignement secondaire",
     monogram: "BAC",
     role: {
-      fr: "Baccalauréat scientifique — section européenne",
-      en: "Scientific Baccalaureate — European Section",
+      fr: "Baccalauréat scientifique - section européenne",
+      en: "Scientific Baccalaureate - European Section",
     },
     period: { fr: "2021", en: "2021" },
     location: { fr: "France", en: "France" },

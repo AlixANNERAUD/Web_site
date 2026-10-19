@@ -1,5 +1,5 @@
 ---
-title: "nanoaudio — engineering project"
+title: "nanoaudio"
 description: "Allocation-free embedded audio processing: PCM conversion, mixing, ring buffers and codecs using caller-owned memory."
 ---
 
@@ -7,7 +7,7 @@ description: "Allocation-free embedded audio processing: PCM conversion, mixing,
 
 # nanoaudio
 
-**Rust · no_std · Audio · DSP** · 2026 – present
+**Rust · no_std · Audio · DSP** · 2026 - present
 
 > Allocation-free embedded audio processing: PCM conversion, mixing, ring buffers and codecs using caller-owned memory.
 

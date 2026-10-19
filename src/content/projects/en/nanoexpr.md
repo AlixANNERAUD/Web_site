@@ -1,5 +1,5 @@
 ---
-title: "nanoexpr — engineering project"
+title: "nanoexpr"
 description: "Heap-free mathematical expression parser and evaluator for embedded Rust with bounded stack usage."
 ---
 
@@ -7,7 +7,7 @@ description: "Heap-free mathematical expression parser and evaluator for embedde
 
 # nanoexpr
 
-**Rust · no_std · Parser · C ABI** · 2026 – present
+**Rust · no_std · Parser · C ABI** · 2026 - present
 
 > Heap-free mathematical expression parser and evaluator for embedded Rust with bounded stack usage.
 

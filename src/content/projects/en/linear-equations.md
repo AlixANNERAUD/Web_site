@@ -1,5 +1,5 @@
 ---
-title: "System of linear equations calculator — engineering project"
+title: "System of linear equations calculator"
 description: "A C implementation of Gaussian elimination with partial pivoting for linear systems."
 ---
 

@@ -1,4 +1,4 @@
-# Alix ANNERAUD — Portfolio
+# Alix ANNERAUD - Portfolio
 
 **From kernel to browser.** Software engineering · Rust systems · Embedded software · Security
 

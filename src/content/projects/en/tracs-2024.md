@@ -1,5 +1,5 @@
 ---
-title: "TRACS (DGSE) — engineering project"
+title: "TRACS (DGSE)"
 description: "Participated in the DGSE TRACS challenge, placing 36th in the student ranking."
 ---
 

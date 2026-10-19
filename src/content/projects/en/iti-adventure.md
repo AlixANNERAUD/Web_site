@@ -1,5 +1,5 @@
 ---
-title: "ITI Adventure — engineering project"
+title: "ITI Adventure"
 description: "A text-based Java RPG exploring object-oriented design and software patterns."
 ---
 

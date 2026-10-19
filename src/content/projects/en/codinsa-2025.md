@@ -1,5 +1,5 @@
 ---
-title: "Cod'INSA — engineering project"
+title: "Cod'INSA"
 description: "First place in the 2025 Cod'INSA competitive programming contest."
 ---
 

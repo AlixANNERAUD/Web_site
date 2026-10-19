@@ -1,5 +1,5 @@
 ---
-title: "Cartographie d'occupation évidentielle (EOGM) — projet d'ingénierie"
+title: "Cartographie d'occupation évidentielle (EOGM)"
 description: "Cartographie d'occupation robotique à partir de capteurs embarqués, basée sur la théorie de Dempster-Shafer."
 ---
 
