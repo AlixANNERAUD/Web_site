@@ -1,5 +1,5 @@
 ---
-title: "Music danceability — engineering project"
+title: "Music danceability"
 description: "Machine-learning experiments predicting song danceability from Spotify audio features."
 ---
 

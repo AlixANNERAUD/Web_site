@@ -1,5 +1,5 @@
 ---
-title: "Réseau ferroviaire miniature — projet d'ingénierie"
+title: "Réseau ferroviaire miniature"
 description: "Cartes électroniques de détection d'occupation et commande de signalisation pour un réseau H0 numérique."
 ---
 

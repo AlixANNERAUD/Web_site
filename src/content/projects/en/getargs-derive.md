@@ -1,5 +1,5 @@
 ---
-title: "getargs-derive — engineering project"
+title: "getargs-derive"
 description: "Procedural macros for embedded Rust command-line interfaces, with allocation-free parsing and compile-time help generation."
 ---
 
@@ -7,7 +7,7 @@ description: "Procedural macros for embedded Rust command-line interfaces, with 
 
 # getargs-derive
 
-**Rust · Proc macros · CLI · no_std** · 2026 – present
+**Rust · Proc macros · CLI · no_std** · 2026 - present
 
 > Procedural macros for embedded Rust command-line interfaces, with allocation-free parsing and compile-time help generation.
 

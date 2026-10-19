@@ -1,5 +1,5 @@
 ---
-title: "Localisation de sources de gaz — projet d'ingénierie"
+title: "Localisation de sources de gaz"
 description: "Prototype de collecte de mesures de capteurs MQ via ESP32 et MQTT pour explorer la localisation de sources de gaz lors d'un stage de recherche."
 ---
 

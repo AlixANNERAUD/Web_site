@@ -1,5 +1,5 @@
 ---
-title: "Cod'INSA — projet d'ingénierie"
+title: "Cod'INSA"
 description: "Première place au concours de programmation compétitive Cod'INSA 2025."
 ---
 

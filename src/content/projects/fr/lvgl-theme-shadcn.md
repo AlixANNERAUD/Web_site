@@ -1,5 +1,5 @@
 ---
-title: "lvgl_theme_shadcn — projet d'ingénierie"
+title: "lvgl_theme_shadcn"
 description: "Un thème inspiré de shadcn/ui pour LVGL 9 : widgets, palettes claires/sombres et personnalisation sur microcontrôleurs."
 ---
 
@@ -7,7 +7,7 @@ description: "Un thème inspiré de shadcn/ui pour LVGL 9 : widgets, palettes cl
 
 # lvgl_theme_shadcn
 
-**C99 · LVGL · Rust · UI** · 2026 – présent
+**C99 · LVGL · Rust · UI** · 2026 - présent
 
 > Un thème inspiré de shadcn/ui pour LVGL 9 : widgets, palettes claires/sombres et personnalisation sur microcontrôleurs.
 

@@ -1,5 +1,5 @@
 ---
-title: "Connected speaker — engineering project"
+title: "Connected speaker"
 description: "An ESP32-powered Wi-Fi control interface for a hi-fi amplifier."
 ---
 

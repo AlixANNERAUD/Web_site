@@ -1,5 +1,5 @@
 ---
-title: "TRACS (DGSE) — projet d'ingénierie"
+title: "TRACS (DGSE)"
 description: "Participation au challenge TRACS de la DGSE, avec une 36e place au classement étudiant."
 ---
 

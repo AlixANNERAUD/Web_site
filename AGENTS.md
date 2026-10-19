@@ -1,4 +1,4 @@
-# Repository instructions — alix.anneraud.fr
+# Repository instructions - alix.anneraud.fr
 
 This is the **single source of truth** for coding agents. `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` remain Git symlinks to this file.
 

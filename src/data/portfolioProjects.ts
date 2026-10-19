@@ -20,7 +20,7 @@ export interface PortfolioProject {
   symbol: string;
   tags: string[];
   description: Translation;
-  /** Human-reviewed editorial factors, scored 0–5; not external quality metrics. */
+  /** Human-reviewed editorial factors, scored 0-5; not external quality metrics. */
   ranking: ProjectRanking;
   featured?: boolean;
   externalUrl?: string;
@@ -218,8 +218,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "lvgl_theme_shadcn"
     },
     "period": {
-      "fr": "2026 – présent",
-      "en": "2026 – present"
+      "fr": "2026 - présent",
+      "en": "2026 - present"
     },
     "group": "library",
     "category": "embedded",
@@ -249,8 +249,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "nanoexpr"
     },
     "period": {
-      "fr": "2026 – présent",
-      "en": "2026 – present"
+      "fr": "2026 - présent",
+      "en": "2026 - present"
     },
     "group": "library",
     "category": "systems",
@@ -280,8 +280,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "nanoaudio"
     },
     "period": {
-      "fr": "2026 – présent",
-      "en": "2026 – present"
+      "fr": "2026 - présent",
+      "en": "2026 - present"
     },
     "group": "library",
     "category": "embedded",
@@ -311,8 +311,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "embedded-i18n"
     },
     "period": {
-      "fr": "2026 – présent",
-      "en": "2026 – present"
+      "fr": "2026 - présent",
+      "en": "2026 - present"
     },
     "group": "library",
     "category": "embedded",
@@ -342,8 +342,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "getargs-derive"
     },
     "period": {
-      "fr": "2026 – présent",
-      "en": "2026 – present"
+      "fr": "2026 - présent",
+      "en": "2026 - present"
     },
     "group": "library",
     "category": "systems",
@@ -373,8 +373,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "en": "battery-percent"
     },
     "period": {
-      "fr": "2026 – présent",
-      "en": "2026 – present"
+      "fr": "2026 - présent",
+      "en": "2026 - present"
     },
     "group": "library",
     "category": "embedded",
@@ -558,7 +558,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     "description": {
       "fr": "Cartographie d'occupation robotique à partir de capteurs embarqués, basée sur la théorie de Dempster-Shafer.",
-      "en": "Robotic occupancy mapping from onboard sensors, using Dempster–Shafer evidence theory."
+      "en": "Robotic occupancy mapping from onboard sensors, using Dempster-Shafer evidence theory."
     },
     "externalUrl": "https://github.com/AlixANNERAUD/Evidential_occupancy_map",
     "ranking": {
@@ -814,7 +814,7 @@ export const PROJECT_RANK_WEIGHTS = {
   evidence: 15,
 } as const satisfies Record<keyof ProjectRanking, number>;
 
-/** Normalized 0–100 editorial relevance, higher first. */
+/** Normalized 0-100 editorial relevance, higher first. */
 export function projectScore(project: PortfolioProject): number {
   const weighted = (Object.keys(PROJECT_RANK_WEIGHTS) as (keyof ProjectRanking)[])
     .reduce((sum, factor) => sum + project.ranking[factor] * PROJECT_RANK_WEIGHTS[factor], 0);

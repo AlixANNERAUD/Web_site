@@ -1,5 +1,5 @@
 ---
-title: "Robot mouche — engineering project"
+title: "Robot mouche"
 description: "A C++ robot combining Wi-Fi remote control, line following and obstacle avoidance."
 ---
 

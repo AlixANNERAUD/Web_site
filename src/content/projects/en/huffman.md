@@ -1,5 +1,5 @@
 ---
-title: "Huffman (de)compressor — engineering project"
+title: "Huffman (de)compressor"
 description: "A Huffman compressor/decompressor written in C with bitstream processing."
 ---
 

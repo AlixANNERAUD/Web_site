@@ -1,5 +1,5 @@
 ---
-title: "Compresseur/décompresseur Huffman — projet d'ingénierie"
+title: "Compresseur/décompresseur Huffman"
 description: "Compresseur/décompresseur Huffman écrit en C, avec manipulation des flux de bits."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "embedded-i18n — projet d'ingénierie"
+title: "embedded-i18n"
 description: "Internationalisation compilée dans le firmware Rust : traductions en ROM, validation à la compilation et fonctionnement sans allocateur."
 ---
 
@@ -7,7 +7,7 @@ description: "Internationalisation compilée dans le firmware Rust : traductions
 
 # embedded-i18n
 
-**Rust · Macros · no_std · i18n** · 2026 – présent
+**Rust · Macros · no_std · i18n** · 2026 - présent
 
 > Internationalisation compilée dans le firmware Rust : traductions en ROM, validation à la compilation et fonctionnement sans allocateur.
 

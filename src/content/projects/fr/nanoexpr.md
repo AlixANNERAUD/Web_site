@@ -1,5 +1,5 @@
 ---
-title: "nanoexpr — projet d'ingénierie"
+title: "nanoexpr"
 description: "Parseur et évaluateur d'expressions mathématiques pour Rust embarqué, sans allocation dynamique et avec taille de pile bornée."
 ---
 
@@ -7,7 +7,7 @@ description: "Parseur et évaluateur d'expressions mathématiques pour Rust emba
 
 # nanoexpr
 
-**Rust · no_std · Parser · C ABI** · 2026 – présent
+**Rust · no_std · Parser · C ABI** · 2026 - présent
 
 > Parseur et évaluateur d'expressions mathématiques pour Rust embarqué, sans allocation dynamique et avec taille de pile bornée.
 

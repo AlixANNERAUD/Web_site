@@ -1,5 +1,5 @@
 ---
-title: "Enceinte connectée — projet d'ingénierie"
+title: "Enceinte connectée"
 description: "Commande Wi-Fi d'un amplificateur hi-fi avec microcontrôleur ESP32 et interface web."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Gas source localization — engineering project"
+title: "Gas source localization"
 description: "ESP32/MQ sensor acquisition and MQTT pipeline prototype for exploring gas source localization during a research internship."
 ---
 

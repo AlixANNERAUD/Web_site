@@ -1,5 +1,5 @@
 ---
-title: "Model railway network — engineering project"
+title: "Model railway network"
 description: "Custom electronics for occupancy detection and automated signalling on an H0-scale railway."
 ---
 

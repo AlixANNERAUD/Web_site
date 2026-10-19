@@ -1,5 +1,5 @@
 ---
-title: "INSAtram — engineering project"
+title: "INSAtram"
 description: "A Free Pascal/SDL tram network management and passenger-flow simulation game."
 ---
 

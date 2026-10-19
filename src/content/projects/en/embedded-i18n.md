@@ -1,5 +1,5 @@
 ---
-title: "embedded-i18n — engineering project"
+title: "embedded-i18n"
 description: "Compile-time localization for embedded Rust: translations stored in firmware, compile-time checks and allocator-free operation."
 ---
 
@@ -7,7 +7,7 @@ description: "Compile-time localization for embedded Rust: translations stored i
 
 # embedded-i18n
 
-**Rust · Macros · no_std · i18n** · 2026 – present
+**Rust · Macros · no_std · i18n** · 2026 - present
 
 > Compile-time localization for embedded Rust: translations stored in firmware, compile-time checks and allocator-free operation.
 

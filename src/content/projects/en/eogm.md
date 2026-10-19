@@ -1,6 +1,6 @@
 ---
-title: "Evidential Occupancy Grid Map (EOGM) — engineering project"
-description: "Robotic occupancy mapping from onboard sensors, using Dempster–Shafer evidence theory."
+title: "Evidential Occupancy Grid Map (EOGM)"
+description: "Robotic occupancy mapping from onboard sensors, using Dempster-Shafer evidence theory."
 ---
 
 [← All projects](/projects)
@@ -9,7 +9,7 @@ description: "Robotic occupancy mapping from onboard sensors, using Dempster–S
 
 **C++ · ROS** · 2024
 
-> Robotic occupancy mapping from onboard sensors, using Dempster–Shafer evidence theory.
+> Robotic occupancy mapping from onboard sensors, using Dempster-Shafer evidence theory.
 
 ## Overview
 

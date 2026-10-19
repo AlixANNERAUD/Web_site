@@ -1,5 +1,5 @@
 ---
-title: "battery-percent — engineering project"
+title: "battery-percent"
 description: "Battery state-of-charge estimation from discharge curves and interpolation, with ADC filtering, in C99 and no_std Rust."
 ---
 
@@ -7,7 +7,7 @@ description: "Battery state-of-charge estimation from discharge curves and inter
 
 # battery-percent
 
-**C99 · Rust · Battery · MCU** · 2026 – present
+**C99 · Rust · Battery · MCU** · 2026 - present
 
 > Battery state-of-charge estimation from discharge curves and interpolation, with ADC filtering, in C99 and no_std Rust.
 

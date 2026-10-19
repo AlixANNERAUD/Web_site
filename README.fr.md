@@ -1,4 +1,4 @@
-# Alix ANNERAUD — Portfolio
+# Alix ANNERAUD - Portfolio
 
 **Du noyau au navigateur.** Ingénierie logicielle · Systèmes Rust · Embarqué · Sécurité
 
