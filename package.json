@@ -16,7 +16,7 @@
     "verify:static": "node scripts/check-static-seo.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^7.0.8",
+    "@astrojs/mdx": "^8.1.0",
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/vue": "^7.0.3",
     "astro": "^7.4.0",
