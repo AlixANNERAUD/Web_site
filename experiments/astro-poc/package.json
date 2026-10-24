@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-astro-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "7.1.6"
+  }
+}

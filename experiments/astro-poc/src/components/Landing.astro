@@ -1,0 +1,124 @@
+---
+import { portfolioProjects } from "../../../../.vitepress/theme/data/portfolioProjects";
+
+interface Props {
+  lang: "en" | "fr";
+}
+
+const { lang } = Astro.props;
+const projects = portfolioProjects.filter((project) => project.featured);
+
+const copy =
+  lang === "fr"
+    ? {
+        title: "Du noyau au navigateur.",
+        description:
+          "Ingénierie logicielle, systèmes Rust et sécurité. Je construis des logiciels embarqués, des outils web et des infrastructures.",
+        projects: "Projets sélectionnés",
+        view: "Lire la fiche",
+        more: "Catalogue complet",
+        navigation: "Navigation",
+      }
+    : {
+        title: "From kernel to browser.",
+        description:
+          "Software engineering, Rust systems and security. I build embedded software, web applications and infrastructure.",
+        projects: "Selected work",
+        view: "Read details",
+        more: "Full catalogue",
+        navigation: "Navigation",
+      };
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={copy.description} />
+    <title>Alix ANNERAUD — {copy.title}</title>
+    <link rel="canonical" href={lang === "fr" ? "https://alix.anneraud.fr/fr/" : "https://alix.anneraud.fr/"} />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="navigation">
+        <a href={lang === "fr" ? "/fr/" : "/"} class="site-name">Alix ANNERAUD</a>
+        <nav aria-label={copy.navigation}>
+          <a href={lang === "fr" ? "/" : "/fr/"}>
+            {lang === "fr" ? "English" : "Français"}
+          </a>
+          <a href={lang === "fr" ? "/fr/projects" : "/projects"}>
+            {copy.more}
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">Software / Systems / Rust</p>
+          <h1>{copy.title}</h1>
+          <p>{copy.description}</p>
+          <a class="primary-link" href="https://www.xila.dev">Xila ↗</a>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+          <div class="heading">
+            <p class="eyebrow">01 / Work</p>
+            <h2 id="projects-heading">{copy.projects}</h2>
+          </div>
+          <div class="project-grid">
+            {
+              projects.map((project) => (
+                <article>
+                  <div class="art" aria-hidden="true">
+                    <span>{project.symbol}</span>
+                  </div>
+                  <div class="project-content">
+                    <p class="tags">{project.tags.join(" · ")}</p>
+                    <h3>{project.title[lang]}</h3>
+                    <p>{project.description[lang]}</p>
+                    <a
+                      href={(lang === "fr" ? "/fr" : "") + "/projects/" + project.id}
+                    >
+                      {copy.view} →
+                    </a>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  :global(*) { box-sizing: border-box; }
+  :global(body) { margin: 0; background: #fbfcfc; color: #162229; font-family: system-ui, sans-serif; }
+  :global(a:focus-visible) { outline: 2px solid #126f66; outline-offset: 4px; }
+
+  .layout { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+  .navigation { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #dde4e4; }
+  .site-name { font-weight: 700; color: inherit; text-decoration: none; }
+  nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+  nav a { color: #236f67; }
+  .hero { padding: clamp(4rem, 8vw, 7rem) 0; }
+  .eyebrow { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #64737b; }
+  .hero h1, .heading h2 { font-family: Georgia, serif; font-weight: 400; letter-spacing: -0.05em; }
+  .hero h1 { margin: 0.5rem 0; max-width: 760px; line-height: 1.06; font-size: clamp(3rem, 6vw, 5.2rem); }
+  .hero > p:not(.eyebrow) { max-width: 620px; color: #4c5c61; font-size: 1.05rem; line-height: 1.7; }
+  .primary-link { display: inline-block; padding: 0.75rem 1.2rem; border-radius: 0.5rem; color: white; background: #236f67; text-decoration: none; font-weight: 600; }
+  .heading { margin-bottom: 1.5rem; border-bottom: 1px solid #dce4e5; }
+  .heading h2 { font-size: clamp(2.3rem, 4vw, 4rem); }
+  .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  article { overflow: hidden; border: 1px solid #dce4e5; border-radius: 0.8rem; }
+  .art { display: flex; min-height: 165px; justify-content: center; align-items: center; background: #183941; color: white; }
+  .art span { font-size: 4rem; font-family: Georgia, serif; }
+  .project-content { padding: 1.2rem; }
+  .tags { color: #60737a; font-size: 0.8rem; }
+  h3 { font-size: 1.4rem; }
+  .project-content p:not(.tags) { line-height: 1.7; color: #506269; }
+  .project-content a { color: #186d64; font-weight: 600; }
+  @media(max-width: 800px) { .project-grid { grid-template-columns: 1fr; } }
+</style>
