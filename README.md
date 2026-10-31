@@ -25,7 +25,7 @@ npm run verify:static    # Route / SEO / content smoke tests
 npm run preview
 ```
 
-Also available: `npm run docs:dev`, `npm run docs:build`, `npm run docs:preview` (compatibility scripts). Run `npm run format:check` before merging.
+Run `npm run check` (format, types, validation, build and static verification) before merging.
 
 ## Project structure
 

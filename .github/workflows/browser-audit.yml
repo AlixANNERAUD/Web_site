@@ -4,6 +4,10 @@ on:
   pull_request:
     paths:
       - "tools/browser-checks/**"
+      - "src/**"
+      - "scripts/**"
+      - "astro.config.mjs"
+      - "package*.json"
       - ".github/workflows/browser-audit.yml"
   workflow_dispatch:
 

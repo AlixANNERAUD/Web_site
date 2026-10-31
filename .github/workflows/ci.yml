@@ -33,9 +33,5 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Validate bilingual project catalogue
-        run: npm run validate:portfolio
-      - name: Build Astro static site
-        run: npm run build
-      - name: Verify routes, SEO, Vue islands and locale parity
-        run: npm run verify:static
+      - name: Format, type-check, validate, build and verify
+        run: npm run check
