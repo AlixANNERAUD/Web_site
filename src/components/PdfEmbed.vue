@@ -1,3 +1,14 @@
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    src: string;
+    title?: string;
+    openLabel?: string;
+  }>(),
+  { title: "CV (PDF)", openLabel: "Open PDF" },
+);
+</script>
+
 <template>
   <div class="pdf-container">
     <iframe
@@ -25,23 +36,6 @@
     >
   </div>
 </template>
-
-<script setup>
-defineProps({
-  src: {
-    type: String,
-    required: true,
-  },
-  title: {
-    type: String,
-    default: "CV (PDF)",
-  },
-  openLabel: {
-    type: String,
-    default: "Open PDF",
-  },
-});
-</script>
 
 <style scoped>
 .pdf-container {

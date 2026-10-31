@@ -80,14 +80,15 @@ export function createTopologyRenderer(
   canvas: HTMLCanvasElement,
   onContextLost: () => void,
 ): TopologyRenderer | null {
-  const gl = canvas.getContext("webgl2", {
+  const context = canvas.getContext("webgl2", {
     alpha: true,
     antialias: true,
     depth: false,
     stencil: false,
     powerPreference: "low-power",
   });
-  if (!gl) return null;
+  if (!context) return null;
+  const gl: WebGL2RenderingContext = context;
 
   const vertex = compileShader(gl, gl.VERTEX_SHADER, VERTEX_SOURCE);
   const fragment = compileShader(gl, gl.FRAGMENT_SHADER, FRAGMENT_SOURCE);
