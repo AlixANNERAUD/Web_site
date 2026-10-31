@@ -56,7 +56,10 @@ export const experiences: PortfolioExperience[] = [
       en: "Network & Telecom Technician",
     },
     period: { fr: "Déc. 2025 - Sept. 2026", en: "Dec 2025 - Sep 2026" },
-    location: { fr: "Mont-Saint-Aignan, France", en: "Mont-Saint-Aignan, France" },
+    location: {
+      fr: "Mont-Saint-Aignan, France",
+      en: "Mont-Saint-Aignan, France",
+    },
     summary: {
       fr: "Diagnostic d'incidents, exploitation réseau et automatisation des outils de support.",
       en: "Incident investigation, network operations and support-tool automation.",

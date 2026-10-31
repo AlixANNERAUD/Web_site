@@ -5,11 +5,23 @@ import EditorialSectionHeading from "./EditorialSectionHeading.vue";
 import EditorialNext from "./EditorialNext.vue";
 import ExperienceTimeline from "./ExperienceTimeline.vue";
 import { BriefcaseBusiness, ChevronDown, GraduationCap } from "lucide-vue-next";
-import { experiences, type ExperienceGroup, type ExperienceLanguage } from "../data/experiences";
+import {
+  experiences,
+  type ExperienceGroup,
+  type ExperienceLanguage,
+} from "../data/experiences";
 
-const props = withDefaults(defineProps<{ lang?: ExperienceLanguage }>(), { lang: "fr" });
+const props = withDefaults(defineProps<{ lang?: ExperienceLanguage }>(), {
+  lang: "fr",
+});
 
-const sections: { id: ExperienceGroup; fr: string; en: string; countFr: string; countEn: string }[] = [
+const sections: {
+  id: ExperienceGroup;
+  fr: string;
+  en: string;
+  countFr: string;
+  countEn: string;
+}[] = [
   {
     id: "professional",
     fr: "Parcours professionnel",
@@ -36,7 +48,8 @@ const copy = computed(() =>
           "J'aime comprendre comment les choses fonctionnent, puis concevoir les outils qui les rendent plus fiables et plus simples à utiliser. Mon parcours mêle développement, réseaux, sécurité et recherche.",
         selected: "Explorer mon parcours",
         current: "En cours",
-        logoCredits: "Logos et marques : propriété de leurs organismes respectifs. Sources et crédits",
+        logoCredits:
+          "Logos et marques : propriété de leurs organismes respectifs. Sources et crédits",
         technologies: "Technologies et domaines",
         earlierProfessionalShow: "Voir les expériences précédentes",
         earlierProfessionalHide: "Masquer les expériences précédentes",
@@ -56,7 +69,8 @@ const copy = computed(() =>
           "I enjoy understanding how things work and building tools that make them more reliable and easier to use. My background connects software, networking, security and research.",
         selected: "Explore my experience",
         current: "Ongoing",
-        logoCredits: "Logos and trademarks belong to their respective owners. Sources and credits",
+        logoCredits:
+          "Logos and trademarks belong to their respective owners. Sources and credits",
         technologies: "Technologies and domains",
         earlierProfessionalShow: "Show earlier experience",
         earlierProfessionalHide: "Hide earlier experience",
@@ -74,9 +88,14 @@ function entriesFor(group: ExperienceGroup) {
   return experiences.filter((entry) => entry.group === group);
 }
 
-const projectsUrl = computed(() => (props.lang === "fr" ? "/fr/projects" : "/projects"));
+const projectsUrl = computed(() =>
+  props.lang === "fr" ? "/fr/projects" : "/projects",
+);
 const navigation = computed(() =>
-  sections.map((section) => ({ href: "#" + section.id, label: section[props.lang] })),
+  sections.map((section) => ({
+    href: "#" + section.id,
+    label: section[props.lang],
+  })),
 );
 
 // Older entries are hidden as entire cards, grouped by section.
@@ -92,8 +111,10 @@ function earlierEntriesFor(group: ExperienceGroup) {
   return entriesFor(group).filter((entry) => entry.earlier);
 }
 function visibleCountFor(group: ExperienceGroup): number {
-  return recentEntriesFor(group).length +
-    (expandedGroups.has(group) ? earlierEntriesFor(group).length : 0);
+  return (
+    recentEntriesFor(group).length +
+    (expandedGroups.has(group) ? earlierEntriesFor(group).length : 0)
+  );
 }
 function earlierButtonLabel(group: ExperienceGroup): string {
   if (group === "professional") {
@@ -127,7 +148,13 @@ function earlierButtonLabel(group: ExperienceGroup): string {
     >
       <EditorialSectionHeading
         :heading-id="section.id + '-heading'"
-        :eyebrow="String(sectionIndex + 1).padStart(2, '0') + ' / ' + visibleCountFor(section.id) + ' ' + copy.count"
+        :eyebrow="
+          String(sectionIndex + 1).padStart(2, '0') +
+          ' / ' +
+          visibleCountFor(section.id) +
+          ' ' +
+          copy.count
+        "
         :title="section[lang]"
         :description="lang === 'fr' ? section.countFr : section.countEn"
       >
@@ -155,7 +182,9 @@ function earlierButtonLabel(group: ExperienceGroup): string {
           <span>{{ earlierButtonLabel(section.id) }}</span>
           <ChevronDown
             :size="17"
-            :class="{ 'career-earlier-icon--open': expandedGroups.has(section.id) }"
+            :class="{
+              'career-earlier-icon--open': expandedGroups.has(section.id),
+            }"
             aria-hidden="true"
           />
         </button>
@@ -170,7 +199,6 @@ function earlierButtonLabel(group: ExperienceGroup): string {
           :technologies-label="copy.technologies"
         />
       </template>
-
     </section>
 
     <EditorialNext
@@ -181,7 +209,11 @@ function earlierButtonLabel(group: ExperienceGroup): string {
     />
     <p class="career-logo-credits">
       <a
-        :href="lang === 'fr' ? '/fr/legal-notice#credits-des-logos' : '/legal-notice#logo-credits'"
+        :href="
+          lang === 'fr'
+            ? '/fr/legal-notice#credits-des-logos'
+            : '/legal-notice#logo-credits'
+        "
       >
         {{ copy.logoCredits }} ↗
       </a>
@@ -190,7 +222,10 @@ function earlierButtonLabel(group: ExperienceGroup): string {
 </template>
 
 <style scoped>
-.career-group { margin: 0 0 4.5rem; scroll-margin-top: 6rem; }
+.career-group {
+  margin: 0 0 4.5rem;
+  scroll-margin-top: 6rem;
+}
 .career-earlier-toggle {
   display: inline-flex;
   align-items: center;
@@ -206,7 +241,9 @@ function earlierButtonLabel(group: ExperienceGroup): string {
   font-weight: 650;
   cursor: pointer;
 }
-.career-earlier-toggle:hover { border-color: var(--vp-c-brand-1); }
+.career-earlier-toggle:hover {
+  border-color: var(--vp-c-brand-1);
+}
 .career-earlier-toggle > span {
   min-width: 0;
   overflow-wrap: anywhere;
@@ -216,25 +253,44 @@ function earlierButtonLabel(group: ExperienceGroup): string {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 3px;
 }
-.career-earlier-toggle svg { transition: transform 160ms ease; }
-.career-earlier-icon--open { transform: rotate(180deg); }
-.career-timeline--earlier { margin-bottom: 0.3rem; }
+.career-earlier-toggle svg {
+  transition: transform 160ms ease;
+}
+.career-earlier-icon--open {
+  transform: rotate(180deg);
+}
+.career-timeline--earlier {
+  margin-bottom: 0.3rem;
+}
 @media (max-width: 680px) {
-  .career-earlier-toggle { margin-left: 1.75rem; max-width: calc(100% - 1.75rem); white-space: normal; }
+  .career-earlier-toggle {
+    margin-left: 1.75rem;
+    max-width: calc(100% - 1.75rem);
+    white-space: normal;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .career-earlier-toggle svg { transition: none; }
+  .career-earlier-toggle svg {
+    transition: none;
+  }
 }
 .career-logo-credits {
   margin: 0;
   color: var(--vp-c-text-3);
   font-size: 0.72rem;
 }
-.career-logo-credits a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.career-logo-credits a:hover { color: var(--vp-c-text-1); }
+.career-logo-credits a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.career-logo-credits a:hover {
+  color: var(--vp-c-text-1);
+}
 
 .career-card a:focus-visible,
-.career-logo-credits a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
-
-
+.career-logo-credits a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+}
 </style>

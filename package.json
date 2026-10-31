@@ -6,24 +6,26 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "docs:dev": "astro dev",
-    "docs:build": "astro build",
-    "docs:preview": "astro preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run validate:portfolio && npm run build && npm run verify:static",
+    "check:types": "astro check",
+    "snapshot": "node scripts/snapshot-dist.mjs",
+    "check": "npm run format:check && npm run check:types && npm run validate:portfolio && npm run build && npm run verify:static && node scripts/snapshot-dist.mjs --compare --fields=file,canonical,hreflang,robots,lang",
     "validate:portfolio": "node scripts/validate-portfolio.mjs",
     "verify:static": "node scripts/check-static-seo.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^8.1.0",
-    "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/vue": "^7.0.3",
-    "astro": "^7.4.0",
+    "@astrojs/mdx": "^8.1.2",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/vue": "^7.1.2",
+    "astro": "^7.4.4",
     "lucide-vue-next": "^1.0.0",
     "vue": "^3.5.44"
   },
   "devDependencies": {
-    "prettier": "3.9.10"
+    "@astrojs/check": "^0.9.12",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
+    "typescript": "^6.0.3"
   }
 }

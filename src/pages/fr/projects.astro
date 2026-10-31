@@ -2,6 +2,12 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PortfolioShowcase from "../../components/PortfolioShowcase.vue";
 ---
-<BaseLayout lang="fr" path="/fr/projects" title="Projets" description="Explorez les projets logiciels et embarqués d'Alix ANNERAUD avec recherche et filtres par domaine.">
+
+<BaseLayout
+  lang="fr"
+  path="/fr/projects"
+  title="Projets"
+  description="Explorez les projets logiciels et embarqués d'Alix ANNERAUD avec recherche et filtres par domaine."
+>
   <PortfolioShowcase lang="fr" mode="catalogue" client:load />
 </BaseLayout>

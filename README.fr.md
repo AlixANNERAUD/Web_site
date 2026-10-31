@@ -25,7 +25,7 @@ npm run verify:static
 npm run preview
 ```
 
-Les commandes `docs:dev`, `docs:build` et `docs:preview` restent disponibles pour compatibilité. Utiliser `npm run format:check` avant de fusionner.
+Lancer `npm run check` (format, types, validation, build et vérification statique) avant de fusionner.
 
 ## Structure
 

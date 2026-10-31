@@ -2,3 +2,5 @@ node_modules/
 dist/
 .astro/
 artifacts/
+package-lock.json
+src/content/**

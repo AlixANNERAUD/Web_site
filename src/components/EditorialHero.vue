@@ -34,7 +34,11 @@ withDefaults(
       </component>
       <p class="editorial-hero__intro">{{ intro }}</p>
     </div>
-    <nav v-if="navItems.length" class="editorial-hero__nav" :aria-label="navLabel">
+    <nav
+      v-if="navItems.length"
+      class="editorial-hero__nav"
+      :aria-label="navLabel"
+    >
       <p class="editorial-hero__nav-caption">{{ navLabel }}</p>
       <a v-for="item in navItems" :key="item.href" :href="item.href">
         <span>{{ item.label }}</span>
@@ -64,7 +68,9 @@ withDefaults(
   margin: 0 0 2rem;
   padding-bottom: 1.75rem;
 }
-.editorial-hero__copy { min-width: 0; }
+.editorial-hero__copy {
+  min-width: 0;
+}
 .editorial-hero__eyebrow,
 .editorial-hero__nav-caption {
   margin: 0 0 0.9rem;
@@ -130,7 +136,9 @@ withDefaults(
   border-radius: 0.75rem;
   background: var(--vp-c-bg-soft);
 }
-.editorial-hero__nav-caption { margin-bottom: 0.65rem; }
+.editorial-hero__nav-caption {
+  margin-bottom: 0.65rem;
+}
 .editorial-hero__nav a {
   display: flex;
   justify-content: space-between;
@@ -143,26 +151,57 @@ withDefaults(
   font-weight: 600;
   text-decoration: none;
 }
-.editorial-hero__nav a svg { color: var(--vp-c-brand-1); }
+.editorial-hero__nav a svg {
+  color: var(--vp-c-brand-1);
+}
 .editorial-hero__nav a:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 4px;
 }
 @media (max-width: 960px) {
-  .editorial-hero--wide { grid-template-columns: 1fr; gap: 1.25rem; padding-bottom: 2.5rem; }
-  .editorial-hero__nav { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.3rem; }
-  .editorial-hero__nav-caption { flex-basis: 100%; margin: 0; }
-  .editorial-hero__nav a { gap: 1rem; border: 0; }
+  .editorial-hero--wide {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+  .editorial-hero__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.3rem;
+  }
+  .editorial-hero__nav-caption {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .editorial-hero__nav a {
+    gap: 1rem;
+    border: 0;
+  }
 }
 @media (max-width: 850px) {
-  .editorial-hero--compact { align-items: start; flex-direction: column; gap: 0.85rem; }
-   .editorial-hero--compact .editorial-hero__copy { grid-template-columns: 1fr; row-gap: 0.85rem; }
+  .editorial-hero--compact {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .editorial-hero--compact .editorial-hero__copy {
+    grid-template-columns: 1fr;
+    row-gap: 0.85rem;
+  }
   .editorial-hero--compact .editorial-hero__eyebrow,
   .editorial-hero--compact .editorial-hero__title,
-  .editorial-hero--compact .editorial-hero__intro { grid-column: 1; grid-row: auto; }
-  .editorial-hero--compact .editorial-hero__intro { max-width: 35rem; }
+  .editorial-hero--compact .editorial-hero__intro {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .editorial-hero--compact .editorial-hero__intro {
+    max-width: 35rem;
+  }
 }
 @media (max-width: 720px) {
-  .editorial-hero--wide { margin-bottom: 2.5rem; }
+  .editorial-hero--wide {
+    margin-bottom: 2.5rem;
+  }
 }
 </style>

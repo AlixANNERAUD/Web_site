@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import { portfolioProjects } from "../src/data/portfolioProjects.ts";
 
 /**
  * Build-output smoke tests for the bilingual Astro site.
@@ -24,19 +25,19 @@ const cases = [
 ];
 
 // Test EVERY static detail route, including alternate locale metadata.
-const catalogueSource = readFileSync(resolve("src/data/portfolioProjects.ts"), "utf8");
-const declaration = "export const portfolioProjects: PortfolioProject[] = ";
-const catalogueStart = catalogueSource.indexOf(declaration) + declaration.length;
-const catalogueEnd = catalogueSource.indexOf(";\n\nexport function projectDetailUrl", catalogueStart);
-if (catalogueStart < declaration.length || catalogueEnd < 0) {
-  throw new Error("Could not find catalogue in portfolioProjects.ts");
-}
-const projectIds = JSON.parse(catalogueSource.slice(catalogueStart, catalogueEnd))
-  .map((project) => project.id);
+const projectIds = portfolioProjects.map((project) => project.id);
 for (const id of projectIds) {
   {
-    cases.push([`projects/${id}.html`, `/projects/${id}`, `/fr/projects/${id}`]);
-    cases.push([`fr/projects/${id}.html`, `/fr/projects/${id}`, `/projects/${id}`]);
+    cases.push([
+      `projects/${id}.html`,
+      `/projects/${id}`,
+      `/fr/projects/${id}`,
+    ]);
+    cases.push([
+      `fr/projects/${id}.html`,
+      `/fr/projects/${id}`,
+      `/projects/${id}`,
+    ]);
   }
 }
 for (const removed of ["projects/archive.html", "fr/projects/archive.html"]) {
@@ -64,7 +65,9 @@ for (const [file, canonicalPath, translationPath] of cases) {
   if (file.startsWith("projects/") || file.startsWith("fr/projects/")) {
     const headings = [...html.matchAll(/<h1(?:\s|>)/g)];
     if (headings.length !== 1) {
-      failed.push(file + ": expected exactly one project H1, found " + headings.length);
+      failed.push(
+        file + ": expected exactly one project H1, found " + headings.length,
+      );
     }
     if (html.includes("/projects/archive")) {
       failed.push(file + ": legacy archive link found");
@@ -78,7 +81,8 @@ for (const [file, canonicalPath, translationPath] of cases) {
     ["translation", translationPath],
   ]) {
     const url = "https://alix.anneraud.fr" + path;
-    if (!html.includes(url)) failed.push(file + ": missing " + kind + " URL " + url);
+    if (!html.includes(url))
+      failed.push(file + ": missing " + kind + " URL " + url);
   }
   if (!html.includes('hreflang="fr"') || !html.includes('hreflang="en"')) {
     failed.push(file + ": incomplete language alternates");
@@ -106,8 +110,10 @@ for (const [file, experienceUrl] of [
     'class="xila-topology"',
   ];
   const positions = marks.map((part) => html.indexOf(part));
-  if (positions.some((index) => index < 0) ||
-      positions.some((index, i) => i > 0 && index <= positions[i - 1])) {
+  if (
+    positions.some((index) => index < 0) ||
+    positions.some((index, i) => i > 0 && index <= positions[i - 1])
+  ) {
     failed.push(file + ": homepage sections missing or in the wrong order");
   }
   if ([...html.matchAll(/class="home-experience-card"/g)].length !== 4) {
@@ -125,7 +131,9 @@ for (const [file, experienceUrl] of [
     }
   }
   if (!/Xila[^<]{0,140}/i.test(html) || !html.includes("xila-topology-link")) {
-    failed.push(file + ": Xila graph must be presented as a named project deep dive");
+    failed.push(
+      file + ": Xila graph must be presented as a named project deep dive",
+    );
   }
   if ([...html.matchAll(/<h1(?:\s|>)/g)].length !== 1) {
     failed.push(file + ": homepage should have exactly one H1");
@@ -141,27 +149,36 @@ for (const [file, language, careerLink] of [
   const html = readFileSync(resolve(dist, file), "utf8");
   const heroStart = html.indexOf('<section class="home-hero"');
   const careerStart = html.indexOf('<section class="home-experience"');
-  const hero = heroStart >= 0 && careerStart > heroStart
-    ? html.slice(heroStart, careerStart)
-    : "";
-  if (!hero.includes("home-hero-title-mask") ||
-      !hero.includes("home-hero-title-line--accent")) {
+  const hero =
+    heroStart >= 0 && careerStart > heroStart
+      ? html.slice(heroStart, careerStart)
+      : "";
+  if (
+    !hero.includes("home-hero-title-mask") ||
+    !hero.includes("home-hero-title-line--accent")
+  ) {
     failed.push(file + ": animated editorial title is missing");
   }
-  if (!hero.includes('href="#career-highlights"') ||
-      !hero.includes("home-hero-scroll")) {
+  if (
+    !hero.includes('href="#career-highlights"') ||
+    !hero.includes("home-hero-scroll")
+  ) {
     failed.push(file + ": accessible scroll cue to career section is missing");
   }
-  if (!hero.includes('href="' + careerLink + '"') ||
-      !hero.includes(language === "fr" ? "/fr/projects" : "/projects") ||
-      !hero.includes("mailto:alix@anneraud.fr")) {
+  if (
+    !hero.includes('href="' + careerLink + '"') ||
+    !hero.includes(language === "fr" ? "/fr/projects" : "/projects") ||
+    !hero.includes("mailto:alix@anneraud.fr")
+  ) {
     failed.push(file + ": professional, projects or contact CTAs missing");
   }
   if (/<img(?:\s|>)/.test(hero) || hero.includes("home-hero-portrait")) {
     failed.push(file + ": homepage hero must not embed the old pixel portrait");
   }
   if (heroStart < 0 || careerStart < 0 || careerStart <= heroStart) {
-    failed.push(file + ": homepage introduction must come before professional work");
+    failed.push(
+      file + ": homepage introduction must come before professional work",
+    );
   }
 }
 
@@ -183,14 +200,20 @@ for (const [file, marker] of [
     failed.push(file + ": expected exactly one h1, found " + h1Count);
   }
   if (!html.includes(marker)) {
-    failed.push(file + ": new portfolio layout not SSR-rendered (" + marker + ")");
+    failed.push(
+      file + ": new portfolio layout not SSR-rendered (" + marker + ")",
+    );
   }
 }
 
 // Shared visual primitives must render as HTML in both locales.
 for (const file of [
-  "projects.html", "fr/projects.html", "experiences.html",
-  "fr/experiences.html", "skills.html", "fr/skills.html",
+  "projects.html",
+  "fr/projects.html",
+  "experiences.html",
+  "fr/experiences.html",
+  "skills.html",
+  "fr/skills.html",
 ]) {
   const html = readFileSync(resolve(dist, file), "utf8");
   if (!html.includes("editorial-hero")) {
@@ -200,9 +223,17 @@ for (const file of [
     failed.push(file + ": shared editorial cards/tags missing");
   }
 }
-for (const file of ["experiences.html", "fr/experiences.html", "skills.html", "fr/skills.html"]) {
+for (const file of [
+  "experiences.html",
+  "fr/experiences.html",
+  "skills.html",
+  "fr/skills.html",
+]) {
   const html = readFileSync(resolve(dist, file), "utf8");
-  if (!html.includes("editorial-section-heading") || !html.includes("editorial-next")) {
+  if (
+    !html.includes("editorial-section-heading") ||
+    !html.includes("editorial-next")
+  ) {
     failed.push(file + ": shared section/CTA missing");
   }
 }
@@ -213,19 +244,27 @@ for (const [file, projectPrefix] of [
   ["fr/skills.html", "/fr/projects/"],
 ]) {
   const html = readFileSync(resolve(dist, file), "utf8");
-  const cards = [...html.matchAll(/<article[^>]+class="[^"]*skills-domain-card[^"]*"/g)].length;
+  const cards = [
+    ...html.matchAll(/<article[^>]+class="[^"]*skills-domain-card[^"]*"/g),
+  ].length;
   if (cards !== 6) {
     failed.push(file + ": expected six skill domain cards, found " + cards);
   }
   if (!html.includes("skills-language-grid") || !html.includes("TOEIC 975")) {
     failed.push(file + ": language proficiency section missing");
   }
-  for (const id of ["xila", "nanoexpr", "deez-nalyzer", "infrastructure", "mini-train-store"]) {
+  for (const id of [
+    "xila",
+    "nanoexpr",
+    "deez-nalyzer",
+    "infrastructure",
+    "mini-train-store",
+  ]) {
     if (!html.includes(projectPrefix + id)) {
       failed.push(file + ": missing evidence link to " + id);
     }
   }
-  if (html.includes("class=\"skill-domain\"")) {
+  if (html.includes('class="skill-domain"')) {
     failed.push(file + ": legacy SkillDomain layout still rendered");
   }
 }
@@ -234,25 +273,42 @@ for (const [file, projectPrefix] of [
 // All content remains SSR-rendered; Vue handles accessible group visibility.
 for (const [file, professionalLabel, educationLabel] of [
   ["experiences.html", "Show earlier experience", "Show earlier education"],
-  ["fr/experiences.html", "Voir les expériences précédentes", "Voir les formations précédentes"],
+  [
+    "fr/experiences.html",
+    "Voir les expériences précédentes",
+    "Voir les formations précédentes",
+  ],
 ]) {
   const html = readFileSync(resolve(dist, file), "utf8");
   for (const group of ["professional", "education"]) {
-    if (!html.includes('id="earlier-' + group + '"') ||
-        !html.includes('aria-controls="earlier-' + group + '"')) {
-      failed.push(file + ": missing earlier " + group + " list or accessible toggle");
+    if (
+      !html.includes('id="earlier-' + group + '"') ||
+      !html.includes('aria-controls="earlier-' + group + '"')
+    ) {
+      failed.push(
+        file + ": missing earlier " + group + " list or accessible toggle",
+      );
     }
   }
-  for (const id of ["insa-relations", "renault-cleon", "guenola-sahut", "baccalaureat", "cambridge-b1"]) {
-    if (!html.includes(id + '-title')) {
+  for (const id of [
+    "insa-relations",
+    "renault-cleon",
+    "guenola-sahut",
+    "baccalaureat",
+    "cambridge-b1",
+  ]) {
+    if (!html.includes(id + "-title")) {
       failed.push(file + ": older card not present in SSR: " + id);
     }
   }
   if (!html.includes(professionalLabel) || !html.includes(educationLabel)) {
     failed.push(file + ": missing translated group toggle labels");
   }
-  if (html.includes('career-expand-button') || html.includes('career-card--compact') ||
-      html.includes('experience-details-')) {
+  if (
+    html.includes("career-expand-button") ||
+    html.includes("career-card--compact") ||
+    html.includes("experience-details-")
+  ) {
     failed.push(file + ": old per-card expansion controls must be removed");
   }
 }
@@ -261,7 +317,10 @@ for (const [file, professionalLabel, educationLabel] of [
 // structural check; browser/network verification of remote assets is separate.
 for (const file of ["experiences.html", "fr/experiences.html"]) {
   const html = readFileSync(resolve(dist, file), "utf8");
-  if (!html.includes("career-company-logo") || !html.includes("logo-becquerel-blanc_tournant.jpg")) {
+  if (
+    !html.includes("career-company-logo") ||
+    !html.includes("logo-becquerel-blanc_tournant.jpg")
+  ) {
     failed.push(file + ": experience company logo markup missing from SSR");
   }
 }
@@ -270,5 +329,9 @@ if (failed.length) {
   console.error("Static SEO checks failed:\n" + failed.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log("Verified canonical, hreflang, Open Graph and structured data on " + cases.length + " built pages.");
+  console.log(
+    "Verified canonical, hreflang, Open Graph and structured data on " +
+      cases.length +
+      " built pages.",
+  );
 }

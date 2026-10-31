@@ -1,0 +1,981 @@
+{
+  "pages": [
+    {
+      "file": "404.html",
+      "lang": "en",
+      "title": "Page not found | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/404",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/404",
+        "fr": "https://alix.anneraud.fr/fr/404",
+        "x-default": "https://alix.anneraud.fr/404"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "experiences.html",
+      "lang": "en",
+      "title": "Experiences | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/experiences",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/experiences",
+        "fr": "https://alix.anneraud.fr/fr/experiences",
+        "x-default": "https://alix.anneraud.fr/experiences"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/experiences.html",
+      "lang": "fr",
+      "title": "Expériences | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/experiences",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/experiences",
+        "fr": "https://alix.anneraud.fr/fr/experiences",
+        "x-default": "https://alix.anneraud.fr/experiences"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/index.html",
+      "lang": "fr",
+      "title": "Alix ANNERAUD - Logiciel, Rust et systèmes embarqués",
+      "canonical": "https://alix.anneraud.fr/fr/",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/",
+        "fr": "https://alix.anneraud.fr/fr/",
+        "x-default": "https://alix.anneraud.fr/"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/legal-notice.html",
+      "lang": "fr",
+      "title": "Mentions légales | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/legal-notice",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/legal-notice",
+        "fr": "https://alix.anneraud.fr/fr/legal-notice",
+        "x-default": "https://alix.anneraud.fr/legal-notice"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects.html",
+      "lang": "fr",
+      "title": "Projets | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects",
+        "fr": "https://alix.anneraud.fr/fr/projects",
+        "x-default": "https://alix.anneraud.fr/projects"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/battery-percent.html",
+      "lang": "fr",
+      "title": "battery-percent | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/battery-percent",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/battery-percent",
+        "fr": "https://alix.anneraud.fr/fr/projects/battery-percent",
+        "x-default": "https://alix.anneraud.fr/projects/battery-percent"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/codinsa-2025.html",
+      "lang": "fr",
+      "title": "Cod'INSA | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/codinsa-2025",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/codinsa-2025",
+        "fr": "https://alix.anneraud.fr/fr/projects/codinsa-2025",
+        "x-default": "https://alix.anneraud.fr/projects/codinsa-2025"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/connected-speaker.html",
+      "lang": "fr",
+      "title": "Enceinte connectée | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/connected-speaker",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/connected-speaker",
+        "fr": "https://alix.anneraud.fr/fr/projects/connected-speaker",
+        "x-default": "https://alix.anneraud.fr/projects/connected-speaker"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/deez-nalyzer.html",
+      "lang": "fr",
+      "title": "Deez'Nalyzer | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/deez-nalyzer",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/deez-nalyzer",
+        "fr": "https://alix.anneraud.fr/fr/projects/deez-nalyzer",
+        "x-default": "https://alix.anneraud.fr/projects/deez-nalyzer"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/dera.html",
+      "lang": "fr",
+      "title": "dera.page | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/dera",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/dera",
+        "fr": "https://alix.anneraud.fr/fr/projects/dera",
+        "x-default": "https://alix.anneraud.fr/projects/dera"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/embedded-i18n.html",
+      "lang": "fr",
+      "title": "embedded-i18n | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/embedded-i18n",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/embedded-i18n",
+        "fr": "https://alix.anneraud.fr/fr/projects/embedded-i18n",
+        "x-default": "https://alix.anneraud.fr/projects/embedded-i18n"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/eogm.html",
+      "lang": "fr",
+      "title": "Cartographie d'occupation évidentielle (EOGM) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/eogm",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/eogm",
+        "fr": "https://alix.anneraud.fr/fr/projects/eogm",
+        "x-default": "https://alix.anneraud.fr/projects/eogm"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/getargs-derive.html",
+      "lang": "fr",
+      "title": "getargs-derive | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/getargs-derive",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/getargs-derive",
+        "fr": "https://alix.anneraud.fr/fr/projects/getargs-derive",
+        "x-default": "https://alix.anneraud.fr/projects/getargs-derive"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/huffman.html",
+      "lang": "fr",
+      "title": "Compresseur/décompresseur Huffman | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/huffman",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/huffman",
+        "fr": "https://alix.anneraud.fr/fr/projects/huffman",
+        "x-default": "https://alix.anneraud.fr/projects/huffman"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/infrastructure.html",
+      "lang": "fr",
+      "title": "Infrastructure - auto-hébergement et automatisation | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/infrastructure",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/infrastructure",
+        "fr": "https://alix.anneraud.fr/fr/projects/infrastructure",
+        "x-default": "https://alix.anneraud.fr/projects/infrastructure"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/insatram.html",
+      "lang": "fr",
+      "title": "INSAtram | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/insatram",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/insatram",
+        "fr": "https://alix.anneraud.fr/fr/projects/insatram",
+        "x-default": "https://alix.anneraud.fr/projects/insatram"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/iti-adventure.html",
+      "lang": "fr",
+      "title": "ITI Aventure | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/iti-adventure",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/iti-adventure",
+        "fr": "https://alix.anneraud.fr/fr/projects/iti-adventure",
+        "x-default": "https://alix.anneraud.fr/projects/iti-adventure"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/jeanne-hack-2025.html",
+      "lang": "fr",
+      "title": "Jeanne d'Hack CTF (Université de Rouen) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/jeanne-hack-2025",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/jeanne-hack-2025",
+        "fr": "https://alix.anneraud.fr/fr/projects/jeanne-hack-2025",
+        "x-default": "https://alix.anneraud.fr/projects/jeanne-hack-2025"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/jeanne-hack-2026.html",
+      "lang": "fr",
+      "title": "Jeanne d'Hack CTF (Université de Rouen) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/jeanne-hack-2026",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/jeanne-hack-2026",
+        "fr": "https://alix.anneraud.fr/fr/projects/jeanne-hack-2026",
+        "x-default": "https://alix.anneraud.fr/projects/jeanne-hack-2026"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/linear-equations.html",
+      "lang": "fr",
+      "title": "Solveur de systèmes d'équations linéaires | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/linear-equations",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/linear-equations",
+        "fr": "https://alix.anneraud.fr/fr/projects/linear-equations",
+        "x-default": "https://alix.anneraud.fr/projects/linear-equations"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/lvgl-theme-shadcn.html",
+      "lang": "fr",
+      "title": "lvgl_theme_shadcn | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/lvgl-theme-shadcn",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/lvgl-theme-shadcn",
+        "fr": "https://alix.anneraud.fr/fr/projects/lvgl-theme-shadcn",
+        "x-default": "https://alix.anneraud.fr/projects/lvgl-theme-shadcn"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/medical-image-deep-learning.html",
+      "lang": "fr",
+      "title": "Segmentation d'images médicales | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/medical-image-deep-learning",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/medical-image-deep-learning",
+        "fr": "https://alix.anneraud.fr/fr/projects/medical-image-deep-learning",
+        "x-default": "https://alix.anneraud.fr/projects/medical-image-deep-learning"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/mini-train-store.html",
+      "lang": "fr",
+      "title": "Mini Train Store - commerce et automatisation | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/mini-train-store",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/mini-train-store",
+        "fr": "https://alix.anneraud.fr/fr/projects/mini-train-store",
+        "x-default": "https://alix.anneraud.fr/projects/mini-train-store"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/model-railway.html",
+      "lang": "fr",
+      "title": "Réseau ferroviaire miniature | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/model-railway",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/model-railway",
+        "fr": "https://alix.anneraud.fr/fr/projects/model-railway",
+        "x-default": "https://alix.anneraud.fr/projects/model-railway"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/music-danceability.html",
+      "lang": "fr",
+      "title": "Prédiction de la dansabilité musicale | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/music-danceability",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/music-danceability",
+        "fr": "https://alix.anneraud.fr/fr/projects/music-danceability",
+        "x-default": "https://alix.anneraud.fr/projects/music-danceability"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/nanoaudio.html",
+      "lang": "fr",
+      "title": "nanoaudio | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/nanoaudio",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/nanoaudio",
+        "fr": "https://alix.anneraud.fr/fr/projects/nanoaudio",
+        "x-default": "https://alix.anneraud.fr/projects/nanoaudio"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/nanoexpr.html",
+      "lang": "fr",
+      "title": "nanoexpr | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/nanoexpr",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/nanoexpr",
+        "fr": "https://alix.anneraud.fr/fr/projects/nanoexpr",
+        "x-default": "https://alix.anneraud.fr/projects/nanoexpr"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/odor-localization.html",
+      "lang": "fr",
+      "title": "Localisation de sources de gaz | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/odor-localization",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/odor-localization",
+        "fr": "https://alix.anneraud.fr/fr/projects/odor-localization",
+        "x-default": "https://alix.anneraud.fr/projects/odor-localization"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/robot-mouche.html",
+      "lang": "fr",
+      "title": "Robot mouche | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/robot-mouche",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/robot-mouche",
+        "fr": "https://alix.anneraud.fr/fr/projects/robot-mouche",
+        "x-default": "https://alix.anneraud.fr/projects/robot-mouche"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/tracs-2024.html",
+      "lang": "fr",
+      "title": "TRACS (DGSE) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/tracs-2024",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/tracs-2024",
+        "fr": "https://alix.anneraud.fr/fr/projects/tracs-2024",
+        "x-default": "https://alix.anneraud.fr/projects/tracs-2024"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/projects/xila.html",
+      "lang": "fr",
+      "title": "Xila - système d'exploitation embarqué en Rust | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/projects/xila",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/xila",
+        "fr": "https://alix.anneraud.fr/fr/projects/xila",
+        "x-default": "https://alix.anneraud.fr/projects/xila"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/resume.html",
+      "lang": "fr",
+      "title": "CV | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/resume",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/resume",
+        "fr": "https://alix.anneraud.fr/fr/resume",
+        "x-default": "https://alix.anneraud.fr/resume"
+      },
+      "robots": null,
+      "h1Count": 0,
+      "ogType": "website"
+    },
+    {
+      "file": "fr/skills.html",
+      "lang": "fr",
+      "title": "Compétences | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/fr/skills",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/skills",
+        "fr": "https://alix.anneraud.fr/fr/skills",
+        "x-default": "https://alix.anneraud.fr/skills"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "index.html",
+      "lang": "en",
+      "title": "Alix ANNERAUD - Software, Rust and embedded systems",
+      "canonical": "https://alix.anneraud.fr/",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/",
+        "fr": "https://alix.anneraud.fr/fr/",
+        "x-default": "https://alix.anneraud.fr/"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "legal-notice.html",
+      "lang": "en",
+      "title": "Legal notice | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/legal-notice",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/legal-notice",
+        "fr": "https://alix.anneraud.fr/fr/legal-notice",
+        "x-default": "https://alix.anneraud.fr/legal-notice"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects.html",
+      "lang": "en",
+      "title": "Projects | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects",
+        "fr": "https://alix.anneraud.fr/fr/projects",
+        "x-default": "https://alix.anneraud.fr/projects"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/battery-percent.html",
+      "lang": "en",
+      "title": "battery-percent | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/battery-percent",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/battery-percent",
+        "fr": "https://alix.anneraud.fr/fr/projects/battery-percent",
+        "x-default": "https://alix.anneraud.fr/projects/battery-percent"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/codinsa-2025.html",
+      "lang": "en",
+      "title": "Cod'INSA | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/codinsa-2025",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/codinsa-2025",
+        "fr": "https://alix.anneraud.fr/fr/projects/codinsa-2025",
+        "x-default": "https://alix.anneraud.fr/projects/codinsa-2025"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/connected-speaker.html",
+      "lang": "en",
+      "title": "Connected speaker | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/connected-speaker",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/connected-speaker",
+        "fr": "https://alix.anneraud.fr/fr/projects/connected-speaker",
+        "x-default": "https://alix.anneraud.fr/projects/connected-speaker"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/deez-nalyzer.html",
+      "lang": "en",
+      "title": "Deez'Nalyzer | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/deez-nalyzer",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/deez-nalyzer",
+        "fr": "https://alix.anneraud.fr/fr/projects/deez-nalyzer",
+        "x-default": "https://alix.anneraud.fr/projects/deez-nalyzer"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/dera.html",
+      "lang": "en",
+      "title": "dera.page | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/dera",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/dera",
+        "fr": "https://alix.anneraud.fr/fr/projects/dera",
+        "x-default": "https://alix.anneraud.fr/projects/dera"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/embedded-i18n.html",
+      "lang": "en",
+      "title": "embedded-i18n | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/embedded-i18n",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/embedded-i18n",
+        "fr": "https://alix.anneraud.fr/fr/projects/embedded-i18n",
+        "x-default": "https://alix.anneraud.fr/projects/embedded-i18n"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/eogm.html",
+      "lang": "en",
+      "title": "Evidential Occupancy Grid Map (EOGM) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/eogm",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/eogm",
+        "fr": "https://alix.anneraud.fr/fr/projects/eogm",
+        "x-default": "https://alix.anneraud.fr/projects/eogm"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/getargs-derive.html",
+      "lang": "en",
+      "title": "getargs-derive | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/getargs-derive",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/getargs-derive",
+        "fr": "https://alix.anneraud.fr/fr/projects/getargs-derive",
+        "x-default": "https://alix.anneraud.fr/projects/getargs-derive"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/huffman.html",
+      "lang": "en",
+      "title": "Huffman (de)compressor | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/huffman",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/huffman",
+        "fr": "https://alix.anneraud.fr/fr/projects/huffman",
+        "x-default": "https://alix.anneraud.fr/projects/huffman"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/infrastructure.html",
+      "lang": "en",
+      "title": "Infrastructure - self-hosting and automation | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/infrastructure",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/infrastructure",
+        "fr": "https://alix.anneraud.fr/fr/projects/infrastructure",
+        "x-default": "https://alix.anneraud.fr/projects/infrastructure"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/insatram.html",
+      "lang": "en",
+      "title": "INSAtram | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/insatram",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/insatram",
+        "fr": "https://alix.anneraud.fr/fr/projects/insatram",
+        "x-default": "https://alix.anneraud.fr/projects/insatram"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/iti-adventure.html",
+      "lang": "en",
+      "title": "ITI Adventure | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/iti-adventure",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/iti-adventure",
+        "fr": "https://alix.anneraud.fr/fr/projects/iti-adventure",
+        "x-default": "https://alix.anneraud.fr/projects/iti-adventure"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/jeanne-hack-2025.html",
+      "lang": "en",
+      "title": "Jeanne d'Hack CTF (University of Rouen) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/jeanne-hack-2025",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/jeanne-hack-2025",
+        "fr": "https://alix.anneraud.fr/fr/projects/jeanne-hack-2025",
+        "x-default": "https://alix.anneraud.fr/projects/jeanne-hack-2025"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/jeanne-hack-2026.html",
+      "lang": "en",
+      "title": "Jeanne d'Hack CTF (University of Rouen) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/jeanne-hack-2026",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/jeanne-hack-2026",
+        "fr": "https://alix.anneraud.fr/fr/projects/jeanne-hack-2026",
+        "x-default": "https://alix.anneraud.fr/projects/jeanne-hack-2026"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/linear-equations.html",
+      "lang": "en",
+      "title": "System of linear equations calculator | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/linear-equations",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/linear-equations",
+        "fr": "https://alix.anneraud.fr/fr/projects/linear-equations",
+        "x-default": "https://alix.anneraud.fr/projects/linear-equations"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/lvgl-theme-shadcn.html",
+      "lang": "en",
+      "title": "lvgl_theme_shadcn | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/lvgl-theme-shadcn",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/lvgl-theme-shadcn",
+        "fr": "https://alix.anneraud.fr/fr/projects/lvgl-theme-shadcn",
+        "x-default": "https://alix.anneraud.fr/projects/lvgl-theme-shadcn"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/medical-image-deep-learning.html",
+      "lang": "en",
+      "title": "Medical image segmentation | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/medical-image-deep-learning",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/medical-image-deep-learning",
+        "fr": "https://alix.anneraud.fr/fr/projects/medical-image-deep-learning",
+        "x-default": "https://alix.anneraud.fr/projects/medical-image-deep-learning"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/mini-train-store.html",
+      "lang": "en",
+      "title": "Mini Train Store - e-commerce and automation | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/mini-train-store",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/mini-train-store",
+        "fr": "https://alix.anneraud.fr/fr/projects/mini-train-store",
+        "x-default": "https://alix.anneraud.fr/projects/mini-train-store"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/model-railway.html",
+      "lang": "en",
+      "title": "Model railway network | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/model-railway",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/model-railway",
+        "fr": "https://alix.anneraud.fr/fr/projects/model-railway",
+        "x-default": "https://alix.anneraud.fr/projects/model-railway"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/music-danceability.html",
+      "lang": "en",
+      "title": "Music danceability | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/music-danceability",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/music-danceability",
+        "fr": "https://alix.anneraud.fr/fr/projects/music-danceability",
+        "x-default": "https://alix.anneraud.fr/projects/music-danceability"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/nanoaudio.html",
+      "lang": "en",
+      "title": "nanoaudio | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/nanoaudio",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/nanoaudio",
+        "fr": "https://alix.anneraud.fr/fr/projects/nanoaudio",
+        "x-default": "https://alix.anneraud.fr/projects/nanoaudio"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/nanoexpr.html",
+      "lang": "en",
+      "title": "nanoexpr | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/nanoexpr",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/nanoexpr",
+        "fr": "https://alix.anneraud.fr/fr/projects/nanoexpr",
+        "x-default": "https://alix.anneraud.fr/projects/nanoexpr"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/odor-localization.html",
+      "lang": "en",
+      "title": "Gas source localization | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/odor-localization",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/odor-localization",
+        "fr": "https://alix.anneraud.fr/fr/projects/odor-localization",
+        "x-default": "https://alix.anneraud.fr/projects/odor-localization"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/robot-mouche.html",
+      "lang": "en",
+      "title": "Robot mouche | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/robot-mouche",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/robot-mouche",
+        "fr": "https://alix.anneraud.fr/fr/projects/robot-mouche",
+        "x-default": "https://alix.anneraud.fr/projects/robot-mouche"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/tracs-2024.html",
+      "lang": "en",
+      "title": "TRACS (DGSE) | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/tracs-2024",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/tracs-2024",
+        "fr": "https://alix.anneraud.fr/fr/projects/tracs-2024",
+        "x-default": "https://alix.anneraud.fr/projects/tracs-2024"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "projects/xila.html",
+      "lang": "en",
+      "title": "Xila - Rust embedded operating system | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/projects/xila",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/projects/xila",
+        "fr": "https://alix.anneraud.fr/fr/projects/xila",
+        "x-default": "https://alix.anneraud.fr/projects/xila"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    },
+    {
+      "file": "resume.html",
+      "lang": "en",
+      "title": "Resume | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/resume",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/resume",
+        "fr": "https://alix.anneraud.fr/fr/resume",
+        "x-default": "https://alix.anneraud.fr/resume"
+      },
+      "robots": null,
+      "h1Count": 0,
+      "ogType": "website"
+    },
+    {
+      "file": "skills.html",
+      "lang": "en",
+      "title": "Skills | Alix ANNERAUD",
+      "canonical": "https://alix.anneraud.fr/skills",
+      "hreflang": {
+        "en": "https://alix.anneraud.fr/skills",
+        "fr": "https://alix.anneraud.fr/fr/skills",
+        "x-default": "https://alix.anneraud.fr/skills"
+      },
+      "robots": null,
+      "h1Count": 1,
+      "ogType": "website"
+    }
+  ],
+  "sitemapLocs": [
+    "https://alix.anneraud.fr/",
+    "https://alix.anneraud.fr/experiences",
+    "https://alix.anneraud.fr/fr",
+    "https://alix.anneraud.fr/fr/experiences",
+    "https://alix.anneraud.fr/fr/legal-notice",
+    "https://alix.anneraud.fr/fr/projects",
+    "https://alix.anneraud.fr/fr/projects/battery-percent",
+    "https://alix.anneraud.fr/fr/projects/codinsa-2025",
+    "https://alix.anneraud.fr/fr/projects/connected-speaker",
+    "https://alix.anneraud.fr/fr/projects/deez-nalyzer",
+    "https://alix.anneraud.fr/fr/projects/dera",
+    "https://alix.anneraud.fr/fr/projects/embedded-i18n",
+    "https://alix.anneraud.fr/fr/projects/eogm",
+    "https://alix.anneraud.fr/fr/projects/getargs-derive",
+    "https://alix.anneraud.fr/fr/projects/huffman",
+    "https://alix.anneraud.fr/fr/projects/infrastructure",
+    "https://alix.anneraud.fr/fr/projects/insatram",
+    "https://alix.anneraud.fr/fr/projects/iti-adventure",
+    "https://alix.anneraud.fr/fr/projects/jeanne-hack-2025",
+    "https://alix.anneraud.fr/fr/projects/jeanne-hack-2026",
+    "https://alix.anneraud.fr/fr/projects/linear-equations",
+    "https://alix.anneraud.fr/fr/projects/lvgl-theme-shadcn",
+    "https://alix.anneraud.fr/fr/projects/medical-image-deep-learning",
+    "https://alix.anneraud.fr/fr/projects/mini-train-store",
+    "https://alix.anneraud.fr/fr/projects/model-railway",
+    "https://alix.anneraud.fr/fr/projects/music-danceability",
+    "https://alix.anneraud.fr/fr/projects/nanoaudio",
+    "https://alix.anneraud.fr/fr/projects/nanoexpr",
+    "https://alix.anneraud.fr/fr/projects/odor-localization",
+    "https://alix.anneraud.fr/fr/projects/robot-mouche",
+    "https://alix.anneraud.fr/fr/projects/tracs-2024",
+    "https://alix.anneraud.fr/fr/projects/xila",
+    "https://alix.anneraud.fr/fr/resume",
+    "https://alix.anneraud.fr/fr/skills",
+    "https://alix.anneraud.fr/legal-notice",
+    "https://alix.anneraud.fr/projects",
+    "https://alix.anneraud.fr/projects/battery-percent",
+    "https://alix.anneraud.fr/projects/codinsa-2025",
+    "https://alix.anneraud.fr/projects/connected-speaker",
+    "https://alix.anneraud.fr/projects/deez-nalyzer",
+    "https://alix.anneraud.fr/projects/dera",
+    "https://alix.anneraud.fr/projects/embedded-i18n",
+    "https://alix.anneraud.fr/projects/eogm",
+    "https://alix.anneraud.fr/projects/getargs-derive",
+    "https://alix.anneraud.fr/projects/huffman",
+    "https://alix.anneraud.fr/projects/infrastructure",
+    "https://alix.anneraud.fr/projects/insatram",
+    "https://alix.anneraud.fr/projects/iti-adventure",
+    "https://alix.anneraud.fr/projects/jeanne-hack-2025",
+    "https://alix.anneraud.fr/projects/jeanne-hack-2026",
+    "https://alix.anneraud.fr/projects/linear-equations",
+    "https://alix.anneraud.fr/projects/lvgl-theme-shadcn",
+    "https://alix.anneraud.fr/projects/medical-image-deep-learning",
+    "https://alix.anneraud.fr/projects/mini-train-store",
+    "https://alix.anneraud.fr/projects/model-railway",
+    "https://alix.anneraud.fr/projects/music-danceability",
+    "https://alix.anneraud.fr/projects/nanoaudio",
+    "https://alix.anneraud.fr/projects/nanoexpr",
+    "https://alix.anneraud.fr/projects/odor-localization",
+    "https://alix.anneraud.fr/projects/robot-mouche",
+    "https://alix.anneraud.fr/projects/tracs-2024",
+    "https://alix.anneraud.fr/projects/xila",
+    "https://alix.anneraud.fr/resume",
+    "https://alix.anneraud.fr/sitemap-0.xml",
+    "https://alix.anneraud.fr/skills"
+  ]
+}

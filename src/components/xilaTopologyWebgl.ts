@@ -8,15 +8,21 @@ type Point = readonly [number, number];
 
 const NODES: Point[] = [
   [-0.76, -0.47], // hardware / target drivers
-  [-0.33, 0.12],  // kernel services
-  [0.22, 0.12],   // bindings / Wasm runtime
-  [0.78, 0.40],   // applications
-  [0.20, -0.57],  // VFS / storage branch
-  [-0.28, 0.70],  // graphics / LVGL branch
+  [-0.33, 0.12], // kernel services
+  [0.22, 0.12], // bindings / Wasm runtime
+  [0.78, 0.4], // applications
+  [0.2, -0.57], // VFS / storage branch
+  [-0.28, 0.7], // graphics / LVGL branch
 ];
 
 const EDGES: ReadonlyArray<readonly [number, number]> = [
-  [0, 1], [1, 2], [2, 3], [1, 4], [1, 5], [4, 2], [5, 3],
+  [0, 1],
+  [1, 2],
+  [2, 3],
+  [1, 4],
+  [1, 5],
+  [4, 2],
+  [5, 3],
 ];
 
 const VERTEX_SOURCE = [
@@ -46,7 +52,11 @@ const FRAGMENT_SOURCE = [
   "}",
 ].join("\n");
 
-function compileShader(gl: WebGL2RenderingContext, kind: number, source: string): WebGLShader {
+function compileShader(
+  gl: WebGL2RenderingContext,
+  kind: number,
+  source: string,
+): WebGLShader {
   const shader = gl.createShader(kind);
   if (!shader) throw new Error("WebGL shader allocation failed.");
   gl.shaderSource(shader, source);
@@ -70,14 +80,15 @@ export function createTopologyRenderer(
   canvas: HTMLCanvasElement,
   onContextLost: () => void,
 ): TopologyRenderer | null {
-  const gl = canvas.getContext("webgl2", {
+  const context = canvas.getContext("webgl2", {
     alpha: true,
     antialias: true,
     depth: false,
     stencil: false,
     powerPreference: "low-power",
   });
-  if (!gl) return null;
+  if (!context) return null;
+  const gl: WebGL2RenderingContext = context;
 
   const vertex = compileShader(gl, gl.VERTEX_SHADER, VERTEX_SOURCE);
   const fragment = compileShader(gl, gl.FRAGMENT_SHADER, FRAGMENT_SOURCE);
@@ -108,9 +119,14 @@ export function createTopologyRenderer(
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
   gl.disable(gl.DEPTH_TEST);
 
-  const segments = new Float32Array(EDGES.flatMap(([a, b]) => [
-    NODES[a][0], NODES[a][1], NODES[b][0], NODES[b][1],
-  ]));
+  const segments = new Float32Array(
+    EDGES.flatMap(([a, b]) => [
+      NODES[a][0],
+      NODES[a][1],
+      NODES[b][0],
+      NODES[b][1],
+    ]),
+  );
   const centers = new Float32Array(NODES.flatMap((node) => [...node]));
   const moving = new Float32Array(EDGES.length * 2);
 
@@ -171,8 +187,8 @@ export function createTopologyRenderer(
     });
 
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.75);
-    draw(segments, gl.LINES, 0.18, 0.66, 0.60, 0.54, 1);
-    draw(centers, gl.POINTS, 0.18, 0.72, 0.65, 0.20, 36 * pixelRatio);
+    draw(segments, gl.LINES, 0.18, 0.66, 0.6, 0.54, 1);
+    draw(centers, gl.POINTS, 0.18, 0.72, 0.65, 0.2, 36 * pixelRatio);
     draw(centers, gl.POINTS, 0.38, 0.94, 0.81, 0.95, 11 * pixelRatio);
     draw(moving, gl.POINTS, 0.96, 0.81, 0.51, 0.98, 7 * pixelRatio);
   }

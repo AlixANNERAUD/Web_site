@@ -2,6 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PdfEmbed from "../components/PdfEmbed.vue";
 ---
-<BaseLayout lang="en" path="/resume" title="Resume" description="Alix ANNERAUD's resume and professional experience in Rust, software systems and security." noFooter>
+
+<BaseLayout
+  lang="en"
+  path="/resume"
+  title="Resume"
+  description="Alix ANNERAUD's resume and professional experience in Rust, software systems and security."
+  noFooter
+>
   <PdfEmbed src="https://resume.alix.anneraud.fr/Resume.english.pdf" />
 </BaseLayout>

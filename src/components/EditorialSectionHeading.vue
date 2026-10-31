@@ -8,9 +8,16 @@ defineProps<{
 </script>
 
 <template>
-  <header class="editorial-section-heading" :class="{ 'editorial-section-heading--icon': $slots.icon }">
+  <header
+    class="editorial-section-heading"
+    :class="{ 'editorial-section-heading--icon': $slots.icon }"
+  >
     <div class="editorial-section-heading__main">
-      <span v-if="$slots.icon" class="editorial-section-heading__icon" aria-hidden="true">
+      <span
+        v-if="$slots.icon"
+        class="editorial-section-heading__icon"
+        aria-hidden="true"
+      >
         <slot name="icon" />
       </span>
       <div>

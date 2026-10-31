@@ -2,6 +2,12 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ExperienceShowcase from "../../components/ExperienceShowcase.vue";
 ---
-<BaseLayout lang="fr" path="/fr/experiences" title="Expériences" description="Parcours professionnel, recherche et formation d'Alix ANNERAUD dans les systèmes Rust, la sécurité, les réseaux et le développement logiciel.">
+
+<BaseLayout
+  lang="fr"
+  path="/fr/experiences"
+  title="Expériences"
+  description="Parcours professionnel, recherche et formation d'Alix ANNERAUD dans les systèmes Rust, la sécurité, les réseaux et le développement logiciel."
+>
   <ExperienceShowcase lang="fr" client:load />
 </BaseLayout>
