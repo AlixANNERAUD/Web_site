@@ -15,7 +15,9 @@ import { dirname, join, relative, resolve, sep } from "node:path";
  *
  * One record per HTML file in dist/, plus every <loc> from dist/sitemap-*.xml.
  * --compare exits 1 when files were added (unless allowed) or removed, when a
- * compared field differs, or when the sitemap locations differ.
+ * compared field differs, when the sitemap locations differ, or when a page has
+ * more than one canonical link or more than one hreflang link per language, or
+ * the sitemap lists a URL twice.
  */
 
 const DIST = resolve("dist");
@@ -34,7 +36,9 @@ const FIELDS = [
 function parseArgs(argv) {
   const options = { mode: null, allowAdded: [], fields: FIELDS };
   for (const arg of argv) {
-    const [name, value = ""] = arg.split("=", 2);
+    const i = arg.indexOf("=");
+    const name = i < 0 ? arg : arg.slice(0, i);
+    const value = i < 0 ? "" : arg.slice(i + 1);
     const list = value
       .split(",")
       .map((item) => item.trim())
@@ -46,6 +50,8 @@ function parseArgs(argv) {
     else throw new Error(`Unknown argument: ${arg}`);
   }
   if (!options.mode) throw new Error("Pass --write or --compare");
+  if (!options.fields.some((field) => field !== "file"))
+    throw new Error("--fields must name at least one field besides file");
   const unknown = options.fields.filter((field) => !FIELDS.includes(field));
   if (unknown.length)
     throw new Error(`Unknown field(s): ${unknown.join(", ")}`);
@@ -116,6 +122,24 @@ function snapshotPage(file, html) {
   };
 }
 
+/** Duplicate canonical/hreflang links, which the snapshot record would hide. */
+function duplicateLinks(file, html) {
+  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
+  const counts = new Map();
+  for (const link of tagsNamed(head, "link")) {
+    const key =
+      link.rel === "canonical"
+        ? "canonical"
+        : link.rel === "alternate" && link.hreflang
+          ? `hreflang ${link.hreflang}`
+          : null;
+    if (key) counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return [...counts]
+    .filter(([, count]) => count > 1)
+    .map(([key, count]) => `${file}: ${count} ${key} links`);
+}
+
 function buildSnapshot() {
   if (!existsSync(DIST))
     throw new Error("dist/ not found: run `npm run build` first");
@@ -123,9 +147,14 @@ function buildSnapshot() {
     .map((path) => relative(DIST, path).split(sep).join("/"))
     .sort();
 
+  const issues = [];
   const pages = files
     .filter((file) => file.endsWith(".html"))
-    .map((file) => snapshotPage(file, readFileSync(join(DIST, file), "utf8")));
+    .map((file) => {
+      const html = readFileSync(join(DIST, file), "utf8");
+      issues.push(...duplicateLinks(file, html));
+      return snapshotPage(file, html);
+    });
 
   const sitemapLocs = files
     .filter((file) => /^sitemap-.*\.xml$/.test(file))
@@ -137,7 +166,12 @@ function buildSnapshot() {
     .map((m) => decodeEntities(m[1].trim()))
     .sort();
 
-  return { pages, sitemapLocs };
+  sitemapLocs.forEach((loc, index) => {
+    if (loc === sitemapLocs[index - 1] && loc !== sitemapLocs[index - 2])
+      issues.push(`sitemap: duplicate ${loc}`);
+  });
+
+  return { snapshot: { pages, sitemapLocs }, issues };
 }
 
 function compare(reference, current, { allowAdded, fields }) {
@@ -185,7 +219,13 @@ function compare(reference, current, { allowAdded, fields }) {
 }
 
 const options = parseArgs(process.argv.slice(2));
-const current = buildSnapshot();
+const { snapshot: current, issues } = buildSnapshot();
+
+if (issues.length) {
+  console.error(`Duplicate SEO links in dist/ (${issues.length}):`);
+  for (const issue of issues) console.error("  " + issue);
+  process.exit(1);
+}
 
 if (options.mode === "write") {
   mkdirSync(dirname(REFERENCE), { recursive: true });

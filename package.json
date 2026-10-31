@@ -10,7 +10,7 @@
     "format:check": "prettier --check .",
     "check:types": "astro check",
     "snapshot": "node scripts/snapshot-dist.mjs",
-    "check": "npm run format:check && npm run check:types && npm run validate:portfolio && npm run build && npm run verify:static",
+    "check": "npm run format:check && npm run check:types && npm run validate:portfolio && npm run build && npm run verify:static && node scripts/snapshot-dist.mjs --compare --fields=file,canonical,hreflang,robots,lang",
     "validate:portfolio": "node scripts/validate-portfolio.mjs",
     "verify:static": "node scripts/check-static-seo.mjs"
   },
