@@ -1,7 +1,9 @@
 ---
 import { experiences } from "../data/experiences";
 
-interface Props { lang: "en" | "fr"; }
+interface Props {
+  lang: "en" | "fr";
+}
 const { lang } = Astro.props;
 const fr = lang === "fr";
 
@@ -16,7 +18,8 @@ const copy = fr
   ? {
       eyebrow: "Parcours / 01",
       title: "L'expérience du terrain.",
-      intro: "Sécurité, développement logiciel, exploitation réseau et recherche : des environnements différents, avec un même souci de comprendre et de construire.",
+      intro:
+        "Sécurité, développement logiciel, exploitation réseau et recherche : des environnements différents, avec un même souci de comprendre et de construire.",
       more: "Voir tout mon parcours",
       detail: "Voir cette expérience",
       technologies: "Domaines pratiqués",
@@ -24,13 +27,19 @@ const copy = fr
   : {
       eyebrow: "Experience / 01",
       title: "Built on real experience.",
-      intro: "Security, software engineering, networking and research: different environments with the same focus on understanding systems and building useful tools.",
+      intro:
+        "Security, software engineering, networking and research: different environments with the same focus on understanding systems and building useful tools.",
       more: "Explore my experience",
       detail: "View this experience",
       technologies: "Areas of work",
     };
 ---
-<section class="home-experience" id="career-highlights" aria-labelledby="home-experience-heading">
+
+<section
+  class="home-experience"
+  id="career-highlights"
+  aria-labelledby="home-experience-heading"
+>
   <div class="home-experience-heading">
     <div>
       <p class="home-experience-eyebrow">{copy.eyebrow}</p>
@@ -44,18 +53,27 @@ const copy = fr
       <li class="home-experience-card">
         <article aria-labelledby={"home-experience-" + entry.id}>
           <div class="home-experience-card-top">
-            <span class="home-experience-monogram" aria-hidden="true">{entry.monogram}</span>
+            <span class="home-experience-monogram" aria-hidden="true">
+              {entry.monogram}
+            </span>
             <span class="home-experience-period">{entry.period[lang]}</span>
           </div>
           <p class="home-experience-organization">{entry.company}</p>
           <h3 id={"home-experience-" + entry.id}>
-            <a href={experiencePath + "#" + entry.id + "-title"} aria-label={entry.role[lang] + " - " + entry.company + ". " + copy.detail}>
+            <a
+              href={experiencePath + "#" + entry.id + "-title"}
+              aria-label={
+                entry.role[lang] + " - " + entry.company + ". " + copy.detail
+              }
+            >
               {entry.role[lang]} <span aria-hidden="true">↗</span>
             </a>
           </h3>
           <p class="home-experience-summary">{entry.summary[lang]}</p>
           <ul class="home-experience-tags" aria-label={copy.technologies}>
-            {entry.technologies.slice(0, 2).map((tag) => <li>{tag}</li>)}
+            {entry.technologies.slice(0, 2).map((tag) => (
+              <li>{tag}</li>
+            ))}
           </ul>
         </article>
       </li>
@@ -68,153 +86,176 @@ const copy = fr
 </section>
 
 <style>
-.home-experience {
-  width: min(100%, 1160px);
-  margin: 3.25rem auto 4.25rem;
-  padding: 0 1.5rem;
-  color: var(--vp-c-text-1);
-  scroll-margin-top: 6rem;
-}
-.home-experience-heading {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1.25rem 2rem;
-  padding-bottom: 1.65rem;
-  margin-bottom: 1.15rem;
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-.home-experience-eyebrow {
-  margin: 0 0 0.65rem;
-  font-size: 0.74rem;
-  font-weight: 650;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--vp-c-text-2);
-}
-.home-experience-heading h2 {
-  margin: 0;
-  font: 400 clamp(2rem, 3.8vw, 3.4rem)/1.14 Georgia, "Times New Roman", serif;
-  letter-spacing: -0.04em;
-}
-.home-experience-intro {
-  flex: 0 1 28rem;
-  margin: 0;
-  color: var(--vp-c-text-2);
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-.home-experience-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.home-experience-card {
-  min-width: 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0.85rem;
-  background: var(--vp-c-bg);
-  transition: border-color 170ms ease, transform 170ms ease;
-}
-.home-experience-card:hover {
-  border-color: var(--vp-c-brand-1);
-  transform: translateY(-2px);
-}
-.home-experience-card article {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(1.15rem, 2.3vw, 1.55rem);
-}
-.home-experience-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 1.1rem;
-}
-.home-experience-monogram {
-  display: grid;
-  place-items: center;
-  width: 2.6rem;
-  height: 2.6rem;
-  padding: 0 0.3rem;
-  border-radius: 0.55rem;
-  border: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-bg-soft);
-  font: 650 0.85rem/1 ui-monospace, monospace;
-}
-.home-experience-period {
-  color: var(--vp-c-text-2);
-  font-size: 0.77rem;
-  text-align: right;
-}
-.home-experience-organization {
-  margin: 0 0 0.3rem;
-  color: var(--vp-c-text-2);
-  font-size: 0.81rem;
-  font-weight: 600;
-}
-.home-experience-card h3 {
-  margin: 0 0 0.65rem;
-  font-size: clamp(1.12rem, 1.8vw, 1.4rem);
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-}
-.home-experience-card h3 a {
-  color: var(--vp-c-text-1);
-  text-decoration: none;
-}
-.home-experience-card h3 a:hover { color: var(--vp-c-brand-1); }
-.home-experience-card h3 span { color: var(--vp-c-brand-1); font-size: 0.83em; }
-.home-experience-summary {
-  margin: 0 0 1rem;
-  color: var(--vp-c-text-2);
-  font-size: 0.87rem;
-  line-height: 1.6;
-}
-.home-experience-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin: auto 0 0;
-  padding: 0;
-  list-style: none;
-}
-.home-experience-tags li {
-  padding: 0.28rem 0.55rem;
-  border-radius: 0.35rem;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-2);
-  font-size: 0.71rem;
-}
-.home-experience-more {
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: center;
-  margin-top: 1.3rem;
-  color: var(--vp-c-brand-1);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 650;
-}
-.home-experience-more:hover { text-decoration: underline; }
-.home-experience-card a:focus-visible,
-.home-experience-more:focus-visible {
-  outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: 4px;
-}
-@media (max-width: 680px) {
-  .home-experience { margin: 2.5rem auto 3rem; padding: 0 1rem; }
-  .home-experience-grid { grid-template-columns: 1fr; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-experience-card { transition: none; }
-  .home-experience-card:hover { transform: none; }
-}
+  .home-experience {
+    width: min(100%, 1160px);
+    margin: 3.25rem auto 4.25rem;
+    padding: 0 1.5rem;
+    color: var(--vp-c-text-1);
+    scroll-margin-top: 6rem;
+  }
+  .home-experience-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.25rem 2rem;
+    padding-bottom: 1.65rem;
+    margin-bottom: 1.15rem;
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+  .home-experience-eyebrow {
+    margin: 0 0 0.65rem;
+    font-size: 0.74rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--vp-c-text-2);
+  }
+  .home-experience-heading h2 {
+    margin: 0;
+    font:
+      400 clamp(2rem, 3.8vw, 3.4rem)/1.14 Georgia,
+      "Times New Roman",
+      serif;
+    letter-spacing: -0.04em;
+  }
+  .home-experience-intro {
+    flex: 0 1 28rem;
+    margin: 0;
+    color: var(--vp-c-text-2);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .home-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .home-experience-card {
+    min-width: 0;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 0.85rem;
+    background: var(--vp-c-bg);
+    transition:
+      border-color 170ms ease,
+      transform 170ms ease;
+  }
+  .home-experience-card:hover {
+    border-color: var(--vp-c-brand-1);
+    transform: translateY(-2px);
+  }
+  .home-experience-card article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.15rem, 2.3vw, 1.55rem);
+  }
+  .home-experience-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+  }
+  .home-experience-monogram {
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0 0.3rem;
+    border-radius: 0.55rem;
+    border: 1px solid var(--vp-c-divider);
+    color: var(--vp-c-brand-1);
+    background: var(--vp-c-bg-soft);
+    font:
+      650 0.85rem/1 ui-monospace,
+      monospace;
+  }
+  .home-experience-period {
+    color: var(--vp-c-text-2);
+    font-size: 0.77rem;
+    text-align: right;
+  }
+  .home-experience-organization {
+    margin: 0 0 0.3rem;
+    color: var(--vp-c-text-2);
+    font-size: 0.81rem;
+    font-weight: 600;
+  }
+  .home-experience-card h3 {
+    margin: 0 0 0.65rem;
+    font-size: clamp(1.12rem, 1.8vw, 1.4rem);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+  .home-experience-card h3 a {
+    color: var(--vp-c-text-1);
+    text-decoration: none;
+  }
+  .home-experience-card h3 a:hover {
+    color: var(--vp-c-brand-1);
+  }
+  .home-experience-card h3 span {
+    color: var(--vp-c-brand-1);
+    font-size: 0.83em;
+  }
+  .home-experience-summary {
+    margin: 0 0 1rem;
+    color: var(--vp-c-text-2);
+    font-size: 0.87rem;
+    line-height: 1.6;
+  }
+  .home-experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .home-experience-tags li {
+    padding: 0.28rem 0.55rem;
+    border-radius: 0.35rem;
+    background: var(--vp-c-bg-soft);
+    color: var(--vp-c-text-2);
+    font-size: 0.71rem;
+  }
+  .home-experience-more {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-top: 1.3rem;
+    color: var(--vp-c-brand-1);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 650;
+  }
+  .home-experience-more:hover {
+    text-decoration: underline;
+  }
+  .home-experience-card a:focus-visible,
+  .home-experience-more:focus-visible {
+    outline: 2px solid var(--vp-c-brand-1);
+    outline-offset: 4px;
+  }
+  @media (max-width: 680px) {
+    .home-experience {
+      margin: 2.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+    .home-experience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-experience-card {
+      transition: none;
+    }
+    .home-experience-card:hover {
+      transform: none;
+    }
+  }
 </style>

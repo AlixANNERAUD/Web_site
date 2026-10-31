@@ -3,7 +3,9 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects", (entry) => entry.id.startsWith("en/"));
+  const projects = await getCollection("projects", (entry) =>
+    entry.id.startsWith("en/"),
+  );
   return projects.map((entry) => ({
     params: { slug: entry.id.replace(/^en\//, "") },
     props: { entry },
@@ -13,7 +15,13 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const slug = entry.id.replace(/^en\//, "");
 ---
-<BaseLayout lang="en" path={"/projects/" + slug} title={entry.data.title} description={entry.data.description}>
+
+<BaseLayout
+  lang="en"
+  path={"/projects/" + slug}
+  title={entry.data.title}
+  description={entry.data.description}
+>
   <article class="prose project-article">
     <Content />
   </article>

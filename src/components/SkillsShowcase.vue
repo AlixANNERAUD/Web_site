@@ -100,7 +100,10 @@ const copy = computed(() =>
 
 function evidenceTitle(evidence: SkillEvidence): string {
   if (evidence.projectId) {
-    return projectIndex.get(evidence.projectId)?.title[props.lang] ?? evidence.projectId;
+    return (
+      projectIndex.get(evidence.projectId)?.title[props.lang] ??
+      evidence.projectId
+    );
   }
   return evidence.label?.[props.lang] ?? "";
 }
@@ -121,7 +124,9 @@ function isExternal(evidence: SkillEvidence): boolean {
   return !!evidence.href && /^https?:\/\//.test(evidence.href);
 }
 
-const projectsHref = computed(() => (props.lang === "fr" ? "/fr/projects" : "/projects"));
+const projectsHref = computed(() =>
+  props.lang === "fr" ? "/fr/projects" : "/projects",
+);
 const navigation = computed(() => [
   { href: "#domains", label: copy.value.domainsNav },
   { href: "#languages", label: copy.value.languagesNav },
@@ -139,7 +144,11 @@ const navigation = computed(() => [
       :nav-items="navigation"
     />
 
-    <section id="domains" class="skills-section" aria-labelledby="skills-domains-heading">
+    <section
+      id="domains"
+      class="skills-section"
+      aria-labelledby="skills-domains-heading"
+    >
       <EditorialSectionHeading
         heading-id="skills-domains-heading"
         :eyebrow="copy.sectionNumber"
@@ -165,7 +174,11 @@ const navigation = computed(() => [
         >
           <div class="skills-card-top">
             <span class="skills-domain-icon" aria-hidden="true">
-              <component :is="icons[domain.icon]" :size="23" :stroke-width="1.75" />
+              <component
+                :is="icons[domain.icon]"
+                :size="23"
+                :stroke-width="1.75"
+              />
             </span>
             <span class="skills-card-index" aria-hidden="true">
               {{ String(index + 1).padStart(2, "0") }}
@@ -173,20 +186,33 @@ const navigation = computed(() => [
           </div>
 
           <h3 :id="'skill-title-' + domain.id">{{ domain.title[lang] }}</h3>
-          <p class="skills-domain-description">{{ domain.description[lang] }}</p>
+          <p class="skills-domain-description">
+            {{ domain.description[lang] }}
+          </p>
 
-          <TechnologyTags :tags="domain.technologies" :label="copy.technologies" density="skill" />
+          <TechnologyTags
+            :tags="domain.technologies"
+            :label="copy.technologies"
+            density="skill"
+          />
 
           <div class="skills-evidence">
             <h4>{{ copy.evidence }}</h4>
             <ul>
-              <li v-for="(evidence, evidenceIndex) in domain.examples" :key="evidence.projectId || evidence.href || evidenceIndex">
+              <li
+                v-for="(evidence, evidenceIndex) in domain.examples"
+                :key="evidence.projectId || evidence.href || evidenceIndex"
+              >
                 <a
                   :href="evidenceHref(evidence)"
                   :target="isExternal(evidence) ? '_blank' : undefined"
-                  :rel="isExternal(evidence) ? 'noopener noreferrer' : undefined"
+                  :rel="
+                    isExternal(evidence) ? 'noopener noreferrer' : undefined
+                  "
                 >
-                  <span class="skills-evidence-name">{{ evidenceTitle(evidence) }}</span>
+                  <span class="skills-evidence-name">{{
+                    evidenceTitle(evidence)
+                  }}</span>
                   <ArrowUpRight :size="16" aria-hidden="true" />
                 </a>
                 <p>{{ evidence.detail[lang] }}</p>
@@ -197,7 +223,11 @@ const navigation = computed(() => [
       </div>
     </section>
 
-    <section id="languages" class="skills-languages" aria-labelledby="skills-languages-heading">
+    <section
+      id="languages"
+      class="skills-languages"
+      aria-labelledby="skills-languages-heading"
+    >
       <EditorialSectionHeading
         heading-id="skills-languages-heading"
         :eyebrow="copy.languageNumber"
@@ -215,7 +245,9 @@ const navigation = computed(() => [
         <li v-for="language in spokenLanguages" :key="language.id">
           <strong>{{ language.name[lang] }}</strong>
           <span>{{ language.proficiency[lang] }}</span>
-          <span v-if="language.detail" class="skills-language-detail">{{ language.detail[lang] }}</span>
+          <span v-if="language.detail" class="skills-language-detail">{{
+            language.detail[lang]
+          }}</span>
         </li>
       </ul>
     </section>
@@ -230,10 +262,13 @@ const navigation = computed(() => [
 </template>
 
 <style scoped>
-
 .skills-section,
-.skills-languages { scroll-margin-top: 6rem; }
-.skills-section { margin-bottom: 4.5rem; }
+.skills-languages {
+  scroll-margin-top: 6rem;
+}
+.skills-section {
+  margin-bottom: 4.5rem;
+}
 
 .skills-count {
   display: flex;
@@ -286,7 +321,9 @@ const navigation = computed(() => [
 
 .skills-card-index {
   color: var(--vp-c-text-3);
-  font: 500 0.8rem/1.4 ui-monospace, monospace;
+  font:
+    500 0.8rem/1.4 ui-monospace,
+    monospace;
 }
 
 .skills-domain-card h3 {
@@ -328,7 +365,9 @@ const navigation = computed(() => [
   list-style: none;
 }
 
-.skills-evidence li { min-width: 0; }
+.skills-evidence li {
+  min-width: 0;
+}
 
 .skills-evidence a {
   display: inline-flex;
@@ -340,8 +379,13 @@ const navigation = computed(() => [
   text-decoration: none;
 }
 
-.skills-evidence a:hover { color: var(--vp-c-brand-1); }
-.skills-evidence a svg { flex: 0 0 auto; color: var(--vp-c-brand-1); }
+.skills-evidence a:hover {
+  color: var(--vp-c-brand-1);
+}
+.skills-evidence a svg {
+  flex: 0 0 auto;
+  color: var(--vp-c-brand-1);
+}
 .skills-evidence p {
   margin: 0.28rem 0 0;
   color: var(--vp-c-text-2);
@@ -398,15 +442,23 @@ const navigation = computed(() => [
 }
 
 @media (max-width: 720px) {
-.skills-domain-grid { grid-template-columns: 1fr; }
-  .skills-language-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skills-domain-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-language-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
-
-  .skills-language-grid li { padding: 1rem; }
-  .skills-count strong { font-size: 2.2rem; }
-  .skills-language-icon { display: none; }
+  .skills-language-grid li {
+    padding: 1rem;
+  }
+  .skills-count strong {
+    font-size: 2.2rem;
+  }
+  .skills-language-icon {
+    display: none;
+  }
 }
-
 </style>

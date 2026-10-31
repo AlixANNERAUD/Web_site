@@ -2,6 +2,17 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PdfEmbed from "../../components/PdfEmbed.vue";
 ---
-<BaseLayout lang="fr" path="/fr/resume" title="CV" description="CV et expériences d'Alix ANNERAUD, ingénieur logiciel spécialisé en Rust, systèmes et sécurité." noFooter>
-  <PdfEmbed src="https://resume.alix.anneraud.fr/Resume.français.pdf" title="CV français (PDF)" openLabel="Ouvrir le PDF" />
+
+<BaseLayout
+  lang="fr"
+  path="/fr/resume"
+  title="CV"
+  description="CV et expériences d'Alix ANNERAUD, ingénieur logiciel spécialisé en Rust, systèmes et sécurité."
+  noFooter
+>
+  <PdfEmbed
+    src="https://resume.alix.anneraud.fr/Resume.français.pdf"
+    title="CV français (PDF)"
+    openLabel="Ouvrir le PDF"
+  />
 </BaseLayout>

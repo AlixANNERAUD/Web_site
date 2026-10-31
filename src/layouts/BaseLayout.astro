@@ -10,13 +10,25 @@ export interface Props {
   home?: boolean;
   noFooter?: boolean;
 }
-const { lang, title, description, path, home = false, noFooter = false } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  path,
+  home = false,
+  noFooter = false,
+} = Astro.props;
 const fr = lang === "fr";
 const site = "https://alix.anneraud.fr";
-const normalPath = path === "/" || path === "/fr/" ? path : path.replace(/\/$/, "");
+const normalPath =
+  path === "/" || path === "/fr/" ? path : path.replace(/\/$/, "");
 const counterpart = fr
-  ? (normalPath === "/fr/" ? "/" : normalPath.replace(/^\/fr(?=\/)/, ""))
-  : (normalPath === "/" ? "/fr/" : "/fr" + normalPath);
+  ? normalPath === "/fr/"
+    ? "/"
+    : normalPath.replace(/^\/fr(?=\/)/, "")
+  : normalPath === "/"
+    ? "/fr/"
+    : "/fr" + normalPath;
 const enPath = fr ? counterpart : normalPath;
 const frPath = fr ? normalPath : counterpart;
 const titleText = home
@@ -45,10 +57,20 @@ const person = {
   name: "Alix ANNERAUD",
   url: site + "/",
   image,
-  sameAs: ["https://github.com/AlixANNERAUD", "https://www.linkedin.com/in/alix-anneraud/"],
-  knowsAbout: ["Rust", "WebAssembly", "Embedded software", "Systems programming", "Security"],
+  sameAs: [
+    "https://github.com/AlixANNERAUD",
+    "https://www.linkedin.com/in/alix-anneraud/",
+  ],
+  knowsAbout: [
+    "Rust",
+    "WebAssembly",
+    "Embedded software",
+    "Systems programming",
+    "Security",
+  ],
 };
 ---
+
 <!doctype html>
 <html lang={fr ? "fr" : "en"}>
   <head>
@@ -63,7 +85,10 @@ const person = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content={fr ? "Portrait d'Alix ANNERAUD" : "Portrait of Alix ANNERAUD"} />
+    <meta
+      property="og:image:alt"
+      content={fr ? "Portrait d'Alix ANNERAUD" : "Portrait of Alix ANNERAUD"}
+    />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={titleText} />
     <meta name="twitter:description" content={description} />
@@ -74,60 +99,135 @@ const person = {
     <link rel="alternate" hreflang="x-default" href={site + enPath} />
     <link rel="icon" href="/images/icon.png" type="image/png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    {home && <script type="application/ld+json" set:html={JSON.stringify(person)} />}
+    {home && (
+      <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    )}
     <script is:inline>
       try {
         const stored = localStorage.getItem("portfolio-theme");
-        if ((stored === "dark") || (stored !== "light" && matchMedia("(prefers-color-scheme: dark)").matches)) {
+        if (
+          stored === "dark" ||
+          (stored !== "light" &&
+            matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
           document.documentElement.classList.add("dark");
         }
       } catch {}
     </script>
-    <script defer src="https://s.anneraud.fr/script.js" data-website-id="89a5e147-d520-4293-aa35-f80eb903ae3a"></script>
+    <script
+      defer
+      src="https://s.anneraud.fr/script.js"
+      data-website-id="89a5e147-d520-4293-aa35-f80eb903ae3a"
+    ></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">{fr ? "Aller au contenu" : "Skip to content"}</a>
+    <a class="skip-link" href="#main">
+      {fr ? "Aller au contenu" : "Skip to content"}
+    </a>
     <div class="site-shell">
       <header class="site-header">
         <div class="site-header-inner">
-          <a class="site-brand" href={fr ? "/fr/" : "/"} aria-label={fr ? "Accueil" : "Home"}>Alix ANNERAUD</a>
-          <nav class="site-main-nav" aria-label={fr ? "Navigation principale" : "Main navigation"}>
+          <a
+            class="site-brand"
+            href={fr ? "/fr/" : "/"}
+            aria-label={fr ? "Accueil" : "Home"}
+          >
+            Alix ANNERAUD
+          </a>
+          <nav
+            class="site-main-nav"
+            aria-label={fr ? "Navigation principale" : "Main navigation"}
+          >
             {links.map((link) => (
-              <a href={link.href} aria-current={normalPath === link.href || normalPath.startsWith(link.href + "/") ? "page" : undefined}>
+              <a
+                href={link.href}
+                aria-current={
+                  normalPath === link.href ||
+                  normalPath.startsWith(link.href + "/")
+                    ? "page"
+                    : undefined
+                }
+              >
                 {link.label}
               </a>
             ))}
           </nav>
           <div class="site-header-tools">
-            <a class="site-locale" href={counterpart} lang={fr ? "en" : "fr"} aria-label={fr ? "Switch to English" : "Passer en français"}>{fr ? "EN" : "FR"}</a>
-            <button class="site-theme-button" type="button" data-theme-toggle aria-label={fr ? "Changer de thème" : "Toggle theme"} aria-pressed="false">
+            <a
+              class="site-locale"
+              href={counterpart}
+              lang={fr ? "en" : "fr"}
+              aria-label={fr ? "Switch to English" : "Passer en français"}
+            >
+              {fr ? "EN" : "FR"}
+            </a>
+            <button
+              class="site-theme-button"
+              type="button"
+              data-theme-toggle
+              aria-label={fr ? "Changer de thème" : "Toggle theme"}
+              aria-pressed="false"
+            >
               <span aria-hidden="true">◐</span>
             </button>
           </div>
         </div>
       </header>
-      <main id="main" class={home ? "site-home" : undefined}><slot /></main>
-      {!noFooter && <footer class="site-footer">
-        <div class="site-footer-inner">
-          <span>© Alix ANNERAUD · <a href="https://opensource.org/licenses/MIT">MIT</a> · Astro</span>
-          <nav aria-label={fr ? "Liens du pied de page" : "Footer links"}>
-            <a href={fr ? "/fr/legal-notice" : "/legal-notice"}>{fr ? "Mentions légales" : "Legal notice"}</a>
-            <a href="https://github.com/AlixANNERAUD" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/alix-anneraud/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://matrix.to/#/@alix:anneraud.fr" target="_blank" rel="noopener noreferrer">Matrix</a>
-            <a href="mailto:alix@anneraud.fr">Email</a>
-          </nav>
-        </div>
-      </footer>}
+      <main id="main" class={home ? "site-home" : undefined}>
+        <slot />
+      </main>
+      {!noFooter && (
+        <footer class="site-footer">
+          <div class="site-footer-inner">
+            <span>
+              © Alix ANNERAUD ·{" "}
+              <a href="https://opensource.org/licenses/MIT">MIT</a> · Astro
+            </span>
+            <nav aria-label={fr ? "Liens du pied de page" : "Footer links"}>
+              <a href={fr ? "/fr/legal-notice" : "/legal-notice"}>
+                {fr ? "Mentions légales" : "Legal notice"}
+              </a>
+              <a
+                href="https://github.com/AlixANNERAUD"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/alix-anneraud/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://matrix.to/#/@alix:anneraud.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Matrix
+              </a>
+              <a href="mailto:alix@anneraud.fr">Email</a>
+            </nav>
+          </div>
+        </footer>
+      )}
     </div>
     <script is:inline>
       const button = document.querySelector("[data-theme-toggle]");
       if (button) {
-        const sync = () => button.setAttribute("aria-pressed", String(document.documentElement.classList.contains("dark")));
+        const sync = () =>
+          button.setAttribute(
+            "aria-pressed",
+            String(document.documentElement.classList.contains("dark")),
+          );
         sync();
         button.addEventListener("click", () => {
           const dark = document.documentElement.classList.toggle("dark");
-          try { localStorage.setItem("portfolio-theme", dark ? "dark" : "light"); } catch {}
+          try {
+            localStorage.setItem("portfolio-theme", dark ? "dark" : "light");
+          } catch {}
           sync();
         });
       }

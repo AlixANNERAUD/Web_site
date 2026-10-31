@@ -75,6 +75,9 @@ withDefaults(
   outline-offset: 4px;
 }
 @media (max-width: 680px) {
-  .editorial-next { flex-direction: column; align-items: flex-start; }
+  .editorial-next {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>

@@ -23,14 +23,16 @@ const content = {
     kicker: "Focus technique - Xila / 03",
     title: "Xila, du matériel aux applications.",
     text: "Un aperçu de l'architecture de Xila : les pilotes relient le matériel aux services Rust, puis à la frontière WebAssembly et aux applications.",
-    diagram: "Pilotes → services Rust → frontières d'exécution WebAssembly → applications. Les services gèrent également le stockage/VFS et l'interface LVGL.",
+    diagram:
+      "Pilotes → services Rust → frontières d'exécution WebAssembly → applications. Les services gèrent également le stockage/VFS et l'interface LVGL.",
     explore: "Lire l'étude de cas Xila",
   },
   en: {
     kicker: "Technical deep dive - Xila / 03",
     title: "Inside Xila: from drivers to apps.",
     text: "A glimpse of Xila's architecture: drivers connect hardware to Rust services, WebAssembly guest bindings and applications.",
-    diagram: "Drivers → Rust services → WebAssembly execution boundary → applications. Services also manage storage/VFS and LVGL graphics.",
+    diagram:
+      "Drivers → Rust services → WebAssembly execution boundary → applications. Services also manage storage/VFS and LVGL graphics.",
     explore: "Read the Xila case study",
   },
 } as const;
@@ -186,17 +188,28 @@ onBeforeUnmount(() => {
       ></canvas>
 
       <div class="xila-topology-labels" aria-hidden="true">
-        <span class="xila-node-label" style="left: 12%; top: 73.5%">Drivers</span>
-        <span class="xila-node-label" style="left: 33.5%; top: 44%">Rust kernel</span>
-        <span class="xila-node-label" style="left: 61%; top: 44%">WASM ABI</span>
+        <span class="xila-node-label" style="left: 12%; top: 73.5%"
+          >Drivers</span
+        >
+        <span class="xila-node-label" style="left: 33.5%; top: 44%"
+          >Rust kernel</span
+        >
+        <span class="xila-node-label" style="left: 61%; top: 44%"
+          >WASM ABI</span
+        >
         <span class="xila-node-label" style="left: 89%; top: 30%">Apps</span>
         <span class="xila-node-label" style="left: 60%; top: 78.5%">VFS</span>
         <span class="xila-node-label" style="left: 36%; top: 15%">LVGL</span>
       </div>
-      <figcaption class="visually-hidden">{{ content[lang].diagram }}</figcaption>
+      <figcaption class="visually-hidden">
+        {{ content[lang].diagram }}
+      </figcaption>
     </figure>
 
-    <a class="xila-topology-link" :href="lang === 'fr' ? '/fr/projects/xila' : '/projects/xila'">
+    <a
+      class="xila-topology-link"
+      :href="lang === 'fr' ? '/fr/projects/xila' : '/projects/xila'"
+    >
       {{ content[lang].explore }} <span aria-hidden="true">↗</span>
     </a>
   </section>
@@ -217,7 +230,9 @@ onBeforeUnmount(() => {
   gap: 1rem 2rem;
   margin-bottom: 1.75rem;
 }
-.xila-topology-heading > div { flex: 1 1 20rem; }
+.xila-topology-heading > div {
+  flex: 1 1 20rem;
+}
 .xila-topology-kicker {
   margin: 0 0 0.65rem;
   color: var(--vp-c-text-2);
@@ -230,7 +245,10 @@ onBeforeUnmount(() => {
   margin: 0;
   padding: 0;
   border: 0;
-  font: normal clamp(2rem, 4vw, 3.5rem)/1.14 Georgia, "Times New Roman", serif;
+  font:
+    normal clamp(2rem, 4vw, 3.5rem)/1.14 Georgia,
+    "Times New Roman",
+    serif;
   letter-spacing: -0.04em;
 }
 .xila-topology-intro {
@@ -248,14 +266,16 @@ onBeforeUnmount(() => {
   isolation: isolate;
   border: 1px solid var(--vp-c-divider);
   border-radius: 1rem;
-  background: radial-gradient(ellipse at 50% 50%, #335f5733 0%, transparent 65%),
+  background:
+    radial-gradient(ellipse at 50% 50%, #335f5733 0%, transparent 65%),
     linear-gradient(135deg, #0c1e25, #162c32 64%, #172c3b);
 }
 .xila-topology-scene::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(#ffffff0b 1px, transparent 1px),
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
     linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
   background-size: 28px 28px;
   pointer-events: none;
@@ -269,9 +289,17 @@ onBeforeUnmount(() => {
   height: 100%;
   pointer-events: none;
 }
-.xila-topology-canvas { opacity: 0; }
-.xila-topology-canvas.is-ready { opacity: 1; }
-.xila-topology-labels { position: absolute; inset: 0; pointer-events: none; }
+.xila-topology-canvas {
+  opacity: 0;
+}
+.xila-topology-canvas.is-ready {
+  opacity: 1;
+}
+.xila-topology-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
 .xila-node-label {
   position: absolute;
   transform: translate(-50%, 0.95rem);
@@ -280,10 +308,12 @@ onBeforeUnmount(() => {
   border-radius: 0.35rem;
   color: #f2f9f9;
   background: #10252cd9;
-  font: 600 clamp(0.67rem, 1.2vw, 0.83rem)/1.3 ui-monospace, monospace;
+  font:
+    600 clamp(0.67rem, 1.2vw, 0.83rem)/1.3 ui-monospace,
+    monospace;
   white-space: nowrap;
 }
- .xila-topology-link {
+.xila-topology-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -293,8 +323,13 @@ onBeforeUnmount(() => {
   font-weight: 650;
   text-decoration: none;
 }
-.xila-topology-link:hover { text-decoration: underline; }
-.xila-topology-link:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
+.xila-topology-link:hover {
+  text-decoration: underline;
+}
+.xila-topology-link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -304,13 +339,27 @@ onBeforeUnmount(() => {
   white-space: nowrap;
 }
 @media (max-width: 720px) {
-  .xila-topology { margin: 2rem auto; padding: 0 1rem; }
-  .xila-topology-scene { height: 310px; }
-  .xila-topology-heading { align-items: start; }
-  .xila-node-label { font-size: 0.65rem; padding: 0.2rem 0.35rem; }
+  .xila-topology {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .xila-topology-scene {
+    height: 310px;
+  }
+  .xila-topology-heading {
+    align-items: start;
+  }
+  .xila-node-label {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.35rem;
+  }
 }
 @media (max-width: 420px) {
-  .xila-topology-scene { height: 270px; }
-  .xila-node-label { font-size: 0.58rem; }
+  .xila-topology-scene {
+    height: 270px;
+  }
+  .xila-node-label {
+    font-size: 0.58rem;
+  }
 }
 </style>

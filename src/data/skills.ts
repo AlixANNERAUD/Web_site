@@ -64,7 +64,15 @@ export const skillDomains: SkillDomain[] = [
       fr: "Conception d'API, intégration de données et pipelines de traitement. J'aime relier le modèle métier à une implémentation simple et maintenable.",
       en: "API design, data integration and processing pipelines. I focus on connecting domain needs to simple, maintainable implementations.",
     },
-    technologies: ["Python", "Django REST", "Java", "SQL", "PostgreSQL", "Rust / Actix", "NumPy"],
+    technologies: [
+      "Python",
+      "Django REST",
+      "Java",
+      "SQL",
+      "PostgreSQL",
+      "Rust / Actix",
+      "NumPy",
+    ],
     examples: [
       {
         projectId: "deez-nalyzer",
@@ -93,7 +101,15 @@ export const skillDomains: SkillDomain[] = [
       fr: "Interfaces Vue et React, applications web interactives et extensions navigateur. Le design doit servir l'usage autant que le code.",
       en: "Vue and React interfaces, interactive web applications and browser extensions. Design should serve the user as much as the code.",
     },
-    technologies: ["Vue 3", "TypeScript", "JavaScript", "React", "Vite", "WXT", "Tailwind CSS"],
+    technologies: [
+      "Vue 3",
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Vite",
+      "WXT",
+      "Tailwind CSS",
+    ],
     examples: [
       {
         projectId: "mini-train-store",
@@ -122,7 +138,15 @@ export const skillDomains: SkillDomain[] = [
       fr: "Auto-hébergement, déploiements reproductibles, CI/CD, supervision et maintenance de services utilisés au quotidien.",
       en: "Self-hosting, reproducible deployments, CI/CD, monitoring and maintaining services used every day.",
     },
-    technologies: ["Debian / Linux", "Docker", "Ansible", "AWS", "GitHub Actions", "Git", "Networking"],
+    technologies: [
+      "Debian / Linux",
+      "Docker",
+      "Ansible",
+      "AWS",
+      "GitHub Actions",
+      "Git",
+      "Networking",
+    ],
     examples: [
       {
         projectId: "infrastructure",
@@ -151,7 +175,15 @@ export const skillDomains: SkillDomain[] = [
       fr: "Diagnostic réseau L2/L3, téléphonie IP et cybersécurité. Une pratique nourrie par l'exploitation télécom et les CTF en équipe.",
       en: "L2/L3 network diagnostics, IP telephony and cybersecurity, informed by telecom operations and team-based CTFs.",
     },
-    technologies: ["L2/L3", "MPLS / VPN", "SIP", "Cisco", "Juniper", "CTF", "Linux"],
+    technologies: [
+      "L2/L3",
+      "MPLS / VPN",
+      "SIP",
+      "Cisco",
+      "Juniper",
+      "CTF",
+      "Linux",
+    ],
     examples: [
       {
         projectId: "jeanne-hack-2026",
@@ -181,11 +213,21 @@ export const skillDomains: SkillDomain[] = [
       fr: "J'utilise les agents de code pour explorer, implémenter et relire, sans déléguer la validation : tests, revues Git et CI restent essentiels.",
       en: "I use coding agents to explore, implement and review, while keeping validation in the loop through tests, Git reviews and CI.",
     },
-    technologies: ["OpenCode", "Claude Code", "Codex", "MCP", "Testing", "Git / CI"],
+    technologies: [
+      "OpenCode",
+      "Claude Code",
+      "Codex",
+      "MCP",
+      "Testing",
+      "Git / CI",
+    ],
     examples: [
       {
         href: "https://github.com/AlixANNERAUD/Web_site/blob/main/AGENTS.md",
-        label: { fr: "Instructions multi-agents", en: "Shared agent guidelines" },
+        label: {
+          fr: "Instructions multi-agents",
+          en: "Shared agent guidelines",
+        },
         detail: {
           fr: "Une seule convention pour plusieurs assistants.",
           en: "One shared convention across coding assistants.",

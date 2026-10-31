@@ -15,7 +15,9 @@ defineProps<{
     <figcaption>{{ title }}</figcaption>
     <ol class="architecture-steps">
       <li v-for="(step, index) in steps" :key="index" class="architecture-step">
-        <span class="step-count" aria-hidden="true">{{ String(index + 1).padStart(2, "0") }}</span>
+        <span class="step-count" aria-hidden="true">{{
+          String(index + 1).padStart(2, "0")
+        }}</span>
         <strong>{{ step.title }}</strong>
         <span class="step-detail">{{ step.detail }}</span>
       </li>
@@ -67,7 +69,9 @@ defineProps<{
 
 .step-count {
   color: var(--vp-c-brand-1);
-  font: 0.77rem ui-monospace, monospace;
+  font:
+    0.77rem ui-monospace,
+    monospace;
 }
 
 .architecture-step strong {
@@ -83,7 +87,11 @@ defineProps<{
 }
 
 @media (max-width: 640px) {
-  .architecture-steps { flex-direction: column; }
-  .architecture-step { flex-basis: auto; }
+  .architecture-steps {
+    flex-direction: column;
+  }
+  .architecture-step {
+    flex-basis: auto;
+  }
 }
 </style>

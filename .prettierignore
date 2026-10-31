@@ -3,5 +3,4 @@ dist/
 .astro/
 artifacts/
 package-lock.json
-src/content/**/*.md
-src/content/**/*.mdx
+src/content/**

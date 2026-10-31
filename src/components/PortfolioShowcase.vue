@@ -51,8 +51,10 @@ const copy = computed(() =>
         catalogueTitle: "Projets",
         title: "Des idées aux",
         emphasis: "systèmes.",
-        description: "Du noyau Rust aux outils métiers : quelques projets que je conçois, développe et maintiens.",
-        catalogueDescription: "Projets classés par intérêt technique, originalité et impact, selon une évaluation éditoriale ajustable.",
+        description:
+          "Du noyau Rust aux outils métiers : quelques projets que je conçois, développe et maintiens.",
+        catalogueDescription:
+          "Projets classés par intérêt technique, originalité et impact, selon une évaluation éditoriale ajustable.",
         sortLabel: "Trier par",
         sortRecommended: "Importance",
         sortAlphabetical: "Nom (A → Z)",
@@ -71,8 +73,10 @@ const copy = computed(() =>
         catalogueTitle: "Projects",
         title: "From ideas to",
         emphasis: "systems.",
-        description: "From a Rust kernel to practical business software: selected projects I design, build and maintain.",
-        catalogueDescription: "Projects ordered by technical depth, originality and practical impact, using an editable editorial assessment.",
+        description:
+          "From a Rust kernel to practical business software: selected projects I design, build and maintain.",
+        catalogueDescription:
+          "Projects ordered by technical depth, originality and practical impact, using an editable editorial assessment.",
         sortLabel: "Sort by",
         sortRecommended: "Importance",
         sortAlphabetical: "Name (A → Z)",
@@ -91,12 +95,15 @@ const visibleProjects = computed(() => {
   if (props.mode === "featured") {
     return portfolioProjects
       .filter((item) => item.featured)
-      .sort((a, b) => projectScore(b) - projectScore(a) || a.id.localeCompare(b.id));
+      .sort(
+        (a, b) => projectScore(b) - projectScore(a) || a.id.localeCompare(b.id),
+      );
   }
 
   const term = search.value.trim().toLocaleLowerCase(props.lang);
   const filtered = portfolioProjects.filter((project) => {
-    if (category.value !== "all" && project.category !== category.value) return false;
+    if (category.value !== "all" && project.category !== category.value)
+      return false;
     if (group.value !== "all" && project.group !== group.value) return false;
     if (!term) return true;
 
@@ -127,7 +134,15 @@ const catalogueUrl = computed(() =>
   <section
     class="portfolio-showcase"
     :class="{ 'portfolio-showcase--catalogue': mode === 'catalogue' }"
-    :aria-label="mode === 'featured' ? (lang === 'fr' ? 'Projets sélectionnés' : 'Selected projects') : (lang === 'fr' ? 'Catalogue de projets' : 'Project catalogue')"
+    :aria-label="
+      mode === 'featured'
+        ? lang === 'fr'
+          ? 'Projets sélectionnés'
+          : 'Selected projects'
+        : lang === 'fr'
+          ? 'Catalogue de projets'
+          : 'Project catalogue'
+    "
   >
     <EditorialHero
       variant="compact"
@@ -135,7 +150,9 @@ const catalogueUrl = computed(() =>
       :eyebrow="mode === 'catalogue' ? copy.catalogueEyebrow : copy.eyebrow"
       :title="mode === 'catalogue' ? copy.catalogueTitle : copy.title"
       :accent="mode === 'catalogue' ? undefined : copy.emphasis"
-      :intro="mode === 'featured' ? copy.description : copy.catalogueDescription"
+      :intro="
+        mode === 'featured' ? copy.description : copy.catalogueDescription
+      "
     />
 
     <div v-if="mode === 'catalogue'" class="showcase-toolbar">
@@ -150,7 +167,9 @@ const catalogueUrl = computed(() =>
               :aria-pressed="group === item.id"
               :class="{ 'is-selected': group === item.id }"
               @click="group = item.id"
-            >{{ item[lang] }}</button>
+            >
+              {{ item[lang] }}
+            </button>
           </div>
         </div>
         <div>
@@ -163,7 +182,9 @@ const catalogueUrl = computed(() =>
               :aria-pressed="category === item.id"
               :class="{ 'is-selected': category === item.id }"
               @click="category = item.id"
-            >{{ item[lang] }}</button>
+            >
+              {{ item[lang] }}
+            </button>
           </div>
         </div>
       </div>
@@ -193,22 +214,33 @@ const catalogueUrl = computed(() =>
         class="showcase-card"
         variant="project"
       >
-        <div class="showcase-art" :class="'showcase-art--' + project.category" aria-hidden="true">
+        <div
+          class="showcase-art"
+          :class="'showcase-art--' + project.category"
+          aria-hidden="true"
+        >
           <span class="showcase-art-symbol">{{ project.symbol }}</span>
           <span class="showcase-art-index">
-            {{ String(index + 1).padStart(2, "0") }} / {{ project.period[lang] }}
+            {{ String(index + 1).padStart(2, "0") }} /
+            {{ project.period[lang] }}
           </span>
         </div>
         <div class="showcase-card-body">
           <p class="showcase-card-category">
-            {{ categories.find((item) => item.id === project.category)?.[lang] }}
+            {{
+              categories.find((item) => item.id === project.category)?.[lang]
+            }}
           </p>
           <h3>{{ project.title[lang] }}</h3>
-          <p class="showcase-card-description">{{ project.description[lang] }}</p>
+          <p class="showcase-card-description">
+            {{ project.description[lang] }}
+          </p>
           <TechnologyTags
             v-if="project.tags.length"
             :tags="project.tags"
-            :label="lang === 'fr' ? 'Technologies utilisées' : 'Technologies used'"
+            :label="
+              lang === 'fr' ? 'Technologies utilisées' : 'Technologies used'
+            "
             density="project"
           />
           <div class="showcase-card-actions">
@@ -221,7 +253,8 @@ const catalogueUrl = computed(() =>
               :href="project.externalUrl"
               target="_blank"
               rel="noopener noreferrer"
-            >{{ copy.external }} <span aria-hidden="true">↗</span></a>
+              >{{ copy.external }} <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
       </EditorialCard>
@@ -231,7 +264,11 @@ const catalogueUrl = computed(() =>
       {{ copy.empty }}
     </p>
 
-    <a v-if="mode === 'featured'" class="showcase-all-link" :href="catalogueUrl">
+    <a
+      v-if="mode === 'featured'"
+      class="showcase-all-link"
+      :href="catalogueUrl"
+    >
       {{ copy.viewAll }} <span aria-hidden="true">↗</span>
     </a>
   </section>
@@ -267,10 +304,26 @@ const catalogueUrl = computed(() =>
   margin: 0 0 1.5rem;
 }
 
-.showcase-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.showcase-toolbar-actions { display: flex; flex-wrap: wrap; align-items: end; gap: 0.75rem; }
-.showcase-sort { display: flex; flex-direction: column; gap: 0.35rem; }
-.showcase-sort > span { color: var(--vp-c-text-2); font-size: 0.73rem; }
+.showcase-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.showcase-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.75rem;
+}
+.showcase-sort {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.showcase-sort > span {
+  color: var(--vp-c-text-2);
+  font-size: 0.73rem;
+}
 .showcase-sort select {
   min-height: 2.35rem;
   padding: 0.49rem 1.5rem 0.49rem 0.6rem;
@@ -282,11 +335,31 @@ const catalogueUrl = computed(() =>
   font-size: 0.82rem;
   cursor: pointer;
 }
-.showcase-controls { display: flex; flex-wrap: wrap; gap: 0.7rem 1.25rem; }
-.showcase-control-label { display: block; margin: 0 0 0.35rem; font-size: 0.73rem; color: var(--vp-c-text-2); }
-.showcase-count { margin: 0.1rem 0 1rem; color: var(--vp-c-text-2); font-size: 0.85rem; }
-.showcase-card-actions .showcase-external-link { color: var(--vp-c-text-2); font-size: 0.79rem; }
-.showcase-card-period { color: var(--vp-c-text-3); font-size: 0.78rem; margin: 0.35rem 0 0.5rem; }
+.showcase-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.25rem;
+}
+.showcase-control-label {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-size: 0.73rem;
+  color: var(--vp-c-text-2);
+}
+.showcase-count {
+  margin: 0.1rem 0 1rem;
+  color: var(--vp-c-text-2);
+  font-size: 0.85rem;
+}
+.showcase-card-actions .showcase-external-link {
+  color: var(--vp-c-text-2);
+  font-size: 0.79rem;
+}
+.showcase-card-period {
+  color: var(--vp-c-text-3);
+  font-size: 0.78rem;
+  margin: 0.35rem 0 0.5rem;
+}
 
 .showcase-filters button {
   padding: 0.52rem 0.82rem;
@@ -296,7 +369,9 @@ const catalogueUrl = computed(() =>
   color: var(--vp-c-text-2);
   font-size: 0.8rem;
   cursor: pointer;
-  transition: border-color 160ms ease, background-color 160ms ease;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
 }
 
 .showcase-filters button:hover,
@@ -336,7 +411,8 @@ const catalogueUrl = computed(() =>
   justify-content: center;
   overflow: hidden;
   background-color: #16212d;
-  background-image: linear-gradient(115deg, transparent 48%, #ffffff0a 49%, transparent 50%),
+  background-image:
+    linear-gradient(115deg, transparent 48%, #ffffff0a 49%, transparent 50%),
     radial-gradient(circle at 68% 30%, #ffffff22, transparent 45%);
   color: #f7f8fa;
 }
@@ -345,16 +421,25 @@ const catalogueUrl = computed(() =>
   position: absolute;
   inset: 0;
   content: "";
-  background-image: linear-gradient(#ffffff16 1px, transparent 1px),
+  background-image:
+    linear-gradient(#ffffff16 1px, transparent 1px),
     linear-gradient(90deg, #ffffff16 1px, transparent 1px);
   background-size: 28px 28px;
   mask-image: linear-gradient(to bottom, #000, transparent 90%);
 }
 
-.showcase-art--systems { background-color: #233b40; }
-.showcase-art--web { background-color: #473b53; }
-.showcase-art--infrastructure { background-color: #304354; }
-.showcase-art--embedded { background-color: #574832; }
+.showcase-art--systems {
+  background-color: #233b40;
+}
+.showcase-art--web {
+  background-color: #473b53;
+}
+.showcase-art--infrastructure {
+  background-color: #304354;
+}
+.showcase-art--embedded {
+  background-color: #574832;
+}
 
 .showcase-art-symbol {
   position: relative;
@@ -381,7 +466,9 @@ const catalogueUrl = computed(() =>
   padding: 1.4rem;
 }
 
-.showcase-card-category { margin-bottom: 0.45rem; }
+.showcase-card-category {
+  margin-bottom: 0.45rem;
+}
 
 .showcase-card h3 {
   margin: 0 0 0.7rem;
@@ -416,7 +503,9 @@ const catalogueUrl = computed(() =>
 }
 
 .showcase-card-actions > a:hover,
-.showcase-all-link:hover { text-decoration: underline; }
+.showcase-all-link:hover {
+  text-decoration: underline;
+}
 
 .showcase-all-link {
   display: inline-block;
@@ -426,7 +515,11 @@ const catalogueUrl = computed(() =>
   font-weight: 600;
 }
 
-.showcase-empty { padding: 2rem; text-align: center; color: var(--vp-c-text-2); }
+.showcase-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--vp-c-text-2);
+}
 
 .sr-only {
   position: absolute;
@@ -447,23 +540,43 @@ const catalogueUrl = computed(() =>
 }
 
 @media (max-width: 850px) {
-.showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 600px) {
-.portfolio-showcase { margin: 2rem auto 3rem; padding: 0 1rem; }
-  .showcase-grid { grid-template-columns: minmax(0, 1fr); }
-  .portfolio-showcase--catalogue .showcase-grid { grid-template-columns: minmax(0, 1fr); }
-  .showcase-art { min-height: 9.5rem; }
-  .showcase-card-body { min-height: 0; }
-  .showcase-toolbar-actions { width: 100%; }
-  .showcase-search { flex: 1 1 100%; }
+  .portfolio-showcase {
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
+  }
+  .showcase-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .portfolio-showcase--catalogue .showcase-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .showcase-art {
+    min-height: 9.5rem;
+  }
+  .showcase-card-body {
+    min-height: 0;
+  }
+  .showcase-toolbar-actions {
+    width: 100%;
+  }
+  .showcase-search {
+    flex: 1 1 100%;
+  }
   .showcase-search,
-.showcase-search input { width: 100%; }
+  .showcase-search input {
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-.showcase-filters button { transition: none; }
+  .showcase-filters button {
+    transition: none;
+  }
 }
-
 </style>

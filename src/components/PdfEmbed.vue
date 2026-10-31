@@ -15,7 +15,14 @@
       </p>
     </iframe>
     <div v-else class="error-state">No PDF link provided.</div>
-    <a v-if="src" class="pdf-open-link" :href="src" target="_blank" rel="noopener noreferrer">{{ openLabel }} ↗</a>
+    <a
+      v-if="src"
+      class="pdf-open-link"
+      :href="src"
+      target="_blank"
+      rel="noopener noreferrer"
+      >{{ openLabel }} ↗</a
+    >
   </div>
 </template>
 

@@ -2,6 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PortfolioShowcase from "../components/PortfolioShowcase.vue";
 ---
-<BaseLayout lang="en" path="/projects" title="Projects" description="Explore Alix ANNERAUD's software and embedded projects, with search and category filters.">
+
+<BaseLayout
+  lang="en"
+  path="/projects"
+  title="Projects"
+  description="Explore Alix ANNERAUD's software and embedded projects, with search and category filters."
+>
   <PortfolioShowcase lang="en" mode="catalogue" client:load />
 </BaseLayout>
