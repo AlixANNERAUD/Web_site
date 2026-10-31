@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import { portfolioProjects } from "../src/data/portfolioProjects.ts";
 
 /**
  * Build-output smoke tests for the bilingual Astro site.
@@ -24,15 +25,7 @@ const cases = [
 ];
 
 // Test EVERY static detail route, including alternate locale metadata.
-const catalogueSource = readFileSync(resolve("src/data/portfolioProjects.ts"), "utf8");
-const declaration = "export const portfolioProjects: PortfolioProject[] = ";
-const catalogueStart = catalogueSource.indexOf(declaration) + declaration.length;
-const catalogueEnd = catalogueSource.indexOf(";\n\nexport function projectDetailUrl", catalogueStart);
-if (catalogueStart < declaration.length || catalogueEnd < 0) {
-  throw new Error("Could not find catalogue in portfolioProjects.ts");
-}
-const projectIds = JSON.parse(catalogueSource.slice(catalogueStart, catalogueEnd))
-  .map((project) => project.id);
+const projectIds = portfolioProjects.map((project) => project.id);
 for (const id of projectIds) {
   {
     cases.push([`projects/${id}.html`, `/projects/${id}`, `/fr/projects/${id}`]);

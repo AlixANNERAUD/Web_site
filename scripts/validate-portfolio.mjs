@@ -1,17 +1,11 @@
 import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { portfolioProjects, projectScore, PROJECT_RANK_WEIGHTS } from "../src/data/portfolioProjects.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const source = readFileSync(join(root, "src/data/portfolioProjects.ts"), "utf8");
-const opening = "export const portfolioProjects: PortfolioProject[] = ";
-const start = source.indexOf(opening);
-const end = source.indexOf(";\n\nexport function projectDetailUrl", start);
-if (start < 0 || end < 0) {
-  throw new Error("Project data declaration not found; update this check if the schema changes.");
-}
 
-const projects = JSON.parse(source.slice(start + opening.length, end));
+const projects = portfolioProjects;
 if (!Array.isArray(projects) || projects.length === 0) {
   throw new Error("Project catalogue is empty.");
 }
@@ -20,13 +14,8 @@ const ids = new Set();
 let featured = 0;
 
 // Editorial ranking weights are defined only in portfolioProjects.ts.
-const weightsSource = source.match(/export const PROJECT_RANK_WEIGHTS = \{([\s\S]*?)\} as const/);
-if (!weightsSource) throw new Error("Missing project ranking weights.");
 const weightFactors = ["technicalDepth", "originality", "practicalImpact", "evidence"];
-const weights = Object.fromEntries(
-  [...weightsSource[1].matchAll(/(\w+):\s*(\d+),/g)]
-    .map((match) => [match[1], Number(match[2])]),
-);
+const weights = PROJECT_RANK_WEIGHTS;
 if (
   Object.keys(weights).length !== weightFactors.length ||
   weightFactors.some((factor) => !Number.isFinite(weights[factor])) ||
@@ -34,11 +23,6 @@ if (
 ) {
   throw new Error("Ranking weights must contain four factors totaling 100%.");
 }
-const editorialScore = (project) =>
-  weightFactors.reduce(
-    (sum, factor) => sum + project.ranking[factor] * weights[factor],
-    0,
-  ) / 5;
 for (const project of projects) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project.id) || ids.has(project.id)) {
     throw new Error("Missing, invalid or duplicate project ID: " + project.id);
@@ -93,7 +77,7 @@ for (const project of projects) {
 
 if (featured !== 3) throw new Error("Expected exactly three featured projects.");
 const topFeatured = [...projects]
-  .sort((a, b) => editorialScore(b) - editorialScore(a) || a.id.localeCompare(b.id))
+  .sort((a, b) => projectScore(b) - projectScore(a) || a.id.localeCompare(b.id))
   .slice(0, featured);
 if (topFeatured.some((project) => !project.featured)) {
   throw new Error("Featured projects must be the highest-ranked editorial picks.");
